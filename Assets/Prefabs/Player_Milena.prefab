@@ -69,7 +69,7 @@ Transform:
   m_GameObject: {fileID: 4445733836767800532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &8994542614104305354
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -277,6 +277,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   isInvulnerable: 0
+  cargadoDesdeGuardado: 0
   sfxSource: {fileID: 3861281069416560983}
   sonidoDanio: {fileID: 8300000, guid: 1082cc8991afcc4458317f6776d0b92e, type: 3}
   defensaPorcentual: 0

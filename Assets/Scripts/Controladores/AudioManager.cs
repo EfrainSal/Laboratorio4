@@ -1,5 +1,6 @@
 using UnityEngine;
-using System.Collections; // Importante añadir esto para poder usar IEnumerator (Corrutinas)
+using UnityEngine.SceneManagement; // Necesario para detectar cambios de escena
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource;
 
     [Header("Pistas de Audio")]
+    public AudioClip musicaMenu;        // Nueva pista para el menú principal
     public AudioClip musicaExploracion; 
     public AudioClip musicaCombate;     
 
@@ -19,7 +21,6 @@ public class AudioManager : MonoBehaviour
     private int enemigosActivos = 0;
     private bool enCombate = false;
     
-    // Variables para controlar el Fade
     private Coroutine transicionActiva;
     private float volumenMaximo;
 
@@ -29,6 +30,9 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            
+            // Suscribimos el método OnSceneLoaded al evento de Unity
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -38,11 +42,26 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        // Guardamos el volumen inicial del inspector para saber hasta dónde subirlo
         volumenMaximo = musicSource.volume;
-        
-        // Iniciamos con la música de exploración
-        CambiarMusica(musicaExploracion);
+        // Quitamos CambiarMusica de aquí, ya que OnSceneLoaded lo manejará
+    }
+
+    // Este método se dispara automáticamente al cargar CUALQUIER escena (incluso al reintentar)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 1. Reseteamos los estados de combate para solucionar el Bug 2
+        enemigosActivos = 0;
+        enCombate = false;
+
+        // 2. Gestionamos qué música debe sonar según la escena para solucionar el Bug 1
+        if (scene.name == "MainMenu") 
+        {
+            CambiarMusica(musicaMenu);
+        }
+        else 
+        {
+            CambiarMusica(musicaExploracion);
+        }
     }
 
     public void RegistrarEnemigoSpawneado()
@@ -74,38 +93,41 @@ public class AudioManager : MonoBehaviour
     {
         if (musicSource.clip == nuevoClip) return; 
         
-        // Si ya hay una transición ocurriendo (ej. mataste al último enemigo justo cuando acababa de aparecer), la detenemos
         if (transicionActiva != null)
         {
             StopCoroutine(transicionActiva);
         }
 
-        // Iniciamos el efecto de transición
         transicionActiva = StartCoroutine(TransicionFade(nuevoClip));
     }
 
     private IEnumerator TransicionFade(AudioClip nuevoClip)
     {
-        // 1. Fade Out: Bajar el volumen progresivamente
         while (musicSource.volume > 0)
         {
             musicSource.volume -= volumenMaximo * (Time.deltaTime / tiempoFade);
-            yield return null; // Espera al siguiente frame
+            yield return null; 
         }
 
-        // 2. Cambiar la pista
         musicSource.Stop();
         musicSource.clip = nuevoClip;
         musicSource.Play();
 
-        // 3. Fade In: Subir el volumen progresivamente
         while (musicSource.volume < volumenMaximo)
         {
             musicSource.volume += volumenMaximo * (Time.deltaTime / tiempoFade);
-            yield return null; // Espera al siguiente frame
+            yield return null; 
         }
 
-        // Aseguramos que el volumen quede exactamente al máximo establecido al terminar
         musicSource.volume = volumenMaximo; 
+    }
+
+    // Es buena práctica desuscribirse del evento si el Singleton llega a destruirse
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
     }
 }

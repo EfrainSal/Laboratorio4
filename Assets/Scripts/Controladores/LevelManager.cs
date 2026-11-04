@@ -92,6 +92,14 @@ public class LevelManager : MonoBehaviour
                 inventario.estimulantesCount = datosGuardados.cantidadEstimulantes;
                 inventario.llavesCount = datosGuardados.llavesCount;
             }
+            // NUEVO: Verificamos si hay datos de transición naturales
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                inventario.vendasCount = GameManager.Instance.vendasPendientes;
+                inventario.botiquinesCount = GameManager.Instance.botiquinesPendientes;
+                inventario.estimulantesCount = GameManager.Instance.estimulantesPendientes;
+                inventario.llavesCount = 0; // La llave siempre se consume en la puerta
+            }
             else
             {
                 inventario.LimpiarLlaves();
@@ -112,19 +120,13 @@ public class LevelManager : MonoBehaviour
             {
                 salud.cargadoDesdeGuardado = true;
                 salud.currentHealth = datosGuardados.vidaActual;
-                
+            }
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                salud.currentHealth = GameManager.Instance.vidaPendiente;
             }
             salud.UpdateHealthUI(); 
         }
-
-                // 5. Inyectar UI y Datos a la Experiencia / Mejoras
-        PlayerExperience exp = jugadorInstanciado.GetComponent<PlayerExperience>();
-        if (exp != null && datosGuardados != null)
-        {
-            exp.puntosDeMejora = datosGuardados.puntosDeMejora;
-        }
-
-
 
         // 4. Inyectar UI y Datos a las Armas
         WeaponManager armas = jugadorInstanciado.GetComponent<WeaponManager>();
@@ -144,14 +146,39 @@ public class LevelManager : MonoBehaviour
                 disparo.currentAmmoInClip = datosGuardados.currentAmmoInClip;
                 disparo.totalAmmo = datosGuardados.totalAmmo;
             }
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                disparo.currentAmmoInClip = GameManager.Instance.municionCargadorPendiente;
+                disparo.totalAmmo = GameManager.Instance.municionTotalPendiente;
+            }
             disparo.UpdateAmmoUI();
         }
 
-        // Limpiar los datos temporales del GameManager una vez inyectados para evitar que se dupliquen al cambiar de piso
+        // 5. Inyectar UI y Datos a la Experiencia / Mejoras
+        PlayerExperience exp = jugadorInstanciado.GetComponent<PlayerExperience>();
+        if (exp != null)
+        {
+            if (datosGuardados != null)
+            {
+                exp.puntosDeMejora = datosGuardados.puntosDeMejora;
+            }
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                exp.puntosDeMejora = GameManager.Instance.puntosDeMejoraPendientes;
+                
+                // Si decidiste pasar también el nivel y experiencia de la barra, descomenta:
+                // exp.nivelActual = GameManager.Instance.nivelActualPendiente;
+                // exp.experienciaActual = GameManager.Instance.expActualPendiente;
+            }
+        }
+
+        // Limpiar los datos temporales del GameManager una vez inyectados para evitar que se dupliquen o interfieran
         if (datosGuardados != null)
         {
             GameManager.Instance.LimpiarDatosCargados();
         }
+        
+        GameManager.Instance.usarDatosDeTransicion = false;
     }
 
     public void RegistrarEnemigoDerrotado(Vector3 posicionMuerte)

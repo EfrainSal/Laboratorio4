@@ -79,6 +79,45 @@ public class PuertaNivel : MonoBehaviour
     private void AvanzarNivel()
     {
         Debug.Log("Llave aceptada. Cargando el siguiente piso...");
+
+        if (GameManager.Instance != null && inventarioJugador != null)
+        {
+            GameManager.Instance.AvanzarPiso();
+            
+            // Activamos la bandera para avisarle al siguiente piso que debe usar estos datos
+            GameManager.Instance.usarDatosDeTransicion = true;
+
+            // Extraer y guardar Puntos de Mejora
+            PlayerExperience exp = inventarioJugador.GetComponent<PlayerExperience>();
+            if (exp != null)
+            {
+                GameManager.Instance.puntosDeMejoraPendientes = exp.puntosDeMejora;
+                // Si quieres que el nivel y progreso de XP también persistan, descomenta:
+                // GameManager.Instance.expActualPendiente = exp.experienciaActual;
+                // GameManager.Instance.nivelActualPendiente = exp.nivelActual;
+            }
+
+            // Extraer y guardar Inventario
+            GameManager.Instance.vendasPendientes = inventarioJugador.vendasCount;
+            GameManager.Instance.botiquinesPendientes = inventarioJugador.botiquinesCount;
+            GameManager.Instance.estimulantesPendientes = inventarioJugador.estimulantesCount;
+
+            // Extraer y guardar Salud
+            PlayerHealth health = inventarioJugador.GetComponent<PlayerHealth>();
+            if (health != null)
+            {
+                GameManager.Instance.vidaPendiente = health.currentHealth;
+            }
+
+            // Extraer y guardar Munición
+            PlayerShooting shooting = inventarioJugador.GetComponent<PlayerShooting>();
+            if (shooting != null)
+            {
+                GameManager.Instance.municionCargadorPendiente = shooting.currentAmmoInClip;
+                GameManager.Instance.municionTotalPendiente = shooting.totalAmmo;
+            }
+        }
+
         SceneManager.LoadScene(nombreSiguienteEscena);
     }
 

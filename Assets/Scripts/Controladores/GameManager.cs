@@ -28,6 +28,19 @@ public class GameManager : MonoBehaviour
     public int nivelMejoraDefensa = 0;
     public int nivelMejoraDanio = 0;
 
+    [Header("Datos de Transición entre Niveles")]
+    public bool usarDatosDeTransicion = false;
+    public int puntosDeMejoraPendientes = 0;
+    public float vidaPendiente = 0f;
+    public int vendasPendientes = 0;
+    public int botiquinesPendientes = 0;
+    public int estimulantesPendientes = 0;
+    public int municionCargadorPendiente = 0;
+    public int municionTotalPendiente = 0;
+    // (Opcional) Si quieres guardar la experiencia actual
+    public float expActualPendiente = 0f; 
+    public int nivelActualPendiente = 1;
+
     private bool runActiva = false;
 
     private void Awake()
@@ -67,7 +80,6 @@ public class GameManager : MonoBehaviour
     {
         personajeSeleccionado = idPersonaje;
 
-        // Reiniciamos todas las estadísticas de la run
         tiempoRun = 0f;
         enemigosDerrotadosTotal = 0;
         puntuacionTotal = 0;
@@ -76,8 +88,18 @@ public class GameManager : MonoBehaviour
         nivelMejoraVida = 0;
         nivelMejoraDefensa = 0;
         nivelMejoraDanio = 0;
+        
+        // LIMPIEZA CRÍTICA: Borramos los datos en tránsito para que no aparezcan en la nueva partida
+        usarDatosDeTransicion = false;
+        puntosDeMejoraPendientes = 0;
+        vidaPendiente = 0f;
+        vendasPendientes = 0;
+        botiquinesPendientes = 0;
+        estimulantesPendientes = 0;
+        municionCargadorPendiente = 0;
+        municionTotalPendiente = 0;
 
-        DatosCargados = null;   // por si quedaron datos de una partida cargada anterior
+        DatosCargados = null;   
 
         runActiva = true;
     }
@@ -126,6 +148,33 @@ public class GameManager : MonoBehaviour
             mejorPuntuacion = Mathf.Max(mejorPrevia, puntuacionTotal),
             nuevoRecord = nuevoRecord,
             causa = causa
+        });
+    }
+
+    public void CompletarRunVictoria()
+    {
+        runActiva = false;
+        
+        // Otorgamos bonos extra por ganar si los tienes, calculamos score final...
+        Debug.Log($"--- RUN COMPLETADA CON ÉXITO --- Piso {pisoActual} | Puntos {puntuacionTotal}");
+
+        string nombreJugador = PlayerPrefs.GetString("PlayerRankingName", "Desconocido");
+
+        // Enviamos al nuevo sistema de Ranking
+        RankingManager.RegistrarPartidaCompletada(nombreJugador, puntuacionTotal, tiempoRun, personajeSeleccionado);
+
+        // Borrar el guardado temporal para evitar clonar el final
+        BorrarGuardadoLocal();
+
+        // Puedes invocar un evento de "Pantalla de Victoria"
+        OnRunTerminada?.Invoke(new RunSummary
+        {
+            tiempo = tiempoRun,
+            piso = pisoActual,
+            enemigos = enemigosDerrotadosTotal,
+            puntuacion = puntuacionTotal,
+            nuevoRecord = true,
+            causa = DeathCause.Desconocida // O crear un enum de Victoria
         });
     }
 

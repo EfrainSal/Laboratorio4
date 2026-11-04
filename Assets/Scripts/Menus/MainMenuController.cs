@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(UIDocument))]
 public class MainMenuController : MonoBehaviour
 {
-    private const string SaveKey = "HasSave";                 // placeholder: reemplázalo por tu sistema de guardado
     private const string SelectedCharacterKey = "SelectedCharacter";
+    private const string PlayerRankingNameKey = "PlayerRankingName"; // Nueva clave para el ranking
 
     private const string HiddenClass = "hidden";
     private const string PanelFadeClass = "panel-fade";
@@ -25,16 +25,17 @@ public class MainMenuController : MonoBehaviour
     [SerializeField, Range(0.1f, 2f)] private float _videoSpeed = 0.5f;
 
     [Header("Audio")]
-    [SerializeField] private AudioMixer _mixer;               // MainMixer
-    [SerializeField] private AudioSource _sfxPreview;         // Output = grupo SFX
+    [SerializeField] private AudioMixer _mixer;               
+    [SerializeField] private AudioSource _sfxPreview;         
 
     [Header("Escenas")]
     [SerializeField] private string _gameSceneName = "SampleScene";
 
     private VisualElement _root, _menuContainer, _logo, _videoBackground, _leftShade;
-    private VisualElement _sidePanel, _pagePlay, _pageSettings;
-    private Button _playButton, _continueButton, _settingsButton, _quitButton;
-    private Button _playBackButton, _confirmButton, _settingsBackButton;
+    private VisualElement _sidePanel, _pagePlay, _pageSettings, _pageRanking;
+    private Button _playButton, _continueButton, _settingsButton, _rankingButton, _quitButton;
+    private Button _playBackButton, _confirmButton, _settingsBackButton, _rankingBackButton;
+    private TextField _playerNameInput;
     private VisualElement[] _cards;
     private EventCallback<ClickEvent>[] _cardCallbacks;
     private VolumeChannel _master, _music, _sfx;
@@ -43,8 +44,10 @@ public class MainMenuController : MonoBehaviour
     private Texture2D _leftShadeTexture, _buttonGradientTexture;
     private int _selectedCharacter = -1;
     private bool _panelOpen;
+    
+    // Almacena el botón que abrió el panel para devolverle el foco al usar el mando
+    private VisualElement _lastFocusedMenuButton; 
 
-    // ------------------------------------------------------------------
     void OnEnable()
     {
         _root = GetComponent<UIDocument>().rootVisualElement;
@@ -56,22 +59,34 @@ public class MainMenuController : MonoBehaviour
         _sidePanel       = _root.Q<VisualElement>("SidePanel");
         _pagePlay        = _root.Q<VisualElement>("PagePlay");
         _pageSettings    = _root.Q<VisualElement>("PageSettings");
+        _pageRanking     = _root.Q<VisualElement>("PageRanking");
 
         _continueButton     = _root.Q<Button>("ContinueButton");
         _playButton         = _root.Q<Button>("PlayButton");
         _settingsButton     = _root.Q<Button>("SettingsButton");
+        _rankingButton      = _root.Q<Button>("RankingButton");
         _quitButton         = _root.Q<Button>("QuitButton");
+        
         _playBackButton     = _root.Q<Button>("PlayBackButton");
         _confirmButton      = _root.Q<Button>("ConfirmButton");
         _settingsBackButton = _root.Q<Button>("BackButton");
+        _rankingBackButton  = _root.Q<Button>("RankingBackButton");
+        
+        _playerNameInput    = _root.Q<TextField>("PlayerNameInput");
 
         _continueButton.clicked     += OnContinueClicked;
         _playButton.clicked         += OpenPlayPage;
         _settingsButton.clicked     += OpenSettingsPage;
+        _rankingButton.clicked      += OpenRankingPage;
         _quitButton.clicked         += OnQuitClicked;
+        
         _playBackButton.clicked     += ClosePanel;
         _settingsBackButton.clicked += ClosePanel;
+        _rankingBackButton.clicked  += ClosePanel;
         _confirmButton.clicked      += OnConfirmCharacter;
+        
+        // Registrar cambio de texto para habilitar/deshabilitar botón confirmar
+        _playerNameInput.RegisterValueChangedCallback(evt => UpdateConfirmButtonState());
 
         _continueButton.SetEnabled(SaveSystem.HayGuardado());
         _confirmButton.SetEnabled(false);
@@ -86,39 +101,33 @@ public class MainMenuController : MonoBehaviour
             _cards[i].RegisterCallback(_cardCallbacks[i]);
         }
 
-        // Escape / botón "cancelar" del gamepad cierra el panel
         _root.RegisterCallback<NavigationCancelEvent>(OnNavigationCancel);
 
         // Audio
-        _master = new VolumeChannel(_mixer, "MasterVolume",
-            _root.Q<Slider>("MasterSlider"), _root.Q<Label>("MasterValueLabel"), 0.8f);
-        _music = new VolumeChannel(_mixer, "MusicVolume",
-            _root.Q<Slider>("MusicSlider"), _root.Q<Label>("MusicValueLabel"), 0.8f);
-        _sfx = new VolumeChannel(_mixer, "SFXVolume",
-            _root.Q<Slider>("SfxSlider"), _root.Q<Label>("SfxValueLabel"), 0.8f);
+        _master = new VolumeChannel(_mixer, "MasterVolume", _root.Q<Slider>("MasterSlider"), _root.Q<Label>("MasterValueLabel"), 0.8f);
+        _music = new VolumeChannel(_mixer, "MusicVolume", _root.Q<Slider>("MusicSlider"), _root.Q<Label>("MusicValueLabel"), 0.8f);
+        _sfx = new VolumeChannel(_mixer, "SFXVolume", _root.Q<Slider>("SfxSlider"), _root.Q<Label>("SfxValueLabel"), 0.8f);
         _sfx.Changed += OnSfxChanged;
 
-        // Fondo: video + degradado lateral
-        if (_videoTexture != null)
-            _videoBackground.style.backgroundImage = Background.FromRenderTexture(_videoTexture);
+        if (_videoTexture != null) _videoBackground.style.backgroundImage = Background.FromRenderTexture(_videoTexture);
 
         _leftShadeTexture = CreateGradientTexture(Color.black, 0.88f, 0f, true);
         _leftShade.style.backgroundImage = new StyleBackground(_leftShadeTexture);
 
-        // Degradado de los botones del menú (el color lo controla el USS con el tint)
         _buttonGradientTexture = CreateGradientTexture(Color.white, 1f, 0f, false);
         _root.Query<Button>(className: MenuButtonClass)
              .ForEach(b => b.style.backgroundImage = new StyleBackground(_buttonGradientTexture));
 
-        // Animación de entrada + foco inicial en "Nueva partida"
         _menuContainer.schedule.Execute(() =>
         {
             _menuContainer.RemoveFromClassList(MenuHiddenClass);
             _playButton.Focus();
         }).StartingIn(100);
 
-        // Parpadeo de luces del logo
         _flickerLoop = _logo.schedule.Execute(FlickerLogo).Every(4000);
+        
+        // Precargar último nombre usado
+        _playerNameInput.value = PlayerPrefs.GetString(PlayerRankingNameKey, "");
     }
 
     void Start()
@@ -129,7 +138,7 @@ public class MainMenuController : MonoBehaviour
 
         if (_videoPlayer != null && _videoTexture != null)
         {
-            _videoPlayer.Stop();                       // por si "Play On Awake" ya lo arrancó
+            _videoPlayer.Stop();                       
             _videoPlayer.playOnAwake = false;
             _videoPlayer.isLooping = true;
             _videoPlayer.renderMode = VideoRenderMode.RenderTexture;
@@ -143,7 +152,6 @@ public class MainMenuController : MonoBehaviour
 
     void Update()
     {
-        // Refuerza la velocidad por si el reproductor la restablece (p. ej. al reiniciar el loop)
         if (_videoPlayer != null && _videoPlayer.isPlaying &&
             !Mathf.Approximately(_videoPlayer.playbackSpeed, _videoSpeed))
         {
@@ -160,13 +168,14 @@ public class MainMenuController : MonoBehaviour
         _continueButton.clicked     -= OnContinueClicked;
         _playButton.clicked         -= OpenPlayPage;
         _settingsButton.clicked     -= OpenSettingsPage;
+        _rankingButton.clicked      -= OpenRankingPage;
         _quitButton.clicked         -= OnQuitClicked;
         _playBackButton.clicked     -= ClosePanel;
         _settingsBackButton.clicked -= ClosePanel;
+        _rankingBackButton.clicked  -= ClosePanel;
         _confirmButton.clicked      -= OnConfirmCharacter;
 
-        for (int i = 0; i < _cards.Length; i++)
-            _cards[i].UnregisterCallback(_cardCallbacks[i]);
+        for (int i = 0; i < _cards.Length; i++) _cards[i].UnregisterCallback(_cardCallbacks[i]);
 
         _root.UnregisterCallback<NavigationCancelEvent>(OnNavigationCancel);
 
@@ -185,14 +194,10 @@ public class MainMenuController : MonoBehaviour
     // ------------------------------------------------------------------
     private void OnVideoPrepared(VideoPlayer source)
     {
-        if (!source.canSetPlaybackSpeed)
-            Debug.LogWarning("Este video/plataforma no permite cambiar la velocidad. Reexporta el video ya a cámara lenta.");
-
         source.Play();
-        source.playbackSpeed = _videoSpeed;   // 0.5 = cámara lenta
+        source.playbackSpeed = _videoSpeed;   
     }
 
-    // Degradado horizontal generado por código (no necesitas imágenes)
     private static Texture2D CreateGradientTexture(Color color, float alphaStart, float alphaEnd, bool smooth)
     {
         const int width = 256;
@@ -224,25 +229,38 @@ public class MainMenuController : MonoBehaviour
     // ------------------------------------------------------------------
     private void OpenPlayPage()
     {
+        _lastFocusedMenuButton = _playButton;
         ClearCharacterSelection();
         ShowPage(_pagePlay, _playButton);
+        _cards[0].Focus(); // Foco para mando
     }
 
-    private void OpenSettingsPage() => ShowPage(_pageSettings, _settingsButton);
+    private void OpenSettingsPage()
+    {
+        _lastFocusedMenuButton = _settingsButton;
+        ShowPage(_pageSettings, _settingsButton);
+        _root.Q<Slider>("MasterSlider").Focus(); // Foco para mando
+    }
+
+    private void OpenRankingPage()
+    {
+        _lastFocusedMenuButton = _rankingButton;
+        ShowPage(_pageRanking, _rankingButton);
+        _rankingBackButton.Focus(); // Foco para mando
+    }
 
     private void ShowPage(VisualElement page, Button activeButton)
     {
         _pagePlay.AddToClassList(HiddenClass);
         _pageSettings.AddToClassList(HiddenClass);
+        _pageRanking.AddToClassList(HiddenClass);
         page.RemoveFromClassList(HiddenClass);
 
-        // La selección de personaje usa un panel más ancho que las opciones
         _sidePanel.EnableInClassList(PanelWideClass, page == _pagePlay);
-
         SetActiveButton(activeButton);
 
         _hidePanelItem?.Pause();
-        _sidePanel.RemoveFromClassList(HiddenClass);                       // display: flex
+        _sidePanel.RemoveFromClassList(HiddenClass);                       
         _sidePanel.schedule.Execute(() => _sidePanel.RemoveFromClassList(PanelFadeClass)).StartingIn(20);
         _panelOpen = true;
     }
@@ -253,9 +271,12 @@ public class MainMenuController : MonoBehaviour
         _panelOpen = false;
 
         SetActiveButton(null);
-        _sidePanel.AddToClassList(PanelFadeClass);                         // fade out
+        _sidePanel.AddToClassList(PanelFadeClass);                         
         _hidePanelItem = _sidePanel.schedule.Execute(() => _sidePanel.AddToClassList(HiddenClass)).StartingIn(320);
-        PlayerPrefs.Save();                                                // guarda volúmenes
+        PlayerPrefs.Save();                                                
+        
+        // DEVOLVER EL FOCO AL MENÚ PARA EL MANDO
+        _lastFocusedMenuButton?.Focus();
     }
 
     private void OnNavigationCancel(NavigationCancelEvent evt)
@@ -269,6 +290,7 @@ public class MainMenuController : MonoBehaviour
     {
         _playButton.EnableInClassList(ActiveClass, active == _playButton);
         _settingsButton.EnableInClassList(ActiveClass, active == _settingsButton);
+        _rankingButton.EnableInClassList(ActiveClass, active == _rankingButton);
     }
 
     // ------------------------------------------------------------------
@@ -279,16 +301,42 @@ public class MainMenuController : MonoBehaviour
         _selectedCharacter = index;
         for (int i = 0; i < _cards.Length; i++)
             _cards[i].EnableInClassList(SelectedCardClass, i == index);
-        _confirmButton.SetEnabled(index >= 0);
+        
+        UpdateConfirmButtonState();
     }
 
     private void ClearCharacterSelection() => SelectCharacter(-1);
+    
+    private void UpdateConfirmButtonState()
+    {
+        bool hasCharacter = _selectedCharacter >= 0;
+        string currentName = _playerNameInput.value?.Trim() ?? "";
+        bool hasValidName = currentName.Length >= 3 && currentName.Length <= 12;
+        
+        // Feedback visual en el input (rojo si es inválido o está vacío, verde si es válido)
+        if (hasValidName)
+        {
+            _playerNameInput.RemoveFromClassList("input-invalid");
+            _playerNameInput.AddToClassList("input-valid");
+        }
+        else
+        {
+            _playerNameInput.RemoveFromClassList("input-valid");
+            _playerNameInput.AddToClassList("input-invalid");
+        }
+
+        _confirmButton.SetEnabled(hasCharacter && hasValidName);
+    }
 
     private void OnConfirmCharacter()
     {
-        if (_selectedCharacter < 0) return;
+        if (_selectedCharacter < 0 || string.IsNullOrWhiteSpace(_playerNameInput.value)) return;
 
-        // Avisamos al GameManager que inicie una nueva Run con este personaje
+        // GUARDAR NOMBRE PARA EL RANKING
+        PlayerPrefs.SetString(PlayerRankingNameKey, _playerNameInput.value.Trim());
+        PlayerPrefs.SetInt(SelectedCharacterKey, _selectedCharacter);
+        PlayerPrefs.Save();
+
         if (GameManager.Instance != null)
         {
             GameManager.Instance.IniciarNuevaRun(_selectedCharacter);
@@ -298,8 +346,6 @@ public class MainMenuController : MonoBehaviour
             Debug.LogWarning("No se encontró el GameManager en la escena del menú.");
         }
 
-        // TODO (GameManager): aquí le pasaremos el personaje elegido y crearemos la run.
-        PlayerPrefs.SetInt(SelectedCharacterKey, _selectedCharacter);
         SaveSystem.Borrar();
         SceneManager.LoadScene(_gameSceneName);
     }
@@ -307,11 +353,9 @@ public class MainMenuController : MonoBehaviour
     // ------------------------------------------------------------------
     // Audio: preview de SFX
     // ------------------------------------------------------------------
-    // Suena 200 ms después del último cambio del slider (funciona con mouse, teclado y gamepad)
     private void OnSfxChanged(float value)
     {
         if (_sfxPreview == null) return;
-
         _sfxPreviewItem?.Pause();
         _sfxPreviewItem = _root.schedule.Execute(PlaySfxPreview).StartingIn(200);
     }
@@ -325,10 +369,8 @@ public class MainMenuController : MonoBehaviour
     // ------------------------------------------------------------------
     // Resto de botones
     // ------------------------------------------------------------------
-// 4. Reemplaza OnContinueClicked en MainMenuController.cs
     private void OnContinueClicked()
     {
-        // Solo carga la escena si realmente existe y se pudo cargar la run
         if (GameManager.Instance != null && GameManager.Instance.CargarRunGuardada())
         {
             SceneManager.LoadScene(_gameSceneName);
@@ -336,7 +378,7 @@ public class MainMenuController : MonoBehaviour
         else
         {
             Debug.LogWarning("No se encontró partida guardada válida.");
-            _continueButton.SetEnabled(false); // Deshabilita el botón por seguridad
+            _continueButton.SetEnabled(false); 
         }
     }
 
@@ -349,7 +391,7 @@ public class MainMenuController : MonoBehaviour
     }
 
     // ------------------------------------------------------------------
-    // Une un Slider + Label con un parámetro expuesto del AudioMixer
+    // VolumeChannel
     // ------------------------------------------------------------------
     private class VolumeChannel
     {
@@ -391,12 +433,8 @@ public class MainMenuController : MonoBehaviour
             UpdateLabel(linear);
         }
 
-        private void UpdateLabel(float linear) =>
-            _label.text = Mathf.RoundToInt(linear * 100f) + "%";
-
+        private void UpdateLabel(float linear) => _label.text = Mathf.RoundToInt(linear * 100f) + "%";
         public void Dispose() => Slider.UnregisterValueChangedCallback(_callback);
-
-        private static float LinearToDecibels(float linear) =>
-            linear <= 0.0001f ? -80f : Mathf.Log10(linear) * 20f;
+        private static float LinearToDecibels(float linear) => linear <= 0.0001f ? -80f : Mathf.Log10(linear) * 20f;
     }
 }

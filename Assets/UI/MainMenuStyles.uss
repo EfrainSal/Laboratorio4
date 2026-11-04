@@ -7,14 +7,11 @@
    Rojo alerta:  #FF2A2A
    Verde tóxico: #6FAE45
    Texto:        #C9C6C0
-   (Diseñado para referencia 1920x1080)
 ----------------------------- */
 
 .root {
     flex-grow: 1;
     background-color: rgb(7, 7, 7);
-    /* Fuente sugerida: Rajdhani o Saira Condensed (Bold)
-    -unity-font-definition: url("project://database/Assets/UI/Fonts/Rajdhani-Bold SDF.asset"); */
 }
 
 .hidden { display: none; }
@@ -24,16 +21,9 @@
     top: 0; left: 0; right: 0; bottom: 0;
 }
 
-/* ---------- Fondo ---------- */
-#VideoBackground {
-    -unity-background-scale-mode: scale-and-crop;
-}
+#VideoBackground { -unity-background-scale-mode: scale-and-crop; }
+.video-shade { background-color: rgba(0, 0, 0, 0.30); }
 
-.video-shade {
-    background-color: rgba(0, 0, 0, 0.30);
-}
-
-/* El degradado lo genera el script en tiempo de ejecución */
 .left-shade {
     position: absolute;
     top: 0; left: 0; bottom: 0;
@@ -41,11 +31,11 @@
     -unity-background-scale-mode: stretch-to-fill;
 }
 
-/* ---------- Logo ---------- */
+/* ---------- Logo Ajustado ---------- */
 .logo {
     flex-shrink: 1;
-    min-height: 120px;
-    margin-bottom: 36px;
+    min-height: 180px; 
+    margin-bottom: 50px;
     -unity-background-scale-mode: scale-to-fit;
     opacity: 1;
 }
@@ -57,21 +47,20 @@
 }
 
 .logo-wordmark {
-    width: 420px;
-    height: 150px;
+    width: 500px;
+    height: 180px;
     background-image: url("project://database/Assets/UI/LogoSinFondo.png");
 }
 
-/* Parpadeo de luces (lo activa el script) */
 .logo-dim { opacity: 0.7; }
 
-/* ---------- Columna izquierda y menú ---------- */
+/* ---------- Columna izquierda Ajustada ---------- */
 .left-column {
     position: absolute;
-    left: 7%;
+    left: 12%; 
     top: 0;
     bottom: 0;
-    width: 420px;
+    width: 550px; 
     justify-content: center;
 }
 
@@ -89,36 +78,30 @@
     translate: -40px 0;
 }
 
-/* ---------- Botones del menú ---------- */
-/* El script les asigna una textura de degradado; el tint la "enciende" al pasar el mouse */
+/* ---------- Botones del menú Ajustados ---------- */
 .btn-menu {
-    height: 56px;
-    margin: 0 0 10px 0;
-    padding: 0 0 0 26px;
+    height: 65px;
+    margin: 0 0 12px 0;
+    padding: 0 0 0 35px;
     -unity-text-align: middle-left;
-    font-size: 26px;
-    letter-spacing: 5px;
+    font-size: 32px;
+    letter-spacing: 6px;
     -unity-font-style: bold;
     color: rgb(214, 211, 205);
-
     background-color: rgba(10, 12, 13, 0.55);
     -unity-background-image-tint-color: rgba(209, 18, 27, 0);
     -unity-background-scale-mode: stretch-to-fill;
-
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.10);
     border-left-width: 4px;
     border-left-color: rgb(90, 90, 88);
     border-radius: 0;
-
     transition-property: -unity-background-image-tint-color, color, border-color, border-left-color, translate;
     transition-duration: 0.18s;
     transition-timing-function: ease-out;
 }
 
-.btn-menu:hover,
-.btn-menu:focus,
-.btn-menu.btn-active {
+.btn-menu:hover, .btn-menu:focus, .btn-menu.btn-active {
     -unity-background-image-tint-color: rgba(209, 18, 27, 0.75);
     border-color: rgba(209, 18, 27, 0.55);
     border-left-color: rgb(255, 42, 42);
@@ -126,12 +109,9 @@
     translate: 10px 0;
 }
 
-.btn-menu:active {
-    -unity-background-image-tint-color: rgba(255, 42, 42, 0.95);
-}
+.btn-menu:active { -unity-background-image-tint-color: rgba(255, 42, 42, 0.95); }
 
-.btn-menu:disabled,
-.btn-menu:disabled:hover {
+.btn-menu:disabled, .btn-menu:disabled:hover {
     color: rgba(214, 211, 205, 0.28);
     -unity-background-image-tint-color: rgba(209, 18, 27, 0);
     border-color: rgba(255, 255, 255, 0.05);
@@ -139,7 +119,7 @@
     translate: 0 0;
 }
 
-/* ---------- Panel de cristal (compacto, centrado a la derecha) ---------- */
+/* ---------- Panel de cristal ---------- */
 .side-panel {
     position: absolute;
     right: 7%;
@@ -212,35 +192,29 @@
     transition-duration: 0.12s;
 }
 
-.btn-action:hover {
+.btn-action:hover, .btn-action:focus {
     background-color: rgb(209, 18, 27);
     border-color: rgb(255, 42, 42);
     color: rgb(255, 255, 255);
 }
 
-.btn-action:active {
-    background-color: rgb(120, 8, 14);
-}
+.btn-action:active { background-color: rgb(120, 8, 14); }
 
-.btn-action-primary {
-    border-color: rgb(111, 174, 69);
-}
-
-.btn-action-primary:hover {
+.btn-action-primary { border-color: rgb(111, 174, 69); }
+.btn-action-primary:hover, .btn-action-primary:focus {
     background-color: rgb(111, 174, 69);
     border-color: rgb(150, 210, 100);
     color: rgb(7, 7, 7);
 }
 
-.btn-action:disabled,
-.btn-action:disabled:hover {
+.btn-action:disabled, .btn-action:disabled:hover {
     opacity: 0.35;
     color: rgb(201, 198, 192);
     background-color: rgba(7, 7, 7, 0.8);
     border-color: rgb(90, 90, 88);
 }
 
-/* ---------- Selección de personaje ---------- */
+/* ---------- Selección de personaje y Nombre ---------- */
 .cards {
     flex-direction: row;
     margin-left: -8px;
@@ -260,7 +234,7 @@
     transition-duration: 0.15s;
 }
 
-.char-card:hover {
+.char-card:hover, .char-card:focus {
     border-color: rgb(184, 181, 176);
     translate: 0 -3px;
 }
@@ -281,10 +255,6 @@
     justify-content: center;
     -unity-background-scale-mode: scale-to-fit;
 }
-
-/* Cuando tengas los retratos, asígnalos aquí y borra el Label "?" del UXML
-.portrait-0 { background-image: url("project://database/Assets/UI/Portraits/Sujeto_A.png"); }
-.portrait-1 { background-image: url("project://database/Assets/UI/Portraits/Sujeto_B.png"); } */
 
 .portrait-placeholder {
     color: rgb(42, 42, 42);
@@ -308,11 +278,78 @@
     white-space: normal;
 }
 
-/* ---------- Opciones ---------- */
-.settings-content {
-    margin-bottom: 4px;
+.input-hint {
+    color: rgb(184, 181, 176);
+    font-size: 14px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    margin-left: 185px; /* Alineado con la caja de texto */
+    -unity-font-style: italic;
 }
 
+/* Estado Inválido (Rojo) */
+.input-invalid > .unity-text-field__input {
+    border-color: rgb(209, 18, 27);
+}
+.input-invalid > .unity-text-field__input:focus {
+    background-color: rgba(209, 18, 27, 0.15);
+    border-width: 2px;
+}
+
+/* Estado Válido (Verde Tóxico) */
+.input-valid > .unity-text-field__input {
+    border-color: rgb(111, 174, 69);
+}
+.input-valid > .unity-text-field__input:focus {
+    background-color: rgba(111, 174, 69, 0.15);
+    border-width: 2px;
+}
+
+/* --- Input del Nombre del Jugador --- */
+.player-name-input {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: rgb(240, 238, 234);
+    font-size: 18px;
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+}
+
+.player-name-input > .unity-label {
+    color: rgb(111, 174, 69);
+    min-width: 180px;
+}
+
+.player-name-input > .unity-text-field__input {
+    background-color: rgba(7, 7, 7, 0.8);
+    border-color: rgb(90, 90, 88);
+    border-width: 1px;
+    padding: 8px 12px;
+    border-radius: 0;
+}
+
+.player-name-input > .unity-text-field__input:focus {
+    border-color: rgb(209, 18, 27);
+    background-color: rgba(209, 18, 27, 0.1);
+}
+
+/* --- Feedback de interacción para el Input de Nombre --- */
+
+/* Cuando pasas el ratón por encima (Hover) */
+.player-name-input > .unity-text-field__input:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgb(184, 181, 176);
+}
+
+/* Cuando el elemento tiene el foco (Mando o Ratón seleccionado) */
+.player-name-input > .unity-text-field__input:focus {
+    background-color: rgba(209, 18, 27, 0.15); /* Fondo rojo sutil */
+    border-color: rgb(209, 18, 27);          /* Borde rojo brillante */
+    border-width: 2px;
+}
+
+/* ---------- Opciones ---------- */
+.settings-content { margin-bottom: 4px; }
 .slider-block { margin-bottom: 20px; }
 
 .row {
@@ -334,6 +371,7 @@
 }
 
 .volume-slider { margin: 0; }
+.volume-slider:focus .unity-base-slider__dragger { border-color: rgb(111, 174, 69); }
 
 .volume-slider .unity-base-slider__tracker {
     height: 8px;
@@ -358,51 +396,22 @@
 
 /* ---------- Marco HUD ---------- */
 .hud-corner {
-    position: absolute;
-    width: 220px;
-    height: 130px;
-    border-color: rgb(90, 90, 88);
+    position: absolute; width: 220px; height: 130px; border-color: rgb(90, 90, 88);
 }
-
 .hud-corner-inner {
-    position: absolute;
-    top: 10px; left: 10px; right: 10px; bottom: 10px;
-    border-color: rgb(209, 18, 27);
+    position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; border-color: rgb(209, 18, 27);
 }
 
 .corner-tl { top: 24px; left: 24px; border-top-width: 5px; border-left-width: 5px; }
 .corner-tl .hud-corner-inner { border-top-width: 2px; border-left-width: 2px; }
-
 .corner-tr { top: 24px; right: 24px; border-top-width: 5px; border-right-width: 5px; }
 .corner-tr .hud-corner-inner { border-top-width: 2px; border-right-width: 2px; }
-
 .corner-bl { bottom: 24px; left: 24px; border-bottom-width: 5px; border-left-width: 5px; }
 .corner-bl .hud-corner-inner { border-bottom-width: 2px; border-left-width: 2px; }
-
 .corner-br { bottom: 24px; right: 24px; border-bottom-width: 5px; border-right-width: 5px; }
 .corner-br .hud-corner-inner { border-bottom-width: 2px; border-right-width: 2px; }
 
-.footer-left {
-    position: absolute;
-    left: 70px;
-    bottom: 38px;
-    flex-direction: row;
-}
-
-.footer-right {
-    position: absolute;
-    right: 70px;
-    bottom: 38px;
-}
-
-.footer-text {
-    color: rgba(201, 198, 192, 0.45);
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-right: 36px;
-}
-
-.footer-ok {
-    color: rgb(111, 174, 69);
-    margin-right: 0;
-}
+.footer-left { position: absolute; left: 70px; bottom: 38px; flex-direction: row; }
+.footer-right { position: absolute; right: 70px; bottom: 38px; }
+.footer-text { color: rgba(201, 198, 192, 0.45); font-size: 16px; letter-spacing: 2px; margin-right: 36px; }
+.footer-ok { color: rgb(111, 174, 69); margin-right: 0; }
