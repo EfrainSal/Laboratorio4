@@ -1,0 +1,87 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UpgradePanelStyles.uss"/>
+
+    <ui:VisualElement name="UpgradeOverlay" class="upg-overlay upg-fade hidden">
+
+        <ui:VisualElement name="Tablet" class="tablet">
+
+            <!-- Marco superior: bocina y cámara -->
+            <ui:VisualElement class="bezel-top">
+                <ui:VisualElement class="bezel-speaker"/>
+                <ui:VisualElement class="bezel-camera"/>
+            </ui:VisualElement>
+
+            <!-- Pantalla -->
+            <ui:VisualElement name="TabletScreen" class="tablet-screen">
+                <ui:VisualElement name="ScanBand" class="scan-band" picking-mode="Ignore"/>
+
+                <!-- Barra de estado -->
+                <ui:VisualElement class="status-bar">
+                    <ui:Label text="LAB-04 // TERMINAL DE MEJORAS" class="status-left"/>
+                    <ui:Label name="StatusRight" text="PISO 1 · 00:00" class="status-right"/>
+                </ui:VisualElement>
+
+                <!-- Cabecera: sujeto + puntos -->
+                <ui:VisualElement class="header-row">
+                    <ui:VisualElement class="subject-box">
+                        <ui:Label text="SUJETO" class="box-caption"/>
+                        <ui:Label name="SubjectName" text="JASON" class="subject-name"/>
+                        <ui:Label name="PlayerLevel" text="NIVEL 1" class="subject-level"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="points-box">
+                        <ui:Label text="PUNTOS DE MEJORA" class="box-caption"/>
+                        <ui:Label name="PointsValue" text="0" class="points-value"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="divider"/>
+
+                <!-- Las 3 mejoras -->
+                <ui:VisualElement class="cards-row">
+
+                    <ui:VisualElement name="CardHealth" class="skill-card skill-health">
+                        <ui:VisualElement name="IconHealth" class="skill-icon"/>
+                        <ui:Label text="VIDA" class="skill-name"/>
+                        <ui:Label name="LevelHealth" text="NIV. 0" class="skill-level"/>
+                        <ui:Label text="VIDA MÁXIMA" class="skill-stat-label"/>
+                        <ui:Label name="StatHealth" text="100 » 120" class="skill-stat-value"/>
+                        <ui:Button name="UpgradeHealthButton" text="MEJORAR" class="upg-btn"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="CardDefense" class="skill-card skill-defense">
+                        <ui:VisualElement name="IconDefense" class="skill-icon"/>
+                        <ui:Label text="DEFENSA" class="skill-name"/>
+                        <ui:Label name="LevelDefense" text="NIV. 0" class="skill-level"/>
+                        <ui:Label text="REDUCCIÓN DE DAÑO" class="skill-stat-label"/>
+                        <ui:Label name="StatDefense" text="0% » 2%" class="skill-stat-value"/>
+                        <ui:Button name="UpgradeDefenseButton" text="MEJORAR" class="upg-btn"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="CardDamage" class="skill-card skill-damage">
+                        <ui:VisualElement name="IconDamage" class="skill-icon"/>
+                        <ui:Label text="DAÑO CUERPO A CUERPO" class="skill-name"/>
+                        <ui:Label name="LevelDamage" text="NIV. 0" class="skill-level"/>
+                        <ui:Label text="DAÑO POR GOLPE" class="skill-stat-label"/>
+                        <ui:Label name="StatDamage" text="10 » 15" class="skill-stat-value"/>
+                        <ui:Button name="UpgradeDamageButton" text="MEJORAR" class="upg-btn"/>
+                    </ui:VisualElement>
+
+                </ui:VisualElement>
+
+                <!-- Pie -->
+                <ui:VisualElement class="footer-row">
+                    <ui:Label text="// ATENCIÓN: LAS AMENAZAS SIGUEN ACTIVAS" class="warn-text"/>
+                    <ui:Button name="CloseButton" text="CERRAR" class="close-btn"/>
+                </ui:VisualElement>
+                <ui:Label text="TAB / SELECT · CERRAR" class="hint-text"/>
+            </ui:VisualElement>
+
+            <!-- Marco inferior -->
+            <ui:VisualElement class="bezel-bottom">
+                <ui:VisualElement class="bezel-home"/>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

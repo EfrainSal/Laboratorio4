@@ -1,0 +1,297 @@
+/* ---------- Paleta (la misma del menú principal) ----------
+   Negro:        #070707    Rojo sangre:  #D1121B
+   Gris metal:   #B8B5B0    Rojo alerta:  #FF2A2A
+   Gris oscuro:  #2A2A2A    Verde tóxico: #6FAE45
+-------------------------------------------------------------- */
+
+.hidden { display: none; }
+
+/* ---------- Overlay (oscurece el juego y bloquea clics) ---------- */
+.pause-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.68);
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.16s;
+}
+
+.pause-fade { opacity: 0; }
+
+/* ---------- Panel ---------- */
+.pause-panel {
+    flex-direction: row;
+    width: 940px;
+    max-width: 94%;
+    max-height: 92%;
+    background-color: rgba(12, 14, 16, 0.95);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.14);
+    border-top-width: 3px;
+    border-top-color: rgb(209, 18, 27);
+    border-radius: 4px;
+}
+
+/* ---------- Columna izquierda ---------- */
+.pause-left {
+    width: 360px;
+    flex-shrink: 0;
+    padding: 26px 30px 22px 30px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-right-width: 1px;
+    border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+.pause-logo {
+    width: 84px;
+    height: 84px;
+    align-self: center;
+    margin-bottom: 6px;
+    background-image: url("project://database/Assets/UI/Logo2.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.pause-title {
+    font-size: 44px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(255, 42, 42);
+    margin-bottom: 20px;
+}
+
+/* ---------- Botones ---------- */
+.pause-btn {
+    height: 54px;
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-size: 19px;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(214, 211, 205);
+    background-color: rgba(42, 44, 46, 0.75);
+    border-width: 1px;
+    border-color: rgb(110, 110, 108);
+    border-radius: 0;
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.12s;
+}
+
+.pause-btn:hover,
+.pause-btn:focus {
+    background-color: rgba(209, 18, 27, 0.85);
+    border-color: rgb(255, 42, 42);
+    color: rgb(255, 255, 255);
+}
+
+.pause-btn:active {
+    background-color: rgb(120, 8, 14);
+}
+
+.pause-btn-danger {
+    color: rgb(255, 74, 61);
+    border-color: rgb(209, 18, 27);
+    background-color: rgba(60, 6, 8, 0.55);
+}
+
+.pause-btn-spaced { margin-top: 8px; }
+
+/* Botón con texto pequeño debajo (Guardar y salir) */
+.btn-wrap { margin-bottom: 12px; }
+
+.btn-wrap .pause-btn { margin-bottom: 0; }
+
+.pause-btn-sub {
+    height: 62px;
+    padding-bottom: 14px;
+}
+
+.pause-btn-note {
+    position: absolute;
+    left: 0; right: 0; bottom: 8px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    -unity-text-align: middle-center;
+    color: rgb(255, 74, 61);
+}
+
+/* ---------- Vistas de la izquierda ---------- */
+.pause-section {
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: rgb(111, 174, 69);
+    margin-bottom: 14px;
+}
+
+.pause-section-danger {
+    font-size: 18px;
+    color: rgb(255, 74, 61);
+    white-space: normal;
+}
+
+.pause-text {
+    font-size: 14px;
+    color: rgb(201, 198, 192);
+    white-space: normal;
+    margin-bottom: 18px;
+}
+
+/* ---------- Opciones de audio ---------- */
+.opt-block { margin-bottom: 16px; }
+
+.opt-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.opt-label {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: rgb(201, 198, 192);
+}
+
+.opt-value {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: rgb(111, 174, 69);
+}
+
+.pause-slider { margin: 0; }
+
+.pause-slider .unity-base-slider__tracker {
+    height: 8px;
+    background-color: rgb(42, 42, 42);
+    border-width: 2px;
+    border-color: rgb(7, 7, 7);
+    border-radius: 0;
+}
+
+.pause-slider .unity-base-slider__dragger {
+    width: 16px;
+    height: 20px;
+    background-color: rgb(209, 18, 27);
+    border-width: 2px;
+    border-color: rgb(255, 42, 42);
+    border-radius: 0;
+}
+
+.pause-slider .unity-base-slider__dragger:hover {
+    background-color: rgb(255, 42, 42);
+}
+
+/* ---------- Columna derecha ---------- */
+.pause-right {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 30px 40px 22px 40px;
+}
+
+.pause-heading {
+    font-size: 20px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+    margin-bottom: 14px;
+}
+
+.pause-heading-spaced { margin-top: 26px; }
+
+.stat-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+.stat-label {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(150, 150, 148);
+}
+
+.stat-value {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+}
+
+/* Barra de pisos */
+.floors {
+    flex-direction: row;
+    margin-top: 8px;
+    margin-right: -6px;
+}
+
+.floor-pip {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 8px;
+    margin-right: 6px;
+    background-color: rgb(42, 42, 42);
+}
+
+.pip-done { background-color: rgb(184, 181, 176); }
+
+.pip-boss {
+    border-width: 1px;
+    border-color: rgb(209, 18, 27);
+}
+
+.pip-boss.pip-done { background-color: rgb(209, 18, 27); }
+
+/* Tarjeta de personaje */
+.char-box {
+    flex-direction: row;
+    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.10);
+    border-left-width: 4px;
+    border-left-color: rgb(209, 18, 27);
+}
+
+.char-portrait {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    margin-right: 18px;
+    background-color: rgb(14, 15, 16);
+    border-width: 1px;
+    border-color: rgb(42, 42, 42);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.char-info {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    justify-content: center;
+}
+
+.char-name {
+    font-size: 28px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+}
+
+.char-desc {
+    font-size: 15px;
+    color: rgb(111, 174, 69);
+    white-space: normal;
+    margin-top: 6px;
+}
+
+.pause-hint {
+    margin-top: 22px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgba(201, 198, 192, 0.4);
+    -unity-text-align: middle-right;
+}
