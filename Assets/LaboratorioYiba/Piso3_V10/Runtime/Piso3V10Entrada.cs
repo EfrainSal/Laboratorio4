@@ -57,6 +57,33 @@ namespace LaboratorioYiba.Piso3V10
 #endif
         }
 
+        /// <summary>Habilidad: Q, K o clic derecho.</summary>
+        public static bool PulsoHabilidad()
+        {
+#if ENABLE_INPUT_SYSTEM
+            bool teclado = Keyboard.current != null &&
+                (Keyboard.current.qKey.wasPressedThisFrame || Keyboard.current.kKey.wasPressedThisFrame);
+            bool raton = Mouse.current != null && Mouse.current.rightButton.wasPressedThisFrame;
+            return teclado || raton;
+#elif ENABLE_LEGACY_INPUT_MANAGER
+            return Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.K) || Input.GetMouseButtonDown(1);
+#else
+            return false;
+#endif
+        }
+
+        /// <summary>Solo para probar la animación de muerte: M.</summary>
+        public static bool PulsoPruebaMuerte()
+        {
+#if ENABLE_INPUT_SYSTEM
+            return Keyboard.current != null && Keyboard.current.mKey.wasPressedThisFrame;
+#elif ENABLE_LEGACY_INPUT_MANAGER
+            return Input.GetKeyDown(KeyCode.M);
+#else
+            return false;
+#endif
+        }
+
         public static bool PulsoReinicio()
         {
 #if ENABLE_INPUT_SYSTEM

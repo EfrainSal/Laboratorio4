@@ -4,8 +4,8 @@ using UnityEngine;
 namespace LaboratorioYiba.Piso3V10
 {
     /// <summary>
-    /// QA: tecla C muestra/oculta los colliders reales de la escena (rojo = muros,
-    /// verde = objetos, amarillo = bloqueo de puertas, cian = jugador).
+    /// QA: tecla C muestra/oculta los colliders reales de la escena (rojo = muros sólidos,
+    /// verde = objetos, amarillo = bloqueo de puertas, magenta = Zorbos/personajes, cian = jugador).
     /// Tecla R devuelve al jugador a su posición inicial.
     /// </summary>
     public class Piso3V10Depuracion : MonoBehaviour
@@ -77,11 +77,45 @@ namespace LaboratorioYiba.Piso3V10
                     lr.SetPosition(i, e.transform.TransformPoint(p[i] + e.offset));
             }
 
+            foreach (PolygonCollider2D pc in FindObjectsByType<PolygonCollider2D>(FindObjectsSortMode.None))
+            {
+                for (int i = 0; i < pc.pathCount; i++)
+                {
+                    Vector2[] p = pc.GetPath(i);
+                    LineRenderer lr = NuevaLinea(new Color(1f, 0.15f, 0.15f), "MuroSolido");
+                    lr.loop = true;
+                    lr.positionCount = p.Length;
+                    for (int k = 0; k < p.Length; k++) lr.SetPosition(k, pc.transform.TransformPoint(p[k] + pc.offset));
+                }
+            }
+
+            foreach (CompositeCollider2D cc in FindObjectsByType<CompositeCollider2D>(FindObjectsSortMode.None))
+            {
+                for (int i = 0; i < cc.pathCount; i++)
+                {
+                    Vector2[] p = new Vector2[cc.GetPathPointCount(i)];
+                    cc.GetPath(i, p);
+                    LineRenderer lr = NuevaLinea(new Color(1f, 0.15f, 0.15f), "MuroSolido");
+                    lr.loop = true;
+                    lr.positionCount = p.Length;
+                    for (int k = 0; k < p.Length; k++) lr.SetPosition(k, cc.transform.TransformPoint(p[k]));
+                }
+            }
+
+            foreach (CapsuleCollider2D c in FindObjectsByType<CapsuleCollider2D>(FindObjectsSortMode.None))
+            {
+                if (jugador != null && c.gameObject == jugador.gameObject) continue;
+                LineRenderer lr = NuevaLinea(new Color(1f, 0.3f, 1f), "Personaje");
+                DibujarCaja(lr, c.transform, c.offset, c.size);
+            }
+
             foreach (BoxCollider2D b in FindObjectsByType<BoxCollider2D>(FindObjectsSortMode.None))
             {
                 if (!b.enabled) continue;
                 bool esPuerta = b.GetComponentInParent<Piso3V10Puerta>() != null;
-                LineRenderer lr = NuevaLinea(esPuerta ? new Color(1f, 0.85f, 0f) : new Color(0.2f, 1f, 0.45f), "Caja");
+                bool esMuro = b.GetComponentInParent<Piso3V10Colisiones>() != null;
+                LineRenderer lr = NuevaLinea(esMuro ? new Color(1f, 0.15f, 0.15f) : esPuerta ? new Color(1f, 0.85f, 0f) : new Color(0.2f, 1f, 0.45f),
+                                             esMuro ? "MuroSolido" : "Caja");
                 DibujarCaja(lr, b.transform, b.offset, b.size);
             }
         }

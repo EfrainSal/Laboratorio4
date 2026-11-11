@@ -5,8 +5,8 @@ namespace LaboratorioYiba.Piso3V10
     /// <summary>
     /// Orden de dibujo por la posición Y del pivote (los sprites usan pivote abajo-centro, en los "pies").
     /// Más abajo en pantalla = se dibuja delante. Solo afecta al dibujo; las colisiones no cambian.
-    /// Rango usado en la escena: Fondo -3000, decals -2000, sombras -1500,
-    /// objetos/jugador 0..1872, MurosFrente (cornisa sur) 20000.
+    /// V14: Fondo -32000, decals -31000, sombras -30000; objetos, personajes y tramos de cornisa
+    /// = -Y*100 (funciona aunque el fondo esté movido o escalado).
     /// </summary>
     [ExecuteAlways]
     [RequireComponent(typeof(SpriteRenderer))]
@@ -45,7 +45,7 @@ namespace LaboratorioYiba.Piso3V10
         {
             if (sr == null) return;
             int orden = Mathf.RoundToInt(-transform.position.y * 100f) + desfase;
-            sr.sortingOrder = Mathf.Clamp(orden, -1000, 15000);
+            sr.sortingOrder = Mathf.Clamp(orden, -29000, 29000);
         }
     }
 }
