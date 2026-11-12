@@ -7,33 +7,57 @@ public class RangedEnemyAI : MonoBehaviour
     [Header("Movement")]
     public float speed = 2f;
     public float detectionRadius = 8f;
-    public float stoppingDistance = 4f; // Distancia ideal para disparar
-    public float retreatDistance = 2.5f; // Huye si el jugador se acerca a esta distancia
+    public float stoppingDistance = 4f; 
+    public float retreatDistance = 2.5f; 
+    
+    [Header("Camino y Tambaleo")]
+    [Tooltip("Asigna SOLO la capa de los muros.")]
+    public LayerMask capaMuros;
+    public float wobbleSpeed = 5f; 
+    public float wobbleAmount = 0.4f;
+
+    [Header("Patrulla (Idle)")]
+    public float patrolSpeed = 1f;
+    public float patrolRadius = 4f;
+    public float patrolWaitTime = 2f;
 
     [Header("Combat")]
-    public GameObject bulletPrefab; // Asigna tu prefab 'Bullet' aquí
-    public Transform firePoint; // Crea un GameObject vacío hijo del enemigo y asígnalo aquí
+    public GameObject bulletPrefab; 
+    public Transform firePoint; 
     public float bulletForce = 10f;
-    public float chargeTime = 1.5f; // Tiempo para cargar el disparo
+    public float chargeTime = 1.5f; 
 
-    [Header("Audio de Alerta")]
-    public AudioClip sfxAlerta; // Asigna: Monstruo_Rugido_Alerta.mp3
+    [Header("Audio")]
+    public AudioClip sfxAlerta; 
     private AudioSource audioSource;
     private bool jugadorDetectado = false;
     
     [Header("UI Indicador")]
-    public Image chargeIndicatorFill; // Imagen de UI en el Canvas del enemigo
+    public Image chargeIndicatorFill; 
 
     [HideInInspector] public bool isKnockedBack = false;
     private bool isCharging = false;
 
     private Transform player;
     private Rigidbody2D rb;
+    private float zPosition;
+    
+    private Vector2 startPosition;
+    private Vector2 patrolTarget;
+    private float patrolTimer;
+    
+    private int currentPathIndex = -1;
+    private float randomWobbleOffset;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
+        zPosition = transform.position.z;
+        startPosition = transform.position;
+        randomWobbleOffset = Random.Range(0f, 100f);
+        GetNewPatrolTarget();
+
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) player = playerObj.transform;
         
@@ -42,9 +66,11 @@ public class RangedEnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
+
         if (player == null || isKnockedBack || isCharging) 
         {
-            if (isCharging) rb.linearVelocity = Vector2.zero; // No moverse mientras dispara
+            if (isCharging) rb.linearVelocity = Vector2.zero; 
             return; 
         }
 
@@ -64,28 +90,126 @@ public class RangedEnemyAI : MonoBehaviour
 
             if (distanceToPlayer > stoppingDistance)
             {
-                // Acercarse
-                Vector2 direction = (player.position - transform.position).normalized;
-                rb.linearVelocity = direction * speed;
+                // Acercarse usando el rastro
+                Vector2 targetPos = ObtenerObjetivoCamino();
+                MoverConTambaleo(targetPos, speed);
             }
             else if (distanceToPlayer < retreatDistance)
             {
-                // Alejarse (Jugador muy cerca)
-                Vector2 direction = (transform.position - player.position).normalized;
-                rb.linearVelocity = direction * speed;
+                // Alejarse (huir)
+                Vector2 dirAlejarse = (transform.position - player.position).normalized;
+                Vector2 retreatTarget = (Vector2)transform.position + dirAlejarse;
+                MoverConTambaleo(retreatTarget, speed);
             }
             else
             {
-                jugadorDetectado = false;
-                // En posición, iniciar ataque
-                rb.linearVelocity = Vector2.zero;
-                StartCoroutine(ChargeAndShoot());
+                // Distancia ideal. Verificar si te puede ver para disparar.
+                if (TieneLineaDeVision(player.position))
+                {
+                    rb.linearVelocity = Vector2.zero;
+                    StartCoroutine(ChargeAndShoot());
+                }
+                else
+                {
+                    // Si estás escondido detrás de una caja, usará el rastro para buscarte
+                    Vector2 targetPos = ObtenerObjetivoCamino();
+                    MoverConTambaleo(targetPos, speed);
+                }
             }
         }
         else
         {
-            rb.linearVelocity = Vector2.zero;
+            jugadorDetectado = false;
+            currentPathIndex = -1;
+            Patrol();
         }
+    }
+
+    private void MoverConTambaleo(Vector2 target, float vel)
+    {
+        Vector2 dir = (target - (Vector2)transform.position).normalized;
+        Vector2 perpendicular = new Vector2(-dir.y, dir.x);
+        dir += perpendicular * Mathf.Sin(Time.time * wobbleSpeed + randomWobbleOffset) * wobbleAmount;
+        rb.linearVelocity = dir.normalized * vel;
+    }
+
+    private Vector2 ObtenerObjetivoCamino()
+    {
+        if (TieneLineaDeVision(player.position))
+        {
+            currentPathIndex = -1; 
+            return player.position;
+        }
+
+        if (MovimientoPlayer.historialPosiciones.Count == 0) return player.position;
+
+        if (currentPathIndex == -1 || currentPathIndex >= MovimientoPlayer.historialPosiciones.Count)
+        {
+            currentPathIndex = BuscarIndiceMasCercanoYVisible();
+        }
+
+        Vector2 nodoDestino = MovimientoPlayer.historialPosiciones[currentPathIndex];
+
+        if (Vector2.Distance(transform.position, nodoDestino) < 0.5f)
+        {
+            currentPathIndex++;
+            if (currentPathIndex >= MovimientoPlayer.historialPosiciones.Count)
+            {
+                currentPathIndex = MovimientoPlayer.historialPosiciones.Count - 1;
+            }
+            nodoDestino = MovimientoPlayer.historialPosiciones[currentPathIndex];
+        }
+
+        return nodoDestino;
+    }
+
+    private int BuscarIndiceMasCercanoYVisible()
+    {
+        int mejorIndice = MovimientoPlayer.historialPosiciones.Count - 1;
+        float mejorDistancia = float.MaxValue;
+
+        for (int i = 0; i < MovimientoPlayer.historialPosiciones.Count; i++)
+        {
+            float dist = Vector2.Distance(transform.position, MovimientoPlayer.historialPosiciones[i]);
+            if (dist < mejorDistancia && TieneLineaDeVision(MovimientoPlayer.historialPosiciones[i]))
+            {
+                mejorDistancia = dist;
+                mejorIndice = i;
+            }
+        }
+        return mejorIndice;
+    }
+
+    private bool TieneLineaDeVision(Vector2 targetPos)
+    {
+        Vector2 dir = targetPos - (Vector2)transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, dir.normalized, dir.magnitude, capaMuros);
+        return hit.collider == null;
+    }
+
+    private void Patrol()
+    {
+        if (Vector2.Distance(transform.position, patrolTarget) < 0.5f)
+        {
+            rb.linearVelocity = Vector2.zero;
+            patrolTimer -= Time.fixedDeltaTime;
+
+            if (patrolTimer <= 0f)
+            {
+                GetNewPatrolTarget();
+                patrolTimer = patrolWaitTime;
+            }
+        }
+        else
+        {
+            MoverConTambaleo(patrolTarget, patrolSpeed);
+        }
+    }
+
+    private void GetNewPatrolTarget()
+    {
+        Vector2 randomDirection = Random.insideUnitCircle * patrolRadius;
+        patrolTarget = startPosition + randomDirection;
     }
 
     private IEnumerator ChargeAndShoot()
@@ -93,7 +217,6 @@ public class RangedEnemyAI : MonoBehaviour
         isCharging = true;
         float timer = 0f;
 
-        // Llenar el círculo visual
         while (timer < chargeTime)
         {
             timer += Time.deltaTime;
@@ -104,8 +227,7 @@ public class RangedEnemyAI : MonoBehaviour
             yield return null;
         }
 
-        // Disparar
-        if (bulletPrefab != null && player != null && firePoint != null)
+        if (bulletPrefab != null && player != null && firePoint != null && TieneLineaDeVision(player.position))
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
@@ -117,7 +239,6 @@ public class RangedEnemyAI : MonoBehaviour
             }
         }
 
-        // Vaciar indicador y esperar antes de volver a moverse
         if (chargeIndicatorFill != null) chargeIndicatorFill.fillAmount = 0f;
         yield return new WaitForSeconds(0.5f);
         isCharging = false;

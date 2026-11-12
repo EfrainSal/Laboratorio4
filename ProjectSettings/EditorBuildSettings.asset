@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LaboratorioYiba/Piso3_V10/Scenes/Piso3_V10.unity
     guid: d3bcce3bb77ca534d98c670c9fee76a2
+  - enabled: 1
+    path: Assets/Scenes/Nivel1.unity
+    guid: 40fdad66b525769448c9809fac86d9b7
+  - enabled: 1
+    path: Assets/Scenes/Cinematicas.unity
+    guid: db8cd89443dfd0441b80b3e6f733af2c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

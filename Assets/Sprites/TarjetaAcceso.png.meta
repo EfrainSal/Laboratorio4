@@ -1,0 +1,678 @@
+fileFormatVersion: 2
+guid: 39f7a0b56a313264393550d6978645d9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8805245330076377229
+    second: TarjetaAcceso_0
+  - first:
+      213: -2988773956205829274
+    second: TarjetaAcceso_1
+  - first:
+      213: -17179778899292622
+    second: TarjetaAcceso_2
+  - first:
+      213: 794225398222093109
+    second: TarjetaAcceso_3
+  - first:
+      213: 1483414413467859749
+    second: TarjetaAcceso_4
+  - first:
+      213: -7352768968626538452
+    second: TarjetaAcceso_5
+  - first:
+      213: 8291444267591876570
+    second: TarjetaAcceso_6
+  - first:
+      213: -7684703283628424121
+    second: TarjetaAcceso_7
+  - first:
+      213: 4430016557102752073
+    second: TarjetaAcceso_8
+  - first:
+      213: 7157733162630718140
+    second: TarjetaAcceso_9
+  - first:
+      213: -447646897239446118
+    second: TarjetaAcceso_10
+  - first:
+      213: -6005078081461394519
+    second: TarjetaAcceso_11
+  - first:
+      213: -3773894356746231827
+    second: TarjetaAcceso_12
+  - first:
+      213: 2464848832819529575
+    second: TarjetaAcceso_13
+  - first:
+      213: -1389093192050482763
+    second: TarjetaAcceso_14
+  - first:
+      213: -6758395710400840435
+    second: TarjetaAcceso_15
+  - first:
+      213: -8848948034655860968
+    second: TarjetaAcceso_16
+  - first:
+      213: -3482314348667693462
+    second: TarjetaAcceso_17
+  - first:
+      213: -1554869558875835491
+    second: TarjetaAcceso_18
+  - first:
+      213: -5268291758639557918
+    second: TarjetaAcceso_19
+  - first:
+      213: -3385646921281326612
+    second: TarjetaAcceso_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TarjetaAcceso_0
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 943
+        width: 157
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80ae5bb9f3823a70800000000000000
+      internalID: 8805245330076377229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 975
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663a96a0cedb586d0800000000000000
+      internalID: -2988773956205829274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 984
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e43650517f2cff0800000000000000
+      internalID: -17179778899292622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_3
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 979
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53bfe9caac7a50b00800000000000000
+      internalID: 794225398222093109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 975
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b3271bc85269410800000000000000
+      internalID: 1483414413467859749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_5
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 974
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28ff756497b5f990800000000000000
+      internalID: -7352768968626538452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_6
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 973
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf33c4a1a0211370800000000000000
+      internalID: 8291444267591876570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 973
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744cc0f24137a5590800000000000000
+      internalID: -7684703283628424121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_8
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 975
+        width: 78
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941653366949a7d30800000000000000
+      internalID: 4430016557102752073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_9
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 960
+        width: 131
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb223ab5360655360800000000000000
+      internalID: 7157733162630718140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_10
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 983
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9dac39c483a9c9f0800000000000000
+      internalID: -447646897239446118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 27
+        width: 1501
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3620a1d4da9aca0800000000000000
+      internalID: -6005078081461394519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 309
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def1a46d31f60abc0800000000000000
+      internalID: -3773894356746231827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_13
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 50
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7678e3144f6e43220800000000000000
+      internalID: 2464848832819529575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_14
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 50
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1eaeff913f8bce0800000000000000
+      internalID: -1389093192050482763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_15
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 47
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0db80ea8ea5532a0800000000000000
+      internalID: -6758395710400840435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_16
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 49
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817427e65a8323580800000000000000
+      internalID: -8848948034655860968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_17
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 31
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a669a6bcc855cafc0800000000000000
+      internalID: -3482314348667693462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_18
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 29
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93332fcf5efb6ae0800000000000000
+      internalID: -1554869558875835491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_19
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 29
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2db21ee8443e6b0800000000000000
+      internalID: -5268291758639557918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TarjetaAcceso_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 31
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1b1222014c301d0800000000000000
+      internalID: -3385646921281326612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TarjetaAcceso_0: 8805245330076377229
+      TarjetaAcceso_1: -2988773956205829274
+      TarjetaAcceso_10: -447646897239446118
+      TarjetaAcceso_11: -6005078081461394519
+      TarjetaAcceso_12: -3773894356746231827
+      TarjetaAcceso_13: 2464848832819529575
+      TarjetaAcceso_14: -1389093192050482763
+      TarjetaAcceso_15: -6758395710400840435
+      TarjetaAcceso_16: -8848948034655860968
+      TarjetaAcceso_17: -3482314348667693462
+      TarjetaAcceso_18: -1554869558875835491
+      TarjetaAcceso_19: -5268291758639557918
+      TarjetaAcceso_2: -17179778899292622
+      TarjetaAcceso_20: -3385646921281326612
+      TarjetaAcceso_3: 794225398222093109
+      TarjetaAcceso_4: 1483414413467859749
+      TarjetaAcceso_5: -7352768968626538452
+      TarjetaAcceso_6: 8291444267591876570
+      TarjetaAcceso_7: -7684703283628424121
+      TarjetaAcceso_8: 4430016557102752073
+      TarjetaAcceso_9: 7157733162630718140
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

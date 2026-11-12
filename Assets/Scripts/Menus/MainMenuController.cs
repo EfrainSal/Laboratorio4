@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     private const string SelectedCharacterKey = "SelectedCharacter";
-    private const string PlayerRankingNameKey = "PlayerRankingName"; // Nueva clave para el ranking
+    private const string PlayerRankingNameKey = "PlayerRankingName"; 
 
     private const string HiddenClass = "hidden";
     private const string PanelFadeClass = "panel-fade";
@@ -31,11 +31,15 @@ public class MainMenuController : MonoBehaviour
     [Header("Escenas")]
     [SerializeField] private string _gameSceneName = "SampleScene";
 
+    [Header("Sprites de Personajes (0: Jason, 1: Milena)")] // NUEVO
+    [SerializeField] private Sprite[] _characterSprites;    // NUEVO
+
     private VisualElement _root, _menuContainer, _logo, _videoBackground, _leftShade;
     private VisualElement _sidePanel, _pagePlay, _pageSettings, _pageRanking;
     private Button _playButton, _continueButton, _settingsButton, _rankingButton, _quitButton;
     private Button _playBackButton, _confirmButton, _settingsBackButton, _rankingBackButton;
     private TextField _playerNameInput;
+    private ScrollView _rankingListContainer;
     private VisualElement[] _cards;
     private EventCallback<ClickEvent>[] _cardCallbacks;
     private VolumeChannel _master, _music, _sfx;
@@ -45,7 +49,6 @@ public class MainMenuController : MonoBehaviour
     private int _selectedCharacter = -1;
     private bool _panelOpen;
     
-    // Almacena el botón que abrió el panel para devolverle el foco al usar el mando
     private VisualElement _lastFocusedMenuButton; 
 
     void OnEnable()
@@ -60,6 +63,7 @@ public class MainMenuController : MonoBehaviour
         _pagePlay        = _root.Q<VisualElement>("PagePlay");
         _pageSettings    = _root.Q<VisualElement>("PageSettings");
         _pageRanking     = _root.Q<VisualElement>("PageRanking");
+        _rankingListContainer = _root.Q<ScrollView>("RankingListContainer");
 
         _continueButton     = _root.Q<Button>("ContinueButton");
         _playButton         = _root.Q<Button>("PlayButton");
@@ -85,13 +89,11 @@ public class MainMenuController : MonoBehaviour
         _rankingBackButton.clicked  += ClosePanel;
         _confirmButton.clicked      += OnConfirmCharacter;
         
-        // Registrar cambio de texto para habilitar/deshabilitar botón confirmar
         _playerNameInput.RegisterValueChangedCallback(evt => UpdateConfirmButtonState());
 
         _continueButton.SetEnabled(SaveSystem.HayGuardado());
         _confirmButton.SetEnabled(false);
 
-        // Tarjetas de personaje
         _cards = new[] { _root.Q<VisualElement>("CharacterCard0"), _root.Q<VisualElement>("CharacterCard1") };
         _cardCallbacks = new EventCallback<ClickEvent>[_cards.Length];
         for (int i = 0; i < _cards.Length; i++)
@@ -99,11 +101,28 @@ public class MainMenuController : MonoBehaviour
             int index = i;
             _cardCallbacks[i] = _ => SelectCharacter(index);
             _cards[i].RegisterCallback(_cardCallbacks[i]);
+
+            // NUEVO: Asignar el sprite desde el Inspector a la tarjeta correspondiente
+            if (_characterSprites != null && i < _characterSprites.Length && _characterSprites[i] != null)
+            {
+                var portrait = _cards[i].Q<VisualElement>(className: "char-portrait");
+                if (portrait != null)
+                {
+                    // Convertir el Sprite a StyleBackground y asignarlo
+                    portrait.style.backgroundImage = new StyleBackground(_characterSprites[i]);
+                    
+                    // Ocultar el placeholder "?"
+                    var placeholder = portrait.Q<Label>(className: "portrait-placeholder");
+                    if (placeholder != null)
+                    {
+                        placeholder.style.display = DisplayStyle.None;
+                    }
+                }
+            }
         }
 
         _root.RegisterCallback<NavigationCancelEvent>(OnNavigationCancel);
 
-        // Audio
         _master = new VolumeChannel(_mixer, "MasterVolume", _root.Q<Slider>("MasterSlider"), _root.Q<Label>("MasterValueLabel"), 0.8f);
         _music = new VolumeChannel(_mixer, "MusicVolume", _root.Q<Slider>("MusicSlider"), _root.Q<Label>("MusicValueLabel"), 0.8f);
         _sfx = new VolumeChannel(_mixer, "SFXVolume", _root.Q<Slider>("SfxSlider"), _root.Q<Label>("SfxValueLabel"), 0.8f);
@@ -126,7 +145,6 @@ public class MainMenuController : MonoBehaviour
 
         _flickerLoop = _logo.schedule.Execute(FlickerLogo).Every(4000);
         
-        // Precargar último nombre usado
         _playerNameInput.value = PlayerPrefs.GetString(PlayerRankingNameKey, "");
     }
 
@@ -135,6 +153,9 @@ public class MainMenuController : MonoBehaviour
         _master.ApplyCurrent();
         _music.ApplyCurrent();
         _sfx.ApplyCurrent();
+
+        // NUEVO: Intentar subir cualquier récord local que esté pendiente (Offline a Online sync)
+        RankingManager.IntentarSubirRecordsPendientes();
 
         if (_videoPlayer != null && _videoTexture != null)
         {
@@ -232,21 +253,60 @@ public class MainMenuController : MonoBehaviour
         _lastFocusedMenuButton = _playButton;
         ClearCharacterSelection();
         ShowPage(_pagePlay, _playButton);
-        _cards[0].Focus(); // Foco para mando
+        _cards[0].Focus(); 
     }
 
     private void OpenSettingsPage()
     {
         _lastFocusedMenuButton = _settingsButton;
         ShowPage(_pageSettings, _settingsButton);
-        _root.Q<Slider>("MasterSlider").Focus(); // Foco para mando
+        _root.Q<Slider>("MasterSlider").Focus(); 
     }
 
     private void OpenRankingPage()
     {
         _lastFocusedMenuButton = _rankingButton;
+        MostrarRanking(); 
         ShowPage(_pageRanking, _rankingButton);
-        _rankingBackButton.Focus(); // Foco para mando
+        _rankingBackButton.Focus(); 
+    }
+
+    private void MostrarRanking()
+    {
+        _rankingListContainer.Clear();
+
+        var datosRanking = RankingManager.LoadRanking();
+
+        if (datosRanking.topScores.Count == 0)
+        {
+            var noDataLabel = new Label("No hay registros en la base de datos local.");
+            noDataLabel.AddToClassList("ranking-empty");
+            _rankingListContainer.Add(noDataLabel);
+            return;
+        }
+
+        int posicion = 1;
+        foreach (var record in datosRanking.topScores)
+        {
+            var fila = new VisualElement();
+            fila.AddToClassList("ranking-row");
+
+            var posicionLabel = new Label($"#{posicion}");
+            posicionLabel.AddToClassList("ranking-pos");
+
+            string tiempoFormateado = GameManager.Instance != null 
+                ? GameManager.Instance.FormatearTiempo(record.time) 
+                : Mathf.FloorToInt(record.time / 60) + ":" + Mathf.FloorToInt(record.time % 60).ToString("00");
+
+            var infoLabel = new Label($"{record.playerName} - Puntos: {record.score} - Tiempo: {tiempoFormateado}");
+            infoLabel.AddToClassList("ranking-info");
+
+            fila.Add(posicionLabel);
+            fila.Add(infoLabel);
+
+            _rankingListContainer.Add(fila);
+            posicion++;
+        }
     }
 
     private void ShowPage(VisualElement page, Button activeButton)
@@ -275,7 +335,6 @@ public class MainMenuController : MonoBehaviour
         _hidePanelItem = _sidePanel.schedule.Execute(() => _sidePanel.AddToClassList(HiddenClass)).StartingIn(320);
         PlayerPrefs.Save();                                                
         
-        // DEVOLVER EL FOCO AL MENÚ PARA EL MANDO
         _lastFocusedMenuButton?.Focus();
     }
 
@@ -313,7 +372,6 @@ public class MainMenuController : MonoBehaviour
         string currentName = _playerNameInput.value?.Trim() ?? "";
         bool hasValidName = currentName.Length >= 3 && currentName.Length <= 12;
         
-        // Feedback visual en el input (rojo si es inválido o está vacío, verde si es válido)
         if (hasValidName)
         {
             _playerNameInput.RemoveFromClassList("input-invalid");
@@ -332,7 +390,6 @@ public class MainMenuController : MonoBehaviour
     {
         if (_selectedCharacter < 0 || string.IsNullOrWhiteSpace(_playerNameInput.value)) return;
 
-        // GUARDAR NOMBRE PARA EL RANKING
         PlayerPrefs.SetString(PlayerRankingNameKey, _playerNameInput.value.Trim());
         PlayerPrefs.SetInt(SelectedCharacterKey, _selectedCharacter);
         PlayerPrefs.Save();

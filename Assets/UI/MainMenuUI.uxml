@@ -35,7 +35,7 @@
                         <ui:VisualElement class="char-portrait portrait-0">
                             <ui:Label text="?" class="portrait-placeholder"/>
                         </ui:VisualElement>
-                        <ui:Label text="SUJETO A" class="char-name"/>
+                        <ui:Label text="JASON" class="char-name"/>
                         <ui:Label text="Salud balanceada." class="char-role"/>
                     </ui:VisualElement>
 
@@ -43,7 +43,7 @@
                         <ui:VisualElement class="char-portrait portrait-1">
                             <ui:Label text="?" class="portrait-placeholder"/>
                         </ui:VisualElement>
-                        <ui:Label text="SUJETO B" class="char-name"/>
+                        <ui:Label text="MILENA" class="char-name"/>
                         <ui:Label text="Mayor agilidad." class="char-role"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
@@ -121,7 +121,7 @@
             <ui:Label text="CONEXIÓN ESTABLE" class="footer-text footer-ok" picking-mode="Ignore"/>
         </ui:VisualElement>
         <ui:VisualElement class="footer-right" picking-mode="Ignore">
-            <ui:Label text="SECTOR 4 · ACCESO RESTRINGIDO" class="footer-text footer-ok" picking-mode="Ignore"/>
+            <ui:Label text="LABORATORIO 4 · ACCESO RESTRINGIDO" class="footer-text footer-ok" picking-mode="Ignore"/>
         </ui:VisualElement>
 
     </ui:VisualElement>

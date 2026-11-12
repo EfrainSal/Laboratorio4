@@ -329,7 +329,10 @@ MonoBehaviour:
   _videoSpeed: 0.5
   _mixer: {fileID: 24100000, guid: 9b3863c0db5669c46afbae5f3a72478c, type: 2}
   _sfxPreview: {fileID: 1843314653}
-  _gameSceneName: Prueba 1
+  _gameSceneName: Piso3_V10
+  _characterSprites:
+  - {fileID: 21300000, guid: 0a3edacca786b6f42b9240fd21612f9d, type: 3}
+  - {fileID: 21300000, guid: dba709c408e792e4698b1fe4c206efa4, type: 3}
 --- !u!1 &804830445
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +372,16 @@ MonoBehaviour:
   nivelMejoraVida: 0
   nivelMejoraDefensa: 0
   nivelMejoraDanio: 0
+  usarDatosDeTransicion: 0
+  puntosDeMejoraPendientes: 0
+  vidaPendiente: 0
+  vendasPendientes: 0
+  botiquinesPendientes: 0
+  estimulantesPendientes: 0
+  municionCargadorPendiente: 0
+  municionTotalPendiente: 0
+  expActualPendiente: 0
+  nivelActualPendiente: 1
 --- !u!4 &804830447
 Transform:
   m_ObjectHideFlags: 0

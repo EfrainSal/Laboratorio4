@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Networking;
 
 [Serializable]
 public class PlayerRecord
@@ -26,6 +28,9 @@ public static class RankingManager
 {
     private static string Path => Application.persistentDataPath + "/ranking.dat";
     
+    private const string ApiUrl = "https://laboratorio4api.onrender.com/api/administracion/ranking";
+    private const string ApiKey = "bd225f21e673bdac15dda936ff91d82e"; 
+
     public static RankingData LoadRanking()
     {
         if (!File.Exists(Path)) return new RankingData();
@@ -38,18 +43,20 @@ public static class RankingManager
         File.WriteAllText(Path, JsonUtility.ToJson(data, true));
     }
 
-    // CORRECCIÓN: Ahora la función recibe 4 argumentos, incluyendo el string playerName
     public static void RegistrarPartidaCompletada(string playerName, int score, float time, int characterId)
     {
         RankingData data = LoadRanking();
         
+        int apiCharacterId = characterId <= 0 ? 1 : characterId;
+        if (apiCharacterId == 1 && characterId == 1) apiCharacterId = 2; 
+
         PlayerRecord newRecord = new PlayerRecord
         {
-            playerName = playerName, // Asignamos el nombre guardado
+            playerName = playerName,
             score = score,
             time = time,
-            characterId = characterId,
-            date = DateTime.Now.ToString("yyyy-MM-dd HH:mm"),
+            characterId = apiCharacterId,
+            date = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ"),
             uploaded = false
         };
 
@@ -59,42 +66,87 @@ public static class RankingManager
         data.topScores.Add(newRecord);
         data.topScores = data.topScores.OrderByDescending(r => r.score).ToList();
         
-        int scoreRank = data.topScores.IndexOf(newRecord);
-        if (scoreRank < 3) requiresUpload = true; // Top 3 local -> Subir
-        
-        if (data.topScores.Count > 10) data.topScores.RemoveAt(10); // Mantener top 10
+        if (data.topScores.IndexOf(newRecord) < 3) requiresUpload = true; 
+        if (data.topScores.Count > 10) data.topScores.RemoveAt(10); 
 
         // --- LÓGICA DE MEJOR TIEMPO ---
         PlayerRecord timeRecord = JsonUtility.FromJson<PlayerRecord>(JsonUtility.ToJson(newRecord));
         data.topTimes.Add(timeRecord);
-        data.topTimes = data.topTimes.OrderBy(r => r.time).ToList(); // Menor tiempo es mejor
+        data.topTimes = data.topTimes.OrderBy(r => r.time).ToList(); 
         
-        int timeRank = data.topTimes.IndexOf(timeRecord);
-        if (timeRank < 3) requiresUpload = true;
-        
+        if (data.topTimes.IndexOf(timeRecord) < 3) requiresUpload = true;
         if (data.topTimes.Count > 10) data.topTimes.RemoveAt(10);
 
         SaveRanking(data);
 
-        // Si calificó para el Top 3 local, intentamos enviarlo
+        // Intento inmediato de subida al terminar la run
         if (requiresUpload)
         {
             IntentarSubirRecordsPendientes();
         }
     }
 
-    public static void IntentarSubirRecordsPendientes()
+    // Al ser un método estático y público, el MainMenuController puede llamarlo libremente
+    public static async void IntentarSubirRecordsPendientes()
     {
         RankingData data = LoadRanking();
         bool changed = false;
 
-        foreach (var record in data.topScores.Concat(data.topTimes).Where(r => !r.uploaded))
+        // Filtramos los pendientes agrupando por nombre y fecha para evitar mandar el clon de 'topTimes'
+        var recordsPendientes = data.topScores.Concat(data.topTimes)
+            .Where(r => !r.uploaded)
+            .GroupBy(r => new { r.playerName, r.date })
+            .Select(g => g.First())
+            .ToList();
+
+        if (recordsPendientes.Count == 0) return; // Nada que subir
+
+        foreach (var record in recordsPendientes)
         {
-            // Aquí harás tu llamada HTTP (UnityWebRequest) al Backend en la nube.
-            // Si es exitoso: record.uploaded = true; changed = true;
-            Debug.Log($"Enviando al backend... Jugador: {record.playerName}, Score: {record.score}, Time: {record.time}");
+            Debug.Log($"Intentando sincronizar con backend... Jugador: {record.playerName}, Score: {record.score}");
+
+            string json = JsonUtility.ToJson(record);
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+
+            using (UnityWebRequest request = new UnityWebRequest(ApiUrl, "POST"))
+            {
+                request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+                request.downloadHandler = new DownloadHandlerBuffer();
+                request.SetRequestHeader("Content-Type", "application/json");
+                request.SetRequestHeader("X-API-Key", ApiKey);
+                request.timeout = 90;
+
+                var operation = request.SendWebRequest();
+
+                while (!operation.isDone)
+                {
+                    await Task.Yield();
+                }
+
+                if (request.result == UnityWebRequest.Result.Success && request.responseCode == 201)
+                {
+                    Debug.Log($"Sincronización exitosa para {record.playerName}");
+                    
+                    // Actualizamos el estado "uploaded" a true en ambas listas físicas si existen
+                    foreach(var match in data.topScores.Where(r => r.date == record.date && r.playerName == record.playerName))
+                        match.uploaded = true;
+                    foreach(var match in data.topTimes.Where(r => r.date == record.date && r.playerName == record.playerName))
+                        match.uploaded = true;
+
+                    changed = true;
+                }
+                else
+                {
+                    // Si falla (sin internet, timeout, etc.), se queda en false. Se reintentará luego.
+                    Debug.LogWarning($"Fallo en sincronización. Se reintentará después. HTTP: {request.responseCode}");
+                }
+            }
         }
 
-        if (changed) SaveRanking(data);
+        // Solo guardamos en disco si logramos subir algo y cambiamos su estado a true
+        if (changed) 
+        {
+            SaveRanking(data);
+        }
     }
 }

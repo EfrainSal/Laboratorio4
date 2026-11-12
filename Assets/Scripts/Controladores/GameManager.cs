@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     /// <summary>La escucha la pantalla de muerte.</summary>
     public static event System.Action<RunSummary> OnRunTerminada;
 
+    /// <summary>La escucha la pantalla de victoria.</summary>   // CAMBIO
+    public static event System.Action<RunSummary> OnRunVictoria; // CAMBIO
+
     public bool RunActiva => runActiva;
 
     /// <summary>Datos de "Continuar": el LevelManager los recoge y llama a LimpiarDatosCargados().</summary>
@@ -151,12 +154,23 @@ public class GameManager : MonoBehaviour
         });
     }
 
+    // Se llama cuando el jugador derrota al jefe final
     public void CompletarRunVictoria()
     {
+        if (!runActiva) return;   // CAMBIO: evita doble disparo
         runActiva = false;
-        
+
         // Otorgamos bonos extra por ganar si los tienes, calculamos score final...
         Debug.Log($"--- RUN COMPLETADA CON ÉXITO --- Piso {pisoActual} | Puntos {puntuacionTotal}");
+
+        // CAMBIO: récord real (antes siempre era true y no se guardaba la mejor puntuación)
+        int mejorPrevia = PlayerPrefs.GetInt("MejorPuntuacion", 0);
+        bool nuevoRecord = puntuacionTotal > mejorPrevia;
+        if (nuevoRecord)
+        {
+            PlayerPrefs.SetInt("MejorPuntuacion", puntuacionTotal);
+        }
+        PlayerPrefs.Save();
 
         string nombreJugador = PlayerPrefs.GetString("PlayerRankingName", "Desconocido");
 
@@ -166,15 +180,15 @@ public class GameManager : MonoBehaviour
         // Borrar el guardado temporal para evitar clonar el final
         BorrarGuardadoLocal();
 
-        // Puedes invocar un evento de "Pantalla de Victoria"
-        OnRunTerminada?.Invoke(new RunSummary
+        // CAMBIO: ahora dispara la pantalla de victoria, no la de muerte
+        OnRunVictoria?.Invoke(new RunSummary
         {
             tiempo = tiempoRun,
             piso = pisoActual,
             enemigos = enemigosDerrotadosTotal,
             puntuacion = puntuacionTotal,
-            nuevoRecord = true,
-            causa = DeathCause.Desconocida // O crear un enum de Victoria
+            mejorPuntuacion = Mathf.Max(mejorPrevia, puntuacionTotal),
+            nuevoRecord = nuevoRecord
         });
     }
 

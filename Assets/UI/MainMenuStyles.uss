@@ -46,10 +46,51 @@
     background-image: url("project://database/Assets/UI/Logo2.png");
 }
 
+/* --- Estilos para el Ranking Local --- */
+.ranking-row {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(7, 7, 7, 0.6);
+    border-color: rgb(42, 42, 42);
+    border-width: 1px;
+    border-left-width: 4px;
+    border-left-color: rgb(90, 90, 88);
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    transition-property: border-left-color, background-color;
+    transition-duration: 0.15s;
+}
+
+.ranking-row:hover {
+    border-left-color: rgb(111, 174, 69);
+    background-color: rgba(111, 174, 69, 0.1);
+}
+
+.ranking-pos {
+    color: rgb(111, 174, 69);
+    font-size: 18px;
+    -unity-font-style: bold;
+    width: 40px;
+}
+
+.ranking-info {
+    color: rgb(240, 238, 234);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.ranking-empty {
+    color: rgb(184, 181, 176);
+    font-size: 16px;
+    -unity-text-align: middle-center;
+    margin-top: 50px;
+    -unity-font-style: italic;
+}
+
 .logo-wordmark {
     width: 500px;
     height: 180px;
-    background-image: url("project://database/Assets/UI/LogoSinFondo.png");
+    background-image: url("project://database/Assets/UI/LogoSinFondo1.png");
 }
 
 .logo-dim { opacity: 0.7; }

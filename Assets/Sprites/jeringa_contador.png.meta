@@ -1,0 +1,1718 @@
+fileFormatVersion: 2
+guid: 33748ccfa3e376444818572e30413d0a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1326321163604337925
+    second: jeringa_contador_0
+  - first:
+      213: 6224623415673468242
+    second: jeringa_contador_1
+  - first:
+      213: -7463911504523630265
+    second: jeringa_contador_2
+  - first:
+      213: -7450517740671595668
+    second: jeringa_contador_3
+  - first:
+      213: 2079225171663475342
+    second: jeringa_contador_4
+  - first:
+      213: 7780104782449178864
+    second: jeringa_contador_5
+  - first:
+      213: -3762015229276107978
+    second: jeringa_contador_6
+  - first:
+      213: 3518319741883591071
+    second: jeringa_contador_7
+  - first:
+      213: -5611037436208403199
+    second: jeringa_contador_8
+  - first:
+      213: -2158984479379795338
+    second: jeringa_contador_9
+  - first:
+      213: -3537291214517554791
+    second: jeringa_contador_10
+  - first:
+      213: -1586261955983290684
+    second: jeringa_contador_11
+  - first:
+      213: 1583472381416497245
+    second: jeringa_contador_12
+  - first:
+      213: 8091780665465232514
+    second: jeringa_contador_13
+  - first:
+      213: -2911025310245074688
+    second: jeringa_contador_14
+  - first:
+      213: 6494110023621451114
+    second: jeringa_contador_15
+  - first:
+      213: 2674782337053689907
+    second: jeringa_contador_16
+  - first:
+      213: 1642882851078098947
+    second: jeringa_contador_17
+  - first:
+      213: 7939545512917530991
+    second: jeringa_contador_18
+  - first:
+      213: 5228232554861798847
+    second: jeringa_contador_19
+  - first:
+      213: -8034354376767331768
+    second: jeringa_contador_20
+  - first:
+      213: 2503421524442874772
+    second: jeringa_contador_21
+  - first:
+      213: 463160341588735272
+    second: jeringa_contador_22
+  - first:
+      213: -3651026474800153788
+    second: jeringa_contador_23
+  - first:
+      213: -4763251391425942228
+    second: jeringa_contador_24
+  - first:
+      213: -959210960629851040
+    second: jeringa_contador_25
+  - first:
+      213: -7736007943924177107
+    second: jeringa_contador_26
+  - first:
+      213: -2366270508538347734
+    second: jeringa_contador_27
+  - first:
+      213: -3228209621253793329
+    second: jeringa_contador_28
+  - first:
+      213: 768494013618232541
+    second: jeringa_contador_29
+  - first:
+      213: 342626360602055502
+    second: jeringa_contador_30
+  - first:
+      213: 3465552544779549877
+    second: jeringa_contador_31
+  - first:
+      213: -4381907407476535246
+    second: jeringa_contador_32
+  - first:
+      213: 130867122651208280
+    second: jeringa_contador_33
+  - first:
+      213: 4747667096867994424
+    second: jeringa_contador_34
+  - first:
+      213: 3476006853859073962
+    second: jeringa_contador_35
+  - first:
+      213: 8289646781420082768
+    second: jeringa_contador_36
+  - first:
+      213: 2296865367780145678
+    second: jeringa_contador_37
+  - first:
+      213: -6331205884227600570
+    second: jeringa_contador_38
+  - first:
+      213: 939422220470213534
+    second: jeringa_contador_39
+  - first:
+      213: 8066909065581844561
+    second: jeringa_contador_40
+  - first:
+      213: -7381384542340915046
+    second: jeringa_contador_41
+  - first:
+      213: 7385381451088633170
+    second: jeringa_contador_42
+  - first:
+      213: -5997869010909426902
+    second: jeringa_contador_43
+  - first:
+      213: 967462140101026549
+    second: jeringa_contador_44
+  - first:
+      213: 230290021588578399
+    second: jeringa_contador_45
+  - first:
+      213: 7854871393353703559
+    second: jeringa_contador_46
+  - first:
+      213: 5364858126099922530
+    second: jeringa_contador_47
+  - first:
+      213: -7750410177829990170
+    second: jeringa_contador_48
+  - first:
+      213: -4024624268411156843
+    second: jeringa_contador_49
+  - first:
+      213: 6448207653330005581
+    second: jeringa_contador_50
+  - first:
+      213: -8633266081771967803
+    second: jeringa_contador_51
+  - first:
+      213: 6165683410035384793
+    second: jeringa_contador_52
+  - first:
+      213: 3516834880589897475
+    second: jeringa_contador_53
+  - first:
+      213: 3637687660424603059
+    second: jeringa_contador_54
+  - first:
+      213: -6751400640743359080
+    second: jeringa_contador_55
+  - first:
+      213: -1341789725332428260
+    second: jeringa_contador_56
+  - first:
+      213: 3508397664548828293
+    second: jeringa_contador_57
+  - first:
+      213: 2029630490896456723
+    second: jeringa_contador_58
+  - first:
+      213: -7438841976406764185
+    second: jeringa_contador_59
+  - first:
+      213: 7969955501069834875
+    second: jeringa_contador_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jeringa_contador_0
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 1203
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfad749cde5f79de0800000000000000
+      internalID: -1326321163604337925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1220
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255bbcf540e426650800000000000000
+      internalID: 6224623415673468242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1232
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749eae9380cda6890800000000000000
+      internalID: -7463911504523630265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_3
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1222
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b0682e6917a9890800000000000000
+      internalID: -7450517740671595668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_4
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1207
+        width: 68
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e825d050744eadc10800000000000000
+      internalID: 2079225171663475342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_5
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1220
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f87331341c78fb60800000000000000
+      internalID: 7780104782449178864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_6
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1230
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b436bb413aacbc0800000000000000
+      internalID: -3762015229276107978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_7
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1230
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9927351a2593d030800000000000000
+      internalID: 3518319741883591071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1246
+        height: 1229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d21692e279122b0800000000000000
+      internalID: -5611037436208403199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_9
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1218
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6725cf60e0fb902e0800000000000000
+      internalID: -2158984479379795338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_10
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 1197
+        width: 52
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991329bb16409eec0800000000000000
+      internalID: -3537291214517554791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_11
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 1214
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ce46e8c7277cf9e0800000000000000
+      internalID: -1586261955983290684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_12
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1216
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50e8f5cdbf99f510800000000000000
+      internalID: 1583472381416497245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_13
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1215
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cdd65a4a7cb4070800000000000000
+      internalID: 8091780665465232514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1214
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009cba257e5f997d0800000000000000
+      internalID: -2911025310245074688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_15
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1171
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d9242c8a6bf1a50800000000000000
+      internalID: 6494110023621451114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_16
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1197
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338039b2d5cbe1520800000000000000
+      internalID: 2674782337053689907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 916
+        width: 48
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300571aaf31bcc610800000000000000
+      internalID: 1642882851078098947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_18
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 928
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69fe77149eee2e60800000000000000
+      internalID: 7939545512917530991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_19
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 890
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5ababeec96e8840800000000000000
+      internalID: 5228232554861798847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 768
+        width: 68
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842ad2d134d308090800000000000000
+      internalID: -8034354376767331768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 606
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4930c7fdc90fdb220800000000000000
+      internalID: 2503421524442874772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_22
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 665
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 825f17270e97d6600800000000000000
+      internalID: 463160341588735272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_23
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 685
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b7dffd3c2f45dc0800000000000000
+      internalID: -3651026474800153788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_24
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 503
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2deb26a81885edb0800000000000000
+      internalID: -4763251391425942228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_25
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 442
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c1ff2a6b230b2f0800000000000000
+      internalID: -959210960629851040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 374
+        width: 5
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27acca13cd24a490800000000000000
+      internalID: -7736007943924177107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_27
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 412
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2fb6107281592fd0800000000000000
+      internalID: -2366270508538347734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_28
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 373
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc95ba804781333d0800000000000000
+      internalID: -3228209621253793329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_29
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 345
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc9ab5db3d3aaa00800000000000000
+      internalID: 768494013618232541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_30
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 229
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43de521cd041c400800000000000000
+      internalID: 342626360602055502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 204
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc390e9dad181030800000000000000
+      internalID: 3465552544779549877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_32
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 149
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23055b2ed665033c0800000000000000
+      internalID: -4381907407476535246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_33
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 145
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a176664fee0d100800000000000000
+      internalID: 130867122651208280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_34
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 128
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b70a4021a13e140800000000000000
+      internalID: 4747667096867994424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_35
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 128
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafd71121d14d3030800000000000000
+      internalID: 3476006853859073962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_36
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 128
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0561108c3ddba0370800000000000000
+      internalID: 8289646781420082768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_37
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 126
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0abe67f1ea10ef10800000000000000
+      internalID: 2296865367780145678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_38
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 128
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f30cedac90328a0800000000000000
+      internalID: -6331205884227600570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_39
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 130
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b5c31488f790d00800000000000000
+      internalID: 939422220470213534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_40
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 126
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15852690e0b63ff60800000000000000
+      internalID: 8066909065581844561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_41
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 126
+        width: 53
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90e533fddd009990800000000000000
+      internalID: -7381384542340915046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_42
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 110
+        width: 86
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d95e2ec452e7660800000000000000
+      internalID: 7385381451088633170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_43
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 112
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b8b63a9e943cca0800000000000000
+      internalID: -5997869010909426902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_44
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 56
+        width: 90
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f26c5ac0bd1d6d00800000000000000
+      internalID: 967462140101026549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_45
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 110
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50ba14fd87223300800000000000000
+      internalID: 230290021588578399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_46
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 131
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780a9355aeb120d60800000000000000
+      internalID: 7854871393353703559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_47
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 96
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ebd8c9a0ec37a40800000000000000
+      internalID: 5364858126099922530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_48
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 31
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e01fd6b103017490800000000000000
+      internalID: -7750410177829990170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_49
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 62
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596cfee1d89a528c0800000000000000
+      internalID: -4024624268411156843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_50
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 35
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ea0b652b2ac7950800000000000000
+      internalID: 6448207653330005581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_51
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 12
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5caad885d3a703880800000000000000
+      internalID: -8633266081771967803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_52
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 21
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1adace468e09550800000000000000
+      internalID: 6165683410035384793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_53
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 31
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f934fd0be4ec030800000000000000
+      internalID: 3516834880589897475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_54
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 39
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b52e6367a9ab7230800000000000000
+      internalID: 3637687660424603059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_55
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 44
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89db52043e43e42a0800000000000000
+      internalID: -6751400640743359080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_56
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 40
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1aaa4a9a51016de0800000000000000
+      internalID: -1341789725332428260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_57
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 23
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5843e3e661550b030800000000000000
+      internalID: 3508397664548828293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_58
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 31
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c5f239d22ba2c10800000000000000
+      internalID: 2029630490896456723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_59
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 19
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765920892ace3c890800000000000000
+      internalID: -7438841976406764185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jeringa_contador_60
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 15
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a10f43d48fa9e60800000000000000
+      internalID: 7969955501069834875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      jeringa_contador_0: -1326321163604337925
+      jeringa_contador_1: 6224623415673468242
+      jeringa_contador_10: -3537291214517554791
+      jeringa_contador_11: -1586261955983290684
+      jeringa_contador_12: 1583472381416497245
+      jeringa_contador_13: 8091780665465232514
+      jeringa_contador_14: -2911025310245074688
+      jeringa_contador_15: 6494110023621451114
+      jeringa_contador_16: 2674782337053689907
+      jeringa_contador_17: 1642882851078098947
+      jeringa_contador_18: 7939545512917530991
+      jeringa_contador_19: 5228232554861798847
+      jeringa_contador_2: -7463911504523630265
+      jeringa_contador_20: -8034354376767331768
+      jeringa_contador_21: 2503421524442874772
+      jeringa_contador_22: 463160341588735272
+      jeringa_contador_23: -3651026474800153788
+      jeringa_contador_24: -4763251391425942228
+      jeringa_contador_25: -959210960629851040
+      jeringa_contador_26: -7736007943924177107
+      jeringa_contador_27: -2366270508538347734
+      jeringa_contador_28: -3228209621253793329
+      jeringa_contador_29: 768494013618232541
+      jeringa_contador_3: -7450517740671595668
+      jeringa_contador_30: 342626360602055502
+      jeringa_contador_31: 3465552544779549877
+      jeringa_contador_32: -4381907407476535246
+      jeringa_contador_33: 130867122651208280
+      jeringa_contador_34: 4747667096867994424
+      jeringa_contador_35: 3476006853859073962
+      jeringa_contador_36: 8289646781420082768
+      jeringa_contador_37: 2296865367780145678
+      jeringa_contador_38: -6331205884227600570
+      jeringa_contador_39: 939422220470213534
+      jeringa_contador_4: 2079225171663475342
+      jeringa_contador_40: 8066909065581844561
+      jeringa_contador_41: -7381384542340915046
+      jeringa_contador_42: 7385381451088633170
+      jeringa_contador_43: -5997869010909426902
+      jeringa_contador_44: 967462140101026549
+      jeringa_contador_45: 230290021588578399
+      jeringa_contador_46: 7854871393353703559
+      jeringa_contador_47: 5364858126099922530
+      jeringa_contador_48: -7750410177829990170
+      jeringa_contador_49: -4024624268411156843
+      jeringa_contador_5: 7780104782449178864
+      jeringa_contador_50: 6448207653330005581
+      jeringa_contador_51: -8633266081771967803
+      jeringa_contador_52: 6165683410035384793
+      jeringa_contador_53: 3516834880589897475
+      jeringa_contador_54: 3637687660424603059
+      jeringa_contador_55: -6751400640743359080
+      jeringa_contador_56: -1341789725332428260
+      jeringa_contador_57: 3508397664548828293
+      jeringa_contador_58: 2029630490896456723
+      jeringa_contador_59: -7438841976406764185
+      jeringa_contador_6: -3762015229276107978
+      jeringa_contador_60: 7969955501069834875
+      jeringa_contador_7: 3518319741883591071
+      jeringa_contador_8: -5611037436208403199
+      jeringa_contador_9: -2158984479379795338
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

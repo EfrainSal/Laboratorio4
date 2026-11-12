@@ -174,8 +174,8 @@ public class PlayerInventory : MonoBehaviour
 
     public void ActualizarUI()
     {
-        if (textoVendas != null) textoVendas.text = "[1]:" + vendasCount;
+        if (textoVendas != null) textoVendas.text = "" + vendasCount;
         if (textoBotiquines != null) textoBotiquines.text = "Botiquín [2]: " + botiquinesCount;
-        if (textoEstimulantes != null) textoEstimulantes.text = "[3]: " + estimulantesCount;
+        if (textoEstimulantes != null) textoEstimulantes.text = "" + estimulantesCount;
     }
 }

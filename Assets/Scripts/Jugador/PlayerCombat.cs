@@ -34,29 +34,33 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        bool golpeoEnemigo = false; // Variable para saber si le dimos a alguien
+        bool golpeoEnemigo = false; 
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            // Intentar dañar enemigo normal
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(attackDamage);
-                golpeoEnemigo = true; // Confirmamos el impacto
+                golpeoEnemigo = true; 
+            }
+            else
+            {
+                // Intentar dañar al Jefe
+                BossHealth bossHealth = enemy.GetComponent<BossHealth>();
+                if (bossHealth != null)
+                {
+                    bossHealth.TakeDamage(attackDamage);
+                    golpeoEnemigo = true;
+                }
             }
         }
 
-        // ---> REPRODUCIR SONIDO SEGÚN EL RESULTADO <---
         if (sfxSource != null)
         {
-            if (golpeoEnemigo && sonidoImpacto != null)
-            {
-                sfxSource.PlayOneShot(sonidoImpacto);
-            }
-            else if (!golpeoEnemigo && sonidoTajo != null)
-            {
-                sfxSource.PlayOneShot(sonidoTajo);
-            }
+            if (golpeoEnemigo && sonidoImpacto != null) sfxSource.PlayOneShot(sonidoImpacto);
+            else if (!golpeoEnemigo && sonidoTajo != null) sfxSource.PlayOneShot(sonidoTajo);
         }
     }
 

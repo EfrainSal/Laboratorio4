@@ -1,0 +1,1276 @@
+fileFormatVersion: 2
+guid: 3ce02f5cd31e42b4f9c0d59bc5c4248b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2454068339059771294
+    second: machete (1)_0
+  - first:
+      213: 4145384691205927201
+    second: machete (1)_1
+  - first:
+      213: -6513460861551641663
+    second: machete (1)_2
+  - first:
+      213: 6339982955990590381
+    second: machete (1)_3
+  - first:
+      213: -3844670414646085398
+    second: machete (1)_4
+  - first:
+      213: 7661539168755002268
+    second: machete (1)_5
+  - first:
+      213: -5352333590209949959
+    second: machete (1)_6
+  - first:
+      213: -2413710088834302242
+    second: machete (1)_7
+  - first:
+      213: -5286158971260857703
+    second: machete (1)_8
+  - first:
+      213: -4117796338222016413
+    second: machete (1)_9
+  - first:
+      213: -230279346853580291
+    second: machete (1)_10
+  - first:
+      213: 1633310022093434288
+    second: machete (1)_11
+  - first:
+      213: -6581324325245940382
+    second: machete (1)_12
+  - first:
+      213: -1247284271425837996
+    second: machete (1)_13
+  - first:
+      213: 5764653502471966667
+    second: machete (1)_14
+  - first:
+      213: 4244070170849894808
+    second: machete (1)_15
+  - first:
+      213: -6678685935776648165
+    second: machete (1)_16
+  - first:
+      213: -3987215008950204067
+    second: machete (1)_17
+  - first:
+      213: -6767080895838349555
+    second: machete (1)_18
+  - first:
+      213: -4907612120945426016
+    second: machete (1)_19
+  - first:
+      213: -7341735386331807189
+    second: machete (1)_20
+  - first:
+      213: 1608686357152829557
+    second: machete (1)_21
+  - first:
+      213: 1754170077528661042
+    second: machete (1)_22
+  - first:
+      213: 1823568684020062675
+    second: machete (1)_23
+  - first:
+      213: 6312127490959484710
+    second: machete (1)_24
+  - first:
+      213: -1985522937679121368
+    second: machete (1)_25
+  - first:
+      213: 2082469505924959122
+    second: machete (1)_26
+  - first:
+      213: 6137668419184614874
+    second: machete (1)_27
+  - first:
+      213: 7750560031480213303
+    second: machete (1)_28
+  - first:
+      213: -3425953706719903931
+    second: machete (1)_29
+  - first:
+      213: 1089130311708325958
+    second: machete (1)_30
+  - first:
+      213: 6211366025272033375
+    second: machete (1)_31
+  - first:
+      213: -7935070218611299739
+    second: machete (1)_32
+  - first:
+      213: -7192247142227234325
+    second: machete (1)_33
+  - first:
+      213: 2132203008968111535
+    second: machete (1)_34
+  - first:
+      213: 6730621332865535098
+    second: machete (1)_35
+  - first:
+      213: 5021144669814569223
+    second: machete (1)_36
+  - first:
+      213: 2633580843556269095
+    second: machete (1)_37
+  - first:
+      213: 4951340361155227228
+    second: machete (1)_38
+  - first:
+      213: 3386732888364033501
+    second: machete (1)_39
+  - first:
+      213: 5845207231362897245
+    second: machete (1)_40
+  - first:
+      213: -1594265067311827177
+    second: machete (1)_41
+  - first:
+      213: -2817201043676625442
+    second: machete (1)_42
+  - first:
+      213: 2409852678697178070
+    second: machete (1)_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: machete (1)_0
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 542
+        width: 140
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97c034f62a9e0220800000000000000
+      internalID: 2454068339059771294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 602
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121fba8d96d578930800000000000000
+      internalID: 4145384691205927201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_2
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 622
+        width: 51
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cbfdc03bd98b95a0800000000000000
+      internalID: -6513460861551641663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 618
+        width: 40
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3a9d568e42cf750800000000000000
+      internalID: 6339982955990590381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 628
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8f098b0acf4aac0800000000000000
+      internalID: -3844670414646085398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 650
+        width: 78
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b226a0841435a60800000000000000
+      internalID: 7661539168755002268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 648
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe052425f0b8b5b0800000000000000
+      internalID: -5352333590209949959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 624
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede314c6677c08ed0800000000000000
+      internalID: -2413710088834302242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 642
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99290c34c6ac3a6b0800000000000000
+      internalID: -5286158971260857703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 642
+        width: 74
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3685fd22c06aad6c0800000000000000
+      internalID: -4117796338222016413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 618
+        width: 87
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1fea37722edccf0800000000000000
+      internalID: -230279346853580291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 626
+        width: 128
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bde6fabfceaaa610800000000000000
+      internalID: 1633310022093434288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 2059
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d041245607aa4a0800000000000000
+      internalID: -6581324325245940382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_13
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 610
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4542bb34091c0bee0800000000000000
+      internalID: -1247284271425837996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 601
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf8d0c61d9200050800000000000000
+      internalID: 5764653502471966667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 596
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891e6579557f5ea30800000000000000
+      internalID: 4244070170849894808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1541
+        y: 600
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14b2afc68a8053a0800000000000000
+      internalID: -6678685935776648165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 596
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59ca6413119aa8c0800000000000000
+      internalID: -3987215008950204067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_18
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 564
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07193d57cf7612a0800000000000000
+      internalID: -6767080895838349555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_19
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 548
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a185a317c8a4ebb0800000000000000
+      internalID: -4907612120945426016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_20
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 578
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2207c6709aec1a90800000000000000
+      internalID: -7341735386331807189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_21
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 560
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5709c19f7b3335610800000000000000
+      internalID: 1608686357152829557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_22
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 536
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c17ba3460185810800000000000000
+      internalID: 1754170077528661042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_23
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 516
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9da827e0e9e4910800000000000000
+      internalID: 1823568684020062675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_24
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 512
+        width: 58
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6272e9b828e299750800000000000000
+      internalID: 6312127490959484710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_25
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 178
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824fe3e68610274e0800000000000000
+      internalID: -1985522937679121368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 182
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b8d347bfa66ec10800000000000000
+      internalID: 2082469505924959122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 162
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addd1a298e06d2550800000000000000
+      internalID: 6137668419184614874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_28
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 146
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73fe7bec8458f8b60800000000000000
+      internalID: 7750560031480213303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 130
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ff60651419470d0800000000000000
+      internalID: -3425953706719903931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_30
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 146
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6483c7f7f3e5d1f00800000000000000
+      internalID: 1089130311708325958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_31
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 144
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f500542ad74333650800000000000000
+      internalID: 6211366025272033375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_32
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 118
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a64ef8da7f0e190800000000000000
+      internalID: -7935070218611299739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_33
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 110
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be13abe8451003c90800000000000000
+      internalID: -7192247142227234325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 130
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa5309af65b179d10800000000000000
+      internalID: 2132203008968111535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_35
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 114
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ccd1f1178f76d50800000000000000
+      internalID: 6730621332865535098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_36
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 97
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709b42a5970bea540800000000000000
+      internalID: 5021144669814569223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_37
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 101
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ce17be2db5c8420800000000000000
+      internalID: 2633580843556269095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_38
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 112
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e26bc33d1b6b440800000000000000
+      internalID: 4951340361155227228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_39
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 101
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd522184e97100f20800000000000000
+      internalID: 3386732888364033501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_40
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 79
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d551ee7f1095e1150800000000000000
+      internalID: 5845207231362897245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_41
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 67
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71770193e5800e9e0800000000000000
+      internalID: -1594265067311827177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_42
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 77
+        width: 66
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed58bc2b39a47e8d0800000000000000
+      internalID: -2817201043676625442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: machete (1)_43
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 63
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3d4ca4e34817120800000000000000
+      internalID: 2409852678697178070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      machete (1)_0: 2454068339059771294
+      machete (1)_1: 4145384691205927201
+      machete (1)_10: -230279346853580291
+      machete (1)_11: 1633310022093434288
+      machete (1)_12: -6581324325245940382
+      machete (1)_13: -1247284271425837996
+      machete (1)_14: 5764653502471966667
+      machete (1)_15: 4244070170849894808
+      machete (1)_16: -6678685935776648165
+      machete (1)_17: -3987215008950204067
+      machete (1)_18: -6767080895838349555
+      machete (1)_19: -4907612120945426016
+      machete (1)_2: -6513460861551641663
+      machete (1)_20: -7341735386331807189
+      machete (1)_21: 1608686357152829557
+      machete (1)_22: 1754170077528661042
+      machete (1)_23: 1823568684020062675
+      machete (1)_24: 6312127490959484710
+      machete (1)_25: -1985522937679121368
+      machete (1)_26: 2082469505924959122
+      machete (1)_27: 6137668419184614874
+      machete (1)_28: 7750560031480213303
+      machete (1)_29: -3425953706719903931
+      machete (1)_3: 6339982955990590381
+      machete (1)_30: 1089130311708325958
+      machete (1)_31: 6211366025272033375
+      machete (1)_32: -7935070218611299739
+      machete (1)_33: -7192247142227234325
+      machete (1)_34: 2132203008968111535
+      machete (1)_35: 6730621332865535098
+      machete (1)_36: 5021144669814569223
+      machete (1)_37: 2633580843556269095
+      machete (1)_38: 4951340361155227228
+      machete (1)_39: 3386732888364033501
+      machete (1)_4: -3844670414646085398
+      machete (1)_40: 5845207231362897245
+      machete (1)_41: -1594265067311827177
+      machete (1)_42: -2817201043676625442
+      machete (1)_43: 2409852678697178070
+      machete (1)_5: 7661539168755002268
+      machete (1)_6: -5352333590209949959
+      machete (1)_7: -2413710088834302242
+      machete (1)_8: -5286158971260857703
+      machete (1)_9: -4117796338222016413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

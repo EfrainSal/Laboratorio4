@@ -15,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
     public float fireRate = 0.5f;
 
     [Header("Munición y Recarga")]
-    public int maxClipSize = 15;      
+    public int maxClipSize = 30;      
     public int currentAmmoInClip;     
     public int totalAmmo = 60;     
 

@@ -24,7 +24,8 @@ public class LevelManager : MonoBehaviour
     [Header("Referencias UI - Armas")]
     public GameObject ammoUIGO;
     public TextMeshProUGUI ammoTextUI;
-    public Image weaponIndicatorImageUI;
+    public GameObject macheteIconGO;
+    public GameObject subfusilIconGO;
 
     [Header("Condiciones del Piso")]
     [SerializeField] private int enemigosParaAvanzar = 10;
@@ -36,6 +37,11 @@ public class LevelManager : MonoBehaviour
     [Header("Estado Actual (Solo lectura)")]
     [SerializeField] private int enemigosDerrotados = 0;
     [SerializeField] private int spawnersActivados = 0;
+
+    // Añade esto en la parte superior donde tienes tus otros [Header]
+    [Header("Referencias UI - Habilidad")]
+    public Image skillBarFillUI; // La imagen "Fill" de la barra de habilidad
+    public Image skillIconUI; // La imagen donde va el icono de la habilidad
 
     private bool condicionesCumplidas = false;
     private bool llaveDropeada = false;
@@ -69,6 +75,29 @@ public class LevelManager : MonoBehaviour
         GameObject prefabAInstanciar = GameManager.Instance.ObtenerPrefabJugador();
         GameObject jugadorInstanciado = Instantiate(prefabAInstanciar, puntoDeInicio.position, Quaternion.identity);
 
+        // --- NUEVO: Inyectar UI a la Habilidad ---
+        int idPersonaje = GameManager.Instance.personajeSeleccionado;
+
+        if (idPersonaje == 0) // Jason (Escudo)
+        {
+            ShieldAbility shield = jugadorInstanciado.GetComponent<ShieldAbility>();
+            if (shield != null)
+            {
+                shield.skillBarFill = skillBarFillUI;
+                shield.skillIconImage = skillIconUI;
+                shield.InicializarUI();
+            }
+        }
+        else // Milena (Dash)
+        {
+            DashAbility dash = jugadorInstanciado.GetComponent<DashAbility>();
+            if (dash != null)
+            {
+                dash.skillBarFill = skillBarFillUI;
+                dash.skillIconImage = skillIconUI;
+                dash.InicializarUI();
+            }
+        }
         // --- APLICAR DATOS GUARDADOS (SI EXISTEN) ---
         SaveData datosGuardados = GameManager.Instance.DatosCargados;
         if (datosGuardados != null)
@@ -132,9 +161,12 @@ public class LevelManager : MonoBehaviour
         WeaponManager armas = jugadorInstanciado.GetComponent<WeaponManager>();
         if (armas != null)
         {
-            armas.weaponIndicatorImage = weaponIndicatorImageUI;
+            // ASIGNA LOS NUEVOS GAMEOBJECTS DEL CANVAS AL JUGADOR
+            armas.macheteIcon = macheteIconGO;
+            armas.subfusilIcon = subfusilIconGO;
             armas.ammoUI = ammoUIGO;
-            armas.EquipWeapon(true); 
+            
+            armas.EquipWeapon(true);
         }
 
         PlayerShooting disparo = jugadorInstanciado.GetComponent<PlayerShooting>();

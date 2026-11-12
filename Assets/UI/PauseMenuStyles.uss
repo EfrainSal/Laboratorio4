@@ -49,7 +49,7 @@
     height: 84px;
     align-self: center;
     margin-bottom: 6px;
-    background-image: url("project://database/Assets/UI/Logo2.png");
+    background-image: url("project://database/Assets/UI/Logo3.png");
     -unity-background-scale-mode: scale-to-fit;
 }
 

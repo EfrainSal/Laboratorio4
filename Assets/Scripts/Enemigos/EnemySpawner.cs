@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Cantidad de Enemigos")]
     public int minEnemies = 1;
     public int maxEnemies = 3;
-    public float spawnRadius = 1.5f; 
+    public float spawnRadius = 1.8f; 
 
     private Transform player;
     private bool spawnerRegistrado = false;

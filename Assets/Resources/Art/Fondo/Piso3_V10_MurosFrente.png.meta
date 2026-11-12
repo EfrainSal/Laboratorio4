@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: 4d5d09e564113e344b4498fd06cc8f7a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7257478770469233595
+    second: Piso3_V10_MurosFrente_0
+  - first:
+      213: -8730580064043387449
+    second: Piso3_V10_MurosFrente_1
+  - first:
+      213: -3307344411707869270
+    second: Piso3_V10_MurosFrente_2
+  - first:
+      213: 2272964388307003419
+    second: Piso3_V10_MurosFrente_3
+  - first:
+      213: 2335653282281440090
+    second: Piso3_V10_MurosFrente_4
+  - first:
+      213: -6197564504296269383
+    second: Piso3_V10_MurosFrente_5
+  - first:
+      213: 8690048601052833659
+    second: Piso3_V10_MurosFrente_6
+  - first:
+      213: 8386093874398971411
+    second: Piso3_V10_MurosFrente_7
+  - first:
+      213: -5254884507415982974
+    second: Piso3_V10_MurosFrente_8
+  - first:
+      213: -6459430384353263463
+    second: Piso3_V10_MurosFrente_9
+  - first:
+      213: -4136753204856621708
+    second: Piso3_V10_MurosFrente_10
+  - first:
+      213: -2419866871174606617
+    second: Piso3_V10_MurosFrente_11
+  - first:
+      213: 729554709568871934
+    second: Piso3_V10_MurosFrente_12
+  - first:
+      213: 6075583740228822669
+    second: Piso3_V10_MurosFrente_13
+  - first:
+      213: -5679946538884193488
+    second: Piso3_V10_MurosFrente_14
+  - first:
+      213: -76730561069098439
+    second: Piso3_V10_MurosFrente_15
+  - first:
+      213: -2899831851345153501
+    second: Piso3_V10_MurosFrente_16
+  - first:
+      213: 1293669184387478579
+    second: Piso3_V10_MurosFrente_17
+  - first:
+      213: 8520383354295776716
+    second: Piso3_V10_MurosFrente_18
+  - first:
+      213: -5739221633524411771
+    second: Piso3_V10_MurosFrente_19
+  - first:
+      213: -2827165455182105093
+    second: Piso3_V10_MurosFrente_20
+  - first:
+      213: 5555994019395465901
+    second: Piso3_V10_MurosFrente_21
+  - first:
+      213: 317011611714937999
+    second: Piso3_V10_MurosFrente_22
+  - first:
+      213: -3713613266891627226
+    second: Piso3_V10_MurosFrente_23
+  - first:
+      213: -2204492829901469670
+    second: Piso3_V10_MurosFrente_24
+  - first:
+      213: 803687014465474604
+    second: Piso3_V10_MurosFrente_25
+  - first:
+      213: -4496636647792221381
+    second: Piso3_V10_MurosFrente_26
+  - first:
+      213: 371780998662150707
+    second: Piso3_V10_MurosFrente_27
+  - first:
+      213: 8260629912779498245
+    second: Piso3_V10_MurosFrente_28
+  - first:
+      213: 8760458516686251188
+    second: Piso3_V10_MurosFrente_29
+  - first:
+      213: -5820794185330518501
+    second: Piso3_V10_MurosFrente_30
+  - first:
+      213: 3871529051700624107
+    second: Piso3_V10_MurosFrente_31
+  - first:
+      213: -2709117739156439238
+    second: Piso3_V10_MurosFrente_32
+  - first:
+      213: 2613273245119245425
+    second: Piso3_V10_MurosFrente_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 1
+  spritePivot: {x: 0, y: 1}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_0
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1355
+        width: 546
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c1e319281484b90800000000000000
+      internalID: -7257478770469233595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_1
+      rect:
+        serializedVersion: 2
+        x: 3503
+        y: 1355
+        width: 191
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5369730bfb6d680800000000000000
+      internalID: -8730580064043387449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_2
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 1259
+        width: 258
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa77746d7c3f912d0800000000000000
+      internalID: -3307344411707869270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 1223
+        width: 143
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18e62881113b8f10800000000000000
+      internalID: 2272964388307003419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_4
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1223
+        width: 287
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a534cd01948e96020800000000000000
+      internalID: 2335653282281440090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1183
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9d9d06be3ddf9a0800000000000000
+      internalID: -6197564504296269383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_6
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1115
+        width: 738
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7762aa2921499870800000000000000
+      internalID: 8690048601052833659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_7
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 1099
+        width: 704
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31641a482f3616470800000000000000
+      internalID: 8386093874398971411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_8
+      rect:
+        serializedVersion: 2
+        x: 3407
+        y: 1111
+        width: 111
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c44cfc166e217b0800000000000000
+      internalID: -5254884507415982974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 982
+        width: 127
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9904249f94e7b56a0800000000000000
+      internalID: -6459430384353263463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_10
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 827
+        width: 290
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475ff0da0ec4796c0800000000000000
+      internalID: -4136753204856621708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_11
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 763
+        width: 258
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0d6e3d6e7ea6ed0800000000000000
+      internalID: -2419866871174606617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_12
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 699
+        width: 319
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdd01c9426ef1a00800000000000000
+      internalID: 729554709568871934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_13
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 711
+        width: 604
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d866a7fc83fc05450800000000000000
+      internalID: 6075583740228822669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_14
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 655
+        width: 418
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033299e67b6cc21b0800000000000000
+      internalID: -5679946538884193488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_15
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 662
+        width: 191
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a5f0416f56feef0800000000000000
+      internalID: -76730561069098439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 619
+        width: 127
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32275309b4ab1c7d0800000000000000
+      internalID: -2899831851345153501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_17
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 603
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334f840e44904f110800000000000000
+      internalID: 1293669184387478579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_18
+      rect:
+        serializedVersion: 2
+        x: 3407
+        y: 587
+        width: 287
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc573fe848b7e3670800000000000000
+      internalID: 8520383354295776716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_19
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 535
+        width: 623
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5825a8ef4503a50b0800000000000000
+      internalID: -5739221633524411771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_20
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 411
+        width: 242
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf57d9a5ff3e3c8d0800000000000000
+      internalID: -2827165455182105093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_21
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 283
+        width: 111
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2f24caf1bda1d40800000000000000
+      internalID: 5555994019395465901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_22
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 283
+        width: 255
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8461f99160466400800000000000000
+      internalID: 317011611714937999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_23
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 214
+        width: 95
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6252fb9c868967cc0800000000000000
+      internalID: -3713613266891627226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_24
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 219
+        width: 290
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18c3db73711861e0800000000000000
+      internalID: -2204492829901469670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_25
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 151
+        width: 143
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c201fcfd415472b00800000000000000
+      internalID: 803687014465474604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_26
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 123
+        width: 415
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3367540bccb891c0800000000000000
+      internalID: -4496636647792221381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_27
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 125
+        width: 415
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a5f7739d4d82500800000000000000
+      internalID: 371780998662150707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_28
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 141
+        width: 511
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50320349327a3a270800000000000000
+      internalID: 8260629912779498245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_29
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 93
+        width: 380
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b421a42b96639970800000000000000
+      internalID: 8760458516686251188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_30
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 91
+        width: 159
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1617b04782683fa0800000000000000
+      internalID: -5820794185330518501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_31
+      rect:
+        serializedVersion: 2
+        x: 3007
+        y: 91
+        width: 127
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea7838092f6ab530800000000000000
+      internalID: 3871529051700624107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_32
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 45
+        width: 252
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ffede05c7476ad0800000000000000
+      internalID: -2709117739156439238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piso3_V10_MurosFrente_33
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 45
+        width: 316
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c6d54bb26344420800000000000000
+      internalID: 2613273245119245425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Piso3_V10_MurosFrente_0: -7257478770469233595
+      Piso3_V10_MurosFrente_1: -8730580064043387449
+      Piso3_V10_MurosFrente_10: -4136753204856621708
+      Piso3_V10_MurosFrente_11: -2419866871174606617
+      Piso3_V10_MurosFrente_12: 729554709568871934
+      Piso3_V10_MurosFrente_13: 6075583740228822669
+      Piso3_V10_MurosFrente_14: -5679946538884193488
+      Piso3_V10_MurosFrente_15: -76730561069098439
+      Piso3_V10_MurosFrente_16: -2899831851345153501
+      Piso3_V10_MurosFrente_17: 1293669184387478579
+      Piso3_V10_MurosFrente_18: 8520383354295776716
+      Piso3_V10_MurosFrente_19: -5739221633524411771
+      Piso3_V10_MurosFrente_2: -3307344411707869270
+      Piso3_V10_MurosFrente_20: -2827165455182105093
+      Piso3_V10_MurosFrente_21: 5555994019395465901
+      Piso3_V10_MurosFrente_22: 317011611714937999
+      Piso3_V10_MurosFrente_23: -3713613266891627226
+      Piso3_V10_MurosFrente_24: -2204492829901469670
+      Piso3_V10_MurosFrente_25: 803687014465474604
+      Piso3_V10_MurosFrente_26: -4496636647792221381
+      Piso3_V10_MurosFrente_27: 371780998662150707
+      Piso3_V10_MurosFrente_28: 8260629912779498245
+      Piso3_V10_MurosFrente_29: 8760458516686251188
+      Piso3_V10_MurosFrente_3: 2272964388307003419
+      Piso3_V10_MurosFrente_30: -5820794185330518501
+      Piso3_V10_MurosFrente_31: 3871529051700624107
+      Piso3_V10_MurosFrente_32: -2709117739156439238
+      Piso3_V10_MurosFrente_33: 2613273245119245425
+      Piso3_V10_MurosFrente_4: 2335653282281440090
+      Piso3_V10_MurosFrente_5: -6197564504296269383
+      Piso3_V10_MurosFrente_6: 8690048601052833659
+      Piso3_V10_MurosFrente_7: 8386093874398971411
+      Piso3_V10_MurosFrente_8: -5254884507415982974
+      Piso3_V10_MurosFrente_9: -6459430384353263463
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

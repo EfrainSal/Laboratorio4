@@ -572,6 +572,14 @@ MonoBehaviour:
   detectionRadius: 8
   stoppingDistance: 4
   retreatDistance: 2.5
+  capaMuros:
+    serializedVersion: 2
+    m_Bits: 256
+  wobbleSpeed: 5
+  wobbleAmount: 0.4
+  patrolSpeed: 1
+  patrolRadius: 4
+  patrolWaitTime: 2
   bulletPrefab: {fileID: 8902530838803603131, guid: 5a6495456d1f7be499ac81501cb8349d, type: 3}
   firePoint: {fileID: 7173344857536393783}
   bulletForce: 20

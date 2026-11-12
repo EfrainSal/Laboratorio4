@@ -31,6 +31,114 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3238368359553002099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3822632611529453565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2537318088069435002}
+  - component: {fileID: 5301283426593737080}
+  m_Layer: 0
+  m_Name: Spot Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2537318088069435002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822632611529453565}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.014, y: 0.004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3238368359553002099}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5301283426593737080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822632611529453565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 4
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_Light2DProvider:
+    rid: -2
+  m_SelectionSources:
+    rid: 3541500669969563654
+  m_FalloffIntensity: 0.715
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000i
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.851
+  m_ShadowSoftness: 1
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 10
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3541500669969563654
+      type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_SelectedHashCode: 3
+        m_SelectedSource:
+          rid: -2
+        m_Provider2DCache:
+          rid: 3541500669969563655
+    - rid: 3541500669969563655
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!1 &4445733836767800532
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2537318088069435002}
   - {fileID: 8569696971921828008}
   - {fileID: 8034371282967184946}
   m_Father: {fileID: 0}
@@ -162,7 +271,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &8994542614104305354
 PolygonCollider2D:
@@ -227,6 +336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovimientoPlayer
   velocidad: 5
+  factorVelocidadReversa: 0.6
+  pivoteArma: {fileID: 0}
+  spriteCuerpo: {fileID: 0}
   sonidosPasos:
   - {fileID: 8300000, guid: 698a9ab02fb34e04588a510e9275a6fb, type: 3}
   - {fileID: 8300000, guid: 12432f0198fa888499a3c9b51aa386e7, type: 3}
@@ -397,10 +509,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponManager
   meleeWeapon: {fileID: 5435252956759248239}
   rangedWeapon: {fileID: 3950210386647523420}
-  weaponIndicatorImage: {fileID: 0}
   ammoUI: {fileID: 0}
-  macheteSprite: {fileID: -3544453155671468836, guid: 7f4fa2d87309f1949bbac8b900d48404, type: 3}
-  subfusilSprite: {fileID: 3587635309237153920, guid: 8332c101ab713954da93a498b0ff1d24, type: 3}
+  macheteIcon: {fileID: 0}
+  subfusilIcon: {fileID: 0}
   isUsingMelee: 1
 --- !u!114 &2351459723101302582
 MonoBehaviour:
@@ -417,6 +528,11 @@ MonoBehaviour:
   fuerzaDash: 25
   duracionDash: 0.2
   cooldown: 3
+  iconoHabilidad: {fileID: -3016375755711065567, guid: ed1b4053c71a11042aa50aa027bb63db, type: 3}
+  colorListo: {r: 0, g: 1, b: 1, a: 1}
+  colorEnCooldown: {r: 0, g: 0.5, b: 0.5, a: 1}
+  skillBarFill: {fileID: 0}
+  skillIconImage: {fileID: 0}
   sfxSource: {fileID: 3861281069416560983}
   sonidoDash: {fileID: 8300000, guid: c27766b07398fdc4891ced387aba55c0, type: 3}
   capaJugador: Player

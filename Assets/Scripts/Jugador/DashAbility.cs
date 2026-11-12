@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI; // Asegúrate de incluir esto
 
 public class DashAbility : MonoBehaviour
 {
@@ -8,6 +9,15 @@ public class DashAbility : MonoBehaviour
     public float fuerzaDash = 25f;
     public float duracionDash = 0.2f;
     public float cooldown = 3f;
+
+    [Header("Configuración de UI")]
+    public Sprite iconoHabilidad; // Arrastra aquí el sprite de la habilidad (icono_desliz...)
+    public Color colorListo = new Color(0, 1, 1, 1); // Cian brillante
+    public Color colorEnCooldown = new Color(0, 0.5f, 0.5f, 1); // Cian oscuro
+    
+    // El LevelManager nos inyectará esto
+    [HideInInspector] public Image skillBarFill;
+    [HideInInspector] public Image skillIconImage;
 
     private bool habilidadLista = true;
     private bool haciendoDash = false;
@@ -18,13 +28,11 @@ public class DashAbility : MonoBehaviour
     public AudioClip sonidoDash;
 
     [Header("Colisiones")]
-    [Tooltip("La capa original de tu jugador (ej. 'Player')")]
     public string capaJugador = "Player";
-    [Tooltip("Una capa que ignora a los enemigos, pero choca con paredes (debes crearla en Unity)")]
     public string capaDash = "PlayerDash";
 
     private Rigidbody2D rb;
-    private MovimientoPlayer movPlayer; // Tu script de movimiento actual
+    private MovimientoPlayer movPlayer;
 
     private void Start()
     {
@@ -32,7 +40,21 @@ public class DashAbility : MonoBehaviour
         movPlayer = GetComponent<MovimientoPlayer>();
     }
 
-    // Leemos el movimiento para saber hacia dónde hacer el dash
+    // Se llama desde el LevelManager después de instanciar al jugador
+    public void InicializarUI()
+    {
+        if (skillIconImage != null && iconoHabilidad != null)
+        {
+            skillIconImage.sprite = iconoHabilidad;
+        }
+
+        if (skillBarFill != null)
+        {
+            skillBarFill.color = colorListo;
+            skillBarFill.fillAmount = 1f;
+        }
+    }
+
     public void OnMove(InputValue value)
     {
         direccionInput = value.Get<Vector2>();
@@ -40,7 +62,6 @@ public class DashAbility : MonoBehaviour
 
     public void OnAbility(InputValue value)
     {
-        // Solo podemos hacer dash si está listo, no estamos dasheando ya, y nos estamos moviendo
         if (value.isPressed && habilidadLista && !haciendoDash && direccionInput != Vector2.zero)
         {
             StartCoroutine(ActivarDash());
@@ -52,28 +73,47 @@ public class DashAbility : MonoBehaviour
         habilidadLista = false;
         haciendoDash = true;
 
-        // Reproducir sonido
-        if (sfxSource != null && sonidoDash != null)
-        {
-            sfxSource.PlayOneShot(sonidoDash);
-        }
-
+        if (sfxSource != null && sonidoDash != null) sfxSource.PlayOneShot(sonidoDash);
         if (movPlayer != null) movPlayer.enabled = false;
         
-        // Cambiar la capa para atravesar enemigos
         gameObject.layer = LayerMask.NameToLayer(capaDash);
-
         rb.linearVelocity = direccionInput.normalized * fuerzaDash;
 
-        yield return new WaitForSeconds(duracionDash);
+        // Feedback visual: vaciamos la barra mientras dura el dash
+        float tiempo = 0f;
+        while (tiempo < duracionDash)
+        {
+            tiempo += Time.deltaTime;
+            if (skillBarFill != null) skillBarFill.fillAmount = 1f - (tiempo / duracionDash);
+            yield return null;
+        }
 
         haciendoDash = false;
         if (movPlayer != null) movPlayer.enabled = true;
-        
-        // Restaurar la capa original para volver a colisionar con enemigos
         gameObject.layer = LayerMask.NameToLayer(capaJugador);
 
-        yield return new WaitForSeconds(cooldown);
+        // --- Inicio del Cooldown ---
+        if (skillBarFill != null)
+        {
+            skillBarFill.color = colorEnCooldown;
+            skillBarFill.fillAmount = 0f;
+        }
+
+        tiempo = 0f;
+        while (tiempo < cooldown)
+        {
+            tiempo += Time.deltaTime;
+            if (skillBarFill != null) skillBarFill.fillAmount = tiempo / cooldown;
+            yield return null;
+        }
+
+        // Habilidad lista de nuevo
+        if (skillBarFill != null)
+        {
+            skillBarFill.color = colorListo;
+            skillBarFill.fillAmount = 1f;
+        }
+        
         habilidadLista = true;
     }
 }

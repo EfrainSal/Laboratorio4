@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: 982bf101e9868754e84899f4c2b4b46f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3967448823824059406
+    second: barra_vida_habilidad_vacia_0
+  - first:
+      213: 794877918635461255
+    second: barra_vida_habilidad_vacia_1
+  - first:
+      213: 2360802817588337625
+    second: barra_vida_habilidad_vacia_2
+  - first:
+      213: -1848450501688774862
+    second: barra_vida_habilidad_vacia_3
+  - first:
+      213: 5879901364915769170
+    second: barra_vida_habilidad_vacia_4
+  - first:
+      213: 6469570690523938397
+    second: barra_vida_habilidad_vacia_5
+  - first:
+      213: -9072524850545476542
+    second: barra_vida_habilidad_vacia_6
+  - first:
+      213: 2615519464996699440
+    second: barra_vida_habilidad_vacia_7
+  - first:
+      213: -6641243871382728474
+    second: barra_vida_habilidad_vacia_8
+  - first:
+      213: 76603372493427550
+    second: barra_vida_habilidad_vacia_9
+  - first:
+      213: 5097797326066850629
+    second: barra_vida_habilidad_vacia_10
+  - first:
+      213: -322356708684892560
+    second: barra_vida_habilidad_vacia_11
+  - first:
+      213: -6381124914809599193
+    second: barra_vida_habilidad_vacia_12
+  - first:
+      213: 961354296340247034
+    second: barra_vida_habilidad_vacia_13
+  - first:
+      213: 1471996969805259711
+    second: barra_vida_habilidad_vacia_14
+  - first:
+      213: 1855994488391293855
+    second: barra_vida_habilidad_vacia_15
+  - first:
+      213: 8416528904650772448
+    second: barra_vida_habilidad_vacia_16
+  - first:
+      213: -2087460377721549209
+    second: barra_vida_habilidad_vacia_17
+  - first:
+      213: -8808707982035648746
+    second: barra_vida_habilidad_vacia_18
+  - first:
+      213: -3978938489355311175
+    second: barra_vida_habilidad_vacia_19
+  - first:
+      213: -1828368349674860338
+    second: barra_vida_habilidad_vacia_20
+  - first:
+      213: -276375655253467815
+    second: barra_vida_habilidad_vacia_21
+  - first:
+      213: -1420539281286917456
+    second: barra_vida_habilidad_vacia_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 2029
+        height: 718
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0c03905fa53f0730800000000000000
+      internalID: 3967448823824059406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_1
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 691
+        width: 117
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a811c6149f70b00800000000000000
+      internalID: 794877918635461255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_2
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 692
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db181f87a143c020800000000000000
+      internalID: 2360802817588337625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_3
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 715
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23fa2fdef0cf856e0800000000000000
+      internalID: -1848450501688774862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_4
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 693
+        width: 58
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f832a632b999150800000000000000
+      internalID: 5879901364915769170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_5
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 699
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e35f9044888c950800000000000000
+      internalID: 6469570690523938397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 693
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c355b77bae71280800000000000000
+      internalID: -9072524850545476542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_7
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 699
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d7f3688113c4420800000000000000
+      internalID: 2615519464996699440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_8
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 633
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e01e73c2ef85d3a0800000000000000
+      internalID: -6641243871382728474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_9
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 633
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5351168c56201100800000000000000
+      internalID: 76603372493427550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_10
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 79
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b9625a8a30fb640800000000000000
+      internalID: 5097797326066850629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_11
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 82
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0767fd70842c68bf0800000000000000
+      internalID: -322356708684892560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_12
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 65
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b0169d2b0b177a0800000000000000
+      internalID: -6381124914809599193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_13
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 62
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1f7a893aa675d00800000000000000
+      internalID: 961354296340247034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_14
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 63
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3a1bfe1759d6410800000000000000
+      internalID: 1471996969805259711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_15
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 65
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b55a95721d1c910800000000000000
+      internalID: 1855994488391293855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_16
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 47
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef448332748dc470800000000000000
+      internalID: 8416528904650772448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_17
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 42
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e4437a8d9d703e0800000000000000
+      internalID: -2087460377721549209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_18
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 31
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ffd98c2ce21c580800000000000000
+      internalID: -8808707982035648746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_19
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 31
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7e8d67688f7c8c0800000000000000
+      internalID: -3978938489355311175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_20
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 33
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0101f4ca450a6e0800000000000000
+      internalID: -1828368349674860338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_21
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 31
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d1d0c4ecd1a2cf0800000000000000
+      internalID: -276375655253467815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra_vida_habilidad_vacia_22
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 23
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2976dcc0b394ce0800000000000000
+      internalID: -1420539281286917456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      barra_vida_habilidad_vacia_0: 3967448823824059406
+      barra_vida_habilidad_vacia_1: 794877918635461255
+      barra_vida_habilidad_vacia_10: 5097797326066850629
+      barra_vida_habilidad_vacia_11: -322356708684892560
+      barra_vida_habilidad_vacia_12: -6381124914809599193
+      barra_vida_habilidad_vacia_13: 961354296340247034
+      barra_vida_habilidad_vacia_14: 1471996969805259711
+      barra_vida_habilidad_vacia_15: 1855994488391293855
+      barra_vida_habilidad_vacia_16: 8416528904650772448
+      barra_vida_habilidad_vacia_17: -2087460377721549209
+      barra_vida_habilidad_vacia_18: -8808707982035648746
+      barra_vida_habilidad_vacia_19: -3978938489355311175
+      barra_vida_habilidad_vacia_2: 2360802817588337625
+      barra_vida_habilidad_vacia_20: -1828368349674860338
+      barra_vida_habilidad_vacia_21: -276375655253467815
+      barra_vida_habilidad_vacia_22: -1420539281286917456
+      barra_vida_habilidad_vacia_3: -1848450501688774862
+      barra_vida_habilidad_vacia_4: 5879901364915769170
+      barra_vida_habilidad_vacia_5: 6469570690523938397
+      barra_vida_habilidad_vacia_6: -9072524850545476542
+      barra_vida_habilidad_vacia_7: 2615519464996699440
+      barra_vida_habilidad_vacia_8: -6641243871382728474
+      barra_vida_habilidad_vacia_9: 76603372493427550
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,13 +1,22 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ShieldAbility : MonoBehaviour
 {
     [Header("Configuración del Escudo")]
     public float duracionEscudo = 3f;
     public float cooldown = 8f;
-    public GameObject escudoVisual; // Un sprite hijo que servirá de burbuja/escudo
+    public GameObject escudoVisual;
+
+    [Header("Configuración de UI")]
+    public Sprite iconoHabilidad; // Arrastra aquí el sprite del escudo (icono_escudo)
+    public Color colorListo = new Color(0, 1, 1, 1); // Cian brillante
+    public Color colorEnCooldown = new Color(0, 0.5f, 0.5f, 1); // Cian oscuro
+    
+    [HideInInspector] public Image skillBarFill;
+    [HideInInspector] public Image skillIconImage;
 
     [Header("Audio")]
     public AudioSource sfxSource;
@@ -22,7 +31,20 @@ public class ShieldAbility : MonoBehaviour
         if (escudoVisual != null) escudoVisual.SetActive(false);
     }
 
-    // Se llama automáticamente por el Player Input cuando presionas el botón "Ability"
+    public void InicializarUI()
+    {
+        if (skillIconImage != null && iconoHabilidad != null)
+        {
+            skillIconImage.sprite = iconoHabilidad;
+        }
+
+        if (skillBarFill != null)
+        {
+            skillBarFill.color = colorListo;
+            skillBarFill.fillAmount = 1f;
+        }
+    }
+
     public void OnAbility(InputValue value)
     {
         if (value.isPressed && habilidadLista)
@@ -35,25 +57,46 @@ public class ShieldAbility : MonoBehaviour
     {
         habilidadLista = false;
 
-        // Reproducir sonido de escudo
-        if (sfxSource != null && sonidoEscudo != null)
-        {
-            sfxSource.PlayOneShot(sonidoEscudo);
-        }
+        if (sfxSource != null && sonidoEscudo != null) sfxSource.PlayOneShot(sonidoEscudo);
         
-        // Activar invulnerabilidad y visual
         playerHealth.isInvulnerable = true;
         if (escudoVisual != null) escudoVisual.SetActive(true);
 
-        // Esperar la duración
-        yield return new WaitForSeconds(duracionEscudo);
+        // Feedback visual: La barra baja lentamente mientras el escudo está activo
+        float tiempo = 0f;
+        while (tiempo < duracionEscudo)
+        {
+            tiempo += Time.deltaTime;
+            if (skillBarFill != null) skillBarFill.fillAmount = 1f - (tiempo / duracionEscudo);
+            yield return null;
+        }
 
-        // Desactivar
+        // Se apaga el escudo
         playerHealth.isInvulnerable = false;
         if (escudoVisual != null) escudoVisual.SetActive(false);
 
-        // Esperar el cooldown
-        yield return new WaitForSeconds(cooldown);
+        // --- Inicio del Cooldown ---
+        if (skillBarFill != null)
+        {
+            skillBarFill.color = colorEnCooldown;
+            skillBarFill.fillAmount = 0f;
+        }
+
+        tiempo = 0f;
+        while (tiempo < cooldown)
+        {
+            tiempo += Time.deltaTime;
+            if (skillBarFill != null) skillBarFill.fillAmount = tiempo / cooldown;
+            yield return null;
+        }
+
+        // Habilidad lista de nuevo
+        if (skillBarFill != null)
+        {
+            skillBarFill.color = colorListo;
+            skillBarFill.fillAmount = 1f;
+        }
+
         habilidadLista = true;
     }
 }

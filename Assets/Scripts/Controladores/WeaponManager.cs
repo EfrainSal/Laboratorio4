@@ -10,13 +10,11 @@ public class WeaponManager : MonoBehaviour
     public PlayerShooting rangedWeapon;
 
     [Header("UI (Canvas)")]
-    public Image weaponIndicatorImage;
-    public GameObject ammoUI; // Arrastra aquí el GameObject que contiene el texto de Ammo
-    //public TextMeshProUGUI weaponIndicatorText;  Crea un texto en tu Canvas para mostrar el arma actual y arrástralo aquí
-    
-    [Header("Sprites de Armas")]
-    public Sprite macheteSprite; // Aquí asignarás el sprite del Machete
-    public Sprite subfusilSprite; // Aquí asignarás el sprite del Subfusil
+    public GameObject ammoUI; // El GameObject que contiene el texto de Ammo
+
+    [Header("Iconos de Armas (GameObjects en Canvas)")]
+    public GameObject macheteIcon;  // Asigna el GameObject de la imagen del Machete
+    public GameObject subfusilIcon; // Asigna el GameObject de la imagen del Subfusil
 
     public bool isUsingMelee = true; // True = Machete, False = Subfusil
 
@@ -38,9 +36,9 @@ public class WeaponManager : MonoBehaviour
 
     public void EquipWeapon(bool useMelee)
     {
-        // Activa/Desactiva los scripts
-        meleeWeapon.enabled = useMelee;
-        rangedWeapon.enabled = !useMelee;
+        // Activa/Desactiva los scripts de combate
+        if (meleeWeapon != null) meleeWeapon.enabled = useMelee;
+        if (rangedWeapon != null) rangedWeapon.enabled = !useMelee;
 
         // Activa/Desactiva la UI de munición
         if (ammoUI != null) 
@@ -48,13 +46,15 @@ public class WeaponManager : MonoBehaviour
             ammoUI.SetActive(!useMelee);
         }
 
-        // Actualiza el texto del arma actual en el Canvas
-        if (weaponIndicatorImage != null)
+        // Activa el icono del arma seleccionada y apaga el otro
+        if (macheteIcon != null) 
         {
-            weaponIndicatorImage.sprite = useMelee ? macheteSprite : subfusilSprite;
-            
-            // Opcional: Ajustar el tamaño nativo del sprite para que no se deforme
-            // weaponIndicatorImage.SetNativeSize(); 
+            macheteIcon.SetActive(useMelee);
+        }
+        
+        if (subfusilIcon != null) 
+        {
+            subfusilIcon.SetActive(!useMelee);
         }
     }
 }
