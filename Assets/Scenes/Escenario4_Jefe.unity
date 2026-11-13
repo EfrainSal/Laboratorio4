@@ -10117,7 +10117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c503d470f86c044d85f19e88dfbfac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAI
-  moveSpeed: 2.5
+  moveSpeed: 2
   attackRange: 2
   timeBetweenAttacks: 2
   damageZarpazo: 20
@@ -10125,6 +10125,9 @@ MonoBehaviour:
   bossBulletPrefab: {fileID: 6474643717541286641, guid: b351d83c3a314304e80a7241ee08e63f, type: 3}
   firePoint: {fileID: 73056767}
   bulletsAmount: 12
+  burstCount: 3
+  timeBetweenBursts: 0.25
+  burstRotationOffset: 10
   damageZarpazoLetal: 45
   knockbackLetal: 15
   basicEnemiesToSummon:
@@ -10153,6 +10156,9 @@ MonoBehaviour:
   bossHealthUIContainer: {fileID: 0}
   healthBarFill: {fileID: 0}
   damageTrailFill: {fileID: 0}
+  margenBarra: {x: 40, y: 20}
+  anchoMaximoBarra: 853.398
+  separacionDelJugador: 24
 --- !u!50 &1598170376
 Rigidbody2D:
   serializedVersion: 5

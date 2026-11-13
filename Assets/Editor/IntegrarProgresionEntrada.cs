@@ -59,12 +59,20 @@ public static class IntegrarProgresionEntrada
             luz.lightType = Light2D.LightType.Global; luz.intensity = 0;
             var spawners = new GameObject("SpawnersSorbos").transform;
             spawners.SetParent(raiz.transform);
-            var posiciones = new[] { new Vector3(13, -11, 0), new Vector3(24, -12, 0), new Vector3(43.4f, -13.7f, 0) };
-            for (int i = 0; i < 3; i++)
+            var posiciones = new[]
             {
-                var go = Instanciar("Assets/Prefabs/Spawner_lvl" + (i + 1) + ".prefab", spawners, escena);
+                new Vector3(13.0f, -11.0f, 0f),
+                new Vector3(24.0f, -12.0f, 0f),
+                new Vector3(30.9f, -18.3f, 0f),
+                new Vector3(44.5f, -15.0f, 0f)
+            };
+            for (int i = 0; i < posiciones.Length; i++)
+            {
+                var go = Instanciar("Assets/Prefabs/Spawner_lvl1.prefab", spawners, escena);
+                go.name = "Spawner_lvl1_" + (i + 1);
                 go.transform.position = posiciones[i];
-                go.GetComponent<EnemySpawner>().evitarObstaculos = true;
+                var sp = go.GetComponent<EnemySpawner>();
+                sp.evitarObstaculos = true;
                 foreach (var r in go.GetComponentsInChildren<SpriteRenderer>(true)) r.enabled = false;
             }
             // Reutilizar el trigger de Debugscene sobre la puerta dibujada del escenario.
@@ -166,10 +174,27 @@ public static class IntegrarProgresionEntrada
         nivel.FindProperty("llavePrefab").objectReferenceValue = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/TarjetaAcceso.prefab");
         nivel.ApplyModifiedPropertiesWithoutUndo();
 
-        foreach (var spawner in escena.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<EnemySpawner>(true)))
+        var viejoSpawners = escena.GetRootGameObjects().FirstOrDefault(g => g.name == "SpawnersSorbos");
+        if (viejoSpawners != null) Object.DestroyImmediate(viejoSpawners);
+        foreach (var spRestante in escena.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<EnemySpawner>(true)).Select(s => s.gameObject).ToArray())
+            Object.DestroyImmediate(spRestante);
+
+        var grupoSpawners = new GameObject("SpawnersSorbos").transform;
+        var posicionesPiso2 = new[]
         {
-            spawner.evitarObstaculos = true;
-            foreach (var r in spawner.GetComponentsInChildren<SpriteRenderer>(true)) r.enabled = false;
+            new Vector3(11.51f, -10.66f, 0f),
+            new Vector3(15.06f, -16.26f, 0f),
+            new Vector3(22.43f, -8.45f, 0f),
+            new Vector3(34.33f, -11.78f, 0f)
+        };
+        for (int i = 0; i < posicionesPiso2.Length; i++)
+        {
+            var go = Instanciar("Assets/Prefabs/Spawner_lvl2.prefab", grupoSpawners, escena);
+            go.name = "Spawner_lvl2_" + (i + 1);
+            go.transform.position = posicionesPiso2[i];
+            var sp = go.GetComponent<EnemySpawner>();
+            sp.evitarObstaculos = true;
+            foreach (var r in go.GetComponentsInChildren<SpriteRenderer>(true)) r.enabled = false;
         }
 
         foreach (var antiguo in escena.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<PuertaNivel>(true)).Select(p => p.gameObject).ToArray())
@@ -256,15 +281,19 @@ public static class IntegrarProgresionEntrada
         spawners.SetParent(raiz.transform);
         var posiciones = new[]
         {
-            new Vector3(14.28f, -8.29f, 0f),
-            new Vector3(25.04f, -18.19f, 0f),
+            new Vector3(11.50f, -7.80f, 0f),
+            new Vector3(22.55f, -10.23f, 0f),
+            new Vector3(17.07f, -18.40f, 0f),
+            new Vector3(34.00f, -18.03f, 0f),
             new Vector3(32.61f, -7.79f, 0f)
         };
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < posiciones.Length; i++)
         {
-            var go = Instanciar("Assets/Prefabs/Spawner_lvl" + (i + 1) + ".prefab", spawners, escena);
+            var go = Instanciar("Assets/Prefabs/Spawner_lvl3.prefab", spawners, escena);
+            go.name = "Spawner_lvl3_" + (i + 1);
             go.transform.position = posiciones[i];
-            go.GetComponent<EnemySpawner>().evitarObstaculos = true;
+            var sp = go.GetComponent<EnemySpawner>();
+            sp.evitarObstaculos = true;
             foreach (var r in go.GetComponentsInChildren<SpriteRenderer>(true)) r.enabled = false;
         }
 

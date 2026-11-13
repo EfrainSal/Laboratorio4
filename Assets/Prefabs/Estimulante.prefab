@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1424044275707399098}
   - component: {fileID: 3403755476186641876}
   - component: {fileID: 6642865252924900506}
+  - component: {fileID: 5101453526620707018}
   m_Layer: 0
   m_Name: Estimulante
   m_TagString: Drop
@@ -185,3 +186,21 @@ PolygonCollider2D:
       - {x: -0.7, y: -0.905}
       - {x: -0.25, y: -0.755}
   m_UseDelaunayMesh: 1
+--- !u!114 &5101453526620707018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137733913389927280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27558318684628c4fb5a3e02bfdbe37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrilloObjeto
+  colorBrillo: {r: 0.4, g: 1, b: 0.55, a: 0.9}
+  grosorBordePixeles: 2.6
+  velocidadPulso: 3.2
+  opacidadMinima: 0.38
+  opacidadMaxima: 0.92
+  restaurarBrilloSpriteBase: 1

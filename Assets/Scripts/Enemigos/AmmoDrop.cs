@@ -6,6 +6,14 @@ public class AmmoDrop : MonoBehaviour
     public int minAmmo = 2; // Mínimo de balas que da
     public int maxAmmo = 5; // Máximo de balas que da
 
+    private void Awake()
+    {
+        if (GetComponent<BrilloObjeto>() == null)
+        {
+            gameObject.AddComponent<BrilloObjeto>();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Si el jugador lo toca

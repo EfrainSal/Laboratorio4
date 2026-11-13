@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8451050238838292643}
   - component: {fileID: 6082052438964089781}
   - component: {fileID: 3312338835132382555}
+  - component: {fileID: 176074437379282497}
   m_Layer: 0
   m_Name: Nota
   m_TagString: Interactuable
@@ -153,3 +154,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotaInteractable
   spriteNotaAltaResolucion: {fileID: 0}
+--- !u!114 &176074437379282497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037848542790907389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27558318684628c4fb5a3e02bfdbe37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrilloObjeto
+  colorBrillo: {r: 1, g: 0.92, b: 0.45, a: 0.9}
+  grosorBordePixeles: 3.2
+  velocidadPulso: 3.2
+  opacidadMinima: 0.38
+  opacidadMaxima: 0.92
+  restaurarBrilloSpriteBase: 1

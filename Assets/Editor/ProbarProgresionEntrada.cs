@@ -144,9 +144,8 @@ public static class ProbarProgresionEntrada
         Exigir(Object.FindObjectsByType<BossAI>(FindObjectsSortMode.None).Length == 0, "Dr. Yiba ausente de Entrada");
         Exigir(LevelManager.Instance.healthBarFillUI != null && Object.FindFirstObjectByType<DeathScreenController>() != null, "HUD y pantalla de muerte conectados");
         var spawners = Object.FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None);
-        Exigir(spawners.Length == 3, "Tres spawners en Entrada");
-        foreach (int i in new[] { 1, 2, 3 })
-            Exigir(spawners.Any(s => s.name == "Spawner_lvl" + i), "Usado prefab original Spawner_lvl" + i);
+        Exigir(spawners.Length >= 3, "Spawners configurados en Entrada");
+        Exigir(spawners.All(s => s.name.StartsWith("Spawner_lvl1")), "Usado exclusivamente prefab Spawner_lvl1 en Entrada");
         foreach (var e in Object.FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None)) Object.Destroy(e.gameObject);
         yield return .1f;
         var posicion = jugador.transform.position;

@@ -139,8 +139,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   enemyPrefabs:
   - {fileID: 8898294941097351476, guid: 9d83f1516b0baab428d3e084c4057235, type: 3}
-  activationRadius: 7
-  cooldownTiempo: 10
+  - {fileID: 8898294941097351476, guid: 8a6bbf9e26b814542895cfac328beee2, type: 3}
+  activationRadius: 9.5
+  cooldownTiempo: 8
   minEnemies: 3
-  maxEnemies: 6
-  spawnRadius: 3
+  maxEnemies: 5
+  spawnRadius: 2.6
+  evitarObstaculos: 1
+  multiplicadorRangoDeteccion: 1.45

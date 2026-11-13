@@ -6,6 +6,14 @@ public class NotaInteractable : MonoBehaviour
     [Tooltip("La imagen de alta resolución que se mostrará en pantalla al leer esta nota")]
     public Sprite spriteNotaAltaResolucion;
 
+    private void Awake()
+    {
+        if (GetComponent<BrilloObjeto>() == null)
+        {
+            gameObject.AddComponent<BrilloObjeto>();
+        }
+    }
+
     // Esta función la llamará el jugador
     public void Interactuar()
     {

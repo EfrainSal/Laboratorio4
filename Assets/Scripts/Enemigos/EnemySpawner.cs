@@ -18,6 +18,10 @@ public class EnemySpawner : MonoBehaviour
     [Tooltip("Evita colocar Sorbos dentro de muros y objetos sólidos del escenario.")]
     public bool evitarObstaculos;
 
+    [Header("Escalado de Dificultad")]
+    [Tooltip("Multiplicador aplicado al rango de detección de los enemigos generados por este spawner.")]
+    public float multiplicadorRangoDeteccion = 1f;
+
     private Transform player;
     private bool spawnerRegistrado = false;
 
@@ -81,6 +85,18 @@ public class EnemySpawner : MonoBehaviour
             var enemigo = Instantiate(prefabElegido, spawnPosition, Quaternion.identity);
             var salud = enemigo.GetComponent<EnemyHealth>();
             if (salud != null) salud.OrigenSpawner = this;
+
+            if (multiplicadorRangoDeteccion > 0f && !Mathf.Approximately(multiplicadorRangoDeteccion, 1f))
+            {
+                if (enemigo.TryGetComponent<MeleeEnemyAI>(out var meleeAI))
+                {
+                    meleeAI.detectionRadius *= multiplicadorRangoDeteccion;
+                }
+                if (enemigo.TryGetComponent<RangedEnemyAI>(out var rangedAI))
+                {
+                    rangedAI.detectionRadius *= multiplicadorRangoDeteccion;
+                }
+            }
 
             if (AudioManager.Instance != null)
             {

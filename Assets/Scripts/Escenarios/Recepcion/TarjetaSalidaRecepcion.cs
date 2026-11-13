@@ -8,6 +8,14 @@ namespace Laboratorio4.Recepcion
         private bool recogida;
         public bool Recogida => recogida;
 
+        private void Awake()
+        {
+            if (GetComponent<BrilloObjeto>() == null)
+            {
+                gameObject.AddComponent<BrilloObjeto>();
+            }
+        }
+
         private void Start()
         {
             // LevelManager ya restauró el inventario: no duplicar una tarjeta guardada.

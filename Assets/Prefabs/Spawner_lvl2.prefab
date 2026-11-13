@@ -140,8 +140,10 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 8898294941097351476, guid: 9d83f1516b0baab428d3e084c4057235, type: 3}
   - {fileID: 8898294941097351476, guid: 8a6bbf9e26b814542895cfac328beee2, type: 3}
-  activationRadius: 7
-  cooldownTiempo: 10
-  minEnemies: 3
-  maxEnemies: 6
-  spawnRadius: 3
+  activationRadius: 7.5
+  cooldownTiempo: 11
+  minEnemies: 2
+  maxEnemies: 4
+  spawnRadius: 2.4
+  evitarObstaculos: 1
+  multiplicadorRangoDeteccion: 1.15
