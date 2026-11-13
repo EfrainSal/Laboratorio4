@@ -537,6 +537,79 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.04, y: 0.13999987}
   m_EdgeRadius: 0
+--- !u!1001 &40420349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2448657861778746022, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_Size.x
+      value: 1.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2448657861778746022, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769317377414388362, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_Name
+      value: PuertaTransicion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435743498477497495, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8056978251474130044, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: textoMensajeUI
+      value: 
+      objectReference: {fileID: 515533155}
+    - target: {fileID: 8056978251474130044, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: nombreSiguienteEscena
+      value: E3_Laboratorio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
 --- !u!1 &43512492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,7 +4061,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253940163}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -8050,6 +8123,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3686230417565730935, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: llavePrefab
+      value: 
+      objectReference: {fileID: 4728040932797468139, guid: 42d9f2f35e8b7c34d9ca085b7f440ba9, type: 3}
+    - target: {fileID: 3686230417565730935, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: spawnersRequeridos
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686230417565730935, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: contarSoloEnemigosDeSpawners
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3736240170227537986, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.3
@@ -8122,6 +8207,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3285d25954897ca489ddf0b580b0c364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+--- !u!114 &515533155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4511794815364112943, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+  m_PrefabInstance: {fileID: 515533153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &535279407
 GameObject:
   m_ObjectHideFlags: 0
@@ -35318,3 +35414,4 @@ SceneRoots:
   - {fileID: 849779435}
   - {fileID: 515533153}
   - {fileID: 1673393714}
+  - {fileID: 40420349}

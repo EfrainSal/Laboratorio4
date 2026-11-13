@@ -1,5 +1,6 @@
 using UnityEngine;
 using Laboratorio4;
+using Laboratorio4.Escenario3;
 
 namespace Laboratorio4.Animacion
 {
@@ -11,6 +12,7 @@ namespace Laboratorio4.Animacion
         public GameObject selectorPrototipo;
         public Transform puntoDeInicio;
         public CamaraSeguimiento camara;
+        public E3Camara camaraE3;
         public LevelManager gestorNivel;
         public GameObject prefabJason;
 
@@ -23,6 +25,8 @@ namespace Laboratorio4.Animacion
             if (prefab == null || puntoDeInicio == null) return;
             var jugador = Instantiate(prefab, puntoDeInicio.position, Quaternion.identity);
             if (camara != null) camara.objetivo = jugador.transform;
+            if (camaraE3 == null) camaraE3 = FindFirstObjectByType<E3Camara>();
+            if (camaraE3 != null) camaraE3.objetivo = jugador.transform;
             if (gestorNivel != null) gestorNivel.UsarJugadorExistente(jugador);
         }
     }
