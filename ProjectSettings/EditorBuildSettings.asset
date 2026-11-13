@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/LaboratorioYiba/Piso3_V10/Scenes/Piso3_V10.unity
     guid: d3bcce3bb77ca534d98c670c9fee76a2
   - enabled: 1
+    path: Assets/Laboratorio4_Recepcion/Scenes/Recepcion.unity
+    guid: 23f6828f59b2da14da72b56d8a1958af
+  - enabled: 1
     path: Assets/Laboratorio4_Escenario1/Scenes/Escenario1_Entrada.unity
     guid: 31d44b3b82f76bc756e657660b354c44
   - enabled: 1
