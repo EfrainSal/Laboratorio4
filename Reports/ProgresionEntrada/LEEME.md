@@ -4,7 +4,7 @@ Inicia con **Play en Assets/Scenes/MainMenu.unity** y selecciona Nueva partida. 
 
 ## Configurar los tres spawns
 
-Abre `Assets/Laboratorio4_Escenario1/Scenes/Escenario1_Entrada.unity`. En la jerarquía:
+Abre `Assets/Scenes/Escenario1_Entrada.unity`. En la jerarquía:
 
 `GameplayEntrada > SpawnersSorbos > Spawner_lvl1 / Spawner_lvl2 / Spawner_lvl3`
 

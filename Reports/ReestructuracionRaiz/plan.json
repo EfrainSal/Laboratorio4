@@ -1,0 +1,233 @@
+{
+  "moves": [
+    {
+      "source": "Assets/Laboratorio4_Escenario1/Scripts/Editor",
+      "destination": "Assets/Editor/Escenarios/Entrada"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario1/Scripts",
+      "destination": "Assets/Scripts/Escenarios/Entrada"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario1/Sprites",
+      "destination": "Assets/Sprites/Escenarios/Entrada"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario1/Datos",
+      "destination": "Assets/Settings/Escenarios/Entrada"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario1/_Referencias",
+      "destination": "Assets/Sprites/Referencias/Entrada"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario1/Scenes/Escenario1_Entrada.unity",
+      "destination": "Assets/Scenes/Escenario1_Entrada.unity"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario1/LEEME.md",
+      "destination": "Assets/Documentation/Escenarios/Entrada/LEEME.md"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario3/Scripts/Editor",
+      "destination": "Assets/Editor/Escenarios/Laboratorio"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario3/Scripts",
+      "destination": "Assets/Scripts/Escenarios/Laboratorio"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario3/Arte",
+      "destination": "Assets/Sprites/Escenarios/Laboratorio"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario3/Datos",
+      "destination": "Assets/Settings/Escenarios/Laboratorio"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario3/Escenas/E3_Laboratorio.unity",
+      "destination": "Assets/Scenes/E3_Laboratorio.unity"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario3/LEEME.md",
+      "destination": "Assets/Documentation/Escenarios/Laboratorio/LEEME.md"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario4/Scripts/Editor",
+      "destination": "Assets/Editor/Escenarios/Jefe"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario4/Scripts",
+      "destination": "Assets/Scripts/Escenarios/Jefe"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario4/Art",
+      "destination": "Assets/Sprites/Escenarios/Jefe"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario4/Data",
+      "destination": "Assets/Settings/Escenarios/Jefe"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario4/Scenes/Escenario4_Jefe.unity",
+      "destination": "Assets/Scenes/Escenario4_Jefe.unity"
+    },
+    {
+      "source": "Assets/Laboratorio4_Escenario4/LEEME.md",
+      "destination": "Assets/Documentation/Escenarios/Jefe/LEEME.md"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/Editor",
+      "destination": "Assets/Editor/Escenarios/Recepcion"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/Scripts",
+      "destination": "Assets/Scripts/Escenarios/Recepcion"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/Sprites",
+      "destination": "Assets/Sprites/Escenarios/Recepcion"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/Datos",
+      "destination": "Assets/Settings/Escenarios/Recepcion"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/_Referencias",
+      "destination": "Assets/Sprites/Referencias/Recepcion"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/Scenes/Recepcion.unity",
+      "destination": "Assets/Scenes/Recepcion.unity"
+    },
+    {
+      "source": "Assets/Laboratorio4_Recepcion/LEEME.md",
+      "destination": "Assets/Documentation/Escenarios/Recepcion/LEEME.md"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Data",
+      "destination": "Assets/Settings/Escenarios/Piso3"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Art/Objetos.zip",
+      "destination": "Assets/Documentation/PaquetesOriginales/Piso3/Objetos.zip"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Art/Personajes/Personajes_Animaciones.json",
+      "destination": "Assets/Settings/Escenarios/Piso3/Personajes_Animaciones.json"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Editor",
+      "destination": "Assets/Editor/Escenarios/Piso3"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Runtime",
+      "destination": "Assets/Scripts/Escenarios/Piso3"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Art",
+      "destination": "Assets/Sprites/Escenarios/Piso3"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Prefabs",
+      "destination": "Assets/Prefabs/Escenarios/Piso3"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Scenes/Galeria_Personajes.unity",
+      "destination": "Assets/Scenes/Galeria_Personajes.unity"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/Scenes/Piso3_V10.unity",
+      "destination": "Assets/Scenes/Piso3_V10.unity"
+    },
+    {
+      "source": "Assets/LaboratorioYiba/Piso3_V10/LEEME_Piso3_V10.md",
+      "destination": "Assets/Documentation/Escenarios/Piso3/LEEME_Piso3_V10.md"
+    }
+  ],
+  "rewrites": [
+    {
+      "path": "Assets/Editor/IntegrarConsumiblesArmaJefe.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/IntegrarConsumiblesArmaJefe.cs"
+    },
+    {
+      "path": "Assets/Editor/IntegrarGameplayPiso3.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/IntegrarGameplayPiso3.cs"
+    },
+    {
+      "path": "Assets/Editor/IntegrarPersonajesMainMenu.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/IntegrarPersonajesMainMenu.cs"
+    },
+    {
+      "path": "Assets/Editor/IntegrarProgresionEntrada.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/IntegrarProgresionEntrada.cs"
+    },
+    {
+      "path": "Assets/Editor/Escenarios/Piso3/Piso3V10Generador.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/Escenarios/Piso3/Piso3V10Generador.cs"
+    },
+    {
+      "path": "Assets/Settings/Escenarios/Recepcion/recepcion_layout.json",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Settings/Escenarios/Recepcion/recepcion_layout.json"
+    },
+    {
+      "path": "Assets/Editor/Escenarios/Recepcion/ConstruirRecepcion.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/Escenarios/Recepcion/ConstruirRecepcion.cs"
+    },
+    {
+      "path": "Assets/Settings/Escenarios/Jefe/E4_Datos.json",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Settings/Escenarios/Jefe/E4_Datos.json"
+    },
+    {
+      "path": "Assets/Editor/Escenarios/Jefe/E4Constructor.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/Escenarios/Jefe/E4Constructor.cs"
+    },
+    {
+      "path": "Assets/Editor/Escenarios/Laboratorio/E3Constructor.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/Escenarios/Laboratorio/E3Constructor.cs"
+    },
+    {
+      "path": "Assets/Settings/Escenarios/Entrada/escenario1_layout.json",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Settings/Escenarios/Entrada/escenario1_layout.json"
+    },
+    {
+      "path": "Assets/Settings/Escenarios/Entrada/limpieza.json",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Settings/Escenarios/Entrada/limpieza.json"
+    },
+    {
+      "path": "Assets/Editor/Escenarios/Entrada/AbrirEscenario1.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/Escenarios/Entrada/AbrirEscenario1.cs"
+    },
+    {
+      "path": "Assets/Editor/Escenarios/Entrada/ConstruirEscenario1.cs",
+      "staged": "Reports/ReestructuracionRaiz/staged/Assets/Editor/Escenarios/Entrada/ConstruirEscenario1.cs"
+    },
+    {
+      "path": "Tools/unify_assets.py",
+      "staged": "Reports/ReestructuracionRaiz/staged/Tools/unify_assets.py"
+    },
+    {
+      "path": "Tools/validate_consumibles_arma_jefe.py",
+      "staged": "Reports/ReestructuracionRaiz/staged/Tools/validate_consumibles_arma_jefe.py"
+    },
+    {
+      "path": "Tools/validate_progresion_entrada.py",
+      "staged": "Reports/ReestructuracionRaiz/staged/Tools/validate_progresion_entrada.py"
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "staged": "Reports/ReestructuracionRaiz/staged/ProjectSettings/EditorBuildSettings.asset"
+    },
+    {
+      "path": "Reports/ProgresionEntrada/LEEME.md",
+      "staged": "Reports/ReestructuracionRaiz/staged/Reports/ProgresionEntrada/LEEME.md"
+    }
+  ],
+  "roots": [
+    "Assets/Laboratorio4_Escenario1",
+    "Assets/Laboratorio4_Escenario3",
+    "Assets/Laboratorio4_Escenario4",
+    "Assets/Laboratorio4_Recepcion",
+    "Assets/LaboratorioYiba"
+  ]
+}

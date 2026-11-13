@@ -37,9 +37,9 @@ PASS Q cambia al machete
 PASS R recarga el subfusil
 PASS Puerta F rechaza jugador sin tarjeta
 PASS Puerta informa que falta la tarjeta
-PASS Oleada original Spawner_lvl1 respeta cantidades
 PASS Oleada original Spawner_lvl3 respeta cantidades
 PASS Oleada original Spawner_lvl2 respeta cantidades
+PASS Oleada original Spawner_lvl1 respeta cantidades
 PASS Enemigo ajeno a spawners no cuenta para tarjeta
 PASS 9 bajas únicas no generan tarjeta; muerte duplicada no suma
 PASS Guardado de prueba cifrado correcto

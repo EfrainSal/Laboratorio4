@@ -19,7 +19,7 @@ public static class IntegrarConsumiblesArmaJefe
 {
     public const string EscenaJefe = "Assets/Scenes/Nivel1.unity";
     public const string BibliotecaJefe = "Assets/Animations/Personajes/DoctorYiba.asset";
-    private const string Arte = "Assets/LaboratorioYiba/Piso3_V10/Art/";
+    private const string Arte = "Assets/Sprites/Escenarios/Piso3/";
     private static readonly string[] Dirs = { "Sur", "Sureste", "Este", "Noreste", "Norte", "Noroeste", "Oeste", "Suroeste" };
 
     [InitializeOnLoadMethod]
@@ -214,7 +214,7 @@ public static class IntegrarConsumiblesArmaJefe
         var rutas = new Dictionary<string, string>
         {
             ["MainMenu"] = "Assets/Scenes/MainMenu.unity", ["Prueba 1"] = "Assets/Scenes/Prueba 1.unity",
-            ["Debugscene"] = "Assets/Scenes/Debugscene.unity", ["Piso3_V10"] = "Assets/LaboratorioYiba/Piso3_V10/Scenes/Piso3_V10.unity",
+            ["Debugscene"] = "Assets/Scenes/Debugscene.unity", ["Piso3_V10"] = "Assets/Scenes/Piso3_V10.unity",
             ["Nivel1"] = EscenaJefe, ["Cinematicas"] = "Assets/Scenes/Cinematicas.unity"
         };
         EditorBuildSettings.scenes = EditorBuildSettings.scenes.Select(s => rutas.TryGetValue(Path.GetFileNameWithoutExtension(s.path), out var path)

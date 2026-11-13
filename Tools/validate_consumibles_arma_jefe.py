@@ -28,8 +28,8 @@ boss_guid = re.search(r'^guid: (\w+)', (root / 'Assets/Scripts/Jefe/AnimacionJef
 boss_scenes = [p.relative_to(root).as_posix() for p in (root / 'Assets').rglob('*.unity') if boss_guid in p.read_text()]
 build = re.findall(r'^    path: (.*)$', (root / 'ProjectSettings/EditorBuildSettings.asset').read_text(), re.M)
 play = (reports / 'playmode.txt').read_text()
-originals = root / 'Assets/Laboratorio4_Escenario1/Sprites/Arma'
-canonical = root / 'Assets/LaboratorioYiba/Piso3_V10/Art/Armas/ArmaLaboratorio4'
+originals = root / 'Assets/Sprites/Escenarios/Entrada/Arma'
+canonical = root / 'Assets/Sprites/Escenarios/Piso3/Armas/ArmaLaboratorio4'
 copies = {}
 for p in originals.glob('*.png'):
     copies[p.name] = [q.relative_to(canonical).as_posix() for q in canonical.rglob('*.png') if q.read_bytes() == p.read_bytes()]
@@ -38,7 +38,7 @@ result = dict(protected_files=len(baseline), modified_or_missing_resources=chang
               duplicate_guids=duplicates, doctor_yiba_scenes=boss_scenes,
               build_scene_paths_exist=all((root / p).is_file() for p in build),
               unique_weapon_sprites=len(list(canonical.rglob('*.png'))), legacy_weapon_copies=copies,
-              boss_sprite_frames=len(list((root / 'Assets/LaboratorioYiba/Piso3_V10/Art/Personajes/DoctorYiba').rglob('*.png'))),
+              boss_sprite_frames=len(list((root / 'Assets/Sprites/Escenarios/Piso3/Personajes/DoctorYiba').rglob('*.png'))),
               playmode_pass=play.startswith('RESULTADO: PASS'),
               passed_checks=sum(l.startswith('PASS ') for l in play.splitlines()),
               failed_checks=[l for l in play.splitlines() if l.startswith('FAIL ')])

@@ -13,7 +13,7 @@ public static class IntegrarPersonajesMainMenu
     public const string Menu = "Assets/Scenes/MainMenu.unity";
     public const string Prefabs = "Assets/Prefabs/";
     public const string Bibliotecas = "Assets/Animations/Personajes/";
-    private const string Arte = "Assets/LaboratorioYiba/Piso3_V10/Art/Personajes/";
+    private const string Arte = "Assets/Sprites/Escenarios/Piso3/Personajes/";
     private static readonly string[] Dirs = { "Sur", "Sureste", "Este", "Noreste", "Norte", "Noroeste", "Oeste", "Suroeste" };
     private static readonly Dictionary<string, BibliotecaPersonaje> datos = new Dictionary<string, BibliotecaPersonaje>();
     [Serializable] private class Info { public Entrada[] animaciones; }
@@ -188,7 +188,7 @@ public static class IntegrarPersonajesMainMenu
         var sprite = visual.GetComponent<SpriteRenderer>();
         if (sprite == null) sprite = visual.gameObject.AddComponent<SpriteRenderer>();
         sistema.pivote = raiz; sistema.visual = sprite;
-        sistema.subfusil = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/LaboratorioYiba/Piso3_V10/Art/Armas/ArmaLaboratorio4/Apuntar/Arma_Apuntar_2_Este.png");
+        sistema.subfusil = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/Escenarios/Piso3/Armas/ArmaLaboratorio4/Apuntar/Arma_Apuntar_2_Este.png");
         sistema.machete = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Sprites/Machete.png");
         sprite.sprite = sistema.subfusil;
         sprite.sharedMaterial = go.GetComponent<SpriteRenderer>().sharedMaterial;

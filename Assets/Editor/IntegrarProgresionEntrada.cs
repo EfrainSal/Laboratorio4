@@ -13,8 +13,8 @@ using Object = UnityEngine.Object;
 
 public static class IntegrarProgresionEntrada
 {
-    public const string Entrada = "Assets/Laboratorio4_Escenario1/Scenes/Escenario1_Entrada.unity";
-    public const string Piso3 = "Assets/LaboratorioYiba/Piso3_V10/Scenes/Piso3_V10.unity";
+    public const string Entrada = "Assets/Scenes/Escenario1_Entrada.unity";
+    public const string Piso3 = "Assets/Scenes/Piso3_V10.unity";
 
     [MenuItem("Laboratorio 4/Progresion/Integrar entrada tarjeta y machete")]
     public static void Integrar()

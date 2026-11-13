@@ -1,0 +1,20 @@
+PASS 3552 GUID de assets y carpetas trasladados resueltos por Unity
+PASS Assets/Scenes\Cinematicas.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Debugscene.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\E3_Laboratorio.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Escenario1_Entrada.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Escenario4_Jefe.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Galeria_Personajes.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\MainMenu.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Nivel1.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Piso3_Final_Modular.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Piso3_Modular.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Piso3_V10.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Prueba 1.unity: escena cargada sin scripts faltantes
+PASS Assets/Scenes\Recepcion.unity: escena cargada sin scripts faltantes
+PASS 25 prefabs trasladados importados sin scripts faltantes
+PASS Piso3V10Generador: rutas de configuración y generación resueltas
+PASS E3Constructor: rutas de configuración y generación resueltas
+PASS E4Constructor: rutas de configuración y generación resueltas
+PASS Recepcion: ruta dinámica a Assets/Scenes/Recepcion.unity
+PASS 10 escenas de Build Settings importadas

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public static class IntegrarGameplayPiso3
 {
-    public const string Escena = "Assets/LaboratorioYiba/Piso3_V10/Scenes/Piso3_V10.unity";
+    public const string Escena = "Assets/Scenes/Piso3_V10.unity";
     public const string HudPrefab = "Assets/Prefabs/UI/HUDGameplay.prefab";
 
     [MenuItem("Laboratorio 4/Gameplay/Integrar HUD armas y spawners")]

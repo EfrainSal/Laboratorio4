@@ -1,0 +1,2051 @@
+{
+ "version": 5,
+ "ancho": 43.44,
+ "alto": 32.58,
+ "fondo": "Assets/Sprites/Escenarios/Jefe/Fondo/E4_Fondo.png",
+ "cornisas": [
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_01.png",
+   "x": 2.64,
+   "y": -22.23,
+   "orden": 2262
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_02.png",
+   "x": 38.88,
+   "y": -22.23,
+   "orden": 2262
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_03.png",
+   "x": 4.56,
+   "y": -24.15,
+   "orden": 2454
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_04.png",
+   "x": 37.2,
+   "y": -24.15,
+   "orden": 2454
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_05.png",
+   "x": 6.24,
+   "y": -25.59,
+   "orden": 2598
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_06.png",
+   "x": 35.52,
+   "y": -25.59,
+   "orden": 2598
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Cornisa_07.png",
+   "x": 7.92,
+   "y": -27.03,
+   "orden": 2742
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Columna_01.png",
+   "x": 10.08,
+   "y": -14.16,
+   "orden": 1512
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Columna_02.png",
+   "x": 28.32,
+   "y": -14.16,
+   "orden": 1512
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Columna_03.png",
+   "x": 10.08,
+   "y": -21.36,
+   "orden": 2232
+  },
+  {
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Fondo/Cornisa/E4_Columna_04.png",
+   "x": 28.32,
+   "y": -21.36,
+   "orden": 2232
+  }
+ ],
+ "muros": [
+  {
+   "x": 21.72,
+   "y": -3.48,
+   "w": 11.76,
+   "h": 0.72
+  },
+  {
+   "x": 15.72,
+   "y": -5.28,
+   "w": 0.24,
+   "h": 3.84
+  },
+  {
+   "x": 27.72,
+   "y": -5.28,
+   "w": 0.24,
+   "h": 3.84
+  },
+  {
+   "x": 15.48,
+   "y": -5.4,
+   "w": 0.24,
+   "h": 3.6
+  },
+  {
+   "x": 27.96,
+   "y": -5.4,
+   "w": 0.24,
+   "h": 3.6
+  },
+  {
+   "x": 15.24,
+   "y": -5.52,
+   "w": 0.24,
+   "h": 3.36
+  },
+  {
+   "x": 28.2,
+   "y": -5.52,
+   "w": 0.24,
+   "h": 3.36
+  },
+  {
+   "x": 11.52,
+   "y": -6.84,
+   "w": 7.2,
+   "h": 0.72
+  },
+  {
+   "x": 31.92,
+   "y": -6.84,
+   "w": 7.2,
+   "h": 0.72
+  },
+  {
+   "x": 7.8,
+   "y": -7.68,
+   "w": 0.24,
+   "h": 1.92
+  },
+  {
+   "x": 35.64,
+   "y": -7.68,
+   "w": 0.24,
+   "h": 1.92
+  },
+  {
+   "x": 7.56,
+   "y": -7.8,
+   "w": 0.24,
+   "h": 1.68
+  },
+  {
+   "x": 35.88,
+   "y": -7.8,
+   "w": 0.24,
+   "h": 1.68
+  },
+  {
+   "x": 7.32,
+   "y": -7.92,
+   "w": 0.24,
+   "h": 1.44
+  },
+  {
+   "x": 36.12,
+   "y": -7.92,
+   "w": 0.24,
+   "h": 1.44
+  },
+  {
+   "x": 6.72,
+   "y": -8.28,
+   "w": 0.96,
+   "h": 0.72
+  },
+  {
+   "x": 36.72,
+   "y": -8.28,
+   "w": 0.96,
+   "h": 0.72
+  },
+  {
+   "x": 6.12,
+   "y": -9.12,
+   "w": 0.24,
+   "h": 1.92
+  },
+  {
+   "x": 37.32,
+   "y": -9.12,
+   "w": 0.24,
+   "h": 1.92
+  },
+  {
+   "x": 5.88,
+   "y": -9.24,
+   "w": 0.24,
+   "h": 1.68
+  },
+  {
+   "x": 37.56,
+   "y": -9.24,
+   "w": 0.24,
+   "h": 1.68
+  },
+  {
+   "x": 5.64,
+   "y": -9.36,
+   "w": 0.24,
+   "h": 1.44
+  },
+  {
+   "x": 37.8,
+   "y": -9.36,
+   "w": 0.24,
+   "h": 1.44
+  },
+  {
+   "x": 5.04,
+   "y": -9.72,
+   "w": 0.96,
+   "h": 0.72
+  },
+  {
+   "x": 38.4,
+   "y": -9.72,
+   "w": 0.96,
+   "h": 0.72
+  },
+  {
+   "x": 4.44,
+   "y": -10.8,
+   "w": 0.24,
+   "h": 2.4
+  },
+  {
+   "x": 39.0,
+   "y": -10.8,
+   "w": 0.24,
+   "h": 2.4
+  },
+  {
+   "x": 4.2,
+   "y": -10.92,
+   "w": 0.24,
+   "h": 2.16
+  },
+  {
+   "x": 39.24,
+   "y": -10.92,
+   "w": 0.24,
+   "h": 2.16
+  },
+  {
+   "x": 3.96,
+   "y": -11.04,
+   "w": 0.24,
+   "h": 1.92
+  },
+  {
+   "x": 39.48,
+   "y": -11.04,
+   "w": 0.24,
+   "h": 1.92
+  },
+  {
+   "x": 3.24,
+   "y": -11.64,
+   "w": 1.2,
+   "h": 0.72
+  },
+  {
+   "x": 40.2,
+   "y": -11.64,
+   "w": 1.2,
+   "h": 0.72
+  },
+  {
+   "x": 2.52,
+   "y": -17.28,
+   "w": 0.24,
+   "h": 11.52
+  },
+  {
+   "x": 40.92,
+   "y": -17.28,
+   "w": 0.24,
+   "h": 11.52
+  },
+  {
+   "x": 2.28,
+   "y": -17.28,
+   "w": 0.24,
+   "h": 11.04
+  },
+  {
+   "x": 41.16,
+   "y": -17.28,
+   "w": 0.24,
+   "h": 11.04
+  },
+  {
+   "x": 2.04,
+   "y": -17.28,
+   "w": 0.24,
+   "h": 10.56
+  },
+  {
+   "x": 41.4,
+   "y": -17.28,
+   "w": 0.24,
+   "h": 10.56
+  },
+  {
+   "x": 3.6,
+   "y": -22.92,
+   "w": 1.92,
+   "h": 0.72
+  },
+  {
+   "x": 39.84,
+   "y": -22.92,
+   "w": 1.92,
+   "h": 0.72
+  },
+  {
+   "x": 4.2,
+   "y": -23.88,
+   "w": 0.72,
+   "h": 1.2
+  },
+  {
+   "x": 39.24,
+   "y": -23.88,
+   "w": 0.72,
+   "h": 1.2
+  },
+  {
+   "x": 5.16,
+   "y": -24.6,
+   "w": 2.16,
+   "h": 0.24
+  },
+  {
+   "x": 38.28,
+   "y": -24.6,
+   "w": 2.16,
+   "h": 0.24
+  },
+  {
+   "x": 5.28,
+   "y": -24.84,
+   "w": 1.92,
+   "h": 0.24
+  },
+  {
+   "x": 38.16,
+   "y": -24.84,
+   "w": 1.92,
+   "h": 0.24
+  },
+  {
+   "x": 5.4,
+   "y": -25.08,
+   "w": 1.68,
+   "h": 0.24
+  },
+  {
+   "x": 38.04,
+   "y": -25.08,
+   "w": 1.68,
+   "h": 0.24
+  },
+  {
+   "x": 5.88,
+   "y": -25.56,
+   "w": 0.72,
+   "h": 0.72
+  },
+  {
+   "x": 37.56,
+   "y": -25.56,
+   "w": 0.72,
+   "h": 0.72
+  },
+  {
+   "x": 6.84,
+   "y": -26.04,
+   "w": 2.16,
+   "h": 0.24
+  },
+  {
+   "x": 36.6,
+   "y": -26.04,
+   "w": 2.16,
+   "h": 0.24
+  },
+  {
+   "x": 6.96,
+   "y": -26.28,
+   "w": 1.92,
+   "h": 0.24
+  },
+  {
+   "x": 36.48,
+   "y": -26.28,
+   "w": 1.92,
+   "h": 0.24
+  },
+  {
+   "x": 7.08,
+   "y": -26.52,
+   "w": 1.68,
+   "h": 0.24
+  },
+  {
+   "x": 36.36,
+   "y": -26.52,
+   "w": 1.68,
+   "h": 0.24
+  },
+  {
+   "x": 7.56,
+   "y": -27.0,
+   "w": 0.72,
+   "h": 0.72
+  },
+  {
+   "x": 35.88,
+   "y": -27.0,
+   "w": 0.72,
+   "h": 0.72
+  },
+  {
+   "x": 21.72,
+   "y": -27.48,
+   "w": 28.56,
+   "h": 0.24
+  },
+  {
+   "x": 21.72,
+   "y": -27.72,
+   "w": 28.08,
+   "h": 0.24
+  },
+  {
+   "x": 21.72,
+   "y": -27.96,
+   "w": 27.6,
+   "h": 0.24
+  },
+  {
+   "x": 12.6,
+   "y": -14.88,
+   "w": 5.04,
+   "h": 0.48
+  },
+  {
+   "x": 30.84,
+   "y": -14.88,
+   "w": 5.04,
+   "h": 0.48
+  },
+  {
+   "x": 12.6,
+   "y": -22.08,
+   "w": 5.04,
+   "h": 0.48
+  },
+  {
+   "x": 30.84,
+   "y": -22.08,
+   "w": 5.04,
+   "h": 0.48
+  }
+ ],
+ "objetos": [
+  {
+   "nombre": "E4_TanqueRoto_A_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/TanqueRoto_A.png",
+   "x": 19.26,
+   "y": -5.7,
+   "colW": 1.385,
+   "colH": 0.582,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_TanqueRoto_B_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/TanqueRoto_B.png",
+   "x": 24.18,
+   "y": -5.7,
+   "colW": 1.238,
+   "colH": 0.588,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_ServidorAzul_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/ServidorAzul.png",
+   "x": 9.0,
+   "y": -7.86,
+   "colW": 0.869,
+   "colH": 0.69,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_RackIndustrial_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/RackIndustrial.png",
+   "x": 10.2,
+   "y": -7.86,
+   "colW": 0.783,
+   "colH": 0.69,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_TerminalExperimentos_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/TerminalExperimentos.png",
+   "x": 14.28,
+   "y": -7.86,
+   "colW": 1.178,
+   "colH": 0.69,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_ConsolaDeInvestigacion_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/ConsolaDeInvestigacion.png",
+   "x": 30.3,
+   "y": -7.86,
+   "colW": 2.847,
+   "colH": 0.69,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_PanelConCables_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/PanelConCables.png",
+   "x": 33.96,
+   "y": -7.86,
+   "colW": 1.694,
+   "colH": 0.69,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_VentiladorMuro_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/VentiladorMuro.png",
+   "x": 7.08,
+   "y": -9.24,
+   "colW": 0.654,
+   "colH": 0.63,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_CajaElectrica_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/CajaElectrica.png",
+   "x": 36.36,
+   "y": -9.24,
+   "colW": 0.886,
+   "colH": 0.63,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_BarrilOxidado_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/BarrilOxidado.png",
+   "x": 3.3,
+   "y": -22.44,
+   "colW": 0.628,
+   "colH": 0.347,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_VitrinaReactivos_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/VitrinaReactivos.png",
+   "x": 39.84,
+   "y": -12.24,
+   "colW": 0.774,
+   "colH": 0.27,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_TanquesGas_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/TanquesGas.png",
+   "x": 39.84,
+   "y": -18.12,
+   "colW": 1.109,
+   "colH": 0.347,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_BarrilPeligroso_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/BarrilPeligroso.png",
+   "x": 39.54,
+   "y": -22.44,
+   "colW": 0.628,
+   "colH": 0.358,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_CajasApiladas_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/CajasApiladas.png",
+   "x": 9.0,
+   "y": -27.06,
+   "colW": 1.006,
+   "colH": 0.336,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_BarrilOxidado_02",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/BarrilOxidado.png",
+   "x": 10.56,
+   "y": -27.12,
+   "colW": 0.628,
+   "colH": 0.347,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  },
+  {
+   "nombre": "E4_MesaCubierta_01",
+   "sprite": "Assets/Sprites/Escenarios/Jefe/Objetos/MesaCubierta.png",
+   "x": 33.84,
+   "y": -27.12,
+   "colW": 1.608,
+   "colH": 0.375,
+   "colY": 0.0,
+   "colision": true,
+   "sombra": true
+  }
+ ],
+ "puertaEntrada": {
+  "nombre": "E4_Puerta_Entrada_01",
+  "sprite": "Assets/Sprites/Escenarios/Jefe/Puertas/Puerta_Entrada.png",
+  "x": 3.6,
+  "y": -12.06,
+  "colW": 1.026,
+  "colH": 0.27,
+  "colY": 0.0,
+  "colision": true,
+  "sombra": false
+ },
+ "puertaSalida": {
+  "nombre": "E4_Puerta_Salida_01",
+  "sprite": "Assets/Sprites/Escenarios/Jefe/Puertas/Puerta_Salida.png",
+  "x": 21.72,
+  "y": -3.96,
+  "colW": 1.017,
+  "colH": 0.27,
+  "colY": 0.0,
+  "colision": true,
+  "sombra": false
+ },
+ "jason": {
+  "x": 5.88,
+  "y": -14.1
+ },
+ "milena": {
+  "x": 5.88,
+  "y": -15.9
+ },
+ "doctor": {
+  "x": 21.72,
+  "y": -8.1
+ },
+ "luzSalida": {
+  "x": 21.72,
+  "y": -2.52
+ },
+ "zonaJefe": {
+  "x": 21.72,
+  "y": -8.13,
+  "w": 7.68,
+  "h": 3.54
+ },
+ "zonaSalida": {
+  "x": 21.72,
+  "y": -4.26,
+  "w": 1.2,
+  "h": 0.6
+ },
+ "animaciones": [
+  {
+   "personaje": "Jason",
+   "nombre": "Quieto",
+   "fps": 1,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/0_Sur/Jason_Quieto_Sur_01.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/1_Sureste/Jason_Quieto_Sureste_01.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/2_Este/Jason_Quieto_Este_01.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/3_Noreste/Jason_Quieto_Noreste_01.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/4_Norte/Jason_Quieto_Norte_01.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/5_Noroeste/Jason_Quieto_Noroeste_01.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/6_Oeste/Jason_Quieto_Oeste_01.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Quieto/7_Suroeste/Jason_Quieto_Suroeste_01.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Jason",
+   "nombre": "Caminar",
+   "fps": 10,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/0_Sur/Jason_Caminar_Sur_08.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/2_Este/Jason_Caminar_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/4_Norte/Jason_Caminar_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Caminar/6_Oeste/Jason_Caminar_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Jason",
+   "nombre": "Disparo",
+   "fps": 14,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/0_Sur/Jason_Disparo_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/2_Este/Jason_Disparo_Este_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Disparo/6_Oeste/Jason_Disparo_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Jason",
+   "nombre": "Habilidad",
+   "fps": 12,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/0_Sur/Jason_Habilidad_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/2_Este/Jason_Habilidad_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/4_Norte/Jason_Habilidad_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Habilidad/6_Oeste/Jason_Habilidad_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Jason",
+   "nombre": "Muerte",
+   "fps": 10,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/0_Sur/Jason_Muerte_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/2_Este/Jason_Muerte_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/4_Norte/Jason_Muerte_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Jason/Muerte/6_Oeste/Jason_Muerte_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Milena",
+   "nombre": "Quieto",
+   "fps": 1,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/0_Sur/Milena_Quieto_Sur_01.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/1_Sureste/Milena_Quieto_Sureste_01.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/2_Este/Milena_Quieto_Este_01.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/3_Noreste/Milena_Quieto_Noreste_01.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/4_Norte/Milena_Quieto_Norte_01.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/5_Noroeste/Milena_Quieto_Noroeste_01.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/6_Oeste/Milena_Quieto_Oeste_01.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Quieto/7_Suroeste/Milena_Quieto_Suroeste_01.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Milena",
+   "nombre": "Correr",
+   "fps": 10,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/0_Sur/Milena_Correr_Sur_08.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/1_Sureste/Milena_Correr_Sureste_08.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/2_Este/Milena_Correr_Este_08.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/3_Noreste/Milena_Correr_Noreste_08.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/4_Norte/Milena_Correr_Norte_08.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/5_Noroeste/Milena_Correr_Noroeste_08.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/6_Oeste/Milena_Correr_Oeste_08.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Correr/7_Suroeste/Milena_Correr_Suroeste_08.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Milena",
+   "nombre": "CorrerConArma",
+   "fps": 10,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/0_Sur/Milena_CorrerConArma_Sur_09.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/1_Sureste/Milena_CorrerConArma_Sureste_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/2_Este/Milena_CorrerConArma_Este_09.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/3_Noreste/Milena_CorrerConArma_Noreste_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/4_Norte/Milena_CorrerConArma_Norte_09.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/5_Noroeste/Milena_CorrerConArma_Noroeste_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/6_Oeste/Milena_CorrerConArma_Oeste_09.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/CorrerConArma/7_Suroeste/Milena_CorrerConArma_Suroeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Milena",
+   "nombre": "Disparo",
+   "fps": 14,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/0_Sur/Milena_Disparo_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/2_Este/Milena_Disparo_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/4_Norte/Milena_Disparo_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Disparo/6_Oeste/Milena_Disparo_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Milena",
+   "nombre": "Habilidad",
+   "fps": 12,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/0_Sur/Milena_Habilidad_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/2_Este/Milena_Habilidad_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/4_Norte/Milena_Habilidad_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Habilidad/6_Oeste/Milena_Habilidad_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "Milena",
+   "nombre": "Muerte",
+   "fps": 10,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/0_Sur/Milena_Muerte_Sur_09.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/1_Sureste/Milena_Muerte_Sureste_09.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/3_Noreste/Milena_Muerte_Noreste_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/4_Norte/Milena_Muerte_Norte_09.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/5_Noroeste/Milena_Muerte_Noroeste_09.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/Milena/Muerte/7_Suroeste/Milena_Muerte_Suroeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "DoctorYiba",
+   "nombre": "Quieto",
+   "fps": 1,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/0_Sur/DoctorYiba_Quieto_Sur_01.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/1_Sureste/DoctorYiba_Quieto_Sureste_01.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/2_Este/DoctorYiba_Quieto_Este_01.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/3_Noreste/DoctorYiba_Quieto_Noreste_01.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/4_Norte/DoctorYiba_Quieto_Norte_01.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/5_Noroeste/DoctorYiba_Quieto_Noroeste_01.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/6_Oeste/DoctorYiba_Quieto_Oeste_01.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Quieto/7_Suroeste/DoctorYiba_Quieto_Suroeste_01.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "DoctorYiba",
+   "nombre": "Correr",
+   "fps": 10,
+   "bucle": true,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/0_Sur/DoctorYiba_Correr_Sur_08.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/1_Sureste/DoctorYiba_Correr_Sureste_08.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/2_Este/DoctorYiba_Correr_Este_08.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/3_Noreste/DoctorYiba_Correr_Noreste_08.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/4_Norte/DoctorYiba_Correr_Norte_08.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/5_Noroeste/DoctorYiba_Correr_Noroeste_08.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/6_Oeste/DoctorYiba_Correr_Oeste_08.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Correr/7_Suroeste/DoctorYiba_Correr_Suroeste_08.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "DoctorYiba",
+   "nombre": "Ataque",
+   "fps": 12,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/0_Sur/DoctorYiba_Ataque_Sur_09.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/1_Sureste/DoctorYiba_Ataque_Sureste_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/2_Este/DoctorYiba_Ataque_Este_09.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/3_Noreste/DoctorYiba_Ataque_Noreste_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/4_Norte/DoctorYiba_Ataque_Norte_09.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/5_Noroeste/DoctorYiba_Ataque_Noroeste_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/6_Oeste/DoctorYiba_Ataque_Oeste_09.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Ataque/7_Suroeste/DoctorYiba_Ataque_Suroeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "DoctorYiba",
+   "nombre": "BolaDePoder",
+   "fps": 12,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/0_Sur/DoctorYiba_BolaDePoder_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/2_Este/DoctorYiba_BolaDePoder_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/4_Norte/DoctorYiba_BolaDePoder_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/BolaDePoder/6_Oeste/DoctorYiba_BolaDePoder_Oeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "DoctorYiba",
+   "nombre": "CampoEnergia",
+   "fps": 12,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/0_Sur/DoctorYiba_CampoEnergia_Sur_09.png"
+     ]
+    },
+    {
+     "d": 1,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/1_Sureste/DoctorYiba_CampoEnergia_Sureste_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/2_Este/DoctorYiba_CampoEnergia_Este_09.png"
+     ]
+    },
+    {
+     "d": 3,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/3_Noreste/DoctorYiba_CampoEnergia_Noreste_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/4_Norte/DoctorYiba_CampoEnergia_Norte_09.png"
+     ]
+    },
+    {
+     "d": 5,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/5_Noroeste/DoctorYiba_CampoEnergia_Noroeste_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/6_Oeste/DoctorYiba_CampoEnergia_Oeste_09.png"
+     ]
+    },
+    {
+     "d": 7,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/CampoEnergia/7_Suroeste/DoctorYiba_CampoEnergia_Suroeste_09.png"
+     ]
+    }
+   ]
+  },
+  {
+   "personaje": "DoctorYiba",
+   "nombre": "Muerte",
+   "fps": 10,
+   "bucle": false,
+   "dirs": [
+    {
+     "d": 0,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/0_Sur/DoctorYiba_Muerte_Sur_09.png"
+     ]
+    },
+    {
+     "d": 2,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/2_Este/DoctorYiba_Muerte_Este_09.png"
+     ]
+    },
+    {
+     "d": 4,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/4_Norte/DoctorYiba_Muerte_Norte_09.png"
+     ]
+    },
+    {
+     "d": 6,
+     "frames": [
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_01.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_02.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_03.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_04.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_05.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_06.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_07.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_08.png",
+      "Assets/Sprites/Escenarios/Jefe/Personajes/DoctorYiba/Muerte/6_Oeste/DoctorYiba_Muerte_Oeste_09.png"
+     ]
+    }
+   ]
+  }
+ ],
+ "spriteSombra": "Assets/Sprites/Escenarios/Jefe/Objetos/E4_SombraObjeto.png",
+ "spriteBala": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_Bala.png",
+ "spriteImpacto": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_Impacto.png",
+ "spriteBola": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_BolaPoder.png",
+ "spriteImpactoBola": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_ImpactoBola.png",
+ "spriteEscudo": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_Escudo.png",
+ "spriteLuzRoja": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_LuzRoja.png",
+ "spriteLuzVerde": "Assets/Sprites/Escenarios/Jefe/Efectos/E4_LuzVerde.png"
+}
