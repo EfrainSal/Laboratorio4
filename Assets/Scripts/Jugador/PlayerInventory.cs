@@ -38,7 +38,7 @@ public class PlayerInventory : MonoBehaviour
     private PlayerCombat combate; 
     private PlayerShooting disparo; 
 
-    void Start()
+    void Awake()
     {
         playerHealth = GetComponent<PlayerHealth>();
         movimiento = GetComponent<MovimientoPlayer>();
@@ -48,21 +48,25 @@ public class PlayerInventory : MonoBehaviour
         // Si no asignas el AudioSource manualmente, lo busca en el mismo GameObject
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
 
-        ActualizarUI();
     }
+
+    void Start() { ActualizarUI(); }
 
     public void OnConsumirVenda(InputValue value)
     {
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
         if (value.isPressed) ConsumirVenda();
     }
 
     public void OnConsumirBotiquin(InputValue value)
     {
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
         if (value.isPressed) ConsumirBotiquin();
     }
 
     public void OnConsumirEstimulante(InputValue value)
     {
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
         if (value.isPressed) ConsumirEstimulante();
     }
 
@@ -119,6 +123,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void ConsumirVenda()
     {
+        if (playerHealth == null || playerHealth.IsDead) return;
         if (vendasCount > 0 && playerHealth.currentHealth < playerHealth.maxHealth)
         {
             vendasCount--;
@@ -129,6 +134,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void ConsumirBotiquin()
     {
+        if (playerHealth == null || playerHealth.IsDead) return;
         if (botiquinesCount > 0 && playerHealth.currentHealth < playerHealth.maxHealth)
         {
             botiquinesCount--;
@@ -139,6 +145,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void ConsumirEstimulante()
     {
+        if (playerHealth == null || playerHealth.IsDead) return;
         if (estimulantesCount > 0)
         {
             estimulantesCount--;
@@ -175,7 +182,7 @@ public class PlayerInventory : MonoBehaviour
     public void ActualizarUI()
     {
         if (textoVendas != null) textoVendas.text = "" + vendasCount;
-        if (textoBotiquines != null) textoBotiquines.text = "Botiquín [2]: " + botiquinesCount;
+        if (textoBotiquines != null) textoBotiquines.text = "Botiquín [3]: " + botiquinesCount;
         if (textoEstimulantes != null) textoEstimulantes.text = "" + estimulantesCount;
     }
 }

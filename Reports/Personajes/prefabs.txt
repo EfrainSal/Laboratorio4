@@ -1,0 +1,4 @@
+PASS Player_Jason: Jason, estados y direcciones completos.
+PASS Player_Milena: Milena, estados y direcciones completos.
+PASS Enemy_Melee: Zorbo, estados y direcciones completos.
+PASS Enemy_Ranged: Zorbo2, estados y direcciones completos.

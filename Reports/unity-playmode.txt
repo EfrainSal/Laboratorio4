@@ -1,0 +1,14 @@
+PASS
+PASS Jason inicia con un solo controlador de movimiento
+PASS Disparo consume municion
+PASS Disparo real activa la animacion de Jason
+PASS La animacion avanza fotogramas en Play
+PASS Sorbo A persigue mediante IA
+PASS Sorbo B ejecuta su disparo con proyectil
+PASS El retroceso suspende la IA cuerpo a cuerpo
+PASS Sorbo A reproduce muerte antes de destruirse y detiene IA
+PASS Sorbo B cancela carga y reproduce muerte
+PASS Milena inicia con su biblioteca propia
+PASS Milena reproduce su habilidad
+PASS Ambos Sorbos se eliminan tras completar muerte
+PASS Play sin errores ni excepciones

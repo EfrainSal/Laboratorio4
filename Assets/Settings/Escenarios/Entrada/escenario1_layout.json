@@ -1,0 +1,4168 @@
+{
+ "ppu": 100,
+ "anchoUnidades": 50.16,
+ "altoUnidades": 28.23,
+ "fondo": [
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Fondo_0.png",
+   "pos": {
+    "x": 0.0,
+    "y": 0.0
+   }
+  },
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Fondo_1.png",
+   "pos": {
+    "x": 25.08,
+    "y": 0.0
+   }
+  },
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Fondo_2.png",
+   "pos": {
+    "x": 0.0,
+    "y": -14.12
+   }
+  },
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Fondo_3.png",
+   "pos": {
+    "x": 25.08,
+    "y": -14.12
+   }
+  }
+ ],
+ "frente": [
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Cornisa_0.png",
+   "pos": {
+    "x": 0.0,
+    "y": 0.0
+   }
+  },
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Cornisa_1.png",
+   "pos": {
+    "x": 25.08,
+    "y": 0.0
+   }
+  },
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Cornisa_2.png",
+   "pos": {
+    "x": 0.0,
+    "y": -14.12
+   }
+  },
+  {
+   "sprite": "Sprites/Escenarios/Entrada/Fondo/Cornisa_3.png",
+   "pos": {
+    "x": 25.08,
+    "y": -14.12
+   }
+  }
+ ],
+ "objetos": [
+  {
+   "nombre": "Planta_01",
+   "prefab": "PlantaMarchita",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 8.52,
+    "y": -6.66
+   },
+   "tam": {
+    "x": 1.02,
+    "y": 1.4
+   },
+   "prefabGuid": "cc69a1c56fa4dc44fb354cb93367ed01",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.56,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Planta_02",
+   "prefab": "PlantaMarchita",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 14.1,
+    "y": -6.66
+   },
+   "tam": {
+    "x": 1.02,
+    "y": 1.4
+   },
+   "prefabGuid": "cc69a1c56fa4dc44fb354cb93367ed01",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.56,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Planta_03",
+   "prefab": "PlantaMarchita",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 14.04,
+    "y": -14.76
+   },
+   "tam": {
+    "x": 1.02,
+    "y": 1.4
+   },
+   "prefabGuid": "cc69a1c56fa4dc44fb354cb93367ed01",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.56,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Silla_Espera_01",
+   "prefab": "SillaLaboratorio",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 10.1,
+    "y": -14.76
+   },
+   "tam": {
+    "x": 0.98,
+    "y": 1.35
+   },
+   "prefabGuid": "bfeac982ebcac1b4893fc3da829aaa4c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.225
+   },
+   "huellaTam": {
+    "x": 0.58,
+    "y": 0.37
+   }
+  },
+  {
+   "nombre": "Silla_Espera_02",
+   "prefab": "SillaLaboratorio",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 11.25,
+    "y": -14.76
+   },
+   "tam": {
+    "x": 0.98,
+    "y": 1.35
+   },
+   "prefabGuid": "bfeac982ebcac1b4893fc3da829aaa4c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.225
+   },
+   "huellaTam": {
+    "x": 0.58,
+    "y": 0.37
+   }
+  },
+  {
+   "nombre": "Silla_Espera_03",
+   "prefab": "SillaLaboratorio",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 12.4,
+    "y": -14.76
+   },
+   "tam": {
+    "x": 0.98,
+    "y": 1.35
+   },
+   "prefabGuid": "bfeac982ebcac1b4893fc3da829aaa4c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.225
+   },
+   "huellaTam": {
+    "x": 0.58,
+    "y": 0.37
+   }
+  },
+  {
+   "nombre": "Archivadores_Recepcion",
+   "prefab": "ArchivadoresDobles",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 6.4,
+    "y": -9.06
+   },
+   "tam": {
+    "x": 0.96,
+    "y": 1.54
+   },
+   "prefabGuid": "d6e673d0bb861ff45b0fd712b601c5ae",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.035
+   },
+   "huellaTam": {
+    "x": 0.88,
+    "y": 0.67
+   }
+  },
+  {
+   "nombre": "Silla_Volcada",
+   "prefab": "SillaLaboratorio",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 17.25,
+    "y": -10.8
+   },
+   "tam": {
+    "x": 0.98,
+    "y": 1.35
+   },
+   "prefabGuid": "bfeac982ebcac1b4893fc3da829aaa4c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.225
+   },
+   "huellaTam": {
+    "x": 0.58,
+    "y": 0.37
+   }
+  },
+  {
+   "nombre": "Sangre_01",
+   "prefab": "ManchaSangre",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 7.315,
+    "y": -12.84
+   },
+   "tam": {
+    "x": 0.95,
+    "y": 0.93
+   },
+   "prefabGuid": "01a18f5ceefa38a41976bdc29dabdda4",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Documentos_01",
+   "prefab": "DocumentosRotos",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 16.195,
+    "y": -9.54
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 0.82
+   },
+   "prefabGuid": "ce3bdd18fa972724787d3ad16d6efd3b",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Servidor_01",
+   "prefab": "ServidorAzul",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 20.155,
+    "y": -4.44
+   },
+   "tam": {
+    "x": 1.01,
+    "y": 1.52
+   },
+   "prefabGuid": "1761a3b070f39d944bd585bac6705cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.9,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Rack_01",
+   "prefab": "RackIndustrial",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 22.015,
+    "y": -4.44
+   },
+   "tam": {
+    "x": 0.91,
+    "y": 1.25
+   },
+   "prefabGuid": "d0005835795b40949a9b5ebd1e33714f",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.175
+   },
+   "huellaTam": {
+    "x": 0.83,
+    "y": 0.27
+   }
+  },
+  {
+   "nombre": "Servidor_02",
+   "prefab": "ServidorAzul",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 26.155,
+    "y": -4.44
+   },
+   "tam": {
+    "x": 1.01,
+    "y": 1.52
+   },
+   "prefabGuid": "1761a3b070f39d944bd585bac6705cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.9,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Rack_02",
+   "prefab": "RackIndustrial",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 27.535,
+    "y": -4.44
+   },
+   "tam": {
+    "x": 0.91,
+    "y": 1.25
+   },
+   "prefabGuid": "d0005835795b40949a9b5ebd1e33714f",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.185,
+    "y": 0.175
+   },
+   "huellaTam": {
+    "x": 1.2,
+    "y": 0.27
+   }
+  },
+  {
+   "nombre": "Silla_Servidores",
+   "prefab": "SillaLaboratorio",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 24.0,
+    "y": -5.6
+   },
+   "tam": {
+    "x": 0.98,
+    "y": 1.35
+   },
+   "prefabGuid": "bfeac982ebcac1b4893fc3da829aaa4c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.225
+   },
+   "huellaTam": {
+    "x": 0.58,
+    "y": 0.37
+   }
+  },
+  {
+   "nombre": "Documentos_02",
+   "prefab": "DocumentosRotos",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 23.695,
+    "y": -6.5
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 0.82
+   },
+   "prefabGuid": "ce3bdd18fa972724787d3ad16d6efd3b",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Camilla_01",
+   "prefab": "CamillaRuedas",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 18.0,
+    "y": -13.86
+   },
+   "tam": {
+    "x": 1.6,
+    "y": 1.17
+   },
+   "prefabGuid": "fddc2634a40984146bdbd8e6d7921ff6",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.1
+   },
+   "huellaTam": {
+    "x": 1.44,
+    "y": 0.8
+   }
+  },
+  {
+   "nombre": "Carrito_01",
+   "prefab": "CarritoMuestras",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 20.1,
+    "y": -14.1
+   },
+   "tam": {
+    "x": 0.92,
+    "y": 1.07
+   },
+   "prefabGuid": "cfc910cf66a31574291024575b1bda8b",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.2
+   },
+   "huellaTam": {
+    "x": 0.79,
+    "y": 0.32
+   }
+  },
+  {
+   "nombre": "Carrito_02",
+   "prefab": "CarritoMuestras",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 22.2,
+    "y": -9.9
+   },
+   "tam": {
+    "x": 0.92,
+    "y": 1.07
+   },
+   "prefabGuid": "cfc910cf66a31574291024575b1bda8b",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.2
+   },
+   "huellaTam": {
+    "x": 0.79,
+    "y": 0.32
+   }
+  },
+  {
+   "nombre": "Mesa_Cultivo_01",
+   "prefab": "MesaDeCultivo",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 29.995,
+    "y": -15.45
+   },
+   "tam": {
+    "x": 3.25,
+    "y": 1.48
+   },
+   "prefabGuid": "bd1089bea1206d445bbfdeb234d5c58c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.37
+   },
+   "huellaTam": {
+    "x": 3.12,
+    "y": 0.66
+   }
+  },
+  {
+   "nombre": "Cajas_01",
+   "prefab": "CajasApiladas",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 33.535,
+    "y": -15.48
+   },
+   "tam": {
+    "x": 1.17,
+    "y": 1.2
+   },
+   "prefabGuid": "c1a4d2bb2d7968c46aee9ce23fd30b04",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.28
+   },
+   "huellaTam": {
+    "x": 1.07,
+    "y": 0.48
+   }
+  },
+  {
+   "nombre": "Sangre_02",
+   "prefab": "ManchaSangre",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 25.795,
+    "y": -12.6
+   },
+   "tam": {
+    "x": 0.95,
+    "y": 0.93
+   },
+   "prefabGuid": "01a18f5ceefa38a41976bdc29dabdda4",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Archivadores_01",
+   "prefab": "ArchivadoresDobles",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 30.12,
+    "y": -5.73
+   },
+   "tam": {
+    "x": 0.96,
+    "y": 1.54
+   },
+   "prefabGuid": "d6e673d0bb861ff45b0fd712b601c5ae",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.16,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 1.2,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Archivador_01",
+   "prefab": "Archivador",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 31.295,
+    "y": -5.76
+   },
+   "tam": {
+    "x": 0.91,
+    "y": 1.24
+   },
+   "prefabGuid": "b67bdf0331c0cdc4691b2b825bd62bbb",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.185
+   },
+   "huellaTam": {
+    "x": 0.83,
+    "y": 0.29
+   }
+  },
+  {
+   "nombre": "Mesa_Analisis_01",
+   "prefab": "MesaDeAnalisis",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 38.875,
+    "y": -6.9
+   },
+   "tam": {
+    "x": 2.47,
+    "y": 1.56
+   },
+   "prefabGuid": "bb8a9d4e8fa44a94581135345101749a",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.39
+   },
+   "huellaTam": {
+    "x": 2.37,
+    "y": 0.7
+   }
+  },
+  {
+   "nombre": "Carrito_03",
+   "prefab": "CarritoMuestras",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 36.66,
+    "y": -8.7
+   },
+   "tam": {
+    "x": 0.92,
+    "y": 1.07
+   },
+   "prefabGuid": "cfc910cf66a31574291024575b1bda8b",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.2
+   },
+   "huellaTam": {
+    "x": 0.79,
+    "y": 0.32
+   }
+  },
+  {
+   "nombre": "Gabinete_01",
+   "prefab": "GabineteManchado",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 36.84,
+    "y": -12.06
+   },
+   "tam": {
+    "x": 1.18,
+    "y": 1.2
+   },
+   "prefabGuid": "93a52756f9e24f24db75607b41d6910c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.145,
+    "y": 0.195
+   },
+   "huellaTam": {
+    "x": 1.39,
+    "y": 0.31
+   }
+  },
+  {
+   "nombre": "Terminal_01",
+   "prefab": "TerminalExperimentos",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 38.695,
+    "y": -12.06
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 1.32
+   },
+   "prefabGuid": "788316185d3cd1d46bb75d2af34cf907",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.235
+   },
+   "huellaTam": {
+    "x": 1.23,
+    "y": 0.39
+   }
+  },
+  {
+   "nombre": "Documentos_03",
+   "prefab": "DocumentosRotos",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 37.855,
+    "y": -13.08
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 0.82
+   },
+   "prefabGuid": "ce3bdd18fa972724787d3ad16d6efd3b",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Gabinete_02",
+   "prefab": "GabineteManchado",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 42.0,
+    "y": -13.56
+   },
+   "tam": {
+    "x": 1.18,
+    "y": 1.2
+   },
+   "prefabGuid": "93a52756f9e24f24db75607b41d6910c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.195
+   },
+   "huellaTam": {
+    "x": 1.1,
+    "y": 0.31
+   }
+  },
+  {
+   "nombre": "Cajas_02",
+   "prefab": "CajasApiladas",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 43.795,
+    "y": -13.56
+   },
+   "tam": {
+    "x": 1.17,
+    "y": 1.2
+   },
+   "prefabGuid": "c1a4d2bb2d7968c46aee9ce23fd30b04",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.28
+   },
+   "huellaTam": {
+    "x": 1.07,
+    "y": 0.48
+   }
+  },
+  {
+   "nombre": "Barril_01",
+   "prefab": "BarrilPeligroso",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 47.695,
+    "y": -14.1
+   },
+   "tam": {
+    "x": 0.73,
+    "y": 1.28
+   },
+   "prefabGuid": "8726838a1737ecd469d6a89a33b24cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.62,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Cajas_03",
+   "prefab": "CajasApiladas",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 46.795,
+    "y": -16.26
+   },
+   "tam": {
+    "x": 1.17,
+    "y": 1.2
+   },
+   "prefabGuid": "c1a4d2bb2d7968c46aee9ce23fd30b04",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.11
+   },
+   "huellaTam": {
+    "x": 1.07,
+    "y": 0.82
+   }
+  },
+  {
+   "nombre": "Maquina_01",
+   "prefab": "MaquinaSellada",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 17.695,
+    "y": -20.04
+   },
+   "tam": {
+    "x": 2.11,
+    "y": 1.24
+   },
+   "prefabGuid": "54a7fa7437a37164c916d5a966f0414d",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.315
+   },
+   "huellaTam": {
+    "x": 2.02,
+    "y": 0.55
+   }
+  },
+  {
+   "nombre": "Terminal_02",
+   "prefab": "TerminalExperimentos",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 26.695,
+    "y": -18.66
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 1.32
+   },
+   "prefabGuid": "788316185d3cd1d46bb75d2af34cf907",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.235
+   },
+   "huellaTam": {
+    "x": 1.23,
+    "y": 0.39
+   }
+  },
+  {
+   "nombre": "Tanque_01",
+   "prefab": "TanqueRoto_A",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 24.355,
+    "y": -21.36
+   },
+   "tam": {
+    "x": 1.61,
+    "y": 2.08
+   },
+   "prefabGuid": "91dd8938b6b87f045a8dc3980763fa4f",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.265
+   },
+   "huellaTam": {
+    "x": 1.19,
+    "y": 0.45
+   }
+  },
+  {
+   "nombre": "Tanque_02",
+   "prefab": "TanqueRoto_B",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 29.04,
+    "y": -21.36
+   },
+   "tam": {
+    "x": 1.44,
+    "y": 2.1
+   },
+   "prefabGuid": "cec04ee331a17984797269af83bc7f4d",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.27
+   },
+   "huellaTam": {
+    "x": 1.09,
+    "y": 0.46
+   }
+  },
+  {
+   "nombre": "Barril_02",
+   "prefab": "BarrilPeligroso",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 32.755,
+    "y": -19.8
+   },
+   "tam": {
+    "x": 0.73,
+    "y": 1.28
+   },
+   "prefabGuid": "8726838a1737ecd469d6a89a33b24cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.62,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Barril_03",
+   "prefab": "BarrilPeligroso",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 20.695,
+    "y": -24.36
+   },
+   "tam": {
+    "x": 0.73,
+    "y": 1.28
+   },
+   "prefabGuid": "8726838a1737ecd469d6a89a33b24cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.135,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.9,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Barril_04",
+   "prefab": "BarrilPeligroso",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 21.595,
+    "y": -24.66
+   },
+   "tam": {
+    "x": 0.73,
+    "y": 1.28
+   },
+   "prefabGuid": "8726838a1737ecd469d6a89a33b24cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.62,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Maquina_02",
+   "prefab": "MaquinaSellada",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 31.495,
+    "y": -24.18
+   },
+   "tam": {
+    "x": 2.11,
+    "y": 1.24
+   },
+   "prefabGuid": "54a7fa7437a37164c916d5a966f0414d",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.005,
+    "y": 0.145
+   },
+   "huellaTam": {
+    "x": 2.02,
+    "y": 0.89
+   }
+  },
+  {
+   "nombre": "Sangre_03",
+   "prefab": "ManchaSangre",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 25.995,
+    "y": -23.3
+   },
+   "tam": {
+    "x": 0.95,
+    "y": 0.93
+   },
+   "prefabGuid": "01a18f5ceefa38a41976bdc29dabdda4",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Camilla_02",
+   "prefab": "CamillaRuedas",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 8.76,
+    "y": -21.06
+   },
+   "tam": {
+    "x": 1.6,
+    "y": 1.17
+   },
+   "prefabGuid": "fddc2634a40984146bdbd8e6d7921ff6",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.27
+   },
+   "huellaTam": {
+    "x": 1.44,
+    "y": 0.46
+   }
+  },
+  {
+   "nombre": "Camilla_03",
+   "prefab": "CamillaRuedas",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 9.0,
+    "y": -24.36
+   },
+   "tam": {
+    "x": 1.6,
+    "y": 1.17
+   },
+   "prefabGuid": "fddc2634a40984146bdbd8e6d7921ff6",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.27
+   },
+   "huellaTam": {
+    "x": 1.44,
+    "y": 0.46
+   }
+  },
+  {
+   "nombre": "Gabinete_03",
+   "prefab": "GabineteManchado",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 13.2,
+    "y": -20.16
+   },
+   "tam": {
+    "x": 1.18,
+    "y": 1.2
+   },
+   "prefabGuid": "93a52756f9e24f24db75607b41d6910c",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.195
+   },
+   "huellaTam": {
+    "x": 1.1,
+    "y": 0.31
+   }
+  },
+  {
+   "nombre": "Archivador_02",
+   "prefab": "Archivador",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 14.095,
+    "y": -22.8
+   },
+   "tam": {
+    "x": 0.91,
+    "y": 1.24
+   },
+   "prefabGuid": "b67bdf0331c0cdc4691b2b825bd62bbb",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.185,
+    "y": 0.185
+   },
+   "huellaTam": {
+    "x": 1.2,
+    "y": 0.29
+   }
+  },
+  {
+   "nombre": "Botiquin_01",
+   "prefab": "Botiquin",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 11.76,
+    "y": -22.9
+   },
+   "tam": {
+    "x": 0.76,
+    "y": 0.66
+   },
+   "prefabGuid": "b98c256404c2cdf44b3a80201ec410a3",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.235
+   },
+   "huellaTam": {
+    "x": 0.68,
+    "y": 0.39
+   }
+  },
+  {
+   "nombre": "Sangre_04",
+   "prefab": "ManchaSangre",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 11.395,
+    "y": -21.66
+   },
+   "tam": {
+    "x": 0.95,
+    "y": 0.93
+   },
+   "prefabGuid": "01a18f5ceefa38a41976bdc29dabdda4",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  },
+  {
+   "nombre": "Vitrina_01",
+   "prefab": "VitrinaReactivos",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 4.8,
+    "y": -23.94
+   },
+   "tam": {
+    "x": 0.9,
+    "y": 1.49
+   },
+   "prefabGuid": "e6bd90ed7a64cdb4baa304bd4278a117",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.03
+   },
+   "huellaTam": {
+    "x": 0.82,
+    "y": 0.66
+   }
+  },
+  {
+   "nombre": "Ventilador_01",
+   "prefab": "VentiladorMuro",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 12.24,
+    "y": -17.31
+   },
+   "tam": {
+    "x": 0.76,
+    "y": 1.07
+   },
+   "prefabGuid": "e7d2c5af2f0eefc44975444fccf5b03f",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": -0.07,
+    "y": 0.175
+   },
+   "huellaTam": {
+    "x": 0.82,
+    "y": 0.27
+   }
+  },
+  {
+   "nombre": "Escritorio_01",
+   "prefab": "EscritorioPrincipal",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 44.1,
+    "y": -24.18
+   },
+   "tam": {
+    "x": 3.94,
+    "y": 1.68
+   },
+   "prefabGuid": "a7591de5c3126f041bf8d52e8fd91e5e",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.245
+   },
+   "huellaTam": {
+    "x": 3.78,
+    "y": 1.09
+   }
+  },
+  {
+   "nombre": "Terminal_03",
+   "prefab": "TerminalExperimentos",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 38.695,
+    "y": -20.16
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 1.32
+   },
+   "prefabGuid": "788316185d3cd1d46bb75d2af34cf907",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.135,
+    "y": 0.235
+   },
+   "huellaTam": {
+    "x": 1.5,
+    "y": 0.39
+   }
+  },
+  {
+   "nombre": "Terminal_04",
+   "prefab": "TerminalExperimentos",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 40.195,
+    "y": -20.16
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 1.32
+   },
+   "prefabGuid": "788316185d3cd1d46bb75d2af34cf907",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.235
+   },
+   "huellaTam": {
+    "x": 1.23,
+    "y": 0.39
+   }
+  },
+  {
+   "nombre": "Barril_05",
+   "prefab": "BarrilPeligroso",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 47.335,
+    "y": -24.0
+   },
+   "tam": {
+    "x": 0.73,
+    "y": 1.28
+   },
+   "prefabGuid": "8726838a1737ecd469d6a89a33b24cde",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.175,
+    "y": 0.205
+   },
+   "huellaTam": {
+    "x": 0.98,
+    "y": 0.33
+   }
+  },
+  {
+   "nombre": "Vitrina_02",
+   "prefab": "VitrinaReactivos",
+   "propio": false,
+   "plano": false,
+   "pos": {
+    "x": 46.11,
+    "y": -20.4
+   },
+   "tam": {
+    "x": 0.9,
+    "y": 1.49
+   },
+   "prefabGuid": "e6bd90ed7a64cdb4baa304bd4278a117",
+   "sprite": "",
+   "colision": true,
+   "huellaCentro": {
+    "x": 0.0,
+    "y": 0.2
+   },
+   "huellaTam": {
+    "x": 0.82,
+    "y": 0.32
+   }
+  },
+  {
+   "nombre": "Documentos_04",
+   "prefab": "DocumentosRotos",
+   "propio": false,
+   "plano": true,
+   "pos": {
+    "x": 39.895,
+    "y": -23.1
+   },
+   "tam": {
+    "x": 1.37,
+    "y": 0.82
+   },
+   "prefabGuid": "ce3bdd18fa972724787d3ad16d6efd3b",
+   "sprite": "",
+   "colision": false,
+   "huellaCentro": {
+    "x": 0,
+    "y": 0
+   },
+   "huellaTam": {
+    "x": 0,
+    "y": 0
+   }
+  }
+ ],
+ "puertas": [
+  {
+   "nombre": "P01_Esclusa_Entrada",
+   "orientacion": "V",
+   "aberturaPx": 312,
+   "pos": {
+    "x": 6.06,
+    "y": -12.12
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 3.12
+   }
+  },
+  {
+   "nombre": "P03_Sala_Servidores",
+   "orientacion": "H",
+   "aberturaPx": 624,
+   "pos": {
+    "x": 23.76,
+    "y": -7.08
+   },
+   "tam": {
+    "x": 6.24,
+    "y": 0.18
+   }
+  },
+  {
+   "nombre": "P06_Pasillo_Noreste",
+   "orientacion": "V",
+   "aberturaPx": 216,
+   "pos": {
+    "x": 32.52,
+    "y": -8.04
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 2.16
+   }
+  },
+  {
+   "nombre": "P07_Corredor_Salida",
+   "orientacion": "V",
+   "aberturaPx": 192,
+   "pos": {
+    "x": 42.36,
+    "y": -8.4
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 1.92
+   }
+  },
+  {
+   "nombre": "P08_Sala_Este_Norte",
+   "orientacion": "H",
+   "aberturaPx": 168,
+   "pos": {
+    "x": 41.4,
+    "y": -9.96
+   },
+   "tam": {
+    "x": 1.68,
+    "y": 0.18
+   }
+  },
+  {
+   "nombre": "P09_Sala_Este",
+   "orientacion": "V",
+   "aberturaPx": 216,
+   "pos": {
+    "x": 39.72,
+    "y": -12.6
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 2.16
+   }
+  },
+  {
+   "nombre": "P10_Oficina_Central",
+   "orientacion": "V",
+   "aberturaPx": 168,
+   "pos": {
+    "x": 34.92,
+    "y": -14.52
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 1.68
+   }
+  },
+  {
+   "nombre": "P11_Sala_Contaminada",
+   "orientacion": "H",
+   "aberturaPx": 312,
+   "pos": {
+    "x": 23.4,
+    "y": -15.96
+   },
+   "tam": {
+    "x": 3.12,
+    "y": 0.18
+   }
+  },
+  {
+   "nombre": "P12_Contaminada_Oeste",
+   "orientacion": "V",
+   "aberturaPx": 240,
+   "pos": {
+    "x": 15.24,
+    "y": -18.48
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 2.4
+   }
+  },
+  {
+   "nombre": "P13_Bodega_Oeste",
+   "orientacion": "V",
+   "aberturaPx": 192,
+   "pos": {
+    "x": 6.12,
+    "y": -20.88
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 1.92
+   }
+  },
+  {
+   "nombre": "P14_Sala_Sureste",
+   "orientacion": "H",
+   "aberturaPx": 192,
+   "pos": {
+    "x": 42.0,
+    "y": -16.68
+   },
+   "tam": {
+    "x": 1.92,
+    "y": 0.18
+   }
+  },
+  {
+   "nombre": "P15_Pasillo_Sur_A",
+   "orientacion": "V",
+   "aberturaPx": 192,
+   "pos": {
+    "x": 34.68,
+    "y": -22.56
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 1.92
+   }
+  },
+  {
+   "nombre": "P16_Pasillo_Sur_B",
+   "orientacion": "V",
+   "aberturaPx": 192,
+   "pos": {
+    "x": 36.6,
+    "y": -22.56
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 1.92
+   }
+  },
+  {
+   "nombre": "P17_Nicho_Salida",
+   "orientacion": "V",
+   "aberturaPx": 216,
+   "pos": {
+    "x": 45.72,
+    "y": -6.6
+   },
+   "tam": {
+    "x": 0.18,
+    "y": 2.16
+   }
+  }
+ ],
+ "salida": {
+  "prefabGuid": "fc47f2aae2d256e4c92ff84c10d9571d",
+  "pos": {
+   "x": 47.04,
+   "y": -6.18
+  },
+  "escala": 1.6,
+  "triggerCentro": {
+   "x": 47.04,
+   "y": -5.97
+  },
+  "triggerTam": {
+   "x": 1.92,
+   "y": 0.9
+  }
+ },
+ "muros": [
+  {
+   "centro": {
+    "x": 25.08,
+    "y": -0.84
+   },
+   "tam": {
+    "x": 50.16,
+    "y": 1.68
+   }
+  },
+  {
+   "centro": {
+    "x": 21.36,
+    "y": -1.8
+   },
+   "tam": {
+    "x": 42.72,
+    "y": 0.24
+   }
+  },
+  {
+   "centro": {
+    "x": 47.88,
+    "y": -3.48
+   },
+   "tam": {
+    "x": 4.56,
+    "y": 3.6
+   }
+  },
+  {
+   "centro": {
+    "x": 9.36,
+    "y": -3.48
+   },
+   "tam": {
+    "x": 18.72,
+    "y": 3.12
+   }
+  },
+  {
+   "centro": {
+    "x": 35.64,
+    "y": -2.76
+   },
+   "tam": {
+    "x": 14.16,
+    "y": 1.68
+   }
+  },
+  {
+   "centro": {
+    "x": 28.44,
+    "y": -5.28
+   },
+   "tam": {
+    "x": 0.24,
+    "y": 3.84
+   }
+  },
+  {
+   "centro": {
+    "x": 28.92,
+    "y": -5.04
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 2.88
+   }
+  },
+  {
+   "centro": {
+    "x": 37.44,
+    "y": -3.96
+   },
+   "tam": {
+    "x": 10.56,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 42.84,
+    "y": -5.76
+   },
+   "tam": {
+    "x": 0.24,
+    "y": 3.36
+   }
+  },
+  {
+   "centro": {
+    "x": 33.96,
+    "y": -4.92
+   },
+   "tam": {
+    "x": 3.6,
+    "y": 1.2
+   }
+  },
+  {
+   "centro": {
+    "x": 42.36,
+    "y": -5.88
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 3.12
+   }
+  },
+  {
+   "centro": {
+    "x": 3.84,
+    "y": -5.76
+   },
+   "tam": {
+    "x": 7.68,
+    "y": 1.44
+   }
+  },
+  {
+   "centro": {
+    "x": 16.8,
+    "y": -6.12
+   },
+   "tam": {
+    "x": 3.84,
+    "y": 2.16
+   }
+  },
+  {
+   "centro": {
+    "x": 46.56,
+    "y": -5.4
+   },
+   "tam": {
+    "x": 1.92,
+    "y": 0.24
+   }
+  },
+  {
+   "centro": {
+    "x": 49.08,
+    "y": -8.52
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 6.48
+   }
+  },
+  {
+   "centro": {
+    "x": 34.08,
+    "y": -6.24
+   },
+   "tam": {
+    "x": 3.36,
+    "y": 1.44
+   }
+  },
+  {
+   "centro": {
+    "x": 19.2,
+    "y": -6.72
+   },
+   "tam": {
+    "x": 0.96,
+    "y": 0.96
+   }
+  },
+  {
+   "centro": {
+    "x": 28.08,
+    "y": -6.72
+   },
+   "tam": {
+    "x": 0.48,
+    "y": 0.96
+   }
+  },
+  {
+   "centro": {
+    "x": 3.0,
+    "y": -6.84
+   },
+   "tam": {
+    "x": 6.0,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 20.16,
+    "y": -6.84
+   },
+   "tam": {
+    "x": 0.96,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 27.48,
+    "y": -8.4
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 3.84
+   }
+  },
+  {
+   "centro": {
+    "x": 28.8,
+    "y": -6.84
+   },
+   "tam": {
+    "x": 0.48,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 27.0,
+    "y": -8.64
+   },
+   "tam": {
+    "x": 0.24,
+    "y": 3.36
+   }
+  },
+  {
+   "centro": {
+    "x": 2.88,
+    "y": -7.68
+   },
+   "tam": {
+    "x": 5.76,
+    "y": 0.96
+   }
+  },
+  {
+   "centro": {
+    "x": 20.28,
+    "y": -8.76
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 3.12
+   }
+  },
+  {
+   "centro": {
+    "x": 46.8,
+    "y": -9.72
+   },
+   "tam": {
+    "x": 2.4,
+    "y": 4.08
+   }
+  },
+  {
+   "centro": {
+    "x": 1.92,
+    "y": -9.72
+   },
+   "tam": {
+    "x": 3.84,
+    "y": 3.12
+   }
+  },
+  {
+   "centro": {
+    "x": 35.28,
+    "y": -9.48
+   },
+   "tam": {
+    "x": 9.6,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 44.28,
+    "y": -10.44
+   },
+   "tam": {
+    "x": 2.64,
+    "y": 2.64
+   }
+  },
+  {
+   "centro": {
+    "x": 4.92,
+    "y": -9.96
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 1.2
+   }
+  },
+  {
+   "centro": {
+    "x": 40.2,
+    "y": -10.44
+   },
+   "tam": {
+    "x": 0.24,
+    "y": 2.16
+   }
+  },
+  {
+   "centro": {
+    "x": 42.6,
+    "y": -10.56
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 2.4
+   }
+  },
+  {
+   "centro": {
+    "x": 40.44,
+    "y": -10.56
+   },
+   "tam": {
+    "x": 0.24,
+    "y": 1.92
+   }
+  },
+  {
+   "centro": {
+    "x": 33.24,
+    "y": -11.28
+   },
+   "tam": {
+    "x": 5.52,
+    "y": 2.88
+   }
+  },
+  {
+   "centro": {
+    "x": 39.84,
+    "y": -10.68
+   },
+   "tam": {
+    "x": 0.48,
+    "y": 1.68
+   }
+  },
+  {
+   "centro": {
+    "x": 30.36,
+    "y": -11.16
+   },
+   "tam": {
+    "x": 0.24,
+    "y": 2.16
+   }
+  },
+  {
+   "centro": {
+    "x": 1.56,
+    "y": -19.755
+   },
+   "tam": {
+    "x": 3.12,
+    "y": 16.95
+   }
+  },
+  {
+   "centro": {
+    "x": 49.32,
+    "y": -19.995
+   },
+   "tam": {
+    "x": 1.68,
+    "y": 16.47
+   }
+  },
+  {
+   "centro": {
+    "x": 34.68,
+    "y": -13.2
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 0.96
+   }
+  },
+  {
+   "centro": {
+    "x": 3.48,
+    "y": -20.715
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 15.03
+   }
+  },
+  {
+   "centro": {
+    "x": 4.92,
+    "y": -14.28
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 1.2
+   }
+  },
+  {
+   "centro": {
+    "x": 39.12,
+    "y": -16.08
+   },
+   "tam": {
+    "x": 2.4,
+    "y": 4.8
+   }
+  },
+  {
+   "centro": {
+    "x": 7.68,
+    "y": -16.08
+   },
+   "tam": {
+    "x": 1.92,
+    "y": 3.84
+   }
+  },
+  {
+   "centro": {
+    "x": 17.16,
+    "y": -15.72
+   },
+   "tam": {
+    "x": 4.08,
+    "y": 3.12
+   }
+  },
+  {
+   "centro": {
+    "x": 11.88,
+    "y": -15.48
+   },
+   "tam": {
+    "x": 6.48,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 34.68,
+    "y": -18.6
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 6.0
+   }
+  },
+  {
+   "centro": {
+    "x": 5.28,
+    "y": -16.92
+   },
+   "tam": {
+    "x": 2.88,
+    "y": 2.16
+   }
+  },
+  {
+   "centro": {
+    "x": 10.2,
+    "y": -16.92
+   },
+   "tam": {
+    "x": 3.12,
+    "y": 2.16
+   }
+  },
+  {
+   "centro": {
+    "x": 20.52,
+    "y": -16.2
+   },
+   "tam": {
+    "x": 2.64,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 29.64,
+    "y": -16.2
+   },
+   "tam": {
+    "x": 9.36,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 40.68,
+    "y": -17.52
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 1.92
+   }
+  },
+  {
+   "centro": {
+    "x": 45.72,
+    "y": -16.92
+   },
+   "tam": {
+    "x": 5.52,
+    "y": 0.72
+   }
+  },
+  {
+   "centro": {
+    "x": 36.48,
+    "y": -17.64
+   },
+   "tam": {
+    "x": 2.88,
+    "y": 1.68
+   }
+  },
+  {
+   "centro": {
+    "x": 43.32,
+    "y": -17.4
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 0.24
+   }
+  },
+  {
+   "centro": {
+    "x": 47.64,
+    "y": -18.6
+   },
+   "tam": {
+    "x": 1.68,
+    "y": 2.64
+   }
+  },
+  {
+   "centro": {
+    "x": 5.04,
+    "y": -18.96
+   },
+   "tam": {
+    "x": 2.4,
+    "y": 1.92
+   }
+  },
+  {
+   "centro": {
+    "x": 36.12,
+    "y": -20.04
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 3.12
+   }
+  },
+  {
+   "centro": {
+    "x": 15.36,
+    "y": -21.72
+   },
+   "tam": {
+    "x": 0.96,
+    "y": 4.08
+   }
+  },
+  {
+   "centro": {
+    "x": 48.24,
+    "y": -24.075
+   },
+   "tam": {
+    "x": 0.48,
+    "y": 8.31
+   }
+  },
+  {
+   "centro": {
+    "x": 6.36,
+    "y": -25.035
+   },
+   "tam": {
+    "x": 0.72,
+    "y": 6.39
+   }
+  },
+  {
+   "centro": {
+    "x": 36.12,
+    "y": -25.875
+   },
+   "tam": {
+    "x": 3.12,
+    "y": 4.71
+   }
+  },
+  {
+   "centro": {
+    "x": 14.04,
+    "y": -25.995
+   },
+   "tam": {
+    "x": 3.12,
+    "y": 4.47
+   }
+  },
+  {
+   "centro": {
+    "x": 4.92,
+    "y": -26.235
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 3.99
+   }
+  },
+  {
+   "centro": {
+    "x": 17.28,
+    "y": -26.355
+   },
+   "tam": {
+    "x": 3.36,
+    "y": 3.75
+   }
+  },
+  {
+   "centro": {
+    "x": 33.36,
+    "y": -26.355
+   },
+   "tam": {
+    "x": 2.4,
+    "y": 3.75
+   }
+  },
+  {
+   "centro": {
+    "x": 38.76,
+    "y": -26.355
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 3.75
+   }
+  },
+  {
+   "centro": {
+    "x": 46.92,
+    "y": -26.355
+   },
+   "tam": {
+    "x": 2.16,
+    "y": 3.75
+   }
+  },
+  {
+   "centro": {
+    "x": 9.6,
+    "y": -26.475
+   },
+   "tam": {
+    "x": 5.76,
+    "y": 3.51
+   }
+  },
+  {
+   "centro": {
+    "x": 25.56,
+    "y": -26.715
+   },
+   "tam": {
+    "x": 13.2,
+    "y": 3.03
+   }
+  },
+  {
+   "centro": {
+    "x": 42.84,
+    "y": -26.715
+   },
+   "tam": {
+    "x": 6.0,
+    "y": 3.03
+   }
+  },
+  {
+   "centro": {
+    "x": 25.08,
+    "y": 0.5
+   },
+   "tam": {
+    "x": 52.16,
+    "y": 1.0
+   }
+  },
+  {
+   "centro": {
+    "x": 25.08,
+    "y": -28.73
+   },
+   "tam": {
+    "x": 52.16,
+    "y": 1.0
+   }
+  },
+  {
+   "centro": {
+    "x": -0.5,
+    "y": -14.115
+   },
+   "tam": {
+    "x": 1.0,
+    "y": 28.23
+   }
+  },
+  {
+   "centro": {
+    "x": 50.66,
+    "y": -14.115
+   },
+   "tam": {
+    "x": 1.0,
+    "y": 28.23
+   }
+  }
+ ],
+ "sombra": "Sprites/Escenarios/Entrada/Comun/Sombra.png",
+ "bala": "Sprites/Escenarios/Entrada/Comun/Bala.png",
+ "impacto": "Sprites/Escenarios/Entrada/Comun/Impacto.png",
+ "animaciones": [
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Norte_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Noreste_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Este_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Sureste_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Sur_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Suroeste_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Oeste_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Quieto",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Quieto/Quieto_Noroeste_01.png"
+   ]
+  },
+  {
+   "clave": "Jason/Caminar",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Caminar",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Sur_08.png"
+   ]
+  },
+  {
+   "clave": "Jason/Caminar",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Caminar",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Caminar/Caminar_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Disparo",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Disparo",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Disparo",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Disparo/Disparo_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Escudo",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Escudo",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Escudo",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Escudo",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Escudo/Escudo_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Muerte",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Muerte",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Muerte",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "Jason/Muerte",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/JasonSmith/Muerte/Muerte_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Norte_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Noreste_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Este_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Sureste_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Sur_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Suroeste_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Oeste_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Quieto",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Quieto/Quieto_Noroeste_01.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Este_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noreste_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Noroeste_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Norte_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sureste_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Suroeste_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Sur_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/Correr",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Correr/Correr_Oeste_08.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noreste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Noroeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sureste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Suroeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/CorrerConArma",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/CorrerConArma/CorrerConArma_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Disparo",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Disparo",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Disparo",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Disparo",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Disparo/Disparo_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Habilidad",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Este_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Habilidad",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Habilidad",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Habilidad",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Habilidad/Habilidad_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Muerte",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noreste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Muerte",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Noroeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Muerte",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Muerte",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sureste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Muerte",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Suroeste_09.png"
+   ]
+  },
+  {
+   "clave": "Milena/Muerte",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/MilenaRhea/Muerte/Muerte_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Norte_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Noreste_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Este_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Sureste_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Sur_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Suroeste_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Oeste_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Quieto",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Quieto/Quieto_Noroeste_01.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Este_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Norte_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noreste_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Noroeste_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sur_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Sureste_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Suroeste_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Caminar",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Caminar/Caminar_Oeste_08.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Ataque",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Este_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Ataque",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Ataque",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Ataque",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Ataque/Ataque_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Muerte",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Este_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Muerte",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Muerte",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "SorboA/Muerte",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_A/Muerte/Muerte_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Correr",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Este_08.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Correr",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Norte_08.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Correr",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Sur_08.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Correr",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Correr/Correr_Oeste_08.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Ataque",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Este_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Ataque",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Ataque",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Ataque",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Ataque/Ataque_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Muerte",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Este_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Muerte",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Muerte",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "SorboB/Muerte",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Enemigos/Sorbo_B/Muerte/Muerte_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Este_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noreste_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Noroeste_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Norte_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sureste_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Suroeste_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Sur_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Corriendo",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Corriendo/Corriendo_Oeste_08.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/MUERTE",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Este_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/MUERTE",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/MUERTE",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/MUERTE",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/MUERTE/MUERTE_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Este_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noreste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Noroeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sureste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Suroeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Ataque_doctor",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Ataque_doctor/Ataque_doctor_Oeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Este",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Este_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Noreste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noreste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Noroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Noroeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Norte",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Norte_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Sureste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sureste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Suroeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Suroeste_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Sur",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Sur_09.png"
+   ]
+  },
+  {
+   "clave": "DoctorYiba/Campo_energia",
+   "dir": "Oeste",
+   "sprites": [
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_01.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_02.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_03.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_04.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_05.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_06.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_07.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_08.png",
+    "Sprites/Escenarios/Entrada/Personajes/DoctorYiba/Campo_energia/Campo_energia_Oeste_09.png"
+   ]
+  }
+ ],
+ "sorbos": [
+  {
+   "variante": "Sorbo",
+   "tipo": "A",
+   "pos": {
+    "x": 25.02,
+    "y": -6.24
+   },
+   "orientacion": 4
+  },
+  {
+   "variante": "Sorbo Acorazado",
+   "tipo": "B",
+   "pos": {
+    "x": 24.9,
+    "y": -13.92
+   },
+   "orientacion": 3
+  },
+  {
+   "variante": "Sorbo",
+   "tipo": "A",
+   "pos": {
+    "x": 22.2,
+    "y": -21.06
+   },
+   "orientacion": 5
+  },
+  {
+   "variante": "Sorbo Acorazado",
+   "tipo": "B",
+   "pos": {
+    "x": 30.9,
+    "y": -18.36
+   },
+   "orientacion": 4
+  },
+  {
+   "variante": "Sorbo",
+   "tipo": "A",
+   "pos": {
+    "x": 12.18,
+    "y": -24.12
+   },
+   "orientacion": 2
+  },
+  {
+   "variante": "Sorbo",
+   "tipo": "A",
+   "pos": {
+    "x": 38.1,
+    "y": -8.76
+   },
+   "orientacion": 6
+  },
+  {
+   "variante": "Sorbo Acorazado",
+   "tipo": "B",
+   "pos": {
+    "x": 44.1,
+    "y": -3.96
+   },
+   "orientacion": 4
+  },
+  {
+   "variante": "Sorbo",
+   "tipo": "A",
+   "pos": {
+    "x": 43.5,
+    "y": -15.36
+   },
+   "orientacion": 7
+  },
+  {
+   "variante": "Sorbo Acorazado",
+   "tipo": "B",
+   "pos": {
+    "x": 39.9,
+    "y": -22.56
+   },
+   "orientacion": 0
+  },
+  {
+   "variante": "Sorbo",
+   "tipo": "A",
+   "pos": {
+    "x": 31.8,
+    "y": -13.26
+   },
+   "orientacion": 4
+  }
+ ],
+ "jason": {
+  "x": 6.96,
+  "y": -12.78
+ },
+ "milena": {
+  "x": 8.46,
+  "y": -13.32
+ }
+}

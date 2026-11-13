@@ -1,0 +1,24 @@
+{
+  "Player_Jason": [
+    "  attackPoint: {fileID: 8569696971921828008}",
+    "  attackRange: 0.8",
+    "  firePoint: {fileID: 8034371282967184946}",
+    "  salidaDisparo: {fileID: 8034371282967184946}",
+    "  cadera: {x: -0.04, y: 0.24}",
+    "  anchoArma: 0.9",
+    "  rotacionReposoMachete: 225",
+    "  posicionManoMachete: {x: 0.25, y: 0}",
+    "  agarreMachete: {x: 0.78, y: 0.8}"
+  ],
+  "Player_Milena": [
+    "  attackPoint: {fileID: 8569696971921828008}",
+    "  attackRange: 0.8",
+    "  firePoint: {fileID: 8034371282967184946}",
+    "  salidaDisparo: {fileID: 8034371282967184946}",
+    "  cadera: {x: -0.04, y: 0.25}",
+    "  anchoArma: 0.9",
+    "  rotacionReposoMachete: 225",
+    "  posicionManoMachete: {x: 0.25, y: 0}",
+    "  agarreMachete: {x: 0.78, y: 0.8}"
+  ]
+}

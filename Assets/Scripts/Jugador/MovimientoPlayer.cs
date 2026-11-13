@@ -98,6 +98,9 @@ public class MovimientoPlayer : MonoBehaviour
             direccionMirada = joystickApuntado.normalized;
         else
         {
+            if (cam == null) cam = Camera.main;
+            if (cam == null) return;
+            if (Mouse.current != null) posicionRaton = Mouse.current.position.ReadValue();
             Vector3 posRatonMundo = cam.ScreenToWorldPoint(posicionRaton);
             direccionMirada = ((Vector2)posRatonMundo - (Vector2)transform.position).normalized;
         }
@@ -105,6 +108,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     private void MoverJugador()
     {
+        if (DeathScreenController.GameplayBlocked) { rb.linearVelocity = Vector2.zero; return; }
         float dotProduct = Vector2.Dot(direccionMovimiento.normalized, direccionMirada);
         bool enReversa = dotProduct < -0.2f; 
         float velocidadActual = enReversa ? velocidad * factorVelocidadReversa : velocidad;
@@ -113,6 +117,7 @@ public class MovimientoPlayer : MonoBehaviour
 
     private void ManejarSonidoPasos()
     {
+        if (DeathScreenController.GameplayBlocked) return;
         if (direccionMovimiento.sqrMagnitude > 0.01f)
         {
             float dotProduct = Vector2.Dot(direccionMovimiento.normalized, direccionMirada);
@@ -136,14 +141,14 @@ public class MovimientoPlayer : MonoBehaviour
 
     private void RotarJugador()
     {
-        if (pivoteArma != null)
+        if (pivoteArma != null && GetComponent<ArmaIndependiente>() == null)
         {
             float angulo = Mathf.Atan2(direccionMirada.y, direccionMirada.x) * Mathf.Rad2Deg;
             pivoteArma.rotation = Quaternion.Euler(0, 0, angulo);
             pivoteArma.localScale = (angulo > 90 || angulo < -90) ? new Vector3(1, -1, 1) : new Vector3(1, 1, 1);
         }
 
-        if (spriteCuerpo != null)
+        if (spriteCuerpo != null && GetComponent<AnimacionJasonDinamica>() == null)
         {
             if (direccionMirada.x < 0) spriteCuerpo.flipX = true; 
             else if (direccionMirada.x > 0) spriteCuerpo.flipX = false; 

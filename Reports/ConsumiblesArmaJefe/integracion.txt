@@ -1,0 +1,3 @@
+PASS Player_Jason: Gameplay + inventario, 8 sprites de reposo y 8 de disparo.
+PASS Player_Milena: Gameplay + inventario, 8 sprites de reposo y 8 de disparo.
+PASS DoctorYiba conectado exclusivamente en Assets/Scenes/Nivel1.unity: 6 estados, 3 fases, HUD, proyectiles e invocaciones.

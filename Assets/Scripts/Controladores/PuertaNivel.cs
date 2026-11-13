@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem; // Necesario para leer el nuevo input system
+using System.Collections.Generic;
 
 public class PuertaNivel : MonoBehaviour
 {
@@ -15,13 +16,16 @@ public class PuertaNivel : MonoBehaviour
     public string mensajeFaltaLlave = "Debo buscar la llave primero";
     public float duracionMensaje = 2.5f;
 
-    [Header("Input (Asignar desde el Inspector)")]
-    [Tooltip("Arrastra aquí la acción 'Interactuar' de tus PlayerControls")]
+    [Header("Input alternativo (opcional)")]
+    [Tooltip("Se usa Gameplay/Player/Interact del PlayerInput en rango. Esta referencia sólo sirve si no hay PlayerInput.")]
     public InputActionReference accionInteractuar;
 
     private Coroutine rutinaMensajeActiva;
     private bool jugadorEnRango = false;
     private PlayerInventory inventarioJugador;
+    private PlayerInput entradaJugador;
+    private bool cargando;
+    private readonly HashSet<Collider2D> contactos = new HashSet<Collider2D>();
 
     private void Start()
     {
@@ -33,8 +37,10 @@ public class PuertaNivel : MonoBehaviour
 
     private void Update()
     {
-        // Si el jugador está cerca y presiona el botón configurado (E o Botón A)
-        if (jugadorEnRango && accionInteractuar != null && accionInteractuar.action.WasPressedThisFrame())
+        // Leer la copia de Gameplay que está habilitada y emparejada con este jugador.
+        if (cargando || DeathScreenController.GameplayBlocked || !jugadorEnRango) return;
+        var accion = entradaJugador != null ? entradaJugador.currentActionMap?.FindAction("Interact", false) : accionInteractuar?.action;
+        if (accion != null && accion.WasPressedThisFrame())
         {
             IntentarAbrirPuerta();
         }
@@ -42,11 +48,13 @@ public class PuertaNivel : MonoBehaviour
 
     private void IntentarAbrirPuerta()
     {
+        if (cargando || !Application.CanStreamedLevelBeLoaded(nombreSiguienteEscena)) return;
         if (inventarioJugador != null)
         {
             // IntentarUsarLlave devuelve true si había llave y ya la restó
             if (inventarioJugador.IntentarUsarLlave())
             {
+                cargando = true;
                 AvanzarNivel();
             }
             else
@@ -59,20 +67,25 @@ public class PuertaNivel : MonoBehaviour
     // Detectar cuando el jugador entra en la zona de la puerta
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        var inventario = collision.GetComponentInParent<PlayerInventory>();
+        if (inventario != null && inventario.isActiveAndEnabled)
         {
+            contactos.Add(collision);
             jugadorEnRango = true;
-            inventarioJugador = collision.GetComponent<PlayerInventory>();
+            inventarioJugador = inventario;
+            entradaJugador = inventario.GetComponent<PlayerInput>();
         }
     }
 
     // Detectar cuando el jugador se aleja de la puerta
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        contactos.Remove(collision);
+        if (contactos.Count == 0)
         {
             jugadorEnRango = false;
             inventarioJugador = null;
+            entradaJugador = null;
         }
     }
 
@@ -92,9 +105,8 @@ public class PuertaNivel : MonoBehaviour
             if (exp != null)
             {
                 GameManager.Instance.puntosDeMejoraPendientes = exp.puntosDeMejora;
-                // Si quieres que el nivel y progreso de XP también persistan, descomenta:
-                // GameManager.Instance.expActualPendiente = exp.experienciaActual;
-                // GameManager.Instance.nivelActualPendiente = exp.nivelActual;
+                GameManager.Instance.expActualPendiente = exp.experienciaActual;
+                GameManager.Instance.nivelActualPendiente = exp.nivelActual;
             }
 
             // Extraer y guardar Inventario

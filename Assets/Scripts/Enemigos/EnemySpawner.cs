@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
     public int minEnemies = 1;
     public int maxEnemies = 3;
     public float spawnRadius = 1.8f; 
+    [Tooltip("Evita colocar Sorbos dentro de muros y objetos sólidos del escenario.")]
+    public bool evitarObstaculos;
 
     private Transform player;
     private bool spawnerRegistrado = false;
@@ -30,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (player == null || !this.enabled) return;
+        if (player == null || !this.enabled || DeathScreenController.GameplayBlocked) return;
 
         // Comprueba si ya pasó el tiempo de enfriamiento
         if (Time.time >= ultimoSpawnTiempo + cooldownTiempo)
@@ -63,12 +65,22 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
             Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
+            if (evitarObstaculos)
+            {
+                int intentos = 0;
+                while (PosicionBloqueada(spawnPosition) && intentos++ < 24)
+                    spawnPosition = transform.position + (Vector3)(Random.insideUnitCircle * spawnRadius);
+                if (PosicionBloqueada(spawnPosition)) spawnPosition = transform.position;
+                if (PosicionBloqueada(spawnPosition)) continue;
+            }
 
             // Elegir aleatoriamente entre los prefabs asignados (Melee o Ranged)
             int randomIndex = Random.Range(0, enemyPrefabs.Length);
             GameObject prefabElegido = enemyPrefabs[randomIndex];
 
-            Instantiate(prefabElegido, spawnPosition, Quaternion.identity);
+            var enemigo = Instantiate(prefabElegido, spawnPosition, Quaternion.identity);
+            var salud = enemigo.GetComponent<EnemyHealth>();
+            if (salud != null) salud.OrigenSpawner = this;
 
             if (AudioManager.Instance != null)
             {
@@ -84,5 +96,13 @@ public class EnemySpawner : MonoBehaviour
         
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, spawnRadius); 
+    }
+
+    private static bool PosicionBloqueada(Vector2 posicion)
+    {
+        foreach (var c in Physics2D.OverlapCircleAll(posicion, 0.3f))
+            if (!c.isTrigger && c.GetComponentInParent<PlayerHealth>() == null
+                && c.GetComponentInParent<EnemyHealth>() == null) return true;
+        return false;
     }
 }

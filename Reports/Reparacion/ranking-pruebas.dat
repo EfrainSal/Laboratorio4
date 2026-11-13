@@ -1,0 +1,128 @@
+{
+    "version": 2,
+    "topScores": [
+        {
+            "recordId": "6d8ad50fb0374532bd5d0f02ec60e46d",
+            "playerName": "PartidaDuranteEnvio",
+            "score": 999,
+            "time": 120.0,
+            "characterId": 2,
+            "date": "2026-11-12T17:40:06.5569979Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "79a72438606a4b54bf861fe1d74b9bbb",
+            "playerName": "Test12",
+            "score": 120,
+            "time": 62.0,
+            "characterId": 1,
+            "date": "2026-11-12T17:40:06.5291467Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "62a716d900e54f068424a4e71cc0a0f8",
+            "playerName": "Test11",
+            "score": 110,
+            "time": 61.0,
+            "characterId": 2,
+            "date": "2026-11-12T17:40:06.5083667Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "90f3399d2b8548f9880aa8a93809fa9d",
+            "playerName": "Test10",
+            "score": 100,
+            "time": 60.0,
+            "characterId": 1,
+            "date": "2026-11-12T17:40:06.4886911Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "4fdac24de34b456cb8d6d56df53de16e",
+            "playerName": "Test9",
+            "score": 90,
+            "time": 59.0,
+            "characterId": 2,
+            "date": "2026-11-12T17:40:06.4820775Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "9f1d150dd93749829c6cbaa034c9593b",
+            "playerName": "Test8",
+            "score": 80,
+            "time": 58.0,
+            "characterId": 1,
+            "date": "2026-11-12T17:40:06.4745215Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "2add2a722ca34865b3a34cf35ad018a5",
+            "playerName": "Test7",
+            "score": 70,
+            "time": 57.0,
+            "characterId": 2,
+            "date": "2026-11-12T17:40:06.4694819Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "dd85f0605dc2481aaf60ea2ed88de2b9",
+            "playerName": "Test6",
+            "score": 60,
+            "time": 56.0,
+            "characterId": 1,
+            "date": "2026-11-12T17:40:06.4633715Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "f1766f5f024f4ee6bdb30e07a1f3ef72",
+            "playerName": "Test5",
+            "score": 50,
+            "time": 55.0,
+            "characterId": 2,
+            "date": "2026-11-12T17:40:06.4426256Z",
+            "uploaded": true,
+            "victory": false
+        },
+        {
+            "recordId": "530387c0d81c4adc8c96948a8df764f2",
+            "playerName": "Test4",
+            "score": 40,
+            "time": 54.0,
+            "characterId": 1,
+            "date": "2026-11-12T17:40:06.4345744Z",
+            "uploaded": true,
+            "victory": false
+        }
+    ],
+    "topTimes": [
+        {
+            "recordId": "6799ce4ebce24428a27e00eb4d85868e",
+            "playerName": "Legacy",
+            "score": 12,
+            "time": 10.0,
+            "characterId": 1,
+            "date": "2026-01-01T00:00:00Z",
+            "uploaded": true,
+            "victory": true
+        },
+        {
+            "recordId": "a20dc237c4754a0eb78644e870e24ad7",
+            "playerName": "Test0",
+            "score": 0,
+            "time": 50.0,
+            "characterId": 1,
+            "date": "2026-11-12T17:40:06.4069629Z",
+            "uploaded": true,
+            "victory": true
+        }
+    ],
+    "pendingUploads": []
+}

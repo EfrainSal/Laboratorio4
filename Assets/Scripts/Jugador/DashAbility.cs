@@ -62,6 +62,7 @@ public class DashAbility : MonoBehaviour
 
     public void OnAbility(InputValue value)
     {
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
         if (value.isPressed && habilidadLista && !haciendoDash && direccionInput != Vector2.zero)
         {
             StartCoroutine(ActivarDash());
@@ -72,6 +73,7 @@ public class DashAbility : MonoBehaviour
     {
         habilidadLista = false;
         haciendoDash = true;
+        GetComponent<AnimacionJasonDinamica>()?.ReproducirAccion("Habilidad");
 
         if (sfxSource != null && sonidoDash != null) sfxSource.PlayOneShot(sonidoDash);
         if (movPlayer != null) movPlayer.enabled = false;

@@ -1,0 +1,66 @@
+{
+  "Arma_Apuntar_0_Sur.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 421,
+    "pixels": 421
+  },
+  "Arma_Apuntar_1_Sureste.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 418,
+    "pixels": 418
+  },
+  "Arma_Apuntar_2_Este.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 432,
+    "pixels": 432
+  },
+  "Arma_Apuntar_3_Noreste.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 470,
+    "pixels": 470
+  },
+  "Arma_Apuntar_4_Norte.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 422,
+    "pixels": 422
+  },
+  "Arma_Apuntar_5_Noroeste.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 469,
+    "pixels": 469
+  },
+  "Arma_Apuntar_6_Oeste.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 436,
+    "pixels": 436
+  },
+  "Arma_Apuntar_7_Suroeste.png": {
+    "offset": [
+      0,
+      16
+    ],
+    "matches": 418,
+    "pixels": 418
+  }
+}

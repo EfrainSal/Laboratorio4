@@ -36,13 +36,6 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 1.5f;
     public float maxFlashAlpha = 0.4f;
 
-    [Header("Feedback de Impacto")]
-    public Color flashColor = Color.red;
-    public float flashDuration = 0.15f;
-
-    private SpriteRenderer spriteRenderer;
-    private Color originalColor;
-
     [Header("Al morir")]
     [Tooltip("Activo: los enemigos se destruyen al morir. Desactivado: se quedan congelados en la escena y se ven detrás del desenfoque de la pantalla de muerte.")]
     public bool destruirEnemigosAlMorir = false;
@@ -61,12 +54,6 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth == 0f)
         {
             currentHealth = maxHealth;
-        }
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null) 
-        {
-            originalColor = spriteRenderer.color;
         }
 
         UpdateHealthUI();
@@ -110,19 +97,14 @@ public class PlayerHealth : MonoBehaviour
     /// <param name="causa">Qué te está golpeando; define el mensaje de la pantalla de muerte.</param>
     public void TakeDamage(float damageAmount, DeathCause causa = DeathCause.Desconocida)
     {
-        if (isDead || isInvulnerable) return;   // muerto o con escudo: ignoramos el daño
-
-        if (spriteRenderer != null) 
-        {
-            StartCoroutine(FlashRoutine());
-        }
-
+        if (isDead || isInvulnerable || damageAmount <= 0f) return;
 
         ultimaCausa = causa;
 
         // El daño se aplica UNA sola vez, ya reducido por la defensa (con su tope máximo)
         float defensa = Mathf.Clamp(defensaPorcentual, 0f, defensaMaxima);
         float dañoFinal = damageAmount * (1f - defensa / 100f);
+        GetComponent<RetroalimentacionDano>()?.Mostrar(Mathf.Min(currentHealth, dañoFinal), true);
 
         currentHealth = Mathf.Clamp(currentHealth - dañoFinal, 0f, maxHealth);
         UpdateHealthUI();
@@ -169,6 +151,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        GetComponent<AnimacionJasonDinamica>()?.Morir();
         Debug.Log($"¡El jugador ha muerto! Causa: {ultimaCausa}");
 
         // 1. Limpiar pantalla roja
@@ -186,7 +169,9 @@ public class PlayerHealth : MonoBehaviour
         // Desactivamos el resto de scripts del jugador, pero NO este (su Update anima la barra roja)
         foreach (MonoBehaviour behaviour in GetComponents<MonoBehaviour>())
         {
-            if (behaviour != this) behaviour.enabled = false;
+            if (behaviour != this && !(behaviour is AnimacionJasonDinamica)
+                && !(behaviour is RetroalimentacionDano)
+                && !(behaviour is Laboratorio4.Animacion.AnimadorSprites8Direcciones)) behaviour.enabled = false;
         }
 
         // 3. Enemigos: destruirlos o congelarlos
@@ -207,11 +192,8 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // 4. Desactivar el spawner
-        EnemySpawner spawner = FindAnyObjectByType<EnemySpawner>();
-        if (spawner != null)
-        {
+        foreach (EnemySpawner spawner in FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None))
             spawner.enabled = false;
-        }
 
         // 5. Simular la muerte sin desactivar el GameObject (así sigue el Update de la barra roja)
         if (ocultarSpriteAlMorir)
@@ -236,12 +218,4 @@ public class PlayerHealth : MonoBehaviour
             Debug.LogWarning("No hay GameManager en la escena: no se mostrará la pantalla de muerte. Inicia el juego desde el Menú Principal.");
         }
     }
-
-    private System.Collections.IEnumerator FlashRoutine()
-    {
-        spriteRenderer.color = flashColor;
-        yield return new WaitForSeconds(flashDuration);
-        spriteRenderer.color = originalColor;
-    }
-
 }

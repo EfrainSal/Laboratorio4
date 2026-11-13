@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763fcf08fcf471940ad663d45a3ef60e, type: 3}
+  m_Name: Jason
+  m_EditorClassIdentifier: Assembly-CSharp::Laboratorio4.Animacion.BibliotecaPersonaje
+  personaje: Jason
+  animaciones:
+  - nombre: Caminar
+    fps: 10
+    bucle: 1
+    direcciones:
+    - frames:
+      - {fileID: 21300000, guid: 116577751671bbf46b5e9a51811702fa, type: 3}
+      - {fileID: 21300000, guid: e457ad1623e4f4043b73b25d13731d83, type: 3}
+      - {fileID: 21300000, guid: 7038a418c98c65148a51fe0e5f185f89, type: 3}
+      - {fileID: 21300000, guid: 96c6f0b07bfd16648a28e68c178e2ee1, type: 3}
+      - {fileID: 21300000, guid: e30f481c058a726498617d0bbd1ea1cb, type: 3}
+      - {fileID: 21300000, guid: a93a75c1f602dde47beda8d4f4809d6c, type: 3}
+      - {fileID: 21300000, guid: 903c4618c91e2ae41a459eff1012cd24, type: 3}
+      - {fileID: 21300000, guid: 08b8a0105b558c04f81fa1aad9e5d72a, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: d476ec4772f23224cb4a7ea81ead332d, type: 3}
+      - {fileID: 21300000, guid: 05cd2d47de5972c46b640a9a1bf76da2, type: 3}
+      - {fileID: 21300000, guid: d8cf0937399374b41ab29d906cf3c760, type: 3}
+      - {fileID: 21300000, guid: 1ef5652667828034bad8b15f6708ce44, type: 3}
+      - {fileID: 21300000, guid: 6a1a246b078d3fa489eab9bd47bf5664, type: 3}
+      - {fileID: 21300000, guid: ba6de613a86b9eb45b06fcd563cfd8ab, type: 3}
+      - {fileID: 21300000, guid: 1c9e3a6edf8570c40b208f3ea27d9231, type: 3}
+      - {fileID: 21300000, guid: 5af4eb6ef1c649d43a4757542a014d67, type: 3}
+      - {fileID: 21300000, guid: 961560aca5a9ab4488ebfbd710da8121, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: 387e6e3292e154143adaa80b0f6c6afd, type: 3}
+      - {fileID: 21300000, guid: acba1ec5e8a66784887510d7da844a32, type: 3}
+      - {fileID: 21300000, guid: 64be148464d773a4e9ac3e494f0574ed, type: 3}
+      - {fileID: 21300000, guid: 59e57286372bfcd4ea974364eff3492d, type: 3}
+      - {fileID: 21300000, guid: a3bf6708eb2cb1640afa88c11a48eb69, type: 3}
+      - {fileID: 21300000, guid: e3be5939eff01294394768d5fca8a1d8, type: 3}
+      - {fileID: 21300000, guid: e9f42c4fd3b54a64a81466c147531d4d, type: 3}
+      - {fileID: 21300000, guid: 71a5bde94f87dfa428f8ff0fb0754ca6, type: 3}
+      - {fileID: 21300000, guid: 401ade41aab5ffd42aa2a8a23c15b382, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: 75afb45bbee493f42a1819bc0497ae36, type: 3}
+      - {fileID: 21300000, guid: 145b953e06628c94e858aacbf8324aa5, type: 3}
+      - {fileID: 21300000, guid: 35b81901c140a9e4eb8756c283c3f105, type: 3}
+      - {fileID: 21300000, guid: 926d8b9c46c3ca946b831b3449b25c26, type: 3}
+      - {fileID: 21300000, guid: b0acc5b14296b304e9f86315c9727cfd, type: 3}
+      - {fileID: 21300000, guid: ba79872277cf0d540b71917064762707, type: 3}
+      - {fileID: 21300000, guid: 46b1e8e16c8775642a26ebd3ccc9fa3e, type: 3}
+      - {fileID: 21300000, guid: 8f45e9d498064fa4c8a9636b51361de4, type: 3}
+      - {fileID: 21300000, guid: 22ebcb22ea36c284dbb44a0e97dc01a1, type: 3}
+    - frames: []
+  - nombre: Habilidad
+    fps: 12
+    bucle: 0
+    direcciones:
+    - frames:
+      - {fileID: 21300000, guid: f0f68a1e68e0d934caf5df293d743bd7, type: 3}
+      - {fileID: 21300000, guid: c9244b3db02f0ba46b0fdd33394b1f7f, type: 3}
+      - {fileID: 21300000, guid: def5ff326801a14438032426f9c52f53, type: 3}
+      - {fileID: 21300000, guid: a015f89b268f1cb499f55ec391cd89e5, type: 3}
+      - {fileID: 21300000, guid: 26c2dedc40157e141826707503774b81, type: 3}
+      - {fileID: 21300000, guid: dcb9858cfe82f1346b8c2a92204ae598, type: 3}
+      - {fileID: 21300000, guid: 90332c48fbbaa04499a47ce15a91dc02, type: 3}
+      - {fileID: 21300000, guid: 7b13037679c435049b40496799d671a4, type: 3}
+      - {fileID: 21300000, guid: 3d879f0374bdce34f8658e3c52f48460, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: 004b6bbeac7976a45829f8259bd6bd8b, type: 3}
+      - {fileID: 21300000, guid: afa160c1d5d77cb478e02617cef842aa, type: 3}
+      - {fileID: 21300000, guid: f44156948ef41594e9097edbb379bc6b, type: 3}
+      - {fileID: 21300000, guid: 4b162ab4ed7ff8f4f8a8eb78e6275510, type: 3}
+      - {fileID: 21300000, guid: cc7d52a142ef88046920cc44f4b604be, type: 3}
+      - {fileID: 21300000, guid: 530dc5be631c3ea47b57d71189478406, type: 3}
+      - {fileID: 21300000, guid: 35648efb5caade0419db3bea4773a8b9, type: 3}
+      - {fileID: 21300000, guid: 2297d0a89aeabe24c8832b8466cc981c, type: 3}
+      - {fileID: 21300000, guid: a6c9ecc9306512242951419c1841e398, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: de444ee964a5dad43a4a83fb8bbd91aa, type: 3}
+      - {fileID: 21300000, guid: 510f7b7a3737d3b42a3508177c1b4b52, type: 3}
+      - {fileID: 21300000, guid: 4a4ba89f5d7581d4988370f904c02e72, type: 3}
+      - {fileID: 21300000, guid: 0be7a1f2ab2a17743989c8670f2cad07, type: 3}
+      - {fileID: 21300000, guid: ee89813c7b20db342aee82a7ab3cb1cc, type: 3}
+      - {fileID: 21300000, guid: d8c4bcce07fcb7849bc17e2cf5439379, type: 3}
+      - {fileID: 21300000, guid: 38560dda925eb604f9a6c4d040ab495c, type: 3}
+      - {fileID: 21300000, guid: 90fef95cd285e504a9f4284a5b4e6e6d, type: 3}
+      - {fileID: 21300000, guid: 59b52edf094ebf445b2c8a9e9ec5ff5f, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: 7650bf792b70c0340922fe6342d3ea05, type: 3}
+      - {fileID: 21300000, guid: 46d62d263bc416d4e9666c03faf2d303, type: 3}
+      - {fileID: 21300000, guid: 3bd4bf7eb66f95b4db10012762096e8f, type: 3}
+      - {fileID: 21300000, guid: ec92a961e11cc224b841cb25a42f61b2, type: 3}
+      - {fileID: 21300000, guid: 68931baa7097f9d4cb6a7710ad9da601, type: 3}
+      - {fileID: 21300000, guid: 30994b5cca8cf024f9b8a7a5a5fdbc11, type: 3}
+      - {fileID: 21300000, guid: c9dd7df35d4588f48b438155f9433fa8, type: 3}
+      - {fileID: 21300000, guid: 76925fc0a4914de49a72193800cfb729, type: 3}
+      - {fileID: 21300000, guid: 07e13d2c2a3878640b02c08ae9819b58, type: 3}
+    - frames: []
+  - nombre: Muerte
+    fps: 10
+    bucle: 0
+    direcciones:
+    - frames:
+      - {fileID: 21300000, guid: 76718bd78c6fd5a4aa28f33f6d52c48c, type: 3}
+      - {fileID: 21300000, guid: 8876bd751da99fb42a431aa707b3d14a, type: 3}
+      - {fileID: 21300000, guid: e9e58b0e9d1481f4ab5f6a6c17279f09, type: 3}
+      - {fileID: 21300000, guid: c45f12f1d4833d44bbb6b7212315681c, type: 3}
+      - {fileID: 21300000, guid: 2cf3407f760a80a4e995c2e164b7d475, type: 3}
+      - {fileID: 21300000, guid: 223aa926e95a982469ffa4e9ab61ac64, type: 3}
+      - {fileID: 21300000, guid: cf681d2ca5afb934ab134f950f294e32, type: 3}
+      - {fileID: 21300000, guid: 4516c0e5d2154304d86fc78da57007ed, type: 3}
+      - {fileID: 21300000, guid: 77c094c3b23db964fa0f58c9c1bdcd0b, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: 43e4d962d286c0241a545d399f19eb5e, type: 3}
+      - {fileID: 21300000, guid: 7ca4134174e028a4794a7ac11943743a, type: 3}
+      - {fileID: 21300000, guid: 1dda1d004f5bd2842a604ec020ab2380, type: 3}
+      - {fileID: 21300000, guid: 84336227ca11c2645b5eb890da04c51c, type: 3}
+      - {fileID: 21300000, guid: 8aea555da5d7bb94ba55612950523f47, type: 3}
+      - {fileID: 21300000, guid: 80d09e87909a6c8478878c15e51e8af6, type: 3}
+      - {fileID: 21300000, guid: af19e31c071984448b0fcdd0edda3572, type: 3}
+      - {fileID: 21300000, guid: b20f3c8654bd0924c95a2b570d39cdbc, type: 3}
+      - {fileID: 21300000, guid: 4bfd7a895d9773446b922c7ade2fd769, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: a871594af2928fa40b7feaa9e8078ef1, type: 3}
+      - {fileID: 21300000, guid: f26fa64c3b2df984e90652d12038290b, type: 3}
+      - {fileID: 21300000, guid: b1094f58394d28941b9c476e561f8c42, type: 3}
+      - {fileID: 21300000, guid: bcbf0f97d380b5348a2a130e83b2dc8d, type: 3}
+      - {fileID: 21300000, guid: caf04a9e04272b64298332859994ad51, type: 3}
+      - {fileID: 21300000, guid: e92e69360ca1c9147859dea4955b7634, type: 3}
+      - {fileID: 21300000, guid: f13d3ea04810e7e45873e66fd60864c2, type: 3}
+      - {fileID: 21300000, guid: f1d42afdf63805d4a82a1d37a1aa1c43, type: 3}
+      - {fileID: 21300000, guid: 82f272fb6d3e1a841a2f12c2099f490d, type: 3}
+    - frames: []
+    - frames:
+      - {fileID: 21300000, guid: 715b40d2c7781f1409ae457b10eb0ca1, type: 3}
+      - {fileID: 21300000, guid: b97349e3260c385428daca96e30bde27, type: 3}
+      - {fileID: 21300000, guid: f0fdb585bfd228c42aa6ef0fbbc4185c, type: 3}
+      - {fileID: 21300000, guid: a962d1de20fc1814d9d60a6c85a1d302, type: 3}
+      - {fileID: 21300000, guid: a7f8abe43eb7eb547b9a5b0cee19bf31, type: 3}
+      - {fileID: 21300000, guid: b66226c44e061224bb1f1369428e2866, type: 3}
+      - {fileID: 21300000, guid: 2113e35b0eef68e4097d942dbadaae63, type: 3}
+      - {fileID: 21300000, guid: 0521b74a79b492849917dba587f37acf, type: 3}
+      - {fileID: 21300000, guid: 5e520cd2df14c224f8dd8841c343738d, type: 3}
+    - frames: []
+  - nombre: Quieto
+    fps: 1
+    bucle: 1
+    direcciones:
+    - frames:
+      - {fileID: 21300000, guid: bb59578f0bc99fe4bb679e8b0582c8cc, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: 3c97d53de4ed703448e64acfbc95233d, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: 75f4eef5dcf87bb49a12d5aa86e016a9, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: eccc9d742b60b1743a32ea55593c5ff3, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: 9ba2730947d4e2c4d86fcfea449e95dd, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: 8cad90bb121f8c84e88840276530ff95, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: 70d562ff8ec6bb84dac938a3f606783c, type: 3}
+    - frames:
+      - {fileID: 21300000, guid: 6873f19a6ff6b1f48ad7157766d533ee, type: 3}

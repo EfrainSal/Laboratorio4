@@ -128,7 +128,10 @@ public class GameManager : MonoBehaviour
     // Se llama desde PlayerHealth.cs cuando el jugador muere
     public void TerminarRunPorMuerte(DeathCause causa = DeathCause.Desconocida)
     {
+        if (!runActiva) return;
         runActiva = false;
+        RankingManager.RegistrarPartida(PlayerPrefs.GetString("PlayerRankingName", "Desconocido"),
+            puntuacionTotal, tiempoRun, personajeSeleccionado, false);
 
         int mejorPrevia = PlayerPrefs.GetInt("MejorPuntuacion", 0);
         bool nuevoRecord = puntuacionTotal > mejorPrevia;
@@ -198,6 +201,7 @@ public class GameManager : MonoBehaviour
     {
         SaveData data = new SaveData
         {
+            escenaActual = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name,
             personajeSeleccionado = personajeSeleccionado,
             tiempoRun = tiempoRun,
             enemigosDerrotadosTotal = enemigosDerrotadosTotal,
@@ -207,6 +211,11 @@ public class GameManager : MonoBehaviour
             nivelMejoraDefensa = nivelMejoraDefensa,
             nivelMejoraDanio = nivelMejoraDanio
         };
+        if (LevelManager.Instance != null)
+        {
+            data.enemigosDerrotadosPiso = LevelManager.Instance.EnemigosDerrotados;
+            data.tarjetaGenerada = LevelManager.Instance.TarjetaGenerada;
+        }
 
         // Buscamos al jugador en la escena para sacarle sus datos exactos
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -219,7 +228,12 @@ public class GameManager : MonoBehaviour
             if (health != null) data.vidaActual = health.currentHealth;
 
             var exp = player.GetComponent<PlayerExperience>();
-            if (exp != null) data.puntosDeMejora = exp.puntosDeMejora;
+            if (exp != null)
+            {
+                data.puntosDeMejora = exp.puntosDeMejora;
+                data.nivelJugador = exp.nivelActual;
+                data.experienciaJugador = exp.experienciaActual;
+            }
 
             var inv = player.GetComponent<PlayerInventory>();
             if (inv != null)

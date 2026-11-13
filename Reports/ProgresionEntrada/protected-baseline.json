@@ -1,0 +1,9 @@
+{
+  "Assets/Scenes/Debugscene.unity": "5bf10445c716ebe0b5bf175920bc8037418dc95ff7b6abd8a2809a1abc99ef53",
+  "Assets/Scenes/Nivel1.unity": "1655ffb97a12595b2066fbeec11f903688412cebc9b6cf87e78271516be64c9b",
+  "Assets/Animations/Personajes/DoctorYiba.asset": "ef5a6b949344c7240f8b97410ae83036bd08e9fc9e7de593f00584b592a14596",
+  "Assets/Scripts/Jefe/BossAI.cs": "5c1c56a4e531cb5ef710130fe0a986c5fad884a71426f532b6eb3a8176e74e59",
+  "Assets/Scripts/Jefe/BossHealth.cs": "3e430630bc4371ba3287c2490a78d7d7c2e40cfb4683b5dfc018ea120a4186c4",
+  "Assets/Sprites/Machete.png": "11362281afe8eff2bea78ba03171a6db8523563244bd2bce1825897c03cb686b",
+  "Assets/Sprites/Machete.png.meta": "d2e284d845b5f47a0c48e3068441bf9d2b5eb320d270be2753c24c84c5a0e7d2"
+}

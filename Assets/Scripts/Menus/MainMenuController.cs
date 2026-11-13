@@ -430,7 +430,10 @@ public class MainMenuController : MonoBehaviour
     {
         if (GameManager.Instance != null && GameManager.Instance.CargarRunGuardada())
         {
-            SceneManager.LoadScene(_gameSceneName);
+            string escena = GameManager.Instance.DatosCargados.escenaActual;
+            // Los guardados anteriores al recorrido por pisos pertenecían a Piso3.
+            if (string.IsNullOrEmpty(escena)) escena = "Piso3_V10";
+            SceneManager.LoadScene(Application.CanStreamedLevelBeLoaded(escena) ? escena : _gameSceneName);
         }
         else
         {

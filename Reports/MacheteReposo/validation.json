@@ -1,0 +1,12 @@
+{
+  "protected_files": 271,
+  "modified_or_missing": [],
+  "previous_weapon_config_preserved": {
+    "Player_Jason": true,
+    "Player_Milena": true
+  },
+  "duplicate_guids": {},
+  "playmode_pass": true,
+  "passed_checks": 26,
+  "captures": 8
+}

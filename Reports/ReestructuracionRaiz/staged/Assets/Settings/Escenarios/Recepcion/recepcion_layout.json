@@ -1,0 +1,881 @@
+{
+ "anchoPx": 1920,
+ "altoPx": 1344,
+ "ppu": 100,
+ "objetos": [
+  {
+   "nombre": "SangreSeca_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/SangreSeca.png",
+   "tipo": "piso",
+   "x": 700,
+   "y": 1130,
+   "w": 148,
+   "h": 80,
+   "colisiones": []
+  },
+  {
+   "nombre": "ManchaSangre_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/ManchaSangre.png",
+   "tipo": "piso",
+   "x": 1230,
+   "y": 720,
+   "w": 96,
+   "h": 93,
+   "colisiones": []
+  },
+  {
+   "nombre": "DocumentosRotos_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/DocumentosRotos.png",
+   "tipo": "piso",
+   "x": 770,
+   "y": 640,
+   "w": 140,
+   "h": 82,
+   "colisiones": []
+  },
+  {
+   "nombre": "Papeles_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/Papeles.png",
+   "tipo": "piso",
+   "x": 1450,
+   "y": 930,
+   "w": 71,
+   "h": 81,
+   "colisiones": []
+  },
+  {
+   "nombre": "Papeles_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/Papeles.png",
+   "tipo": "piso",
+   "x": 380,
+   "y": 960,
+   "w": 71,
+   "h": 81,
+   "colisiones": []
+  },
+  {
+   "nombre": "DocumentosRotos_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/DocumentosRotos.png",
+   "tipo": "piso",
+   "x": 1120,
+   "y": 1080,
+   "w": 140,
+   "h": 82,
+   "colisiones": []
+  },
+  {
+   "nombre": "ManchaSangre_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Piso/ManchaSangre.png",
+   "tipo": "piso",
+   "x": 300,
+   "y": 700,
+   "w": 96,
+   "h": 93,
+   "colisiones": []
+  },
+  {
+   "nombre": "VentiladorMuro_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/VentiladorMuro.png",
+   "tipo": "pared",
+   "x": 690,
+   "y": 186,
+   "w": 49,
+   "h": 70,
+   "colisiones": []
+  },
+  {
+   "nombre": "Botiquin_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/Botiquin.png",
+   "tipo": "pared",
+   "x": 140,
+   "y": 165,
+   "w": 65,
+   "h": 56,
+   "colisiones": []
+  },
+  {
+   "nombre": "RejillaIndustrial_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/RejillaIndustrial.png",
+   "tipo": "pared",
+   "x": 1440,
+   "y": 186,
+   "w": 55,
+   "h": 71,
+   "colisiones": []
+  },
+  {
+   "nombre": "SenalFlecha_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/SenalFlecha.png",
+   "tipo": "pared",
+   "x": 600,
+   "y": 162,
+   "w": 77,
+   "h": 42,
+   "colisiones": []
+  },
+  {
+   "nombre": "SenalNoFumar_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/SenalNoFumar.png",
+   "tipo": "pared",
+   "x": 300,
+   "y": 180,
+   "w": 53,
+   "h": 65,
+   "colisiones": []
+  },
+  {
+   "nombre": "SenalSalida_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/SenalSalida.png",
+   "tipo": "pared",
+   "x": 848,
+   "y": 150,
+   "w": 72,
+   "h": 40,
+   "colisiones": []
+  },
+  {
+   "nombre": "SenalRadiacion_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/SenalRadiacion.png",
+   "tipo": "pared",
+   "x": 1072,
+   "y": 182,
+   "w": 57,
+   "h": 64,
+   "colisiones": []
+  },
+  {
+   "nombre": "CartelInformativo_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Pared/CartelInformativo.png",
+   "tipo": "pared",
+   "x": 1345,
+   "y": 190,
+   "w": 64,
+   "h": 78,
+   "colisiones": []
+  },
+  {
+   "nombre": "PlantaSeca_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaSeca.png",
+   "tipo": "objeto",
+   "x": 115,
+   "y": 275,
+   "w": 92,
+   "h": 115,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 41.4,
+     "h": 22
+    }
+   ]
+  },
+  {
+   "nombre": "PlantaSeca_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaSeca.png",
+   "tipo": "objeto",
+   "x": 480,
+   "y": 275,
+   "w": 92,
+   "h": 115,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 41.4,
+     "h": 22
+    }
+   ]
+  },
+  {
+   "nombre": "PlantaSeca_03",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaSeca.png",
+   "tipo": "objeto",
+   "x": 820,
+   "y": 275,
+   "w": 92,
+   "h": 115,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 41.4,
+     "h": 22
+    }
+   ]
+  },
+  {
+   "nombre": "DispensadorAgua_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/DispensadorAgua.png",
+   "tipo": "objeto",
+   "x": 1785,
+   "y": 285,
+   "w": 59,
+   "h": 168,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.0,
+     "w": 47.2,
+     "h": 30
+    }
+   ]
+  },
+  {
+   "nombre": "Sofa_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Sofa.png",
+   "tipo": "objeto",
+   "x": 300,
+   "y": 290,
+   "w": 202,
+   "h": 117,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 17.55,
+     "w": 185.84,
+     "h": 35.1
+    }
+   ]
+  },
+  {
+   "nombre": "ArchiveroGrande_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/ArchiveroGrande.png",
+   "tipo": "objeto",
+   "x": 1180,
+   "y": 290,
+   "w": 142,
+   "h": 146,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 20.0,
+     "w": 134.9,
+     "h": 40
+    }
+   ]
+  },
+  {
+   "nombre": "SillaOficina_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/SillaOficina.png",
+   "tipo": "objeto",
+   "x": 1310,
+   "y": 290,
+   "w": 81,
+   "h": 124,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 12.0,
+     "w": 48.6,
+     "h": 24
+    }
+   ]
+  },
+  {
+   "nombre": "SillaRuedas_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/SillaRuedas.png",
+   "tipo": "objeto",
+   "x": 718,
+   "y": 292,
+   "w": 102,
+   "h": 111,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 13.0,
+     "w": 71.39999999999999,
+     "h": 26
+    }
+   ]
+  },
+  {
+   "nombre": "ArchivadoresDobles_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/ArchivadoresDobles.png",
+   "tipo": "objeto",
+   "x": 1530,
+   "y": 300,
+   "w": 97,
+   "h": 158,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 20.0,
+     "w": 92.14999999999999,
+     "h": 40
+    }
+   ]
+  },
+  {
+   "nombre": "MaquinaExpendedora_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/MaquinaExpendedora.png",
+   "tipo": "objeto",
+   "x": 1660,
+   "y": 300,
+   "w": 104,
+   "h": 180,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 20.0,
+     "w": 98.8,
+     "h": 40
+    }
+   ]
+  },
+  {
+   "nombre": "Archivador_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Archivador.png",
+   "tipo": "objeto",
+   "x": 380,
+   "y": 420,
+   "w": 91,
+   "h": 126,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.0,
+     "w": 86.45,
+     "h": 30
+    }
+   ]
+  },
+  {
+   "nombre": "ArcoDetector_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/ArcoDetector.png",
+   "tipo": "objeto",
+   "x": 960,
+   "y": 420,
+   "w": 117,
+   "h": 147,
+   "colisiones": [
+    {
+     "cx": -51.0,
+     "cy": 12,
+     "w": 15,
+     "h": 24
+    },
+    {
+     "cx": 51.0,
+     "cy": 12,
+     "w": 15,
+     "h": 24
+    }
+   ]
+  },
+  {
+   "nombre": "EscritorioRecepcion_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/EscritorioRecepcion.png",
+   "tipo": "objeto",
+   "x": 600,
+   "y": 500,
+   "w": 299,
+   "h": 206,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 36.05,
+     "w": 284.05,
+     "h": 72.1
+    }
+   ]
+  },
+  {
+   "nombre": "BoteMedico_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/BoteMedico.png",
+   "tipo": "objeto",
+   "x": 415,
+   "y": 500,
+   "w": 59,
+   "h": 85,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 10.0,
+     "w": 47.2,
+     "h": 20
+    }
+   ]
+  },
+  {
+   "nombre": "BoteBiologico_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/BoteBiologico.png",
+   "tipo": "objeto",
+   "x": 1115,
+   "y": 505,
+   "w": 65,
+   "h": 95,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 10.0,
+     "w": 52.0,
+     "h": 20
+    }
+   ]
+  },
+  {
+   "nombre": "ConsolaDeInvestigacion_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/ConsolaDeInvestigacion.png",
+   "tipo": "objeto",
+   "x": 1330,
+   "y": 520,
+   "w": 327,
+   "h": 157,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 27.474999999999998,
+     "w": 310.65,
+     "h": 54.949999999999996
+    }
+   ]
+  },
+  {
+   "nombre": "Banca3_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca3.png",
+   "tipo": "objeto",
+   "x": 210,
+   "y": 640,
+   "w": 150,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.6,
+     "w": 138.0,
+     "h": 31.2
+    }
+   ]
+  },
+  {
+   "nombre": "Banca3_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca3.png",
+   "tipo": "objeto",
+   "x": 1710,
+   "y": 640,
+   "w": 150,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.6,
+     "w": 138.0,
+     "h": 31.2
+    }
+   ]
+  },
+  {
+   "nombre": "PlantaMarchita_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaMarchita.png",
+   "tipo": "objeto",
+   "x": 115,
+   "y": 740,
+   "w": 88,
+   "h": 122,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 39.6,
+     "h": 22
+    }
+   ]
+  },
+  {
+   "nombre": "PlantaMarchita_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaMarchita.png",
+   "tipo": "objeto",
+   "x": 1805,
+   "y": 740,
+   "w": 88,
+   "h": 122,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 39.6,
+     "h": 22
+    }
+   ]
+  },
+  {
+   "nombre": "Banca3_03",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca3.png",
+   "tipo": "objeto",
+   "x": 210,
+   "y": 830,
+   "w": 150,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.6,
+     "w": 138.0,
+     "h": 31.2
+    }
+   ]
+  },
+  {
+   "nombre": "Banca3_04",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca3.png",
+   "tipo": "objeto",
+   "x": 1710,
+   "y": 830,
+   "w": 150,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.6,
+     "w": 138.0,
+     "h": 31.2
+    }
+   ]
+  },
+  {
+   "nombre": "Banca3_05",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca3.png",
+   "tipo": "objeto",
+   "x": 560,
+   "y": 1000,
+   "w": 150,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.6,
+     "w": 138.0,
+     "h": 31.2
+    }
+   ]
+  },
+  {
+   "nombre": "Banca3_06",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca3.png",
+   "tipo": "objeto",
+   "x": 1360,
+   "y": 1000,
+   "w": 150,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.6,
+     "w": 138.0,
+     "h": 31.2
+    }
+   ]
+  },
+  {
+   "nombre": "CajaElectrica_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/CajaElectrica.png",
+   "tipo": "objeto",
+   "x": 1800,
+   "y": 1010,
+   "w": 104,
+   "h": 117,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.0,
+     "w": 93.60000000000001,
+     "h": 30
+    }
+   ]
+  },
+  {
+   "nombre": "DispensadorAgua_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/DispensadorAgua.png",
+   "tipo": "objeto",
+   "x": 115,
+   "y": 1030,
+   "w": 59,
+   "h": 168,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 15.0,
+     "w": 47.2,
+     "h": 30
+    }
+   ]
+  },
+  {
+   "nombre": "GabineteManchado_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/GabineteManchado.png",
+   "tipo": "objeto",
+   "x": 250,
+   "y": 1040,
+   "w": 120,
+   "h": 122,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 21.349999999999998,
+     "w": 114.0,
+     "h": 42.699999999999996
+    }
+   ]
+  },
+  {
+   "nombre": "Extintor_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Extintor.png",
+   "tipo": "objeto",
+   "x": 1810,
+   "y": 1110,
+   "w": 46,
+   "h": 82,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 7.5,
+     "w": 27.599999999999998,
+     "h": 15
+    }
+   ]
+  },
+  {
+   "nombre": "SenalPisoMojado_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/SenalPisoMojado.png",
+   "tipo": "objeto",
+   "x": 190,
+   "y": 1150,
+   "w": 68,
+   "h": 90,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 9.0,
+     "w": 40.8,
+     "h": 18
+    }
+   ]
+  },
+  {
+   "nombre": "Banca4_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca4.png",
+   "tipo": "objeto",
+   "x": 740,
+   "y": 1205,
+   "w": 202,
+   "h": 90,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 13.5,
+     "w": 185.84,
+     "h": 27.0
+    }
+   ]
+  },
+  {
+   "nombre": "Banca2_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/Banca2.png",
+   "tipo": "objeto",
+   "x": 1220,
+   "y": 1205,
+   "w": 113,
+   "h": 90,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 13.5,
+     "w": 103.96000000000001,
+     "h": 27.0
+    }
+   ]
+  },
+  {
+   "nombre": "CarritoLimpieza_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/CarritoLimpieza.png",
+   "tipo": "objeto",
+   "x": 310,
+   "y": 1210,
+   "w": 75,
+   "h": 118,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 12.5,
+     "w": 60.0,
+     "h": 25
+    }
+   ]
+  },
+  {
+   "nombre": "BoteMedico_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/BoteMedico_2.png",
+   "tipo": "objeto",
+   "x": 1450,
+   "y": 1228,
+   "w": 66,
+   "h": 95,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 10.0,
+     "w": 52.800000000000004,
+     "h": 20
+    }
+   ]
+  },
+  {
+   "nombre": "PlantaSeca_04",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaSeca.png",
+   "tipo": "objeto",
+   "x": 130,
+   "y": 1235,
+   "w": 92,
+   "h": 115,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 41.4,
+     "h": 22
+    }
+   ]
+  },
+  {
+   "nombre": "CajasApiladas_01",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/CajasApiladas.png",
+   "tipo": "objeto",
+   "x": 1560,
+   "y": 1235,
+   "w": 119,
+   "h": 122,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 24.400000000000002,
+     "w": 107.10000000000001,
+     "h": 48.800000000000004
+    }
+   ]
+  },
+  {
+   "nombre": "CajasApiladas_02",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/CajasApiladas_2.png",
+   "tipo": "objeto",
+   "x": 1680,
+   "y": 1235,
+   "w": 102,
+   "h": 104,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 20.8,
+     "w": 91.8,
+     "h": 41.6
+    }
+   ]
+  },
+  {
+   "nombre": "PlantaSeca_05",
+   "sprite": "Sprites/Escenarios/Recepcion/Objetos/PlantaSeca.png",
+   "tipo": "objeto",
+   "x": 1790,
+   "y": 1235,
+   "w": 92,
+   "h": 115,
+   "colisiones": [
+    {
+     "cx": 0,
+     "cy": 11.0,
+     "w": 41.4,
+     "h": 22
+    }
+   ]
+  }
+ ],
+ "puertas": [
+  {
+   "nombre": "Puerta_Salida_Escenario1",
+   "sprite": "Sprites/Escenarios/Recepcion/Puertas/Puerta_Salida.png",
+   "x": 960,
+   "y": 190,
+   "w": 125,
+   "h": 145
+  },
+  {
+   "nombre": "Puerta_Entrada",
+   "sprite": "Sprites/Escenarios/Recepcion/Puertas/Puerta_Entrada.png",
+   "x": 960,
+   "y": 1344,
+   "w": 121,
+   "h": 138
+  }
+ ],
+ "muros": [
+  {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 120
+  },
+  {
+   "x": 0,
+   "y": 120,
+   "w": 888,
+   "h": 72
+  },
+  {
+   "x": 1032,
+   "y": 120,
+   "w": 888,
+   "h": 72
+  },
+  {
+   "x": 0,
+   "y": 192,
+   "w": 72,
+   "h": 1152
+  },
+  {
+   "x": 1848,
+   "y": 192,
+   "w": 72,
+   "h": 1152
+  },
+  {
+   "x": 72,
+   "y": 1248,
+   "w": 816,
+   "h": 96
+  },
+  {
+   "x": 1032,
+   "y": 1248,
+   "w": 816,
+   "h": 96
+  },
+  {
+   "x": 888,
+   "y": 120,
+   "w": 144,
+   "h": 72
+  },
+  {
+   "x": 888,
+   "y": 1250,
+   "w": 144,
+   "h": 94
+  }
+ ],
+ "salida": {
+  "x": 900,
+  "y": 184,
+  "w": 120,
+  "h": 34,
+  "escena": "Escenario1_Entrada"
+ },
+ "jason": {
+  "x": 930,
+  "y": 1185
+ },
+ "milena": {
+  "x": 995,
+  "y": 1185
+ }
+}
