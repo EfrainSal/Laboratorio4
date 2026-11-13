@@ -1,0 +1,71 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/DeathScreenStyles.uss"/>
+
+    <ui:VisualElement name="DeathOverlay" class="death-overlay hidden">
+
+        <!-- Fondo: escena desenfocada + tinte rojo + viñeta + barra de escaneo -->
+        <ui:VisualElement name="DeathBackdrop" class="fill backdrop" picking-mode="Ignore"/>
+        <ui:VisualElement name="DeathTint" class="fill death-tint" picking-mode="Ignore"/>
+        <ui:VisualElement name="DeathVignette" class="fill death-vignette" picking-mode="Ignore"/>
+        <ui:VisualElement name="ScanBar" class="scan-bar" picking-mode="Ignore"/>
+
+        <ui:VisualElement class="death-content">
+
+            <ui:Label name="FloorLabel" text="HAS CAÍDO EN EL PISO 1" class="death-floor reveal"/>
+
+            <!-- Título con glitch: dos capas fantasma + la principal -->
+            <ui:VisualElement name="GlitchTitle" class="glitch-title reveal">
+                <ui:Label name="TitleGhostA" text="INCURSIÓN FALLIDA" class="title-text title-ghost-a" picking-mode="Ignore"/>
+                <ui:Label name="TitleGhostB" text="INCURSIÓN FALLIDA" class="title-text title-ghost-b" picking-mode="Ignore"/>
+                <ui:Label name="TitleMain" text="INCURSIÓN FALLIDA" class="title-text title-main" picking-mode="Ignore"/>
+            </ui:VisualElement>
+
+            <ui:Label text="TODOS LOS RECURSOS SE HAN PERDIDO" class="death-subtitle reveal"/>
+
+            <!-- Estadísticas -->
+            <ui:VisualElement name="StatsPanel" class="stats-panel reveal">
+                <ui:Label text="ESTADÍSTICAS DE LA RUN" class="stats-title"/>
+
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="TIEMPO SOBREVIVIDO" class="stat-label"/>
+                    <ui:Label name="TimeValue" text="00:00" class="stat-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="ENEMIGOS ELIMINADOS" class="stat-label"/>
+                    <ui:Label name="KillsValue" text="0" class="stat-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="PUNTUACIÓN" class="stat-label"/>
+                    <ui:Label name="ScoreValue" text="0" class="stat-value stat-value-score"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="MEJOR PUNTUACIÓN" class="stat-label"/>
+                    <ui:Label name="BestValue" text="0" class="stat-value"/>
+                </ui:VisualElement>
+                <ui:Label name="RecordBadge" text="¡NUEVO RÉCORD!" class="record-badge hidden"/>
+
+                <!-- Causa de muerte -->
+                <ui:VisualElement name="CauseRow" class="cause-row reveal">
+                    <ui:VisualElement name="DeathSkull" class="death-skull"/>
+                    <ui:VisualElement class="cause-info">
+                        <ui:Label text="CAUSA DE MUERTE" class="cause-label"/>
+                        <ui:Label name="CauseText" text="" class="cause-text"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Botones -->
+            <ui:VisualElement name="DeathActions" class="death-actions reveal">
+                <ui:VisualElement class="retry-wrap">
+                    <ui:VisualElement class="bracket br-tl" picking-mode="Ignore"/>
+                    <ui:VisualElement class="bracket br-tr" picking-mode="Ignore"/>
+                    <ui:VisualElement class="bracket br-bl" picking-mode="Ignore"/>
+                    <ui:VisualElement class="bracket br-br" picking-mode="Ignore"/>
+                    <ui:Button name="RetryButton" text="REINTENTAR" class="death-btn death-btn-primary"/>
+                </ui:VisualElement>
+                <ui:Button name="MenuButton" text="VOLVER AL MENÚ" class="death-btn death-btn-secondary"/>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

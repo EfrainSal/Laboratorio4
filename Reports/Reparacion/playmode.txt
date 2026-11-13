@@ -1,0 +1,75 @@
+Input real mediante dispositivos virtuales. Guardados y ranking aislados. Sin partidas ficticias en API real.
+
+JASON: PASS
+PASS Inicio desde MainMenu
+PASS Un solo jugador activo
+PASS Acciones completas conectadas al prefab
+PASS D mueve al jugador a traves de PlayerInput y Rigidbody2D
+PASS Soltar movimiento detiene al jugador
+PASS Posicion personalizada del arma conservada
+PASS R recarga municion limitada y actualiza HUD
+PASS Sin reserva R no inventa balas
+PASS Click dispara proyectil y consume municion
+PASS Q cambia a machete por accion real
+PASS Ocho sprites de tajo e indicador visibles con machete
+PASS Indicador usa exactamente el centro y radio de la colision
+PASS Tajo dana una vez al enemigo dentro, incluso con dos colliders (vida=990)
+PASS Tajo no alcanza enemigo fuera del radio
+PASS Enemigo recibe destello y numero al sufrir dano
+PASS El ataque real reproduce la animacion de tajo
+PASS Recarga bloqueada al usar machete
+PASS Jugador pierde vida y muestra feedback al recibir dano
+PASS Q restaura subfusil y oculta alcance melee
+PASS Bala dana al segundo Sorbo una vez y activa su feedback
+PASS Pausa bloquea cambio de arma, disparo y recarga
+PASS Start conserva municion restaurada desde guardado
+PASS Muerte guarda score y personaje una vez, con envio pendiente
+PASS Una derrota no entra como victoria rapida
+PASS Game Over sigue apareciendo tras reparar input y rankings
+PASS Menu muestra puntuacion de la partida terminada
+PASS Migracion preserva ranking antiguo sin duplicar pendientes
+PASS Cola conserva partidas fuera del top 10 y tiempos solo de victorias
+PASS Identificadores distintos aunque las partidas se creen el mismo segundo
+PASS HTTP 503 conserva toda la cola persistida
+PASS Llamadas concurrentes comparten una sola sincronizacion
+PASS Reintento acepta 201, 200 y 204, marca tablas y vacia cola
+PASS Sincronizacion no sobrescribe partidas registradas durante await
+PASS POST real contra servidor local usa contrato de seis campos y cabecera API
+PASS Sin errores ni excepciones en Play Mode
+
+MILENA: PASS
+PASS Inicio desde MainMenu
+PASS Un solo jugador activo
+PASS Acciones completas conectadas al prefab
+PASS D mueve al jugador a traves de PlayerInput y Rigidbody2D
+PASS Soltar movimiento detiene al jugador
+PASS Posicion personalizada del arma conservada
+PASS R recarga municion limitada y actualiza HUD
+PASS Sin reserva R no inventa balas
+PASS Click dispara proyectil y consume municion
+PASS Q cambia a machete por accion real
+PASS Ocho sprites de tajo e indicador visibles con machete
+PASS Indicador usa exactamente el centro y radio de la colision
+PASS Tajo dana una vez al enemigo dentro, incluso con dos colliders (vida=985)
+PASS Tajo no alcanza enemigo fuera del radio
+PASS Enemigo recibe destello y numero al sufrir dano
+PASS El ataque real reproduce la animacion de tajo
+PASS Recarga bloqueada al usar machete
+PASS Jugador pierde vida y muestra feedback al recibir dano
+PASS Q restaura subfusil y oculta alcance melee
+PASS Bala dana al segundo Sorbo una vez y activa su feedback
+PASS Pausa bloquea cambio de arma, disparo y recarga
+PASS Start conserva municion restaurada desde guardado
+PASS Muerte guarda score y personaje una vez, con envio pendiente
+PASS Una derrota no entra como victoria rapida
+PASS Game Over sigue apareciendo tras reparar input y rankings
+PASS Menu muestra puntuacion de la partida terminada
+PASS Migracion preserva ranking antiguo sin duplicar pendientes
+PASS Cola conserva partidas fuera del top 10 y tiempos solo de victorias
+PASS Identificadores distintos aunque las partidas se creen el mismo segundo
+PASS HTTP 503 conserva toda la cola persistida
+PASS Llamadas concurrentes comparten una sola sincronizacion
+PASS Reintento acepta 201, 200 y 204, marca tablas y vacia cola
+PASS Sincronizacion no sobrescribe partidas registradas durante await
+PASS POST real contra servidor local usa contrato de seis campos y cabecera API
+PASS Sin errores ni excepciones en Play Mode

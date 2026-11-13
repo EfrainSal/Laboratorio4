@@ -1,0 +1,262 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class LevelManager : MonoBehaviour
+{
+    public static LevelManager Instance { get; private set; }
+
+    [Header("Spawneo del Jugador")]
+    [Tooltip("El punto donde aparecerá el jugador al iniciar el nivel")]
+    public Transform puntoDeInicio;
+    private GameObject jugadorExistente;
+
+    public void UsarJugadorExistente(GameObject jugador)
+    {
+        jugadorExistente = jugador;
+    }
+
+    [Header("Referencias UI - Inventario")]
+    public TextMeshProUGUI textoVendasUI;
+    public TextMeshProUGUI textoBotiquinesUI;
+    public TextMeshProUGUI textoEstimulantesUI;
+
+    [Header("Referencias UI - Salud")]
+    public Image healthBarFillUI;
+    public Image damageTrailFillUI;
+    public Image damageFlashUI;
+    public TextMeshProUGUI healthTextUI;
+
+    [Header("Referencias UI - Armas")]
+    public GameObject ammoUIGO;
+    public TextMeshProUGUI ammoTextUI;
+    public GameObject macheteIconGO;
+    public GameObject subfusilIconGO;
+
+    [Header("Condiciones del Piso")]
+    [SerializeField] private int enemigosParaAvanzar = 10;
+    [SerializeField] private int spawnersRequeridos = 3;
+    [SerializeField] private bool contarSoloEnemigosDeSpawners;
+    public int EnemigosDerrotados => enemigosDerrotados;
+    public bool TarjetaGenerada => llaveDropeada;
+    
+    [Header("Objetos de Progresión")]
+    [SerializeField] private GameObject llavePrefab;
+    
+    [Header("Estado Actual (Solo lectura)")]
+    [SerializeField] private int enemigosDerrotados = 0;
+    [SerializeField] private int spawnersActivados = 0;
+
+    // Añade esto en la parte superior donde tienes tus otros [Header]
+    [Header("Referencias UI - Habilidad")]
+    public Image skillBarFillUI; // La imagen "Fill" de la barra de habilidad
+    public Image skillIconUI; // La imagen donde va el icono de la habilidad
+
+    private bool condicionesCumplidas = false;
+    private bool llaveDropeada = false;
+
+    public bool JugadorTieneLlave { get; set; } = false; 
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        PrepararJugador();
+    }
+
+    private void PrepararJugador()
+    {
+        if (GameManager.Instance == null)
+        {
+            Debug.LogError("Falta GameManager. Asegúrate de iniciar el juego desde el Menú Principal.");
+            return;
+        }
+
+        // 1. Instanciar al jugador
+        GameObject prefabAInstanciar = GameManager.Instance.ObtenerPrefabJugador();
+        GameObject jugadorInstanciado = jugadorExistente != null
+            ? jugadorExistente
+            : Instantiate(prefabAInstanciar, puntoDeInicio.position, Quaternion.identity);
+
+        // --- NUEVO: Inyectar UI a la Habilidad ---
+        int idPersonaje = GameManager.Instance.personajeSeleccionado;
+
+        if (idPersonaje == 0) // Jason (Escudo)
+        {
+            ShieldAbility shield = jugadorInstanciado.GetComponent<ShieldAbility>();
+            if (shield != null)
+            {
+                shield.skillBarFill = skillBarFillUI;
+                shield.skillIconImage = skillIconUI;
+                shield.InicializarUI();
+            }
+        }
+        else // Milena (Dash)
+        {
+            DashAbility dash = jugadorInstanciado.GetComponent<DashAbility>();
+            if (dash != null)
+            {
+                dash.skillBarFill = skillBarFillUI;
+                dash.skillIconImage = skillIconUI;
+                dash.InicializarUI();
+            }
+        }
+        // --- APLICAR DATOS GUARDADOS (SI EXISTEN) ---
+        SaveData datosGuardados = GameManager.Instance.DatosCargados;
+        if (datosGuardados != null)
+        {
+            enemigosDerrotados = datosGuardados.enemigosDerrotadosPiso;
+            // Si no se recogió antes de guardar, permitir que el siguiente Sorbo la vuelva a soltar.
+            llaveDropeada = datosGuardados.tarjetaGenerada && datosGuardados.llavesCount > 0;
+            VerificarCondiciones();
+            // Mover al jugador a donde estaba al guardar
+            jugadorInstanciado.transform.position = new Vector3(datosGuardados.posicionX, datosGuardados.posicionY, 0f);
+        }
+
+        // 2. Inyectar UI y Datos al Inventario
+        PlayerInventory inventario = jugadorInstanciado.GetComponent<PlayerInventory>();
+        if (inventario != null)
+        {
+            inventario.textoVendas = textoVendasUI;
+            inventario.textoBotiquines = textoBotiquinesUI;
+            inventario.textoEstimulantes = textoEstimulantesUI;
+            
+            if (datosGuardados != null)
+            {
+                inventario.vendasCount = datosGuardados.cantidadVendas;
+                inventario.botiquinesCount = datosGuardados.cantidadBotiquines;
+                inventario.estimulantesCount = datosGuardados.cantidadEstimulantes;
+                inventario.llavesCount = datosGuardados.llavesCount;
+            }
+            // NUEVO: Verificamos si hay datos de transición naturales
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                inventario.vendasCount = GameManager.Instance.vendasPendientes;
+                inventario.botiquinesCount = GameManager.Instance.botiquinesPendientes;
+                inventario.estimulantesCount = GameManager.Instance.estimulantesPendientes;
+                inventario.llavesCount = 0; // La llave siempre se consume en la puerta
+            }
+            else
+            {
+                inventario.LimpiarLlaves();
+            }
+            inventario.ActualizarUI(); 
+        }
+
+        // 3. Inyectar UI y Datos a la Salud
+        PlayerHealth salud = jugadorInstanciado.GetComponent<PlayerHealth>();
+        if (salud != null)
+        {
+            salud.healthBarFill = healthBarFillUI;
+            salud.damageTrailFill = damageTrailFillUI;
+            salud.damageFlash = damageFlashUI;
+            salud.healthText = healthTextUI;
+
+            if (datosGuardados != null)
+            {
+                salud.cargadoDesdeGuardado = true;
+                salud.currentHealth = datosGuardados.vidaActual;
+            }
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                salud.currentHealth = GameManager.Instance.vidaPendiente;
+            }
+            salud.UpdateHealthUI(); 
+        }
+
+        // 4. Inyectar UI y Datos a las Armas
+        WeaponManager armas = jugadorInstanciado.GetComponent<WeaponManager>();
+        if (armas != null)
+        {
+            // ASIGNA LOS NUEVOS GAMEOBJECTS DEL CANVAS AL JUGADOR
+            armas.macheteIcon = macheteIconGO;
+            armas.subfusilIcon = subfusilIconGO;
+            armas.ammoUI = ammoUIGO;
+            
+            armas.EquipWeapon(armas.isUsingMelee);
+        }
+
+        PlayerShooting disparo = jugadorInstanciado.GetComponent<PlayerShooting>();
+        if (disparo != null)
+        {
+            disparo.ammoText = ammoTextUI;
+            if (datosGuardados != null)
+            {
+                disparo.RestaurarMunicion(datosGuardados.currentAmmoInClip, datosGuardados.totalAmmo);
+            }
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                disparo.RestaurarMunicion(GameManager.Instance.municionCargadorPendiente, GameManager.Instance.municionTotalPendiente);
+            }
+            disparo.UpdateAmmoUI();
+        }
+
+        // 5. Inyectar UI y Datos a la Experiencia / Mejoras
+        PlayerExperience exp = jugadorInstanciado.GetComponent<PlayerExperience>();
+        if (exp != null)
+        {
+            if (datosGuardados != null)
+            {
+                exp.puntosDeMejora = datosGuardados.puntosDeMejora;
+                exp.RestaurarProgreso(datosGuardados.nivelJugador, datosGuardados.experienciaJugador);
+            }
+            else if (GameManager.Instance.usarDatosDeTransicion)
+            {
+                exp.puntosDeMejora = GameManager.Instance.puntosDeMejoraPendientes;
+                exp.RestaurarProgreso(GameManager.Instance.nivelActualPendiente, GameManager.Instance.expActualPendiente);
+                
+            }
+        }
+
+        // Limpiar los datos temporales del GameManager una vez inyectados para evitar que se dupliquen o interfieran
+        if (datosGuardados != null)
+        {
+            GameManager.Instance.LimpiarDatosCargados();
+        }
+        
+        GameManager.Instance.usarDatosDeTransicion = false;
+    }
+
+    public void RegistrarEnemigoDerrotado(Vector3 posicionMuerte, EnemySpawner origen = null)
+    {
+        if (contarSoloEnemigosDeSpawners && origen == null) return;
+        enemigosDerrotados++;
+        VerificarCondiciones();
+
+        if (condicionesCumplidas && !llaveDropeada && llavePrefab != null)
+        {
+            Instantiate(llavePrefab, posicionMuerte, Quaternion.identity);
+            llaveDropeada = true;
+            Debug.Log("¡Condiciones cumplidas! El enemigo soltó la llave de salida.");
+        }
+    }
+
+    public void RegistrarSpawnerActivado()
+    {
+        spawnersActivados++;
+        VerificarCondiciones();
+    }
+
+    private void VerificarCondiciones()
+    {
+        if (!condicionesCumplidas && enemigosDerrotados >= enemigosParaAvanzar && spawnersActivados >= spawnersRequeridos)
+        {
+            condicionesCumplidas = true;
+            Debug.Log("Cuota alcanzada. Este enemigo soltará la Tarjeta de Acceso.");
+        }
+    }
+
+    public void RecogerLlave()
+    {
+        JugadorTieneLlave = true;
+        Debug.Log("Llave recogida. Ya puedes abrir la puerta.");
+    }
+}

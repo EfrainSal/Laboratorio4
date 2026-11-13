@@ -1,0 +1,23 @@
+{
+  "protected_files": 271,
+  "modified_or_missing": [],
+  "duplicate_guids": {},
+  "weapon_positions_preserved": true,
+  "input_actions": [
+    "Ability",
+    "AimGamepad",
+    "Attack",
+    "ConsumirBotiquin",
+    "ConsumirEstimulante",
+    "ConsumirVenda",
+    "Interact",
+    "LookMouse",
+    "Move",
+    "Reload",
+    "SwitchWeapon"
+  ],
+  "jason_pass": true,
+  "milena_pass": true,
+  "passed_checks": 70,
+  "failed_checks": []
+}

@@ -1,0 +1,7 @@
+{
+  "Assets/Settings/Gameplay.inputactions": "9ecabaebe48d80773d19c5dcba11a420b1d9e9454ecb39fe59772112cf108161",
+  "Assets/Prefabs/Player_Jason.prefab": "7c64593cee78cfe915bc2b696fb548811997ef666febab351d2085a41a8f24f0",
+  "Assets/Prefabs/Player_Milena.prefab": "5f5f7da65fce32bafb79ed8d2af4ead6bfc632ac318ac2c4a80181f405eca2b8",
+  "Assets/Scripts/Jugador/ArmaIndependiente.cs": "04bdc5fd780dde82b865d786f2b8d61505ffe44857700f21fda3f42603cf6223",
+  "Assets/Scripts/Jugador/MacheteAnimacion.cs": "5bf4e6ecf81ace36d6e663673366a49dea88738a7daffec2d71fa380d792c165"
+}

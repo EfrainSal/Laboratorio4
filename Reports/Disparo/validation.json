@@ -1,0 +1,9 @@
+{
+  "protected_files": 271,
+  "modified_or_missing": [],
+  "existing_configuration_changed": [],
+  "playmode_pass": true,
+  "passed_checks": 26,
+  "failed_checks": [],
+  "regression_reproduced": true
+}

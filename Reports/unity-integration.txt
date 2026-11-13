@@ -1,0 +1,8 @@
+Jason: 5 estados; cobertura en 8 direcciones con fallback a las vistas dibujadas.
+Milena: 7 estados; cobertura en 8 direcciones con fallback a las vistas dibujadas.
+Zorbo: 4 estados; cobertura en 8 direcciones con fallback a las vistas dibujadas.
+Zorbo2: 4 estados; cobertura en 8 direcciones con fallback a las vistas dibujadas.
+Player_Jason: biblioteca y colision correctas.
+Player_Milena: biblioteca y colision correctas.
+Enemy_Melee: biblioteca y colision correctas.
+Enemy_Ranged: biblioteca y colision correctas.

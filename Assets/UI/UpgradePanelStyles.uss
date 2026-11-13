@@ -1,0 +1,317 @@
+/* ---------- Paleta ----------
+   Marco tablet: #181B1D / #3A3E40     Pantalla: #060F0D
+   Verde fósforo: #6FAE45 / #96DC5F     Ámbar: #FFB020
+   Rojo vida: #FF4A3D     Teal defensa: #3FB8AF
+----------------------------- */
+
+.hidden { display: none; }
+
+/* ---------- Overlay (el juego sigue visible y activo detrás) ---------- */
+.upg-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.42);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.upg-fade { opacity: 0; }
+
+/* ---------- Tablet ---------- */
+.tablet {
+    width: 1040px;
+    max-width: 96%;
+    max-height: 96%;
+    padding: 12px 18px 10px 18px;
+    background-color: rgb(24, 27, 29);
+    border-width: 2px;
+    border-color: rgb(58, 62, 64);
+    border-radius: 34px;
+    translate: 0 0;
+    transition-property: translate;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+}
+
+.upg-fade .tablet { translate: 0 30px; }
+
+.bezel-top {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    margin-bottom: 8px;
+}
+
+.bezel-speaker {
+    width: 70px;
+    height: 5px;
+    margin-right: 16px;
+    border-radius: 3px;
+    background-color: rgb(10, 12, 13);
+}
+
+.bezel-camera {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(8, 10, 11);
+    border-width: 2px;
+    border-color: rgb(63, 184, 175);
+}
+
+.bezel-bottom {
+    height: 26px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.bezel-home {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: rgb(58, 62, 64);
+}
+
+/* ---------- Pantalla ---------- */
+.tablet-screen {
+    padding: 16px 26px 14px 26px;
+    background-color: rgb(6, 15, 13);
+    border-width: 2px;
+    border-color: rgba(111, 174, 69, 0.35);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Banda de escaneo (la mueve el script) */
+.scan-band {
+    position: absolute;
+    left: 0; right: 0;
+    top: -20%;
+    height: 90px;
+    background-color: rgba(111, 174, 69, 0.05);
+}
+
+.status-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(111, 174, 69, 0.22);
+}
+
+.status-left,
+.status-right {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgba(111, 174, 69, 0.85);
+}
+
+/* ---------- Cabecera ---------- */
+.header-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.subject-box { align-items: flex-start; }
+.points-box  { align-items: flex-end; }
+
+.box-caption {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: rgba(201, 198, 192, 0.55);
+}
+
+.subject-name {
+    font-size: 30px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+}
+
+.subject-level {
+    font-size: 20px;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+    color: rgb(111, 174, 69);
+}
+
+.points-value {
+    font-size: 64px;
+    -unity-font-style: bold;
+    color: rgb(150, 220, 95);
+    text-shadow: 0 0 14px rgba(111, 174, 69, 0.7);
+    scale: 1 1;
+    transition-property: scale;
+    transition-duration: 0.18s;
+}
+
+.points-zero {
+    color: rgb(120, 120, 118);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.points-pulse { scale: 1.15 1.15; }
+
+.divider {
+    height: 2px;
+    margin: 12px 0 18px 0;
+    background-color: rgba(111, 174, 69, 0.25);
+}
+
+/* ---------- Tarjetas de mejora ---------- */
+.cards-row {
+    flex-direction: row;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.skill-card {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 8px;
+    padding: 20px 18px 18px 18px;
+    align-items: center;
+    background-color: rgba(10, 24, 22, 0.85);
+    border-width: 1px;
+    border-color: rgba(111, 174, 69, 0.28);
+    border-top-width: 3px;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+}
+
+.card-flash { background-color: rgba(111, 174, 69, 0.32); }
+
+.skill-icon {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 12px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.skill-name {
+    font-size: 19px;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    min-height: 50px;
+    color: rgb(240, 238, 234);
+}
+
+.skill-level {
+    font-size: 28px;
+    -unity-font-style: bold;
+    margin: 4px 0 12px 0;
+}
+
+.skill-stat-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(201, 198, 192, 0.55);
+}
+
+.skill-stat-value {
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+}
+
+/* Colores por habilidad */
+.skill-health  { border-top-color: rgb(255, 74, 61); }
+.skill-health .skill-icon  { -unity-background-image-tint-color: rgb(255, 74, 61); }
+.skill-health .skill-level { color: rgb(255, 74, 61); }
+
+.skill-defense { border-top-color: rgb(63, 184, 175); }
+.skill-defense .skill-icon  { -unity-background-image-tint-color: rgb(63, 184, 175); }
+.skill-defense .skill-level { color: rgb(63, 184, 175); }
+
+.skill-damage  { border-top-color: rgb(255, 176, 32); }
+.skill-damage .skill-icon  { -unity-background-image-tint-color: rgb(255, 176, 32); }
+.skill-damage .skill-level { color: rgb(255, 176, 32); }
+
+/* ---------- Botones ---------- */
+.upg-btn {
+    width: 100%;
+    height: 48px;
+    margin: 16px 0 0 0;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(150, 220, 95);
+    background-color: rgba(111, 174, 69, 0.10);
+    border-width: 2px;
+    border-color: rgb(111, 174, 69);
+    border-radius: 0;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.12s;
+}
+
+.upg-btn:hover,
+.upg-btn:focus {
+    background-color: rgb(111, 174, 69);
+    color: rgb(6, 15, 13);
+    border-color: rgb(150, 220, 95);
+}
+
+.upg-btn:active { background-color: rgb(80, 130, 50); }
+
+.upg-btn:disabled,
+.upg-btn:disabled:hover {
+    color: rgb(110, 110, 108);
+    background-color: rgba(60, 60, 60, 0.20);
+    border-color: rgb(70, 72, 72);
+}
+
+/* ---------- Pie ---------- */
+.footer-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.warn-text {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: rgb(255, 176, 32);
+}
+
+.close-btn {
+    height: 38px;
+    margin: 0;
+    padding: 0 24px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    color: rgb(201, 198, 192);
+    background-color: rgba(60, 60, 60, 0.35);
+    border-width: 1px;
+    border-color: rgb(110, 110, 108);
+    border-radius: 0;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.12s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: rgb(209, 18, 27);
+    border-color: rgb(255, 42, 42);
+    color: rgb(255, 255, 255);
+}
+
+.hint-text {
+    margin-top: 8px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    -unity-text-align: middle-center;
+    color: rgba(201, 198, 192, 0.35);
+}

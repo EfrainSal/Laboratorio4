@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: aacda8e8517730f4ab9d7f1ac843392c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3583259308962851328
+    second: marco_arma_0
+  - first:
+      213: 6866156464064542734
+    second: marco_arma_1
+  - first:
+      213: -4588047506654225142
+    second: marco_arma_2
+  - first:
+      213: 4092459101099092812
+    second: marco_arma_3
+  - first:
+      213: -985680609392464178
+    second: marco_arma_4
+  - first:
+      213: 7725084772688079220
+    second: marco_arma_5
+  - first:
+      213: -7374084672259624078
+    second: marco_arma_6
+  - first:
+      213: 3746497111903884074
+    second: marco_arma_7
+  - first:
+      213: -1936553320424547346
+    second: marco_arma_8
+  - first:
+      213: 1532049239562622166
+    second: marco_arma_9
+  - first:
+      213: -1054374768028239185
+    second: marco_arma_10
+  - first:
+      213: 4154333450923018330
+    second: marco_arma_11
+  - first:
+      213: -3043930941233707657
+    second: marco_arma_12
+  - first:
+      213: 5622580326386671042
+    second: marco_arma_13
+  - first:
+      213: -8871016101840519676
+    second: marco_arma_14
+  - first:
+      213: -1940076526006506559
+    second: marco_arma_15
+  - first:
+      213: 4758026082099124150
+    second: marco_arma_16
+  - first:
+      213: 231216969622922817
+    second: marco_arma_17
+  - first:
+      213: -7297841162913452162
+    second: marco_arma_18
+  - first:
+      213: 7273249098512273740
+    second: marco_arma_19
+  - first:
+      213: -1148524031511787861
+    second: marco_arma_20
+  - first:
+      213: -1466456853233102315
+    second: marco_arma_21
+  - first:
+      213: 2586504539139428155
+    second: marco_arma_22
+  - first:
+      213: 4192866637065318882
+    second: marco_arma_23
+  - first:
+      213: 7346821667600920809
+    second: marco_arma_24
+  - first:
+      213: -6061742522178556449
+    second: marco_arma_25
+  - first:
+      213: -6671793815458900598
+    second: marco_arma_26
+  - first:
+      213: 3855308055976279826
+    second: marco_arma_27
+  - first:
+      213: 9195745371084226436
+    second: marco_arma_28
+  - first:
+      213: -5337367154021024930
+    second: marco_arma_29
+  - first:
+      213: -7431928750458985930
+    second: marco_arma_30
+  - first:
+      213: 9002581852365476189
+    second: marco_arma_31
+  - first:
+      213: 6489990699943786862
+    second: marco_arma_32
+  - first:
+      213: -4016631889509159553
+    second: marco_arma_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: marco_arma_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 1882
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0065827b4a4b54ec0800000000000000
+      internalID: -3583259308962851328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_1
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 779
+        width: 51
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08b1d4fcec794f50800000000000000
+      internalID: 6866156464064542734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_2
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 812
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d1249e91bf350c0800000000000000
+      internalID: -4588047506654225142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_3
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 777
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b63d2aed55bc830800000000000000
+      internalID: 4092459101099092812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_4
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 792
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eceeb2745b82252f0800000000000000
+      internalID: -985680609392464178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_5
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 790
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4792ad7eba3053b60800000000000000
+      internalID: 7725084772688079220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_6
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 790
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273ff466f0df9a990800000000000000
+      internalID: -7374084672259624078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_7
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 780
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23de03064b3ef330800000000000000
+      internalID: 3746497111903884074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_8
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 788
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebdd7fe30bff15e0800000000000000
+      internalID: -1936553320424547346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_9
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 763
+        width: 41
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4998e8aaee24510800000000000000
+      internalID: 1532049239562622166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_10
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 779
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faaba8b1cbb1e51f0800000000000000
+      internalID: -1054374768028239185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_11
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 757
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a580ac4534827a930800000000000000
+      internalID: 4154333450923018330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_12
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 778
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775c1f6bfe8c1c5d0800000000000000
+      internalID: -3043930941233707657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_13
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 757
+        width: 45
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd9063640b670e40800000000000000
+      internalID: 5622580326386671042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_14
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 792
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e76052bd1d3e480800000000000000
+      internalID: -8871016101840519676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_15
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 773
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cbee46bda67315e0800000000000000
+      internalID: -1940076526006506559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_16
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 790
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7df873387e70240800000000000000
+      internalID: 4758026082099124150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_17
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 759
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146aa6cdb92753300800000000000000
+      internalID: 231216969622922817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_18
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 757
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fe151c02cd8ba90800000000000000
+      internalID: -7297841162913452162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_19
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 766
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4111cf0585cfe460800000000000000
+      internalID: 7273249098512273740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_20
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 778
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba68dbd7a7f9f00f0800000000000000
+      internalID: -1148524031511787861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_21
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 776
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5129a98f24916abe0800000000000000
+      internalID: -1466456853233102315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_22
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 771
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f4759ac2c15e320800000000000000
+      internalID: 2586504539139428155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_23
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 763
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e17ddcddfd003a30800000000000000
+      internalID: 4192866637065318882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_24
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 760
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0fe7da16725f560800000000000000
+      internalID: 7346821667600920809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_25
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 763
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddaaa5ea4d50eba0800000000000000
+      internalID: -6061742522178556449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_26
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 763
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a859cee9fd60963a0800000000000000
+      internalID: -6671793815458900598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_27
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 755
+        width: 51
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ffa28204ec08530800000000000000
+      internalID: 3855308055976279826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_28
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 751
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ffa60a1b9dd9f70800000000000000
+      internalID: 9195745371084226436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_29
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 63
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b3dbc1adcdde5b0800000000000000
+      internalID: -5337367154021024930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_30
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 63
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63221e07d2c7cd890800000000000000
+      internalID: -7431928750458985930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_31
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 74
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d515f9b3f789fec70800000000000000
+      internalID: 9002581852365476189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_32
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 65
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69fcb9f724111a50800000000000000
+      internalID: 6489990699943786862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marco_arma_33
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 63
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7dec48d39e0248c0800000000000000
+      internalID: -4016631889509159553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      marco_arma_0: -3583259308962851328
+      marco_arma_1: 6866156464064542734
+      marco_arma_10: -1054374768028239185
+      marco_arma_11: 4154333450923018330
+      marco_arma_12: -3043930941233707657
+      marco_arma_13: 5622580326386671042
+      marco_arma_14: -8871016101840519676
+      marco_arma_15: -1940076526006506559
+      marco_arma_16: 4758026082099124150
+      marco_arma_17: 231216969622922817
+      marco_arma_18: -7297841162913452162
+      marco_arma_19: 7273249098512273740
+      marco_arma_2: -4588047506654225142
+      marco_arma_20: -1148524031511787861
+      marco_arma_21: -1466456853233102315
+      marco_arma_22: 2586504539139428155
+      marco_arma_23: 4192866637065318882
+      marco_arma_24: 7346821667600920809
+      marco_arma_25: -6061742522178556449
+      marco_arma_26: -6671793815458900598
+      marco_arma_27: 3855308055976279826
+      marco_arma_28: 9195745371084226436
+      marco_arma_29: -5337367154021024930
+      marco_arma_3: 4092459101099092812
+      marco_arma_30: -7431928750458985930
+      marco_arma_31: 9002581852365476189
+      marco_arma_32: 6489990699943786862
+      marco_arma_33: -4016631889509159553
+      marco_arma_4: -985680609392464178
+      marco_arma_5: 7725084772688079220
+      marco_arma_6: -7374084672259624078
+      marco_arma_7: 3746497111903884074
+      marco_arma_8: -1936553320424547346
+      marco_arma_9: 1532049239562622166
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

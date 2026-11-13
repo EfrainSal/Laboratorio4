@@ -1,0 +1,128 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenuStyles.uss"/>
+
+    <ui:VisualElement name="Root" class="root">
+
+        <!-- Fondo -->
+        <ui:VisualElement name="VideoBackground" class="fill" picking-mode="Ignore"/>
+        <ui:VisualElement name="VideoShade" class="fill video-shade" picking-mode="Ignore"/>
+        <ui:VisualElement name="LeftShade" class="left-shade" picking-mode="Ignore"/>
+
+        <!-- Columna izquierda -->
+        <ui:VisualElement name="LeftColumn" class="left-column">
+            <ui:VisualElement name="Logo" class="logo logo-wordmark"/>
+
+            <ui:VisualElement name="MenuContainer" class="menu-container menu-hidden">
+                <ui:Button text="CONTINUAR" name="ContinueButton" class="btn-menu"/>
+                <ui:Button text="NUEVA PARTIDA" name="PlayButton" class="btn-menu"/>
+                <ui:Button text="OPCIONES" name="SettingsButton" class="btn-menu"/>
+                <ui:Button text="RANKING LOCAL" name="RankingButton" class="btn-menu"/>
+                <ui:Button text="SALIR" name="QuitButton" class="btn-menu"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Panel de cristal (derecha) -->
+        <ui:VisualElement name="SidePanel" class="side-panel panel-fade hidden">
+
+            <!-- Página: selección de personaje -->
+            <ui:VisualElement name="PagePlay" class="page hidden">
+                <ui:Label text="SELECCIONA TU SUJETO" class="panel-title"/>
+                <ui:Label text="Elige con quién intentarás escapar." class="panel-subtitle"/>
+                <ui:VisualElement class="divider"/>
+
+                <ui:VisualElement class="cards">
+                    <ui:VisualElement name="CharacterCard0" class="char-card" focusable="true">
+                        <ui:VisualElement class="char-portrait portrait-0">
+                            <ui:Label text="?" class="portrait-placeholder"/>
+                        </ui:VisualElement>
+                        <ui:Label text="JASON" class="char-name"/>
+                        <ui:Label text="Salud balanceada." class="char-role"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="CharacterCard1" class="char-card" focusable="true">
+                        <ui:VisualElement class="char-portrait portrait-1">
+                            <ui:Label text="?" class="portrait-placeholder"/>
+                        </ui:VisualElement>
+                        <ui:Label text="MILENA" class="char-name"/>
+                        <ui:Label text="Mayor agilidad." class="char-role"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- Input del nombre para el ranking -->
+                <ui:TextField name="PlayerNameInput" label="NOMBRE (RANKING):" max-length="12" class="player-name-input"/>
+                <ui:Label text="* Escribe entre 3 y 12 caracteres (Ej: SUPERVIVIENTE)" class="input-hint"/>
+
+                <ui:VisualElement class="panel-actions">
+                    <ui:Button text="&lt; VOLVER" name="PlayBackButton" class="btn-action"/>
+                    <ui:Button text="CONFIRMAR" name="ConfirmButton" class="btn-action btn-action-primary"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Página: opciones -->
+            <ui:VisualElement name="PageSettings" class="page hidden">
+                <ui:Label text="OPCIONES" class="panel-title"/>
+                <ui:Label text="Ajustes de audio" class="panel-subtitle"/>
+                <ui:VisualElement class="divider"/>
+
+                <ui:VisualElement class="settings-content">
+                    <ui:VisualElement class="slider-block">
+                        <ui:VisualElement class="row">
+                            <ui:Label text="VOLUMEN MAESTRO" class="row-label"/>
+                            <ui:Label text="80%" name="MasterValueLabel" class="row-value"/>
+                        </ui:VisualElement>
+                        <ui:Slider name="MasterSlider" low-value="0" high-value="1" value="0.8" class="volume-slider"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="slider-block">
+                        <ui:VisualElement class="row">
+                            <ui:Label text="MÚSICA" class="row-label"/>
+                            <ui:Label text="80%" name="MusicValueLabel" class="row-value"/>
+                        </ui:VisualElement>
+                        <ui:Slider name="MusicSlider" low-value="0" high-value="1" value="0.8" class="volume-slider"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="slider-block">
+                        <ui:VisualElement class="row">
+                            <ui:Label text="EFECTOS (SFX)" class="row-label"/>
+                            <ui:Label text="80%" name="SfxValueLabel" class="row-value"/>
+                        </ui:VisualElement>
+                        <ui:Slider name="SfxSlider" low-value="0" high-value="1" value="0.8" class="volume-slider"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="panel-actions">
+                    <ui:Button text="&lt; VOLVER" name="BackButton" class="btn-action"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            
+            <!-- Página: Ranking -->
+            <ui:VisualElement name="PageRanking" class="page hidden">
+                <ui:Label text="RANKING DEL SECTOR" class="panel-title"/>
+                <ui:Label text="Registros de las mejores extracciones." class="panel-subtitle"/>
+                <ui:VisualElement class="divider"/>
+                
+                <ui:ScrollView name="RankingListContainer" style="height: 250px; margin-bottom: 20px;" />
+
+                <ui:VisualElement class="panel-actions">
+                    <ui:Button text="&lt; VOLVER" name="RankingBackButton" class="btn-action"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+
+        <!-- Marco HUD -->
+        <ui:VisualElement class="hud-corner corner-tl" picking-mode="Ignore"><ui:VisualElement class="hud-corner-inner" picking-mode="Ignore"/></ui:VisualElement>
+        <ui:VisualElement class="hud-corner corner-tr" picking-mode="Ignore"><ui:VisualElement class="hud-corner-inner" picking-mode="Ignore"/></ui:VisualElement>
+        <ui:VisualElement class="hud-corner corner-bl" picking-mode="Ignore"><ui:VisualElement class="hud-corner-inner" picking-mode="Ignore"/></ui:VisualElement>
+        <ui:VisualElement class="hud-corner corner-br" picking-mode="Ignore"><ui:VisualElement class="hud-corner-inner" picking-mode="Ignore"/></ui:VisualElement>
+
+        <ui:VisualElement class="footer-left" picking-mode="Ignore">
+            <ui:Label text="v0.1" class="footer-text" picking-mode="Ignore"/>
+            <ui:Label text="CONEXIÓN ESTABLE" class="footer-text footer-ok" picking-mode="Ignore"/>
+        </ui:VisualElement>
+        <ui:VisualElement class="footer-right" picking-mode="Ignore">
+            <ui:Label text="LABORATORIO 4 · ACCESO RESTRINGIDO" class="footer-text footer-ok" picking-mode="Ignore"/>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,27 @@
+RESULTADO: PASS
+PASS Jason: Accion Attack original de tipo Button
+PASS Jason: Sin clic no dispara
+PASS Jason: Mantener clic genera disparos a la cadencia configurada
+PASS Jason: La accion reconoce la liberacion del clic
+PASS Jason: Liberar clic corta el disparo desde la siguiente actualizacion de input
+PASS Jason: Soltar clic detiene todos los disparos siguientes (municion=27, esperada=27)
+PASS Jason: Nueva pulsacion corta dispara una sola bala
+PASS Jason: Clic corto no deja el arma disparando
+PASS Jason: Pausa impide disparar
+PASS Jason: Soltar durante pausa no reanuda disparos al volver
+PASS Jason: Volver del machete con clic liberado no dispara
+PASS Jason: Desactivar PlayerInput detiene el arma aunque el ultimo evento fuera pulsar
+PASS Jason: Reactivar input con boton libre mantiene el arma detenida
+PASS Milena: Accion Attack original de tipo Button
+PASS Milena: Sin clic no dispara
+PASS Milena: Mantener clic genera disparos a la cadencia configurada
+PASS Milena: La accion reconoce la liberacion del clic
+PASS Milena: Liberar clic corta el disparo desde la siguiente actualizacion de input
+PASS Milena: Soltar clic detiene todos los disparos siguientes (municion=12, esperada=12)
+PASS Milena: Nueva pulsacion corta dispara una sola bala
+PASS Milena: Clic corto no deja el arma disparando
+PASS Milena: Pausa impide disparar
+PASS Milena: Soltar durante pausa no reanuda disparos al volver
+PASS Milena: Volver del machete con clic liberado no dispara
+PASS Milena: Desactivar PlayerInput detiene el arma aunque el ultimo evento fuera pulsar
+PASS Milena: Reactivar input con boton libre mantiene el arma detenida

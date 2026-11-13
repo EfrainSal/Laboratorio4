@@ -1,0 +1,51 @@
+/* ---------- Victoria: sobreescribe la paleta roja de DeathScreenStyles ----------
+   Verde terminal: #35E0A1   Dorado: #FFD740   Cian: #00C8FF
+------------------------------------------------------------------------------- */
+
+/* Fondo */
+.victory-overlay .death-tint { background-color: rgba(4, 44, 30, 0.55); }
+.victory-overlay .scan-bar   { background-color: rgba(53, 224, 161, 0.05); }
+
+/* Textos */
+.victory-overlay .death-floor    { color: rgb(53, 224, 161); }
+.victory-overlay .death-subtitle { color: rgb(214, 211, 205); }
+
+/* Título */
+.victory-overlay .title-main {
+    color: rgb(53, 224, 161);
+    text-shadow: 0 0 14px rgba(53, 224, 161, 0.65);
+}
+.victory-overlay .title-ghost-a { color: rgba(255, 215, 64, 0.70); }
+.victory-overlay .title-ghost-b { color: rgba(0, 200, 255, 0.50); }
+
+/* Panel de estadísticas */
+.victory-overlay .stats-panel {
+    border-top-color: rgb(53, 224, 161);
+}
+.victory-overlay .stat-value-score { color: rgb(255, 215, 64); }
+.victory-overlay .record-badge     { color: rgb(255, 215, 64); }
+
+/* Reporte final */
+.victory-overlay .cause-label { color: rgb(214, 211, 205); }
+.victory-overlay .cause-text  { color: rgb(53, 224, 161); }
+
+/* Botón CONTINUAR */
+.victory-overlay .death-btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgba(10, 90, 60, 0.80);
+    border-color: rgb(53, 224, 161);
+}
+.victory-overlay .death-btn-primary.pulse {
+    background-color: rgba(16, 140, 92, 0.95);
+}
+.victory-overlay .death-btn-primary:hover,
+.victory-overlay .death-btn-primary:focus {
+    background-color: rgb(30, 180, 122);
+    border-color: rgb(170, 255, 220);
+}
+.victory-overlay .death-btn-primary:active {
+    background-color: rgb(8, 100, 66);
+}
+
+/* Esquinas decorativas */
+.victory-overlay .bracket { border-color: rgb(53, 224, 161); }

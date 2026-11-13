@@ -1,0 +1,45 @@
+Ruta real: MainMenu -> GameManager -> escena configurada en MainMenuController.
+
+JASON: PASS
+PASS Arranque desde MainMenu con GameManager
+PASS MainMenu referencia el prefab integrado de Jason
+PASS MainMenu referencia el prefab integrado de Milena
+PASS Un unico jugador activo en la escena de juego
+PASS La seleccion del menu llega al personaje instanciado
+PASS Movimiento del prefab activo
+PASS Camara enlazada al personaje elegido
+PASS La escena cargada desde el menu contiene ambos Sorbos
+PASS Disparo real consume municion
+PASS Disparo real activa sprites del personaje seleccionado
+PASS Los fotogramas de disparo avanzan
+PASS Sorbo A persigue mediante IA
+PASS Sorbo B carga y dispara su proyectil
+PASS Retroceso suspende la IA cuerpo a cuerpo
+PASS Retroceso suspende la IA a distancia
+PASS Sorbo A reproduce muerte y detiene su IA
+PASS Sorbo B reproduce muerte y cancela disparos
+PASS Habilidad real activa su animacion
+PASS Ambos Sorbos desaparecen tras su animacion de muerte
+PASS Ejecucion sin errores ni excepciones
+
+MILENA: PASS
+PASS Arranque desde MainMenu con GameManager
+PASS MainMenu referencia el prefab integrado de Jason
+PASS MainMenu referencia el prefab integrado de Milena
+PASS Un unico jugador activo en la escena de juego
+PASS La seleccion del menu llega al personaje instanciado
+PASS Movimiento del prefab activo
+PASS Camara enlazada al personaje elegido
+PASS La escena cargada desde el menu contiene ambos Sorbos
+PASS Disparo real consume municion
+PASS Disparo real activa sprites del personaje seleccionado
+PASS Los fotogramas de disparo avanzan
+PASS Sorbo A persigue mediante IA
+PASS Sorbo B carga y dispara su proyectil
+PASS Retroceso suspende la IA cuerpo a cuerpo
+PASS Retroceso suspende la IA a distancia
+PASS Sorbo A reproduce muerte y detiene su IA
+PASS Sorbo B reproduce muerte y cancela disparos
+PASS Habilidad real activa su animacion
+PASS Ambos Sorbos desaparecen tras su animacion de muerte
+PASS Ejecucion sin errores ni excepciones

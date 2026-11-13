@@ -1,0 +1,106 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/PauseMenuStyles.uss"/>
+
+    <ui:VisualElement name="PauseOverlay" class="pause-overlay pause-fade hidden">
+        <ui:VisualElement name="PausePanel" class="pause-panel">
+
+            <!-- ===== Columna izquierda ===== -->
+            <ui:VisualElement class="pause-left">
+                <ui:VisualElement class="pause-logo"/>
+                <ui:Label text="PAUSA" class="pause-title"/>
+
+                <!-- Vista: principal -->
+                <ui:VisualElement name="MainView" class="view">
+                    <ui:Button text="REANUDAR" name="ResumeButton" class="pause-btn"/>
+                    <ui:VisualElement class="btn-wrap">
+                        <ui:Button text="GUARDAR Y SALIR" name="SaveQuitButton" class="pause-btn pause-btn-sub"/>
+                        <ui:Label text="SE BORRA AL CONTINUAR" class="pause-btn-note" picking-mode="Ignore"/>
+                    </ui:VisualElement>
+                    <ui:Button text="OPCIONES" name="OptionsButton" class="pause-btn"/>
+                    <ui:Button text="ABANDONAR INCURSIÓN" name="AbandonButton" class="pause-btn pause-btn-danger"/>
+                </ui:VisualElement>
+
+                <!-- Vista: opciones de audio -->
+                <ui:VisualElement name="OptionsView" class="view hidden">
+                    <ui:Label text="AUDIO" class="pause-section"/>
+
+                    <ui:VisualElement class="opt-block">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="MAESTRO" class="opt-label"/>
+                            <ui:Label text="80%" name="MasterValueLabel" class="opt-value"/>
+                        </ui:VisualElement>
+                        <ui:Slider name="MasterSlider" low-value="0" high-value="1" value="0.8" class="pause-slider"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="opt-block">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="MÚSICA" class="opt-label"/>
+                            <ui:Label text="80%" name="MusicValueLabel" class="opt-value"/>
+                        </ui:VisualElement>
+                        <ui:Slider name="MusicSlider" low-value="0" high-value="1" value="0.8" class="pause-slider"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement class="opt-block">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="EFECTOS (SFX)" class="opt-label"/>
+                            <ui:Label text="80%" name="SfxValueLabel" class="opt-value"/>
+                        </ui:VisualElement>
+                        <ui:Slider name="SfxSlider" low-value="0" high-value="1" value="0.8" class="pause-slider"/>
+                    </ui:VisualElement>
+
+                    <ui:Button text="&lt; VOLVER" name="OptionsBackButton" class="pause-btn pause-btn-spaced"/>
+                </ui:VisualElement>
+
+                <!-- Vista: confirmar abandono -->
+                <ui:VisualElement name="ConfirmView" class="view hidden">
+                    <ui:Label text="¿ABANDONAR LA INCURSIÓN?" class="pause-section pause-section-danger"/>
+                    <ui:Label text="Perderás todo el progreso de esta run. Esta acción no se puede deshacer." class="pause-text"/>
+                    <ui:Button text="SÍ, ABANDONAR" name="ConfirmAbandonButton" class="pause-btn pause-btn-danger"/>
+                    <ui:Button text="CANCELAR" name="CancelAbandonButton" class="pause-btn"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- ===== Columna derecha ===== -->
+            <ui:VisualElement class="pause-right">
+                <ui:Label text="ESTADO DE LA INCURSIÓN" class="pause-heading"/>
+
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="TIEMPO" class="stat-label"/>
+                    <ui:Label text="00:00" name="TimeValue" class="stat-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="PISO" class="stat-label"/>
+                    <ui:Label text="1 / 4" name="FloorValue" class="stat-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="ENEMIGOS DERROTADOS" class="stat-label"/>
+                    <ui:Label text="0" name="KillsValue" class="stat-value"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="stat-row">
+                    <ui:Label text="PUNTUACIÓN" class="stat-label"/>
+                    <ui:Label text="0" name="ScoreValue" class="stat-value"/>
+                </ui:VisualElement>
+
+                <!-- Progreso de pisos: 3 de mutantes + jefe -->
+                <ui:VisualElement class="floors">
+                    <ui:VisualElement class="floor-pip"/>
+                    <ui:VisualElement class="floor-pip"/>
+                    <ui:VisualElement class="floor-pip"/>
+                    <ui:VisualElement class="floor-pip pip-boss"/>
+                </ui:VisualElement>
+
+                <ui:Label text="SUJETO" class="pause-heading pause-heading-spaced"/>
+                <ui:VisualElement class="char-box">
+                    <ui:VisualElement name="CharacterPortrait" class="char-portrait"/>
+                    <ui:VisualElement class="char-info">
+                        <ui:Label text="JASON" name="CharacterName" class="char-name"/>
+                        <ui:Label text="" name="CharacterDesc" class="char-desc"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:Label text="ESC / START · REANUDAR" class="pause-hint"/>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

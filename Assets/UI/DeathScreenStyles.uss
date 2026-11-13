@@ -1,0 +1,280 @@
+/* ---------- Paleta ----------
+   Rojo sangre:  #D1121B    Rojo alerta:  #FF2A2A    Rojo texto: #FF4A3D
+   Verde tóxico: #6FAE45    Gris claro:   #D6D3CD
+------------------------------ */
+
+.hidden { display: none; }
+
+.fill {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.death-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Fondo ---------- */
+.backdrop {
+    -unity-background-scale-mode: scale-and-crop;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.8s;
+}
+
+.death-tint {
+    background-color: rgba(48, 0, 4, 0.58);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.8s;
+}
+
+.death-vignette {
+    -unity-background-scale-mode: stretch-to-fill;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1.2s;
+}
+
+.death-overlay.shown .backdrop,
+.death-overlay.shown .death-tint,
+.death-overlay.shown .death-vignette {
+    opacity: 1;
+}
+
+/* Barra de escaneo que baja por la pantalla (la mueve el script) */
+.scan-bar {
+    position: absolute;
+    left: 0; right: 0;
+    top: -20%;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.035);
+}
+
+/* ---------- Contenido ---------- */
+.death-content {
+    width: 820px;
+    max-width: 96%;
+    align-items: center;
+}
+
+/* Aparición escalonada (el script añade la clase "visible") */
+.reveal {
+    opacity: 0;
+    translate: 0 18px;
+    transition-property: opacity, translate;
+    transition-duration: 0.45s;
+    transition-timing-function: ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.death-floor {
+    font-size: 28px;
+    letter-spacing: 4px;
+    -unity-font-style: bold;
+    color: rgb(200, 196, 190);
+    margin-bottom: 4px;
+}
+
+/* ---------- Título con glitch ---------- */
+.glitch-title { margin: 2px 0 8px 0; }
+
+.title-text {
+    font-size: 68px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+}
+
+.title-main {
+    color: rgb(255, 42, 42);
+    text-shadow: 0 0 14px rgba(255, 0, 0, 0.65);
+}
+
+.title-ghost-a {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    color: rgba(111, 174, 69, 0.75);
+}
+
+.title-ghost-b {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.death-subtitle {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: rgb(214, 211, 205);
+    margin-bottom: 22px;
+}
+
+/* ---------- Estadísticas ---------- */
+.stats-panel {
+    width: 560px;
+    max-width: 100%;
+    padding: 18px 26px 16px 26px;
+    background-color: rgba(8, 8, 10, 0.74);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.10);
+    border-top-width: 2px;
+    border-top-color: rgb(209, 18, 27);
+}
+
+.stats-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(240, 238, 234);
+    margin-bottom: 12px;
+}
+
+.stat-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.stat-label {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: rgb(160, 158, 154);
+}
+
+.stat-value {
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+}
+
+.stat-value-score { color: rgb(111, 174, 69); }
+
+.record-badge {
+    align-self: flex-end;
+    font-size: 14px;
+    letter-spacing: 3px;
+    -unity-font-style: bold;
+    color: rgb(111, 174, 69);
+    margin-top: 2px;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.record-badge.blink { opacity: 0.3; }
+
+/* ---------- Causa de muerte ---------- */
+.cause-row {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.death-skull {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.cause-info {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.cause-label {
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(214, 211, 205);
+}
+
+.cause-text {
+    font-size: 16px;
+    letter-spacing: 1px;
+    -unity-font-style: bold;
+    color: rgb(255, 74, 61);
+    white-space: normal;
+    min-height: 44px;
+}
+
+/* ---------- Botones ---------- */
+.death-actions {
+    width: 460px;
+    max-width: 100%;
+    margin-top: 26px;
+}
+
+.retry-wrap { margin-bottom: 14px; }
+
+.death-btn {
+    height: 58px;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    letter-spacing: 4px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-radius: 0;
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.18s;
+}
+
+.death-btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgba(120, 8, 14, 0.80);
+    border-width: 2px;
+    border-color: rgb(255, 42, 42);
+}
+
+.death-btn-primary.pulse {
+    background-color: rgba(190, 14, 22, 0.95);
+}
+
+.death-btn-primary:hover,
+.death-btn-primary:focus {
+    background-color: rgb(230, 24, 32);
+    border-color: rgb(255, 120, 110);
+}
+
+.death-btn-primary:active { background-color: rgb(150, 8, 14); }
+
+.death-btn-secondary {
+    color: rgb(205, 202, 196);
+    background-color: rgba(70, 70, 70, 0.75);
+    border-width: 2px;
+    border-color: rgb(120, 120, 118);
+}
+
+.death-btn-secondary:hover,
+.death-btn-secondary:focus {
+    background-color: rgba(110, 110, 108, 0.9);
+    border-color: rgb(200, 198, 192);
+    color: rgb(255, 255, 255);
+}
+
+/* Esquinas decorativas alrededor de "Reintentar" */
+.bracket {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: rgb(255, 42, 42);
+}
+
+.br-tl { top: -7px;    left: -7px;  border-top-width: 2px;    border-left-width: 2px; }
+.br-tr { top: -7px;    right: -7px; border-top-width: 2px;    border-right-width: 2px; }
+.br-bl { bottom: -7px; left: -7px;  border-bottom-width: 2px; border-left-width: 2px; }
+.br-br { bottom: -7px; right: -7px; border-bottom-width: 2px; border-right-width: 2px; }

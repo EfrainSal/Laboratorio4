@@ -1,0 +1,75 @@
+[
+  {
+    "ok": true,
+    "message": "Ningún archivo preexistente perdido",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "Contenido de assets intacto fuera de los ajustes previstos de rutas",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "271 archivos existentes de Resources idénticos",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "Cinco carpetas de origen disueltas",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "GUID conservados; metas reserializados por Unity contrastados con el origen versionado",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "934 metas fuera de Resources normalizados al reimportar en Unity 6",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "12 metas de contenedores vacíos archivados fuera de Assets",
+    "details": [
+      "Assets/Laboratorio4_Escenario1/Scenes.meta",
+      "Assets/Laboratorio4_Escenario1.meta",
+      "Assets/Laboratorio4_Escenario3/Escenas.meta",
+      "Assets/Laboratorio4_Escenario3.meta",
+      "Assets/Laboratorio4_Escenario4/Scenes.meta",
+      "Assets/Laboratorio4_Escenario4.meta",
+      "Assets/Laboratorio4_Recepcion/Scenes.meta",
+      "Assets/Laboratorio4_Recepcion.meta",
+      "Assets/LaboratorioYiba/Piso3_V10/Scenes/Otros Assets.meta",
+      "Assets/LaboratorioYiba/Piso3_V10/Scenes.meta",
+      "Assets/LaboratorioYiba/Piso3_V10.meta",
+      "Assets/LaboratorioYiba.meta"
+    ]
+  },
+  {
+    "ok": true,
+    "message": "16 escenas conservadas",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "10 escenas de compilación con rutas válidas",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "Código y assets activos sin rutas a las carpetas disueltas",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "Referencias de imágenes en layouts JSON resueltas",
+    "details": []
+  },
+  {
+    "ok": true,
+    "message": "Reubicados: 3042 imágenes, 25 prefabs y 80 scripts",
+    "details": []
+  }
+]

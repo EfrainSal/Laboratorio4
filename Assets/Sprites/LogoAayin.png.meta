@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: f8eec2c7f04dfa947bc8459d5c8be32e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4555067255989807490
+    second: LogoAayin_0
+  - first:
+      213: 3507640275273248713
+    second: LogoAayin_1
+  - first:
+      213: 8707622916909062904
+    second: LogoAayin_2
+  - first:
+      213: 5591963413086652280
+    second: LogoAayin_3
+  - first:
+      213: 7192172628164342682
+    second: LogoAayin_4
+  - first:
+      213: -5830740040885068799
+    second: LogoAayin_5
+  - first:
+      213: -3036420066707725708
+    second: LogoAayin_6
+  - first:
+      213: 1535594185414451736
+    second: LogoAayin_7
+  - first:
+      213: 6710156535486907345
+    second: LogoAayin_8
+  - first:
+      213: 2346840889524847384
+    second: LogoAayin_9
+  - first:
+      213: -367851986592214904
+    second: LogoAayin_10
+  - first:
+      213: 8537218049970390131
+    second: LogoAayin_11
+  - first:
+      213: 4597140604804862603
+    second: LogoAayin_12
+  - first:
+      213: 5838622159573024666
+    second: LogoAayin_13
+  - first:
+      213: 6084715206478393060
+    second: LogoAayin_14
+  - first:
+      213: 3069707064635081875
+    second: LogoAayin_15
+  - first:
+      213: 6721171111448516932
+    second: LogoAayin_16
+  - first:
+      213: 8561250696947044239
+    second: LogoAayin_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LogoAayin_0
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 481
+        width: 672
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28929491989d63f30800000000000000
+      internalID: 4555067255989807490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_1
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 749
+        width: 248
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cfe38ffe34ada030800000000000000
+      internalID: 3507640275273248713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_2
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 946
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa5a6078e0b7d870800000000000000
+      internalID: 8707622916909062904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_3
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 754
+        width: 186
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877c202c815aa9d40800000000000000
+      internalID: 5591963413086652280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_4
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 682
+        width: 189
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93f50946eabfc360800000000000000
+      internalID: 7192172628164342682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_5
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 753
+        width: 75
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c166d43dc051fa0800000000000000
+      internalID: -5830740040885068799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_6
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 753
+        width: 177
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472a40779087cd5d0800000000000000
+      internalID: -3036420066707725708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_7
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 524
+        width: 150
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812a8c496c68f4510800000000000000
+      internalID: 1535594185414451736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_8
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 526
+        width: 129
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d386fc21d34f1d50800000000000000
+      internalID: 6710156535486907345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_9
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 524
+        width: 172
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8138d7cda57a19020800000000000000
+      internalID: 2346840889524847384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_10
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 525
+        width: 121
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880df31319025eaf0800000000000000
+      internalID: -367851986592214904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_11
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 525
+        width: 124
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374c986959a4a7670800000000000000
+      internalID: 8537218049970390131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_12
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 525
+        width: 90
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b821bebf5035ccf30800000000000000
+      internalID: 4597140604804862603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_13
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 525
+        width: 120
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ff2177be3f60150800000000000000
+      internalID: 5838622159573024666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_14
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 525
+        width: 122
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eeef89fd30417450800000000000000
+      internalID: 6084715206478393060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_15
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 525
+        width: 43
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394c410bf4ac99a20800000000000000
+      internalID: 3069707064635081875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_16
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 523
+        width: 127
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449918cf385664d50800000000000000
+      internalID: 6721171111448516932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LogoAayin_17
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 525
+        width: 97
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f0890462cafc670800000000000000
+      internalID: 8561250696947044239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LogoAayin_0: 4555067255989807490
+      LogoAayin_1: 3507640275273248713
+      LogoAayin_10: -367851986592214904
+      LogoAayin_11: 8537218049970390131
+      LogoAayin_12: 4597140604804862603
+      LogoAayin_13: 5838622159573024666
+      LogoAayin_14: 6084715206478393060
+      LogoAayin_15: 3069707064635081875
+      LogoAayin_16: 6721171111448516932
+      LogoAayin_17: 8561250696947044239
+      LogoAayin_2: 8707622916909062904
+      LogoAayin_3: 5591963413086652280
+      LogoAayin_4: 7192172628164342682
+      LogoAayin_5: -5830740040885068799
+      LogoAayin_6: -3036420066707725708
+      LogoAayin_7: 1535594185414451736
+      LogoAayin_8: 6710156535486907345
+      LogoAayin_9: 2346840889524847384
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

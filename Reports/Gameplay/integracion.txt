@@ -1,0 +1,4 @@
+HUD, DeathScreen, PauseMenu y LevelManager reutilizados de Debugscene.
+Un solo jugador desde MainMenu.
+Arma independiente y mira procedural en ambos prefabs.
+3 spawners originales con ambos Sorbos, radio 5, cooldown 10, oleadas de 1 a 3.
