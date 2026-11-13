@@ -36,7 +36,7 @@ namespace Laboratorio4.Escenario3
             if (cargarEn < 0f) cargarEn = Time.time + esperaAntesDeCargar;
             if (Time.time >= cargarEn)
             {
-                if (Application.CanStreamedLevelBeLoaded(escenaSiguiente)) SceneManager.LoadScene(escenaSiguiente);
+                if (Application.CanStreamedLevelBeLoaded(escenaSiguiente)) TransicionEntrePisos.CargarEscena(escenaSiguiente);
                 else { E3Hud.Mensaje("La escena '" + escenaSiguiente + "' no está en Build Settings", 3f); cargarEn = float.MaxValue; }
             }
         }

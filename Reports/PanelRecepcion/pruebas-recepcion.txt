@@ -1,0 +1,70 @@
+PASS Iniciar partida apunta a la escena real Recepcion
+PASS Recepcion carga antes de Entrada, personaje 0
+PASS Sólo aparece el prefab seleccionado, personaje 0
+PASS Controlador del prototipo desactivado
+PASS Ayuda oscurecida visible y partida detenida
+PASS HUD real conectado en Recepcion
+PASS Once controles muestran sus asignaciones actuales
+PASS Panel completo dentro de la pantalla
+PASS Ayuda bloquea movimiento y cronómetro
+PASS Ayuda bloquea combate, habilidad y menú de pausa
+PASS Entendido restaura el juego con teclado o mando
+PASS Objetivo de la tarjeta permanece visible al jugar
+PASS Guardar en Recepcion conserva la partida
+PASS Continuar vuelve a Recepcion y recupera la salud guardada
+PASS Botón Entendido responde al clic del mouse
+PASS Tarjeta única con recogida de inventario y sin doble controlador
+PASS Tarjeta colocada exactamente al lado derecho de la puerta
+PASS Tarjeta en el suelo, junto al panel de salida
+PASS Ruta física de recepción transitable: (8.70, -5.80)
+PASS Ruta física de recepción transitable: (8.70, -3.30)
+PASS Ruta física de recepción transitable: (9.60, -2.55)
+PASS Panel accesible antes de recoger la tarjeta
+PASS F sin tarjeta impide salir y muestra el aviso
+PASS Recoger tarjeta sólo suma una unidad al inventario y no cambia de escena
+PASS Recoger tarjeta no bloquea ni congela al jugador
+PASS Se puede guardar con la tarjeta en posesión
+PASS Continuar conserva la tarjeta guardada sin duplicarla en el suelo
+PASS Tarjeta recogida fuera del alcance del panel: hay que acercarse
+PASS F con tarjeta lejos del panel no permite salir ni consume la tarjeta
+PASS Llegar al panel con F ya mantenida requiere una nueva pulsación
+PASS F frente al panel con tarjeta carga Entrada, personaje 0
+PASS Se conserva el personaje elegido en Entrada
+PASS La tarjeta de Recepcion se consume antes de Entrada
+PASS El panel del prólogo conserva el índice del primer piso
+PASS Transición libera tiempo, controles y pausa
+PASS Entrada conserva vida, inventario y munición de Recepcion
+PASS La cuota y tarjeta del siguiente piso empiezan independientes
+PASS No se agregó jefe al flujo inicial
+PASS Recepcion carga antes de Entrada, personaje 1
+PASS Sólo aparece el prefab seleccionado, personaje 1
+PASS Controlador del prototipo desactivado
+PASS Ayuda oscurecida visible y partida detenida
+PASS HUD real conectado en Recepcion
+PASS Once controles muestran sus asignaciones actuales
+PASS Panel completo dentro de la pantalla
+PASS Ayuda bloquea movimiento y cronómetro
+PASS Ayuda bloquea combate, habilidad y menú de pausa
+PASS Entendido restaura el juego con teclado o mando
+PASS Objetivo de la tarjeta permanece visible al jugar
+PASS Tarjeta única con recogida de inventario y sin doble controlador
+PASS Tarjeta colocada exactamente al lado derecho de la puerta
+PASS Tarjeta en el suelo, junto al panel de salida
+PASS Ruta física de recepción transitable: (8.70, -5.80)
+PASS Ruta física de recepción transitable: (8.70, -3.30)
+PASS Ruta física de recepción transitable: (9.60, -2.55)
+PASS Panel accesible antes de recoger la tarjeta
+PASS F sin tarjeta impide salir y muestra el aviso
+PASS Recoger tarjeta sólo suma una unidad al inventario y no cambia de escena
+PASS Recoger tarjeta no bloquea ni congela al jugador
+PASS Tarjeta recogida fuera del alcance del panel: hay que acercarse
+PASS F con tarjeta lejos del panel no permite salir ni consume la tarjeta
+PASS Llegar al panel con F ya mantenida requiere una nueva pulsación
+PASS F frente al panel con tarjeta carga Entrada, personaje 1
+PASS Se conserva el personaje elegido en Entrada
+PASS La tarjeta de Recepcion se consume antes de Entrada
+PASS El panel del prólogo conserva el índice del primer piso
+PASS Transición libera tiempo, controles y pausa
+PASS La cuota y tarjeta del siguiente piso empiezan independientes
+PASS No se agregó jefe al flujo inicial
+PASS Flujo completo sin errores ni excepciones

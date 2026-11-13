@@ -1,0 +1,12 @@
+PASS 271 archivos existentes de Resources intactos: []
+PASS Escenas ajenas a la referencia de estilo de Recepcion intactas: []
+PASS Ajuste concurrente de la puerta de Entrada conservado sin sobrescribir
+PASS Puerta usa el fundido común: PuertaNivel.cs
+PASS Puerta usa el fundido común: PuertaSalida.cs
+PASS Puerta usa el fundido común: RecepcionSalida.cs
+PASS Puerta usa el fundido común: E3Puerta.cs
+PASS Puerta usa el fundido común: E4PuertaSalida.cs
+PASS Controles vinculados a la hoja de estilos del menú
+PASS La pantalla de controles conserva la eliminación del botiquín
+PASS Prueba Play de botón compartido y fundido completo aprobada
+PASS Regresión Play de Entrada a Piso3 y conservación de partida aprobada

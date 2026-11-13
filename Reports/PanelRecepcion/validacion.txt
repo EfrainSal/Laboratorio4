@@ -1,0 +1,5 @@
+PASS 271 archivos protegidos de resources-baseline.json intactos: []
+PASS 5 archivos protegidos de protegidos.json intactos: []
+PASS Recoger la tarjeta no carga escenas
+PASS Panel de salida e indicador vinculados en Recepcion
+PASS Pruebas Play de proximidad, tarjeta, guardado y F aprobadas

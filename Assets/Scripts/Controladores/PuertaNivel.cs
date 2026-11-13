@@ -10,6 +10,9 @@ public class PuertaNivel : MonoBehaviour
     [Header("Configuración de Nivel")]
     [Tooltip("Nombre exacto de la escena del siguiente piso")]
     public string nombreSiguienteEscena;
+    [Tooltip("Desactivar en la recepción/prólogo para conservar el índice del primer piso.")]
+    public bool avanzarContadorPiso = true;
+    public bool JugadorEnRango => jugadorEnRango;
 
     [Header("UI Feedback")]
     public TextMeshProUGUI textoMensajeUI;
@@ -95,7 +98,7 @@ public class PuertaNivel : MonoBehaviour
 
         if (GameManager.Instance != null && inventarioJugador != null)
         {
-            GameManager.Instance.AvanzarPiso();
+            if (avanzarContadorPiso) GameManager.Instance.AvanzarPiso();
             
             // Activamos la bandera para avisarle al siguiente piso que debe usar estos datos
             GameManager.Instance.usarDatosDeTransicion = true;
@@ -130,7 +133,7 @@ public class PuertaNivel : MonoBehaviour
             }
         }
 
-        SceneManager.LoadScene(nombreSiguienteEscena);
+        TransicionEntrePisos.CargarEscena(nombreSiguienteEscena);
     }
 
     private void MostrarMensaje()

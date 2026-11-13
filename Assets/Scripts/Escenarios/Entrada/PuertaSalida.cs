@@ -19,7 +19,7 @@ namespace Laboratorio4
             mostrando = true;
             Debug.Log("[Laboratorio 4] " + mensaje);
             if (!string.IsNullOrEmpty(escenaDestino) && Application.CanStreamedLevelBeLoaded(escenaDestino))
-                SceneManager.LoadScene(escenaDestino);
+                TransicionEntrePisos.CargarEscena(escenaDestino);
         }
 
         void OnTriggerExit2D(Collider2D otro) { if (otro.CompareTag("Player")) mostrando = false; }

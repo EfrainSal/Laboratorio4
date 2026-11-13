@@ -1,0 +1,52 @@
+SCENE Recepcion
+LIGHT GameplayRecepcion/LuzRecepcion active=True type=Global intensity=1 radius=1 scale=(1.00, 1.00, 1.00)
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=61 example=00_Mapa/Fondo
+PLAYER Laboratorio4.Recepcion.RecepcionJugador 05_Personajes/Jason
+SCENE Escenario1_Entrada
+LIGHT GameplayEntrada/LuzGameplay active=True type=Global intensity=1 radius=1 scale=(1.00, 1.00, 1.00)
+MATERIAL Sprites/Default count=32 example=E1_Mapa/E1_Fondo_0
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=112 example=E1_Puertas/Puerta_Salida_Piso2
+PLAYER Laboratorio4.ControladorJugador E1_Personajes/JasonSmith, E1_Personajes/MilenaRhea
+SCENE Piso3_V10
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=161 example=00_Fondo
+PLAYER LaboratorioYiba.Piso3V10.Piso3V10Movimiento 05_Jason
+SCENE E3_Laboratorio
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=247 example=E3_Nivel/E3_Mapa/E3_Fondo_00
+PLAYER Laboratorio4.Escenario3.E3Jugador E3_Nivel/E3_Personajes/E3_Jason
+SCENE Escenario4_Jefe
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=54 example=E4_Mapa/E4_Fondo
+PLAYER Laboratorio4.Escenario4.E4Jugador E4_Personajes/E4_Jason
+SCENE Nivel1
+LIGHT IluminacionCombate active=True type=Global intensity=1 radius=1 scale=(1.00, 1.00, 1.00)
+LIGHT Player_Milena/Spot Light 2D active=True type=Point intensity=3 radius=10 scale=(1.00, 1.00, 1.00)
+MATERIAL Universal Render Pipeline/2D/Sprite-Unlit-Default count=1 example=Jefe_DoctorYiba
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=2 example=Player_Milena
+PLAYER MovimientoPlayer Player_Milena
+PLAYER UnityEngine.InputSystem.PlayerInput Player_Milena
+PLAYER PlayerHealth Player_Milena
+PLAYER PlayerCombat Player_Milena
+PLAYER PlayerShooting Player_Milena
+PLAYER PlayerInventory Player_Milena
+PLAYER PlayerExperience Player_Milena
+SCENE Debugscene
+LIGHT Global Light 2D active=True type=Global intensity=1 radius=1 scale=(1.00, 1.00, 1.00)
+LIGHT Player_Jason/Spot Light 2D active=True type=Point intensity=3 radius=10 scale=(1.00, 1.00, 1.00)
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=12 example=Estimulante
+PLAYER MovimientoPlayer Player_Jason
+PLAYER UnityEngine.InputSystem.PlayerInput Player_Jason
+PLAYER PlayerHealth Player_Jason
+PLAYER PlayerCombat Player_Jason
+PLAYER PlayerShooting Player_Jason
+PLAYER PlayerInventory Player_Jason
+PLAYER PlayerExperience Player_Jason
+PLAYER InteraccionJugador Player_Jason
+SCENE Prueba 1
+LIGHT Global Light 2D active=False type=Global intensity=0 radius=1 scale=(1.00, 1.00, 1.00)
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=80 example=Fondo
+SCENE Piso3_Modular
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=17 example=Jugador_Prueba
+PLAYER Piso3TestPlayer Jugador_Prueba
+PLAYER LaboratorioYiba.Piso3V10.Piso3V10Movimiento 05_Jason
+SCENE Piso3_Final_Modular
+MATERIAL Universal Render Pipeline/2D/Sprite-Lit-Default count=63 example=04_Objetos_Independientes/tanque_contencion_30_73
+PLAYER LaboratorioYiba.Piso3V10.Piso3V10Movimiento 05_Jason

@@ -41,7 +41,7 @@ namespace Laboratorio4.Escenario4
             if (!zonaSalida.Contains((Vector2)jugador.position)) return;
             Escapo = true;
             if (!string.IsNullOrEmpty(escenaDestino) && Application.CanStreamedLevelBeLoaded(escenaDestino))
-                SceneManager.LoadScene(escenaDestino);
+                TransicionEntrePisos.CargarEscena(escenaDestino);
         }
     }
 }

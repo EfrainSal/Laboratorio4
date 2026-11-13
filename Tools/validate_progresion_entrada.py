@@ -24,7 +24,7 @@ entry = read('Assets/Scenes/Escenario1_Entrada.unity')
 for i in (1, 2, 3):
     guid = re.search(r'^guid: (\w+)', read(f'Assets/Prefabs/Spawner_lvl{i}.prefab.meta'), re.M)[1]
     check(f'm_SourcePrefab: {{fileID: 100100000, guid: {guid},' in entry, f'Entrada referencia prefab original Spawner_lvl{i}')
-check('_gameSceneName: Escenario1_Entrada' in read('Assets/Scenes/MainMenu.unity'), 'MainMenu inicia en Entrada')
+check('_gameSceneName: Recepcion' in read('Assets/Scenes/MainMenu.unity'), 'MainMenu inicia en Recepcion antes de Entrada')
 check('path: Assets/Scenes/Escenario1_Entrada.unity' in read('ProjectSettings/EditorBuildSettings.asset'), 'Entrada incluida en compilación')
 check('nombreSiguienteEscena: Piso3_V10' in read('Assets/Prefabs/PuertaTransicion.prefab'), 'Puerta enlazada a Piso3_V10')
 card_guid = re.search(r'^guid: (\w+)', read('Assets/Sprites/TarjetaAcceso.png.meta'), re.M)[1]

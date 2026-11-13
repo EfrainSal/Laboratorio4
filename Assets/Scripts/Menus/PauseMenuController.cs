@@ -173,6 +173,7 @@ public class PauseMenuController : MonoBehaviour
     // ------------------------------------------------------------------
     private void OnPausePressed(InputAction.CallbackContext ctx)
     {
+        if (TransicionEntrePisos.EnCurso) return;
         if (!_isPaused)
         {
             if (UpgradePanelController.TryClose()) return;   // primero se cierra el panel de mejoras
