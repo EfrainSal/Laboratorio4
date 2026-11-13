@@ -488,6 +488,7 @@ MonoBehaviour:
   maxClipSize: 30
   currentAmmoInClip: 0
   totalAmmo: 60
+  reloadDuration: 1.5
   sfxSource: {fileID: 3861281069416560983}
   sonidoDisparo: {fileID: 8300000, guid: 1cbf983e9d863f2418c9a439c7c81643, type: 3}
 --- !u!114 &4668186451430304283
@@ -795,8 +796,8 @@ MonoBehaviour:
   duracionDisparoVisual: 0.12
   retrocesoVisual: 0.035
   invertirFiloMachete: 1
-  escalaMachete: 0.5
-  rotacionReposoMachete: 225
+  escalaMachete: 0.7
+  rotacionReposoMachete: 180
   posicionManoMachete: {x: 0.25, y: 0}
   agarreMachete: {x: 0.78, y: 0.8}
 --- !u!114 &1358809743462916464

@@ -25,6 +25,7 @@ public class SaveData
     public float posicionX;
     public float posicionY;
     public float vidaActual;
+    public float vidaMaxima; // 0 en guardados antiguos: se calcula con las mejoras de la run.
 
     // Inventario
     public int cantidadVendas;

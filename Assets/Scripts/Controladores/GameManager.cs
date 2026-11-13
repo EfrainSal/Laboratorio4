@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     public bool usarDatosDeTransicion = false;
     public int puntosDeMejoraPendientes = 0;
     public float vidaPendiente = 0f;
+    public float vidaMaximaPendiente = 0f;
     public int vendasPendientes = 0;
     public int botiquinesPendientes = 0;
     public int estimulantesPendientes = 0;
@@ -68,6 +70,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnEnable() { SceneManager.sceneLoaded += PrepararVidaDePrototipos; }
+    private void OnDisable() { SceneManager.sceneLoaded -= PrepararVidaDePrototipos; }
+
+    private void PrepararVidaDePrototipos(Scene escena, LoadSceneMode modo)
+    {
+        // Los mapas antiguos usan otra clase de salud. Sólo conectar los jugadores activos,
+        // sin añadir esta lógica a Sorbos, al jefe ni a los prototipos desactivados.
+        foreach (var raiz in escena.GetRootGameObjects())
+            foreach (var c in raiz.GetComponentsInChildren<MonoBehaviour>())
+                if ((c is Laboratorio4.Escenario4.E4Jugador || c is Laboratorio4.Escenario3.E3Jugador)
+                    && c.GetComponent<PlayerHealth>() == null)
+                    c.gameObject.AddComponent<VidaJugadorPrototipo>();
+    }
+
+    public bool CapturarDatosDeTransicion()
+    {
+        var jugador = LevelManager.Instance != null ? LevelManager.Instance.JugadorActual : null;
+        var salud = jugador != null ? jugador.GetComponent<PlayerHealth>() : FindFirstObjectByType<PlayerHealth>();
+        if (salud == null || salud.IsDead || salud.currentHealth <= 0) return false;
+        usarDatosDeTransicion = true;
+        vidaPendiente = salud.currentHealth; vidaMaximaPendiente = salud.maxHealth;
+        var inv = salud.GetComponent<PlayerInventory>();
+        if (inv != null) { vendasPendientes = inv.vendasCount; botiquinesPendientes = inv.botiquinesCount; estimulantesPendientes = inv.estimulantesCount; }
+        var exp = salud.GetComponent<PlayerExperience>();
+        if (exp != null) { puntosDeMejoraPendientes = exp.puntosDeMejora; expActualPendiente = exp.experienciaActual; nivelActualPendiente = exp.nivelActual; }
+        var disparo = salud.GetComponent<PlayerShooting>();
+        if (disparo != null) { municionCargadorPendiente = disparo.currentAmmoInClip; municionTotalPendiente = disparo.totalAmmo; }
+        return true;
+    }
+
     // Método que llamamos desde el LevelManager para saber a quién instanciar
     public GameObject ObtenerPrefabJugador()
     {
@@ -96,11 +128,14 @@ public class GameManager : MonoBehaviour
         usarDatosDeTransicion = false;
         puntosDeMejoraPendientes = 0;
         vidaPendiente = 0f;
+        vidaMaximaPendiente = 0f;
         vendasPendientes = 0;
         botiquinesPendientes = 0;
         estimulantesPendientes = 0;
         municionCargadorPendiente = 0;
         municionTotalPendiente = 0;
+        expActualPendiente = 0f;
+        nivelActualPendiente = 1;
 
         DatosCargados = null;   
 
@@ -218,14 +253,15 @@ public class GameManager : MonoBehaviour
         }
 
         // Buscamos al jugador en la escena para sacarle sus datos exactos
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = LevelManager.Instance != null ? LevelManager.Instance.JugadorActual : null;
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             data.posicionX = player.transform.position.x;
             data.posicionY = player.transform.position.y;
 
             var health = player.GetComponent<PlayerHealth>();
-            if (health != null) data.vidaActual = health.currentHealth;
+            if (health != null) { data.vidaActual = health.currentHealth; data.vidaMaxima = health.maxHealth; }
 
             var exp = player.GetComponent<PlayerExperience>();
             if (exp != null)

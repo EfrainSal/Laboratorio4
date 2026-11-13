@@ -296,7 +296,7 @@ public class UpgradePanelController : MonoBehaviour
             bool estabaLleno = _health.currentHealth >= _health.maxHealth - 0.01f;
 
             float bonus = lvVida * aumentoVida;
-            _health.maxHealth += bonus;
+            if (!_health.MaximoRestaurado) _health.maxHealth += bonus;
             if (estabaLleno && !_health.cargadoDesdeGuardado) 
                 _health.Heal(bonus);
             else 
@@ -315,7 +315,8 @@ public class UpgradePanelController : MonoBehaviour
     {
         if (_exp != null && _combat != null && _health != null) return true;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = LevelManager.Instance != null ? LevelManager.Instance.JugadorActual : null;
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) return false;
 
         _exp = player.GetComponent<PlayerExperience>();

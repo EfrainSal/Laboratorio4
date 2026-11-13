@@ -25,7 +25,10 @@ public class PantallaControlesInicio : MonoBehaviour
     private float tiempoAnterior, inicio, inicioCierre;
     private string esquema;
     private Texture2D texturaBoton;
+    private string avisoPuerta;
+    private float finAvisoPuerta;
     public VisualElement Panel => panel;
+    public bool AvisoPuertaVisible => !IsShowing && Time.unscaledTime < finAvisoPuerta;
 
     private void OnEnable() { IsShowing = true; transicion = false; }
 
@@ -71,6 +74,7 @@ public class PantallaControlesInicio : MonoBehaviour
         objetivo = new VisualElement { name = "ObjetivoRecepcion" }; objetivo.AddToClassList("recepcion-objetivo");
         objetivo.pickingMode = PickingMode.Ignore;
         textoObjetivo = Texto("", "recepcion-objetivo-texto"); objetivo.Add(textoObjetivo);
+        EstiloAvisoRecepcion.Aplicar(objetivo, textoObjetivo);
         objetivo.style.display = DisplayStyle.None; raiz.Add(objetivo);
         tiempoAnterior = TransicionEntrePisos.EnCurso ? TransicionEntrePisos.EscalaTiempoAnterior : Time.timeScale;
         pausaAnterior = TransicionEntrePisos.EnCurso ? TransicionEntrePisos.BloqueoPausaAnterior : PauseMenuController.PauseBlocked;
@@ -122,6 +126,7 @@ public class PantallaControlesInicio : MonoBehaviour
                 ? enPanel ? teclas["Interact"].text + " · USAR TARJETA  /  Abrir el panel de salida"
                     : "TARJETA OBTENIDA  /  Acércate al panel de la puerta de salida"
                 : "RECEPCIÓN  /  Recoge la tarjeta del suelo, junto a la puerta de salida";
+            if (AvisoPuertaVisible) textoObjetivo.text = avisoPuerta;
         }
         if (!IsShowing) return;
         if (cerrando)
@@ -154,6 +159,13 @@ public class PantallaControlesInicio : MonoBehaviour
     {
         transicion = true;
         textoObjetivo.text = "ACCESO AUTORIZADO  /  Entrando al laboratorio…";
+    }
+    public bool MostrarAvisoPuerta(string mensaje, float duracion)
+    {
+        if (objetivo == null || IsShowing || transicion) return false;
+        avisoPuerta = mensaje; finAvisoPuerta = Time.unscaledTime + Mathf.Max(.1f, duracion);
+        textoObjetivo.text = mensaje;
+        return true;
     }
     private void RestaurarTiempo()
     {

@@ -1,0 +1,8 @@
+PASS 271 archivos de Resources conservados: []
+PASS 13 archivos de escenas conservados: []
+PASS La muerte termina la run y emite el resumen sin cargar ni reiniciar
+PASS La pantalla recibe la derrota y ejecuta la secuencia original de Game Over
+PASS Reintentar reinicia en Recepcion y protege contra dobles pulsaciones
+PASS Reintentar libera la pausa anterior antes del fundido
+PASS Tres derrotas en Play esperan el botón real de UI Toolkit antes de cargar Recepcion
+PASS Regresión de puerta, vida y reintento aprobada

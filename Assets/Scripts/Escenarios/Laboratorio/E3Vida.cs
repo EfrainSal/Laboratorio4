@@ -28,6 +28,15 @@ namespace Laboratorio4.Escenario3
         public bool Danio(int cantidad)
         {
             if (Muerto || invulnerable) return false;
+            var puente = GetComponent<VidaJugadorPrototipo>();
+            if (puente != null)
+            {
+                GetComponent<PlayerHealth>().TakeDamage(cantidad, DeathCause.Mutante);
+                puente.Sincronizar(); parpadeo = .15f;
+                AlRecibir?.Invoke(actual);
+                if (actual <= 0) AlMorir?.Invoke();
+                return true;
+            }
             actual = Mathf.Max(0, actual - cantidad);
             parpadeo = 0.15f;
             if (AlRecibir != null) AlRecibir(actual);

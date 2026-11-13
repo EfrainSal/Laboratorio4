@@ -404,6 +404,8 @@ MonoBehaviour:
   healthBarFadeDuration: 0.5
   ammoDropPrefab: {fileID: 5996529410058777466, guid: 3ef3e9c942a4d064895b6e0d991552d2, type: 3}
   dropChance: 40
+  vendaDropPrefab: {fileID: 2547609757957364918, guid: daa8c427ab2b1f144a7a8f114f9b86e3, type: 3}
+  vendaDropChance: 20
   experienciaAlMorir: 25
   audioSource: {fileID: 6454223911596055069}
   sfxDanio: {fileID: 8300000, guid: 7305ca4d30c624948bdc8d3ad9cc9931, type: 3}

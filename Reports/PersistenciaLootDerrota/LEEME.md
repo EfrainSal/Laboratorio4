@@ -1,0 +1,17 @@
+# Vida persistente, vendas y regreso tras derrota
+
+`GameManager` conserva la vida actual y máxima durante la run con `DontDestroyOnLoad`. `TransicionEntrePisos.CargarEscena` captura el jugador actual antes del fundido; así las puertas de cada mapa usan la misma transferencia. `LevelManager` restaura los valores en el nuevo jugador. La reaplicación de mejoras no duplica el máximo ni añade curación al entrar en otro mapa. El guardado local incluye la vida máxima y acepta el formato anterior, que no la tenía.
+
+Los jugadores de prototipo de E3/E4 se conectan a `PlayerHealth` mediante `VidaJugadorPrototipo` en tiempo de ejecución. Sólo se enlazan jugadores activos; Sorbos, jefe y prototipos desactivados mantienen su lógica. Los puntos de vida reales conservan sus decimales aunque los HUD antiguos muestren enteros.
+
+`EnemyHealth` conserva la tirada de munición y añade una tirada independiente de vendas. `Enemy`, `Enemy_Melee` y `Enemy_Ranged`, en `Assets/Prefabs`, referencian el prefab existente `Vendas`. Probabilidad inicial: **20 % para vendas** y **40 % para munición**. Para cambiarla, selecciona el prefab del Sorbo y ajusta **Enemy Health > Dropeo > Venda Drop Chance** o **Drop Chance**. Puede soltar ambas cosas, una sola o ninguna; el guardia de muerte evita duplicar loot al recibir varios golpes letales.
+
+Al morir, primero se registra una única derrota, se conserva su puntuación en el ranking y se elimina el guardado de la run perdida. Se muestra **Game Over**, con la acción pausada y el resumen de la partida. Sólo al pulsar **Reintentar** se inicia otra run y se carga **Recepcion** con el fundido existente: mismo personaje, vida base completa, piso 1 y sin mejoras/consumibles de la derrota. La pantalla de controles de recepción mantiene su pausa propia y devuelve el control al cerrarla. Véase `Reports/FlujoGameOver/LEEME.md` para la corrección posterior del flujo.
+
+Prueba: `Laboratorio 4 > Partida > Probar vida loot y derrota`. Los datos de QA se guardan sólo en esta carpeta y la sincronización externa se suspende durante la prueba.
+
+La prueba específica aprobó **90 comprobaciones sin errores** con el flujo corregido de Game Over: Jason y Milena recorren los cinco destinos con 100, 37.5, 139.25 y 63.25 puntos; se conserva el máximo de 140, sin duplicar mejoras. Se verifican las cuatro combinaciones de loot en ambos Sorbos, la recogida física y uso de vendas, el guardado/continuación y tres derrotas que esperan Reintentar antes de cargar recepción. Las capturas `Reports/FlujoGameOver/perdiste-*.png` muestran la pantalla de derrota y `regreso-*.png` muestran recepción después de pulsar Reintentar.
+
+El validador `python Tools/validate_persistencia_loot_derrota.py` comprueba referencias y hashes. Los **271 archivos preexistentes de Resources** permanecen idénticos. Se guardaron los cambios que el usuario ya tenía abiertos en Recepcion (incluida Nota (1)) antes de iniciar las pruebas; su hash se documentó en `cambios-usuario.json`. La implementación de esta tarea no reescribe escenas.
+
+La regresión `ProbarProgresionEntrada` comprueba la interacción con F, tarjeta, conservación de vida/munición, recarga, armas y el paso de Game Over a Recepcion mediante Reintentar. Sus expectativas corresponden a la adrenalina de curación completa y a la recarga temporizada que ya tiene el proyecto. Los resultados actuales están en `Reports/ProgresionEntrada/pruebas.txt`.

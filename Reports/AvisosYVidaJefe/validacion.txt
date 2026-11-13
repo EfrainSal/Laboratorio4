@@ -1,0 +1,6 @@
+PASS 271 archivos de Resources intactos: []
+PASS 13 archivos de Scenes intactos: []
+PASS Recepción y avisos de puerta comparten la presentación
+PASS La puerta muestra el aviso nuevo y mantiene oculta la franja gris
+PASS La barra del jefe usa el espacio libre del HUD y el anclaje derecho
+PASS Prueba Play de cuatro avisos y dos HUD del jefe aprobada

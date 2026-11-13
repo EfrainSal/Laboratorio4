@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using System.Collections;
 using UnityEngine.InputSystem; // Necesario para leer el nuevo input system
 using System.Collections.Generic;
 
@@ -23,7 +22,8 @@ public class PuertaNivel : MonoBehaviour
     [Tooltip("Se usa Gameplay/Player/Interact del PlayerInput en rango. Esta referencia sólo sirve si no hay PlayerInput.")]
     public InputActionReference accionInteractuar;
 
-    private Coroutine rutinaMensajeActiva;
+    private float finAviso;
+    public bool AvisoVisible => Time.unscaledTime < finAviso && !DeathScreenController.GameplayBlocked;
     private bool jugadorEnRango = false;
     private PlayerInventory inventarioJugador;
     private PlayerInput entradaJugador;
@@ -96,65 +96,17 @@ public class PuertaNivel : MonoBehaviour
     {
         Debug.Log("Llave aceptada. Cargando el siguiente piso...");
 
-        if (GameManager.Instance != null && inventarioJugador != null)
-        {
-            if (avanzarContadorPiso) GameManager.Instance.AvanzarPiso();
-            
-            // Activamos la bandera para avisarle al siguiente piso que debe usar estos datos
-            GameManager.Instance.usarDatosDeTransicion = true;
-
-            // Extraer y guardar Puntos de Mejora
-            PlayerExperience exp = inventarioJugador.GetComponent<PlayerExperience>();
-            if (exp != null)
-            {
-                GameManager.Instance.puntosDeMejoraPendientes = exp.puntosDeMejora;
-                GameManager.Instance.expActualPendiente = exp.experienciaActual;
-                GameManager.Instance.nivelActualPendiente = exp.nivelActual;
-            }
-
-            // Extraer y guardar Inventario
-            GameManager.Instance.vendasPendientes = inventarioJugador.vendasCount;
-            GameManager.Instance.botiquinesPendientes = inventarioJugador.botiquinesCount;
-            GameManager.Instance.estimulantesPendientes = inventarioJugador.estimulantesCount;
-
-            // Extraer y guardar Salud
-            PlayerHealth health = inventarioJugador.GetComponent<PlayerHealth>();
-            if (health != null)
-            {
-                GameManager.Instance.vidaPendiente = health.currentHealth;
-            }
-
-            // Extraer y guardar Munición
-            PlayerShooting shooting = inventarioJugador.GetComponent<PlayerShooting>();
-            if (shooting != null)
-            {
-                GameManager.Instance.municionCargadorPendiente = shooting.currentAmmoInClip;
-                GameManager.Instance.municionTotalPendiente = shooting.totalAmmo;
-            }
-        }
+        if (GameManager.Instance != null && avanzarContadorPiso) GameManager.Instance.AvanzarPiso();
 
         TransicionEntrePisos.CargarEscena(nombreSiguienteEscena);
     }
 
     private void MostrarMensaje()
     {
+        // Conservar la referencia de TMP para las escenas antiguas, sin mostrar su franja gris.
         if (textoMensajeUI != null)
-        {
-            if (rutinaMensajeActiva != null)
-            {
-                StopCoroutine(rutinaMensajeActiva);
-            }
-            rutinaMensajeActiva = StartCoroutine(RutinaMostrarMensaje());
-        }
-    }
-
-    private IEnumerator RutinaMostrarMensaje()
-    {
-        textoMensajeUI.text = mensajeFaltaLlave;
-        textoMensajeUI.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(duracionMensaje);
-
-        textoMensajeUI.gameObject.SetActive(false);
+            textoMensajeUI.gameObject.SetActive(false);
+        if (AvisoPuertaUI.Mostrar(this, mensajeFaltaLlave, duracionMensaje))
+            finAviso = Time.unscaledTime + Mathf.Max(.1f, duracionMensaje);
     }
 }

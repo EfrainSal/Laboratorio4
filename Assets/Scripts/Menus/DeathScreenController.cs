@@ -85,6 +85,7 @@ public class DeathScreenController : MonoBehaviour
     private RunSummary _summary;
     private string _causeFullText = "";
     private bool _shown;
+    private bool _retryRequested;
     private float _burstEnd, _nextBurstAt;
 
     // ------------------------------------------------------------------
@@ -404,16 +405,27 @@ public class DeathScreenController : MonoBehaviour
     // ------------------------------------------------------------------
     private void OnRetry()
     {
+        if (_retryRequested || !IsShowing || !_retryButton.enabledSelf || TransicionEntrePisos.EnCurso) return;
+        if (!Application.CanStreamedLevelBeLoaded("Recepcion"))
+        {
+            Debug.LogError("La escena Recepcion debe estar habilitada en Build Settings para reintentar.");
+            return;
+        }
+        _retryRequested = true;
+        _retryButton.SetEnabled(false);
+        _menuButton.SetEnabled(false);
+        foreach (var loop in _loops) loop.Pause();
         var gm = GameManager.Instance;
         int character = gm != null ? gm.personajeSeleccionado : 0;
 
         RestoreTime();
         if (gm != null) gm.IniciarNuevaRun(character);     // misma elección de personaje
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        TransicionEntrePisos.CargarEscena("Recepcion", false);
     }
 
     private void OnMenu()
     {
+        if (_retryRequested || TransicionEntrePisos.EnCurso) return;
         RestoreTime();
         SceneManager.LoadScene(_mainMenuSceneName);
     }
@@ -422,6 +434,7 @@ public class DeathScreenController : MonoBehaviour
     {
         IsShowing = false;
         Time.timeScale = 1f;
+        PauseMenuController.PauseBlocked = false;
         AudioListener.pause = false;
     }
 

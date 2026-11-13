@@ -1,0 +1,51 @@
+PASS Recepcion: partida activa antes de interactuar
+PASS Recepcion: jugador en el panel de la puerta (jugador=Center: (9.60, -2.55, 0.00), Extents: (0.00, 0.00, 0.00), panel=Center: (9.60, -2.55, 0.00), Extents: (0.70, 0.50, 0.00))
+PASS Recepcion: F sin tarjeta muestra aviso sin cambiar de escena
+PASS Recepcion: franja gris antigua oculta
+PASS Recepcion reutiliza su panel sin duplicar avisos
+PASS Recepcion: fondo, borde, texto y tipografía iguales a recepción
+PASS Recepcion: aviso abajo sin bloquear clics
+PASS Recepcion: repetir F renueva el aviso
+PASS Recepcion: el aviso expira correctamente
+PASS Recepcion: no se añadió jefe al mapa
+PASS Escenario1_Entrada: partida activa antes de interactuar
+PASS Escenario1_Entrada: jugador en el panel de la puerta (jugador=Center: (47.04, -5.97, 0.00), Extents: (0.00, 0.00, 0.00), panel=Center: (47.04, -5.97, 0.00), Extents: (0.96, 0.45, 0.00))
+PASS Escenario1_Entrada: F sin tarjeta muestra aviso sin cambiar de escena
+PASS Escenario1_Entrada: franja gris antigua oculta
+PASS Escenario1_Entrada: texto de acceso correcto
+PASS Escenario1_Entrada: fondo, borde, texto y tipografía iguales a recepción
+PASS Escenario1_Entrada: aviso abajo sin bloquear clics
+PASS Escenario1_Entrada: repetir F renueva el aviso
+PASS Escenario1_Entrada: el aviso expira correctamente
+PASS Escenario1_Entrada: no se añadió jefe al mapa
+PASS Piso3_V10: partida activa antes de interactuar
+PASS Piso3_V10: jugador en el panel de la puerta (jugador=Center: (35.93, -3.95, 0.00), Extents: (0.00, 0.00, 0.00), panel=Center: (35.93, -3.88, 0.00), Extents: (0.50, 0.50, 0.00))
+PASS Piso3_V10: F sin tarjeta muestra aviso sin cambiar de escena
+PASS Piso3_V10: franja gris antigua oculta
+PASS Piso3_V10: texto de acceso correcto
+PASS Piso3_V10: fondo, borde, texto y tipografía iguales a recepción
+PASS Piso3_V10: aviso abajo sin bloquear clics
+PASS Piso3_V10: repetir F renueva el aviso
+PASS Piso3_V10: el aviso expira correctamente
+PASS Piso3_V10: no se añadió jefe al mapa
+PASS E3_Laboratorio: partida activa antes de interactuar
+PASS E3_Laboratorio: jugador en el panel de la puerta (jugador=Center: (42.60, -5.02, 0.00), Extents: (0.00, 0.00, 0.00), panel=Center: (42.60, -4.74, 0.00), Extents: (1.08, 0.55, 0.00))
+PASS E3_Laboratorio: F sin tarjeta muestra aviso sin cambiar de escena
+PASS E3_Laboratorio: franja gris antigua oculta
+PASS E3_Laboratorio: texto de acceso correcto
+PASS E3_Laboratorio: fondo, borde, texto y tipografía iguales a recepción
+PASS E3_Laboratorio: aviso abajo sin bloquear clics
+PASS E3_Laboratorio: repetir F renueva el aviso
+PASS E3_Laboratorio: el aviso expira correctamente
+PASS E3_Laboratorio: no se añadió jefe al mapa
+PASS Escenario4_Jefe: barras reales separadas
+PASS Escenario4_Jefe: barra del jefe sigue mostrando daño
+PASS Escenario4_Jefe: distribución sin solapamiento y dentro de ventana, ancho lógico 1920
+PASS Escenario4_Jefe: distribución sin solapamiento y dentro de ventana, ancho lógico 1440
+PASS Escenario4_Jefe: distribución sin solapamiento y dentro de ventana, ancho lógico 607.5
+PASS Nivel1: barras reales separadas
+PASS Nivel1: barra del jefe sigue mostrando daño
+PASS Nivel1: distribución sin solapamiento y dentro de ventana, ancho lógico 1920
+PASS Nivel1: distribución sin solapamiento y dentro de ventana, ancho lógico 1440
+PASS Nivel1: distribución sin solapamiento y dentro de ventana, ancho lógico 607.5
+PASS Avisos y vida del jefe sin errores ni excepciones
