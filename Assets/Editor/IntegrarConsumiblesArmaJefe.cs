@@ -153,7 +153,7 @@ public static class IntegrarConsumiblesArmaJefe
             if (!Object.FindObjectsByType<Light2D>(FindObjectsSortMode.None).Any(l => l.lightType == Light2D.LightType.Global))
             {
                 var luz = new GameObject("IluminacionCombate").AddComponent<Light2D>();
-                luz.lightType = Light2D.LightType.Global; luz.intensity = 1;
+                luz.lightType = Light2D.LightType.Global; luz.intensity = 0;
             }
             var victoria = Object.FindFirstObjectByType<VictoryScreenController>();
             if (victoria != null)

@@ -56,7 +56,7 @@ public static class IntegrarProgresionEntrada
             nivel.ApplyModifiedPropertiesWithoutUndo();
             var luz = new GameObject("LuzGameplay").AddComponent<Light2D>();
             luz.transform.SetParent(raiz.transform);
-            luz.lightType = Light2D.LightType.Global; luz.intensity = 1;
+            luz.lightType = Light2D.LightType.Global; luz.intensity = 0;
             var spawners = new GameObject("SpawnersSorbos").transform;
             spawners.SetParent(raiz.transform);
             var posiciones = new[] { new Vector3(13, -11, 0), new Vector3(24, -12, 0), new Vector3(43.4f, -13.7f, 0) };
@@ -250,7 +250,7 @@ public static class IntegrarProgresionEntrada
         var luz = new GameObject("LuzGameplay").AddComponent<Light2D>();
         luz.transform.SetParent(raiz.transform);
         luz.lightType = Light2D.LightType.Global;
-        luz.intensity = 1f;
+        luz.intensity = 0f;
 
         var spawners = new GameObject("SpawnersSorbos").transform;
         spawners.SetParent(raiz.transform);

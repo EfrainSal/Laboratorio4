@@ -22,6 +22,9 @@ public class BossAI : MonoBehaviour
     public GameObject bossBulletPrefab;
     public Transform firePoint; // Centro del jefe para disparar
     public int bulletsAmount = 12; // Cantidad de proyectiles en el círculo
+    public int burstCount = 3; // Número de ráfagas por ataque
+    public float timeBetweenBursts = 0.25f; // Tiempo entre cada ráfaga
+    public float burstRotationOffset = 10f; // Rotación ligera entre ráfagas para que no vayan en fila
 
     [Header("Ataque: Zarpazo Letal (Fase 3)")]
     public float damageZarpazoLetal = 45f;
@@ -209,17 +212,28 @@ public class BossAI : MonoBehaviour
             yield break;
         }
 
-        ReproducirSFX(sfxDisparo);
-
         float angleStep = 360f / Mathf.Max(1, bulletsAmount);
-        float currentAngle = 0f;
+        int rafagas = Mathf.Max(1, burstCount);
 
-        for (int i = 0; i < bulletsAmount; i++)
+        for (int b = 0; b < rafagas; b++)
         {
-            // Calcular rotación en Z para cada bala
-            Quaternion rotation = Quaternion.Euler(0, 0, currentAngle);
-            Instantiate(bossBulletPrefab, firePoint.position, rotation);
-            currentAngle += angleStep;
+            if (DeathScreenController.GameplayBlocked) break;
+
+            ReproducirSFX(sfxDisparo);
+
+            float currentAngle = b * burstRotationOffset;
+            for (int i = 0; i < bulletsAmount; i++)
+            {
+                // Calcular rotación en Z para cada bala
+                Quaternion rotation = Quaternion.Euler(0, 0, currentAngle);
+                Instantiate(bossBulletPrefab, firePoint.position, rotation);
+                currentAngle += angleStep;
+            }
+
+            if (b < rafagas - 1)
+            {
+                yield return new WaitForSeconds(timeBetweenBursts);
+            }
         }
 
         yield return new WaitForSeconds(0.5f); // Pausa tras disparar

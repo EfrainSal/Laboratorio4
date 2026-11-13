@@ -28,6 +28,9 @@ public class WeaponManager : MonoBehaviour
     public void OnSwitchWeapon(InputValue value)
     {
         if (DeathScreenController.GameplayBlocked) return;
+        ShieldAbility shield = GetComponent<ShieldAbility>();
+        if (shield != null && shield.IsShieldActive) return;
+
         if (value.isPressed)
         {
             isUsingMelee = !isUsingMelee;
@@ -37,6 +40,11 @@ public class WeaponManager : MonoBehaviour
 
     public void EquipWeapon(bool useMelee)
     {
+        ShieldAbility shield = GetComponent<ShieldAbility>();
+        if (!useMelee && shield != null && shield.IsShieldActive)
+        {
+            useMelee = true;
+        }
         isUsingMelee = useMelee;
         if (useMelee) GetComponent<ArmaIndependiente>()?.CancelarDisparoVisual();
         // Activa/Desactiva los scripts de combate

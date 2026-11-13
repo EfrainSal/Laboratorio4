@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
     public Image healthBarFill; 
     public float knockbackForce = 5f; 
     public float knockbackTime = 0.2f; 
+    public float healthBarVisibleDuration = 1f;
+    public float healthBarFadeDuration = 0.5f;
 
     private Rigidbody2D rb;
     private EnemyAI enemyAI;
@@ -21,6 +23,10 @@ public class EnemyHealth : MonoBehaviour
     private MeleeEnemyAI meleeAI;
     private RangedEnemyAI rangedAI;
     private bool muerto;
+    private CanvasGroup healthBarCanvasGroup;
+    private Image[] healthBarImages;
+    private float[] healthBarBaseAlphas;
+    private Coroutine healthBarFadeCoroutine;
 
     [Header("Dropeo")]
     public GameObject ammoDropPrefab; 
@@ -35,6 +41,11 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip sfxSpawnOcio;  // Asigna: Monstruo_Grunido.mp3
     public AudioClip sfxMuerte;     // Asigna: Muerte_Enemigo.ogg
 
+    void Awake()
+    {
+        InicializarBarraVida();
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -47,12 +58,103 @@ public class EnemyHealth : MonoBehaviour
         if (playerObj != null) player = playerObj.transform;
 
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
+        EstablecerOpacidadBarraVida(0f);
         
         // Evita que 7 enemigos suenen en el mismo milisegundo al spawnear
         StartCoroutine(ReproducirSonidoSpawnConRetraso());
         
         // Inicia los gruñidos aleatorios para darles vida
         StartCoroutine(RutinaGruñidosAleatorios());
+    }
+
+    private void InicializarBarraVida()
+    {
+        if (healthBarFill == null) return;
+
+        Transform parent = healthBarFill.transform.parent;
+        if (parent != null)
+        {
+            Image chargeFill = rangedAI != null ? rangedAI.chargeIndicatorFill : GetComponent<RangedEnemyAI>()?.chargeIndicatorFill;
+            var lista = new System.Collections.Generic.List<Image>();
+            foreach (var img in parent.GetComponentsInChildren<Image>(true))
+            {
+                if (img != null && img != chargeFill && img.gameObject.name != "Image")
+                {
+                    lista.Add(img);
+                }
+            }
+            healthBarImages = lista.ToArray();
+            if (chargeFill == null && parent.GetComponent<Canvas>() != null)
+            {
+                healthBarCanvasGroup = parent.GetComponent<CanvasGroup>();
+            }
+        }
+        else
+        {
+            healthBarImages = new[] { healthBarFill };
+        }
+
+        healthBarBaseAlphas = new float[healthBarImages.Length];
+        for (int i = 0; i < healthBarImages.Length; i++)
+        {
+            float a = healthBarImages[i].color.a;
+            healthBarBaseAlphas[i] = a > 0.01f ? a : 1f;
+        }
+
+        EstablecerOpacidadBarraVida(0f);
+    }
+
+    private void EstablecerOpacidadBarraVida(float opacidad)
+    {
+        float alpha = Mathf.Clamp01(opacidad);
+        if (healthBarCanvasGroup != null)
+        {
+            healthBarCanvasGroup.alpha = alpha;
+        }
+        if (healthBarImages != null && healthBarBaseAlphas != null)
+        {
+            for (int i = 0; i < healthBarImages.Length; i++)
+            {
+                if (healthBarImages[i] != null)
+                {
+                    Color c = healthBarImages[i].color;
+                    c.a = (healthBarCanvasGroup != null ? healthBarBaseAlphas[i] : healthBarBaseAlphas[i] * alpha);
+                    healthBarImages[i].color = c;
+                }
+            }
+        }
+    }
+
+    private void MostrarBarraVidaTemporalmente()
+    {
+        if (healthBarFill == null || muerto) return;
+        if (healthBarImages == null) InicializarBarraVida();
+
+        if (healthBarFadeCoroutine != null)
+        {
+            StopCoroutine(healthBarFadeCoroutine);
+        }
+        healthBarFadeCoroutine = StartCoroutine(RutinaMostrarYDesvanecerBarraVida());
+    }
+
+    private IEnumerator RutinaMostrarYDesvanecerBarraVida()
+    {
+        EstablecerOpacidadBarraVida(1f);
+        yield return new WaitForSeconds(healthBarVisibleDuration);
+
+        float tiempo = 0f;
+        float duracion = Mathf.Max(0.05f, healthBarFadeDuration);
+        while (tiempo < duracion)
+        {
+            tiempo += Time.deltaTime;
+            float t = Mathf.Clamp01(tiempo / duracion);
+            EstablecerOpacidadBarraVida(Mathf.Lerp(1f, 0f, t));
+            yield return null;
+        }
+
+        EstablecerOpacidadBarraVida(0f);
+        healthBarFadeCoroutine = null;
     }
 
     public void TakeDamage(float damageAmount)
@@ -74,6 +176,7 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
+            MostrarBarraVidaTemporalmente();
             StartCoroutine(ApplyKnockback());
         }
     }

@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6528301, g: 0.6343538, b: 0.6343538, a: 1}
+  m_Color: {r: 0.6528301, g: 0.6343538, b: 0.6343538, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.96981126, g: 0.3202206, b: 0.3202206, a: 1}
+  m_Color: {r: 0.96981126, g: 0.3202206, b: 0.3202206, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -400,6 +400,8 @@ MonoBehaviour:
   healthBarFill: {fileID: 2468429247153389428}
   knockbackForce: 5
   knockbackTime: 0.2
+  healthBarVisibleDuration: 0.5
+  healthBarFadeDuration: 0.5
   ammoDropPrefab: {fileID: 5996529410058777466, guid: 3ef3e9c942a4d064895b6e0d991552d2, type: 3}
   dropChance: 40
   experienciaAlMorir: 25
@@ -619,9 +621,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.45}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.96, y: 0.96}
-    newSize: {x: 0.96, y: 0.96}
+    pivot: {x: 0.5104, y: 0.0312}
+    oldSize: {x: 0.96000004, y: 0.96000004}
+    newSize: {x: 0.96000004, y: 0.96000004}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

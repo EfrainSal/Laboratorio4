@@ -27,35 +27,39 @@ public class Bullet : MonoBehaviour
         if (distance > 0)
         {
             // Trazamos una línea desde la posición anterior hasta la actual
-            RaycastHit2D hit = Physics2D.Raycast(previousPosition, direction.normalized, distance);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(previousPosition, direction.normalized, distance);
 
-            // Si la línea choca con algo que no sea la propia bala
-            if (hit.collider != null && hit.collider.gameObject != gameObject)
+            foreach (RaycastHit2D hit in hits)
             {
-                // Ignorar al jugador y los drops (la bala los atraviesa)
-                if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Drop")) 
+                if (hit.collider == null || hit.collider.gameObject == gameObject) continue;
+
+                // Ignorar al jugador, drops y balas del jefe o de otros proyectiles
+                if (hit.collider.CompareTag("Player") ||
+                    hit.collider.CompareTag("Drop") ||
+                    hit.collider.GetComponentInParent<BossBullet>() != null ||
+                    hit.collider.GetComponentInParent<Bullet>() != null ||
+                    hit.collider.GetComponentInParent<EnemyBullet>() != null)
                 {
-                    // No hacemos nada, la bala sigue su curso
+                    continue;
                 }
-                else
+
+                impactoAplicado = true;
+                // Daño a enemigos normales
+                if (hit.collider.CompareTag("Enemy"))
                 {
-                    impactoAplicado = true;
-                    // Daño a enemigos normales
-                    if (hit.collider.CompareTag("Enemy"))
-                    {
-                        EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>();
-                        if (enemyHealth != null) enemyHealth.TakeDamage(damage);
-                    }
-                    // Daño al Jefe
-                    else if (hit.collider.CompareTag("Boss"))
-                    {
-                        BossHealth bossHealth = hit.collider.GetComponentInParent<BossHealth>();
-                        if (bossHealth != null) bossHealth.TakeDamage(damage);
-                    }
-                    
-                    // La bala choca contra un muro u otro objeto válido y se destruye
-                    Destroy(gameObject);
+                    EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>();
+                    if (enemyHealth != null) enemyHealth.TakeDamage(damage);
                 }
+                // Daño al Jefe
+                else if (hit.collider.CompareTag("Boss"))
+                {
+                    BossHealth bossHealth = hit.collider.GetComponentInParent<BossHealth>();
+                    if (bossHealth != null) bossHealth.TakeDamage(damage);
+                }
+
+                // La bala choca contra un enemigo, jefe o muro válido y se destruye
+                Destroy(gameObject);
+                break;
             }
         }
         
@@ -66,7 +70,12 @@ public class Bullet : MonoBehaviour
     // Mantenemos OnTriggerEnter2D como método de respaldo
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (impactoAplicado || collision.CompareTag("Player") || collision.CompareTag("Drop")) return;
+        if (impactoAplicado ||
+            collision.CompareTag("Player") ||
+            collision.CompareTag("Drop") ||
+            collision.GetComponentInParent<BossBullet>() != null ||
+            collision.GetComponentInParent<Bullet>() != null ||
+            collision.GetComponentInParent<EnemyBullet>() != null) return;
         impactoAplicado = true;
 
         if (collision.CompareTag("Enemy"))

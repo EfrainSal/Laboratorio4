@@ -24,10 +24,13 @@ public class ShieldAbility : MonoBehaviour
 
     private bool habilidadLista = true;
     private PlayerHealth playerHealth;
+    private WeaponManager weaponManager;
+    public bool IsShieldActive { get; private set; }
 
     private void Start()
     {
         playerHealth = GetComponent<PlayerHealth>();
+        weaponManager = GetComponent<WeaponManager>();
         if (escudoVisual != null) escudoVisual.SetActive(false);
     }
 
@@ -57,11 +60,18 @@ public class ShieldAbility : MonoBehaviour
     private IEnumerator ActivarEscudo()
     {
         habilidadLista = false;
+        IsShieldActive = true;
+        if (weaponManager == null) weaponManager = GetComponent<WeaponManager>();
+        if (weaponManager != null && !weaponManager.isUsingMelee)
+        {
+            weaponManager.EquipWeapon(true);
+        }
+
         GetComponent<AnimacionJasonDinamica>()?.ReproducirAccion("Habilidad");
 
         if (sfxSource != null && sonidoEscudo != null) sfxSource.PlayOneShot(sonidoEscudo);
         
-        playerHealth.isInvulnerable = true;
+        if (playerHealth != null) playerHealth.isInvulnerable = true;
         if (escudoVisual != null) escudoVisual.SetActive(true);
 
         // Feedback visual: La barra baja lentamente mientras el escudo está activo
@@ -74,7 +84,8 @@ public class ShieldAbility : MonoBehaviour
         }
 
         // Se apaga el escudo
-        playerHealth.isInvulnerable = false;
+        IsShieldActive = false;
+        if (playerHealth != null) playerHealth.isInvulnerable = false;
         if (escudoVisual != null) escudoVisual.SetActive(false);
 
         // --- Inicio del Cooldown ---
@@ -100,5 +111,12 @@ public class ShieldAbility : MonoBehaviour
         }
 
         habilidadLista = true;
+    }
+
+    private void OnDisable()
+    {
+        IsShieldActive = false;
+        if (playerHealth != null) playerHealth.isInvulnerable = false;
+        if (escudoVisual != null) escudoVisual.SetActive(false);
     }
 }
