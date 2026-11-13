@@ -461,7 +461,7 @@ MonoBehaviour:
   llavesCount: 0
   curaVendas: 10
   curaBotiquin: 30
-  curaEstimulante: 30
+  curaEstimulante: 100
   multiplicadorVelocidad: 1.5
   "multiplicadorDa\xF1o": 1.5
   duracionEstimulante: 5

@@ -99,11 +99,17 @@ public class EnemyHealth : MonoBehaviour
             if (muerto) return;
             muerto = true;
             StopAllCoroutines();
+            if (healthBarFill != null)
+            {
+                Canvas healthCanvas = healthBarFill.GetComponentInParent<Canvas>();
+                if (healthCanvas != null) healthCanvas.gameObject.SetActive(false);
+                else healthBarFill.gameObject.SetActive(false);
+            }
             if (enemyAI != null) enemyAI.enabled = false;
             if (meleeAI != null) meleeAI.enabled = false;
             if (rangedAI != null) rangedAI.enabled = false;
             if (rb != null) { rb.linearVelocity = Vector2.zero; rb.simulated = false; }
-            foreach (var collider in GetComponents<Collider2D>()) collider.enabled = false;
+            foreach (var collider in GetComponentsInChildren<Collider2D>()) collider.enabled = false;
             var animacion = GetComponent<AnimacionEnemigoDinamica>();
             float duracionMuerte = animacion != null ? animacion.Morir() : 0f;
             // Otorgar experiencia al jugador antes de morir

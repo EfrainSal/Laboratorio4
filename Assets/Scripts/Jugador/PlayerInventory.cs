@@ -15,7 +15,7 @@ public class PlayerInventory : MonoBehaviour
     [Header("Configuración de Curación")]
     public float curaVendas = 10f;
     public float curaBotiquin = 30f;
-    public float curaEstimulante = 30f; 
+    public float curaEstimulante = 100f;
 
     [Header("Bufo del Estimulante")]
     public float multiplicadorVelocidad = 1.5f; 
@@ -152,7 +152,7 @@ public class PlayerInventory : MonoBehaviour
             
             if (playerHealth.currentHealth < playerHealth.maxHealth)
             {
-                playerHealth.Heal(curaEstimulante);
+                playerHealth.Heal(playerHealth.maxHealth);
             }
             
             if (!estimulanteActivo)

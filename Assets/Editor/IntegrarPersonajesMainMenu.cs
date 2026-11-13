@@ -148,7 +148,13 @@ public static class IntegrarPersonajesMainMenu
         var cap = go.GetComponent<CapsuleCollider2D>(); if (cap == null) cap = go.AddComponent<CapsuleCollider2D>();
         foreach (var c in go.GetComponents<Collider2D>()) if (c != cap && !c.isTrigger) c.enabled = false;
         cap.enabled = true; cap.direction = CapsuleDirection2D.Horizontal;
-        cap.size = jugador ? new Vector2(0.44f, 0.22f) : new Vector2(0.5f, 0.24f); cap.offset = Vector2.up * cap.size.y * 0.5f;
+        cap.size = jugador ? new Vector2(0.44f, 0.22f) : new Vector2(0.32f, 0.18f); cap.offset = Vector2.up * cap.size.y * 0.5f;
+        if (!jugador)
+        {
+            var hurtbox = go.GetComponent<BoxCollider2D>(); if (hurtbox == null) hurtbox = go.AddComponent<BoxCollider2D>();
+            hurtbox.enabled = true; hurtbox.isTrigger = true;
+            hurtbox.size = new Vector2(0.55f, 0.9f); hurtbox.offset = new Vector2(0f, 0.45f);
+        }
     }
 
     [MenuItem("Laboratorio 4/Personajes/Validar prefabs")]
