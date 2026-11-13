@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     [Tooltip("El punto donde aparecerá el jugador al iniciar el nivel")]
     public Transform puntoDeInicio;
     private GameObject jugadorExistente;
+    public GameObject JugadorActual { get; private set; }
 
     public void UsarJugadorExistente(GameObject jugador)
     {
@@ -85,6 +86,7 @@ public class LevelManager : MonoBehaviour
         GameObject jugadorInstanciado = jugadorExistente != null
             ? jugadorExistente
             : Instantiate(prefabAInstanciar, puntoDeInicio.position, Quaternion.identity);
+        JugadorActual = jugadorInstanciado;
 
         // --- NUEVO: Inyectar UI a la Habilidad ---
         int idPersonaje = GameManager.Instance.personajeSeleccionado;
@@ -162,12 +164,11 @@ public class LevelManager : MonoBehaviour
 
             if (datosGuardados != null)
             {
-                salud.cargadoDesdeGuardado = true;
-                salud.currentHealth = datosGuardados.vidaActual;
+                salud.RestaurarVida(datosGuardados.vidaActual, datosGuardados.vidaMaxima);
             }
             else if (GameManager.Instance.usarDatosDeTransicion)
             {
-                salud.currentHealth = GameManager.Instance.vidaPendiente;
+                salud.RestaurarVida(GameManager.Instance.vidaPendiente, GameManager.Instance.vidaMaximaPendiente);
             }
             salud.UpdateHealthUI(); 
         }

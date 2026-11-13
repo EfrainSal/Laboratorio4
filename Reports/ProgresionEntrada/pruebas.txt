@@ -9,7 +9,7 @@ PASS Usado prefab original Spawner_lvl2
 PASS Usado prefab original Spawner_lvl3
 PASS Movimiento D responde en Entrada
 PASS 1 consume sólo venda y cura 10
-PASS 2 consume sólo adrenalina y cura 30
+PASS 2 consume sólo adrenalina y restaura toda la vida
 PASS 3 consume botiquín y cura 30
 PASS Filo reflejado conservando mango y punta
 PASS Machete mide exactamente la mitad
@@ -34,12 +34,13 @@ PASS Sprite de reposo dirección 7
 PASS Fogonazo dirección 7
 PASS Soltar clic detiene el disparo
 PASS Q cambia al machete
+PASS R inicia la recarga temporizada
 PASS R recarga el subfusil
 PASS Puerta F rechaza jugador sin tarjeta
 PASS Puerta informa que falta la tarjeta
 PASS Oleada original Spawner_lvl1 respeta cantidades
-PASS Oleada original Spawner_lvl2 respeta cantidades
 PASS Oleada original Spawner_lvl3 respeta cantidades
+PASS Oleada original Spawner_lvl2 respeta cantidades
 PASS Enemigo ajeno a spawners no cuenta para tarjeta
 PASS 9 bajas únicas no generan tarjeta; muerte duplicada no suma
 PASS Guardado de prueba cifrado correcto
@@ -56,5 +57,7 @@ PASS Transición conserva nivel y experiencia
 PASS Dr. Yiba ausente de Piso3
 PASS Nueva partida Milena usa su prefab real en Entrada
 PASS Milena comparte machete reducido y 8 fogonazos
-PASS Muerte muestra Game Over y bloquea controles
+PASS Muerte bloquea controles y abre Game Over
+PASS Game Over espera la decisión del jugador en el mapa de derrota
+PASS Reintentar en Game Over devuelve a Recepcion
 PASS Sin errores ni excepciones durante el recorrido

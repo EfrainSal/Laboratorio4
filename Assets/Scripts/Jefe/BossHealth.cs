@@ -15,7 +15,13 @@ public class BossHealth : MonoBehaviour
     public GameObject bossHealthUIContainer;
     public Image healthBarFill;
     public Image damageTrailFill;
+    [Header("Posición de la barra del jefe")]
+    public Vector2 margenBarra = new Vector2(40f, 20f);
+    public float anchoMaximoBarra = 853.398f;
+    public float separacionDelJugador = 24f;
     private BossAI bossAI;
+    private Vector2 tamanoPantalla;
+    private float anchoOriginal;
 
     private void Awake()
     {
@@ -38,7 +44,12 @@ public class BossHealth : MonoBehaviour
                 break;
             }
         }
-        if (bossHealthUIContainer != null) bossHealthUIContainer.SetActive(true);
+        if (bossHealthUIContainer != null)
+        {
+            bossHealthUIContainer.SetActive(true);
+            Canvas.ForceUpdateCanvases();
+            AcomodarBarraVida();
+        }
         ActualizarUI();
         if (damageTrailFill != null) damageTrailFill.fillAmount = 1;
     }
@@ -46,6 +57,35 @@ public class BossHealth : MonoBehaviour
     {
         if (damageTrailFill != null && healthBarFill != null && damageTrailFill.fillAmount > healthBarFill.fillAmount)
             damageTrailFill.fillAmount = Mathf.Lerp(damageTrailFill.fillAmount, healthBarFill.fillAmount, Time.deltaTime * trailSpeed);
+    }
+    private void LateUpdate()
+    {
+        if (tamanoPantalla != new Vector2(Screen.width, Screen.height)) AcomodarBarraVida();
+    }
+    public void AcomodarBarraVida()
+    {
+        if (bossHealthUIContainer == null) return;
+        var barra = bossHealthUIContainer.GetComponent<RectTransform>();
+        var padre = barra != null ? barra.parent as RectTransform : null;
+        if (padre == null) return;
+        if (anchoOriginal <= 0) anchoOriginal = Mathf.Max(1, barra.rect.width);
+        var jugador = padre.Find("HealthBarContainer") as RectTransform;
+        float disponible = padre.rect.width - margenBarra.x * 2;
+        float distanciaSuperior = margenBarra.y;
+        if (jugador != null)
+        {
+            var limitesJugador = RectTransformUtility.CalculateRelativeRectTransformBounds(padre, jugador);
+            float espacioDerecho = padre.rect.xMax - margenBarra.x - limitesJugador.max.x - separacionDelJugador;
+            if (espacioDerecho >= 320) disponible = Mathf.Min(disponible, espacioDerecho);
+            else
+                // En ventanas estrechas, colocar la barra debajo del HUD en vez de encimarla.
+                distanciaSuperior = Mathf.Max(distanciaSuperior, padre.rect.yMax - limitesJugador.min.y + separacionDelJugador);
+        }
+        barra.anchorMin = barra.anchorMax = barra.pivot = Vector2.one;
+        barra.anchoredPosition = new Vector2(-margenBarra.x, -distanciaSuperior);
+        float escala = Mathf.Min(anchoMaximoBarra, Mathf.Max(1, disponible)) / anchoOriginal;
+        barra.localScale = new Vector3(escala, escala, 1);
+        tamanoPantalla = new Vector2(Screen.width, Screen.height);
     }
     public void TakeDamage(float damageAmount)
     {

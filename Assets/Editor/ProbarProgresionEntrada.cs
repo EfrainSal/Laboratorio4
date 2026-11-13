@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
 [InitializeOnLoad]
@@ -22,6 +23,7 @@ public static class ProbarProgresionEntrada
     private static Keyboard teclado;
     private static Mouse mouse;
     private static GameObject jugador;
+    private static bool segundoPlanoAnterior;
     private static readonly List<string> resultados = new List<string>();
     private static readonly List<string> errores = new List<string>();
 
@@ -49,6 +51,8 @@ public static class ProbarProgresionEntrada
         if (!SessionState.GetBool(Clave, false)) return;
         if (estado == PlayModeStateChange.EnteredPlayMode)
         {
+            segundoPlanoAnterior = Application.runInBackground;
+            Application.runInBackground = true;
             SaveSystem.RutaDePruebas = Path.GetFullPath(Carpeta + "run.dat");
             RankingManager.RutaDePruebas = Path.GetFullPath(Carpeta + "ranking.dat");
             RankingManager.SuspenderSincronizacionAutomatica = true;
@@ -59,6 +63,7 @@ public static class ProbarProgresionEntrada
         }
         if (estado == PlayModeStateChange.ExitingPlayMode)
         {
+            Application.runInBackground = segundoPlanoAnterior;
             QuitarDispositivos();
             PlayerPrefs.SetInt("MejorPuntuacion", SessionState.GetInt(Clave + ".mejor", 0)); PlayerPrefs.Save();
             rutina = null;
@@ -153,7 +158,8 @@ public static class ProbarProgresionEntrada
         Tecla(Key.Digit1); yield return .1f; Tecla(); yield return .1f;
         Exigir(Mathf.Approximately(salud.currentHealth, 35) && inventario.vendasCount == 1 && inventario.botiquinesCount == 2, "1 consume sólo venda y cura 10");
         Tecla(Key.Digit2); yield return .1f; Tecla(); yield return .1f;
-        Exigir(Mathf.Approximately(salud.currentHealth, 65) && inventario.estimulantesCount == 1 && inventario.botiquinesCount == 2, "2 consume sólo adrenalina y cura 30");
+        Exigir(Mathf.Approximately(salud.currentHealth, salud.maxHealth) && inventario.estimulantesCount == 1 && inventario.botiquinesCount == 2, "2 consume sólo adrenalina y restaura toda la vida");
+        salud.currentHealth = 65;
         Tecla(Key.Digit3); yield return .1f; Tecla(); yield return .1f;
         Exigir(Mathf.Approximately(salud.currentHealth, 95) && inventario.botiquinesCount == 1, "3 consume botiquín y cura 30");
         var arma = jugador.GetComponent<ArmaIndependiente>();
@@ -189,14 +195,16 @@ public static class ProbarProgresionEntrada
         Tecla(Key.Q); yield return .1f; Tecla(); yield return .1f;
         Exigir(armas.isUsingMelee, "Q cambia al machete");
         Tecla(Key.Q); yield return .1f; Tecla(); yield return .1f;
-        disparo.RestaurarMunicion(1, 40); Tecla(Key.R); yield return .3f; Tecla(); yield return .2f;
+        disparo.RestaurarMunicion(1, 40); Tecla(Key.R); yield return .1f;
+        Exigir(disparo.IsReloading, "R inicia la recarga temporizada");
+        Tecla(); yield return disparo.reloadDuration + .2f;
         Exigir(disparo.currentAmmoInClip > 1 && disparo.totalAmmo < 40, "R recarga el subfusil");
         // La puerta no permite avanzar sin tarjeta, usando el input real del jugador.
         var puerta = Object.FindFirstObjectByType<PuertaNivel>();
         Posicionar(puerta.transform.position); yield return .2f;
         Tecla(Key.F); yield return .1f; Tecla(); yield return .1f;
         Exigir(SceneManager.GetActiveScene().name == destino && inventario.llavesCount == 0, "Puerta F rechaza jugador sin tarjeta");
-        Exigir(puerta.textoMensajeUI.gameObject.activeSelf, "Puerta informa que falta la tarjeta");
+        Exigir(puerta.AvisoVisible && !puerta.textoMensajeUI.gameObject.activeSelf, "Puerta informa que falta la tarjeta con el aviso de recepción");
         Posicionar(new Vector3(13, -11, 0)); yield return .1f;
         foreach (var e in Object.FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None)) Object.Destroy(e.gameObject);
         yield return .1f;
@@ -265,8 +273,19 @@ public static class ProbarProgresionEntrada
         Exigir(jugador.name.StartsWith("Player_Milena"), "Nueva partida Milena usa su prefab real en Entrada");
         Exigir(jugador.GetComponent<ArmaIndependiente>().escalaMachete == .5f && jugador.GetComponent<ArmaIndependiente>().spritesDisparo.All(s => s != null), "Milena comparte machete reducido y 8 fogonazos");
         var vida = jugador.GetComponent<PlayerHealth>(); vida.isInvulnerable = false; vida.TakeDamage(10000);
-        yield return .7f;
-        Exigir(vida.IsDead && DeathScreenController.GameplayBlocked, "Muerte muestra Game Over y bloquea controles");
+        Exigir(vida.IsDead && DeathScreenController.GameplayBlocked, "Muerte bloquea controles y abre Game Over");
+        var pantallaDerrota = Object.FindFirstObjectByType<DeathScreenController>();
+        var botonReintentar = pantallaDerrota.GetComponent<UIDocument>().rootVisualElement.Q<Button>("RetryButton");
+        float limitePantalla = Time.unscaledTime + 12;
+        while (!botonReintentar.enabledSelf && Time.unscaledTime < limitePantalla) yield return .05f;
+        Exigir(botonReintentar.enabledSelf && DeathScreenController.IsShowing && Time.timeScale == 0 && SceneManager.GetActiveScene().name == destino && !TransicionEntrePisos.EnCurso, "Game Over espera la decisión del jugador en el mapa de derrota");
+        botonReintentar.Focus(); yield return .15f;
+        // La prueba específica de derrota cubre el evento UI; aquí verificar la regresión de la partida.
+        pantallaDerrota.SendMessage("OnRetry");
+        yield return .05f;
+        float limiteDerrota = Time.unscaledTime + 10;
+        while (TransicionEntrePisos.EnCurso && Time.unscaledTime < limiteDerrota) yield return .05f;
+        Exigir(SceneManager.GetActiveScene().name == "Recepcion", "Reintentar en Game Over devuelve a Recepcion");
         Exigir(errores.Count == 0, "Sin errores ni excepciones durante el recorrido");
     }
 }

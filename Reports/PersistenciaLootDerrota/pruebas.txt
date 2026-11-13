@@ -1,0 +1,90 @@
+PASS Singleton del menú presente y persistente
+PASS Cambio aceptado a Escenario1_Entrada
+PASS Escenario1_Entrada: vida exacta 100 del personaje 0
+PASS Escenario1_Entrada: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a Piso3_V10
+PASS Piso3_V10: vida exacta 37.5 del personaje 0
+PASS Piso3_V10: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a E3_Laboratorio
+PASS E3_Laboratorio: vida exacta 100 del personaje 0
+PASS E3_Laboratorio: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a Escenario4_Jefe
+PASS Escenario4_Jefe: vida exacta 139.25 del personaje 0
+PASS Escenario4_Jefe: máximo conservado sin duplicar mejoras
+PASS Daño del prototipo descuenta vida real sin perder decimales
+PASS Cambio aceptado a Nivel1
+PASS Nivel1: vida exacta 63.25 del personaje 0
+PASS Nivel1: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a Escenario1_Entrada
+PASS Escenario1_Entrada: vida exacta 100 del personaje 1
+PASS Escenario1_Entrada: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a Piso3_V10
+PASS Piso3_V10: vida exacta 37.5 del personaje 1
+PASS Piso3_V10: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a E3_Laboratorio
+PASS E3_Laboratorio: vida exacta 100 del personaje 1
+PASS E3_Laboratorio: máximo conservado sin duplicar mejoras
+PASS Cambio aceptado a Escenario4_Jefe
+PASS Escenario4_Jefe: vida exacta 139.25 del personaje 1
+PASS Escenario4_Jefe: máximo conservado sin duplicar mejoras
+PASS Daño del prototipo descuenta vida real sin perder decimales
+PASS Cambio aceptado a Nivel1
+PASS Nivel1: vida exacta 63.25 del personaje 1
+PASS Nivel1: máximo conservado sin duplicar mejoras
+PASS Enemy_Melee: prefab de vendas conectado
+PASS Enemy_Melee: tirada de vendas independiente y sin duplicados, modo 0
+PASS Enemy_Melee: tirada original de munición, modo 0
+PASS Enemy_Melee: tirada de vendas independiente y sin duplicados, modo 1
+PASS Enemy_Melee: tirada original de munición, modo 1
+PASS Enemy_Melee: tirada de vendas independiente y sin duplicados, modo 2
+PASS Enemy_Melee: tirada original de munición, modo 2
+PASS Enemy_Melee: tirada de vendas independiente y sin duplicados, modo 3
+PASS Enemy_Melee: tirada original de munición, modo 3
+PASS Enemy_Ranged: prefab de vendas conectado
+PASS Enemy_Ranged: tirada de vendas independiente y sin duplicados, modo 0
+PASS Enemy_Ranged: tirada original de munición, modo 0
+PASS Enemy_Ranged: tirada de vendas independiente y sin duplicados, modo 1
+PASS Enemy_Ranged: tirada original de munición, modo 1
+PASS Enemy_Ranged: tirada de vendas independiente y sin duplicados, modo 2
+PASS Enemy_Ranged: tirada original de munición, modo 2
+PASS Enemy_Ranged: tirada de vendas independiente y sin duplicados, modo 3
+PASS Enemy_Ranged: tirada original de munición, modo 3
+PASS Venda dropeada se recoge físicamente una sola vez
+PASS La venda obtenida cura y se consume
+PASS Guardado conserva vida actual y máxima
+PASS Continuar acepta el guardado
+PASS Continuar no cura ni duplica mejoras de vida
+PASS Derrota se registra una vez y bloquea controles
+PASS Game Over visible y acción pausada antes de reintentar
+PASS La derrota conserva escena y resumen sin iniciar otra run
+PASS Esperar en Game Over no cambia de escena ni duplica la derrota
+PASS Sólo Reintentar inicia el fundido y bloquea dobles pulsaciones
+PASS Reintentar lleva a Recepcion con personaje 0
+PASS Nueva partida conserva personaje y reinicia piso
+PASS No se arrastran vida cero ni mejoras de la run perdida
+PASS Guardado de la run perdida eliminado
+PASS Ranking conserva la puntuación de derrota una sola vez
+PASS Recepcion recupera tiempo, input y pausa
+PASS Derrota se registra una vez y bloquea controles
+PASS Game Over visible y acción pausada antes de reintentar
+PASS La derrota conserva escena y resumen sin iniciar otra run
+PASS Esperar en Game Over no cambia de escena ni duplica la derrota
+PASS Sólo Reintentar inicia el fundido y bloquea dobles pulsaciones
+PASS Reintentar lleva a Recepcion con personaje 1
+PASS Nueva partida conserva personaje y reinicia piso
+PASS No se arrastran vida cero ni mejoras de la run perdida
+PASS Guardado de la run perdida eliminado
+PASS Ranking conserva la puntuación de derrota una sola vez
+PASS Recepcion recupera tiempo, input y pausa
+PASS Derrota se registra una vez y bloquea controles
+PASS Game Over visible y acción pausada antes de reintentar
+PASS La derrota conserva escena y resumen sin iniciar otra run
+PASS Esperar en Game Over no cambia de escena ni duplica la derrota
+PASS Sólo Reintentar inicia el fundido y bloquea dobles pulsaciones
+PASS Reintentar lleva a Recepcion desde E4
+PASS Nueva partida conserva personaje y reinicia piso
+PASS No se arrastran vida cero ni mejoras de la run perdida
+PASS Guardado de la run perdida eliminado
+PASS Ranking conserva la puntuación de derrota una sola vez
+PASS Recepcion recupera tiempo, input y pausa
+PASS Recorrido completo sin errores ni excepciones

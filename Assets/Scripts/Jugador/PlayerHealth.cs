@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
     public bool isInvulnerable = false;
     [HideInInspector] public bool cargadoDesdeGuardado = false;
+    public bool MaximoRestaurado { get; private set; }
 
     private bool isDead = false;
     private DeathCause ultimaCausa = DeathCause.Desconocida;
@@ -44,18 +45,21 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake()
     {
+        currentHealth = maxHealth;
+    }
 
+    public void RestaurarVida(float vida, float maximo = 0f)
+    {
+        // No curar ni recortar contra el máximo base antes de reaplicar las mejoras.
+        if (maximo > 0f) { maxHealth = maximo; MaximoRestaurado = true; }
+        currentHealth = Mathf.Max(0f, vida);
+        cargadoDesdeGuardado = true;
+        UpdateHealthUI();
+        if (damageTrailFill != null) damageTrailFill.fillAmount = currentHealth / maxHealth;
     }
 
     void Start()
     {
-        // ELIMINAMOS la línea "currentHealth = maxHealth;" para que no sobrescriba el guardado.
-        // La inicialización por defecto (nueva partida) ya la hace el Awake().
-        if (currentHealth == 0f)
-        {
-            currentHealth = maxHealth;
-        }
-
         UpdateHealthUI();
 
         if (damageTrailFill != null)

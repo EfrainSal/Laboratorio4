@@ -31,6 +31,15 @@ namespace Laboratorio4.Escenario4
         public bool Recibir(int danio)
         {
             if (Muerto || invulnerable || danio <= 0) return false;
+            var puente = GetComponent<VidaJugadorPrototipo>();
+            if (puente != null)
+            {
+                GetComponent<PlayerHealth>().TakeDamage(danio, DeathCause.Jefe);
+                puente.Sincronizar(); tParpadeo = .14f;
+                AlRecibir?.Invoke(danio);
+                if (actual <= 0) AlMorir?.Invoke();
+                return true;
+            }
             actual = Mathf.Max(0, actual - danio);
             tParpadeo = 0.14f;
             if (AlRecibir != null) AlRecibir(danio);

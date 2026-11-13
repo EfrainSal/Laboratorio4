@@ -31,6 +31,9 @@ public class EnemyHealth : MonoBehaviour
     [Header("Dropeo")]
     public GameObject ammoDropPrefab; 
     [Range(0f, 100f)] public float dropChance = 40f; 
+    [Tooltip("Prefab de vendas que se puede soltar además de la munición.")]
+    public GameObject vendaDropPrefab;
+    [Range(0f, 100f)] public float vendaDropChance = 20f;
     
     [Header("Experiencia")]
     public float experienciaAlMorir = 25f; // Cuánta XP da este enemigo al morir
@@ -229,11 +232,14 @@ public class EnemyHealth : MonoBehaviour
             if (ammoDropPrefab != null)
             {
                 float randomValue = Random.Range(0f, 100f);
-                if (randomValue <= dropChance)
+                if (dropChance >= 100f || randomValue < dropChance)
                 {
-                    Instantiate(ammoDropPrefab, transform.position, Quaternion.identity);
+                    Instantiate(ammoDropPrefab, transform.position + Vector3.left * .18f, Quaternion.identity);
                 }
             }
+            // Tiradas independientes: puede soltar munición, vendas, ambas o ninguna.
+            if (vendaDropPrefab != null && (vendaDropChance >= 100f || Random.Range(0f, 100f) < vendaDropChance))
+                Instantiate(vendaDropPrefab, transform.position + Vector3.right * .18f, Quaternion.identity);
 
             if (LevelManager.Instance != null)
             {

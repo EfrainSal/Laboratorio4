@@ -23,9 +23,11 @@ public class TransicionEntrePisos : MonoBehaviour
         instancia = null; EnCurso = false; EscenaDestino = null;
         EscalaTiempoAnterior = 1; BloqueoPausaAnterior = false;
     }
-    public static bool CargarEscena(string escena)
+    public static bool CargarEscena(string escena, bool conservarEstadoJugador = true)
     {
         if (EnCurso || string.IsNullOrWhiteSpace(escena) || !Application.CanStreamedLevelBeLoaded(escena)) return false;
+        if (conservarEstadoJugador && GameManager.Instance != null && GameManager.Instance.RunActiva)
+            GameManager.Instance.CapturarDatosDeTransicion();
         if (instancia == null)
         {
             var go = new GameObject("TransicionEntrePisos");

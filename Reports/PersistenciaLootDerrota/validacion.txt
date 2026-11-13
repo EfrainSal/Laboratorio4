@@ -1,0 +1,12 @@
+PASS 271 archivos preexistentes de Resources intactos: []
+PASS Escenas conservadas, incluidos los cambios abiertos del usuario: []
+PASS Vendas reutiliza el pickup de inventario existente
+PASS Enemy: vendas al 20 % y munición conservada
+PASS Enemy_Melee: vendas al 20 % y munición conservada
+PASS Enemy_Ranged: vendas al 20 % y munición conservada
+PASS Estado de vida vive en el singleton persistente
+PASS Los cambios de piso capturan los datos antes de cargar
+PASS La derrota muestra Game Over y sólo Reintentar reinicia en Recepcion
+PASS Recepcion habilitada en Build Settings
+PASS Prueba Play de persistencia, drops y retorno tras derrota aprobada
+PASS Regresión de F, tarjeta, transferencia de vida y derrota aprobada

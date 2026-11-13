@@ -235,7 +235,7 @@ public static class ProbarInicioRecepcion
             }
             Exigir(puerta.JugadorEnRango && jugador.GetComponent<PlayerInventory>().llavesCount == 0, "Panel accesible antes de recoger la tarjeta");
             Tecla(Key.F); yield return .15f; Tecla(); yield return .1f;
-            Exigir(SceneManager.GetActiveScene().name == "Recepcion" && puerta.textoMensajeUI.gameObject.activeSelf,
+            Exigir(SceneManager.GetActiveScene().name == "Recepcion" && puerta.AvisoVisible && !puerta.textoMensajeUI.gameObject.activeSelf,
                 "F sin tarjeta impide salir y muestra el aviso");
             float zoom = Camera.main.orthographicSize; Camera.main.orthographicSize = 2.5f; yield return .35f;
             ScreenCapture.CaptureScreenshot("Reports/PanelRecepcion/puerta-y-tarjeta-" + id + ".png"); yield return .15f;
