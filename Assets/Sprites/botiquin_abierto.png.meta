@@ -1,0 +1,1354 @@
+fileFormatVersion: 2
+guid: 4e35ac77fc5cb1e4fb05372e164a6ba9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3548039926052782570
+    second: botiquin_abierto_0
+  - first:
+      213: -6024577924682206341
+    second: botiquin_abierto_1
+  - first:
+      213: 1273842086421232288
+    second: botiquin_abierto_2
+  - first:
+      213: -8375521387730637572
+    second: botiquin_abierto_3
+  - first:
+      213: 6593421565760167369
+    second: botiquin_abierto_4
+  - first:
+      213: 2084794909350193120
+    second: botiquin_abierto_5
+  - first:
+      213: -2199799619122928442
+    second: botiquin_abierto_6
+  - first:
+      213: 3341127271084196742
+    second: botiquin_abierto_7
+  - first:
+      213: -1665809929978676675
+    second: botiquin_abierto_8
+  - first:
+      213: -4113949366475546981
+    second: botiquin_abierto_9
+  - first:
+      213: 8866687651286198904
+    second: botiquin_abierto_10
+  - first:
+      213: 7049499109338610478
+    second: botiquin_abierto_11
+  - first:
+      213: -106319167790086489
+    second: botiquin_abierto_12
+  - first:
+      213: -5629464077245108212
+    second: botiquin_abierto_13
+  - first:
+      213: -1422711748666243364
+    second: botiquin_abierto_14
+  - first:
+      213: 7691717646687963277
+    second: botiquin_abierto_15
+  - first:
+      213: -2341225775859079493
+    second: botiquin_abierto_16
+  - first:
+      213: 3913931732388442223
+    second: botiquin_abierto_17
+  - first:
+      213: 569028539360664180
+    second: botiquin_abierto_18
+  - first:
+      213: -7146357008109776890
+    second: botiquin_abierto_19
+  - first:
+      213: -7082658502184361045
+    second: botiquin_abierto_20
+  - first:
+      213: -3172711159650369269
+    second: botiquin_abierto_21
+  - first:
+      213: -129582545823097568
+    second: botiquin_abierto_22
+  - first:
+      213: -4272547888729119203
+    second: botiquin_abierto_23
+  - first:
+      213: -4940286735065842499
+    second: botiquin_abierto_24
+  - first:
+      213: -6863606781612778800
+    second: botiquin_abierto_25
+  - first:
+      213: -4570153469045285077
+    second: botiquin_abierto_26
+  - first:
+      213: 5525115594663421273
+    second: botiquin_abierto_27
+  - first:
+      213: 908162411061088784
+    second: botiquin_abierto_28
+  - first:
+      213: 4185040847558218140
+    second: botiquin_abierto_29
+  - first:
+      213: 7376312896673732075
+    second: botiquin_abierto_30
+  - first:
+      213: -3574634748767183843
+    second: botiquin_abierto_31
+  - first:
+      213: 3449032684410212374
+    second: botiquin_abierto_32
+  - first:
+      213: 3839970769379541514
+    second: botiquin_abierto_33
+  - first:
+      213: 5047898060032214862
+    second: botiquin_abierto_34
+  - first:
+      213: -8101108905331257887
+    second: botiquin_abierto_35
+  - first:
+      213: 86221693832906160
+    second: botiquin_abierto_36
+  - first:
+      213: 3539016085960036402
+    second: botiquin_abierto_37
+  - first:
+      213: -5473533022473050621
+    second: botiquin_abierto_38
+  - first:
+      213: 5336727516073571675
+    second: botiquin_abierto_39
+  - first:
+      213: -1566669606344530182
+    second: botiquin_abierto_40
+  - first:
+      213: -2681892339689985851
+    second: botiquin_abierto_41
+  - first:
+      213: 5720846807771199614
+    second: botiquin_abierto_42
+  - first:
+      213: 3124250307111209374
+    second: botiquin_abierto_43
+  - first:
+      213: -8914014566489183797
+    second: botiquin_abierto_44
+  - first:
+      213: -3097288173280140837
+    second: botiquin_abierto_45
+  - first:
+      213: -687632858804009267
+    second: botiquin_abierto_46
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: botiquin_abierto_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 15
+        width: 1165
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae18741b38b2d3130800000000000000
+      internalID: 3548039926052782570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 984
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7338ad0c46646ca0800000000000000
+      internalID: -6024577924682206341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_2
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 884
+        width: 67
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa7415e0a89da110800000000000000
+      internalID: 1273842086421232288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 912
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfce0ab5cab24cb80800000000000000
+      internalID: -8375521387730637572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_4
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 894
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cdd8890bf9808b50800000000000000
+      internalID: 6593421565760167369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_5
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 834
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e76c51acedaeec10800000000000000
+      internalID: 2084794909350193120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_6
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 824
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c46325c6edb871e0800000000000000
+      internalID: -2199799619122928442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_7
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 839
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 683085e0d811e5e20800000000000000
+      internalID: 3341127271084196742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_8
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 817
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a7d4cc1bad1e8e0800000000000000
+      internalID: -1665809929978676675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_9
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 789
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e184b09d058e6c0800000000000000
+      internalID: -4113949366475546981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_10
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 816
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87aa14de07dcc0b70800000000000000
+      internalID: 8866687651286198904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 784
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b7f80171ad4d160800000000000000
+      internalID: 7049499109338610478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_12
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 782
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a68e0bb747468ef0800000000000000
+      internalID: -106319167790086489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_13
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 785
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00bbf77f3020e1b0800000000000000
+      internalID: -5629464077245108212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_14
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 770
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd649f2d333814ce0800000000000000
+      internalID: -1422711748666243364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 696
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d88807b72787eba60800000000000000
+      internalID: 7691717646687963277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_16
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 704
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb66eeaaf8b428fd0800000000000000
+      internalID: -2341225775859079493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_17
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 680
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6074287c24115630800000000000000
+      internalID: 3913931732388442223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_18
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 640
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ad6a3117895e700800000000000000
+      internalID: 569028539360664180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_19
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 645
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6005e750a2a03dc90800000000000000
+      internalID: -7146357008109776890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_20
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 624
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3a6e72e9755bd90800000000000000
+      internalID: -7082658502184361045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_21
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 599
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b014f12920448f3d0800000000000000
+      internalID: -3172711159650369269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_22
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 545
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d9f137c51a33ef0800000000000000
+      internalID: -129582545823097568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 571
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16a476055cd4b4c0800000000000000
+      internalID: -4272547888729119203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_24
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 549
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc73d3a363907bb0800000000000000
+      internalID: -4940286735065842499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_25
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 527
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da12004ff19fb0a0800000000000000
+      internalID: -6863606781612778800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 513
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f598432ad8390c0800000000000000
+      internalID: -4570153469045285077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_27
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 517
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95562ea2c572dac40800000000000000
+      internalID: 5525115594663421273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_28
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 279
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01298a5b6e07a9c00800000000000000
+      internalID: 908162411061088784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_29
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 199
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9115314a70441a30800000000000000
+      internalID: 4185040847558218140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 87
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5de568f7ded5660800000000000000
+      internalID: 7376312896673732075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_31
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 145
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1cd6fd92a8546ec0800000000000000
+      internalID: -3574634748767183843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_32
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 59
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6109bf4e3fc6ddf20800000000000000
+      internalID: 3449032684410212374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_33
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 31
+        width: 46
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0240c8d1115a4530800000000000000
+      internalID: 3839970769379541514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_34
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 21
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e478a9a6a8cbd0640800000000000000
+      internalID: 5047898060032214862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_35
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 47
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed0af24f54139f80800000000000000
+      internalID: -8101108905331257887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_36
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 34
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b5c7d87c22523100800000000000000
+      internalID: 86221693832906160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_37
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 33
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2309a02316c1d1130800000000000000
+      internalID: 3539016085960036402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_38
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 39
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306af1157ba1a04b0800000000000000
+      internalID: -5473533022473050621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_39
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 33
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b553e92966ddf0a40800000000000000
+      internalID: 5336727516073571675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_40
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 33
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6ee692b42124ae0800000000000000
+      internalID: -1566669606344530182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_41
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 33
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8efe6502108cad0800000000000000
+      internalID: -2681892339689985851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_42
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 31
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7831af7cd7846f40800000000000000
+      internalID: 5720846807771199614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_43
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 31
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99c4c0f9119b5b20800000000000000
+      internalID: 3124250307111209374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_44
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 35
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc921c1fafe0b4480800000000000000
+      internalID: -8914014566489183797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_45
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 31
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd16e9801d83405d0800000000000000
+      internalID: -3097288173280140837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botiquin_abierto_46
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 15
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6c913ee890576f0800000000000000
+      internalID: -687632858804009267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      botiquin_abierto_0: 3548039926052782570
+      botiquin_abierto_1: -6024577924682206341
+      botiquin_abierto_10: 8866687651286198904
+      botiquin_abierto_11: 7049499109338610478
+      botiquin_abierto_12: -106319167790086489
+      botiquin_abierto_13: -5629464077245108212
+      botiquin_abierto_14: -1422711748666243364
+      botiquin_abierto_15: 7691717646687963277
+      botiquin_abierto_16: -2341225775859079493
+      botiquin_abierto_17: 3913931732388442223
+      botiquin_abierto_18: 569028539360664180
+      botiquin_abierto_19: -7146357008109776890
+      botiquin_abierto_2: 1273842086421232288
+      botiquin_abierto_20: -7082658502184361045
+      botiquin_abierto_21: -3172711159650369269
+      botiquin_abierto_22: -129582545823097568
+      botiquin_abierto_23: -4272547888729119203
+      botiquin_abierto_24: -4940286735065842499
+      botiquin_abierto_25: -6863606781612778800
+      botiquin_abierto_26: -4570153469045285077
+      botiquin_abierto_27: 5525115594663421273
+      botiquin_abierto_28: 908162411061088784
+      botiquin_abierto_29: 4185040847558218140
+      botiquin_abierto_3: -8375521387730637572
+      botiquin_abierto_30: 7376312896673732075
+      botiquin_abierto_31: -3574634748767183843
+      botiquin_abierto_32: 3449032684410212374
+      botiquin_abierto_33: 3839970769379541514
+      botiquin_abierto_34: 5047898060032214862
+      botiquin_abierto_35: -8101108905331257887
+      botiquin_abierto_36: 86221693832906160
+      botiquin_abierto_37: 3539016085960036402
+      botiquin_abierto_38: -5473533022473050621
+      botiquin_abierto_39: 5336727516073571675
+      botiquin_abierto_4: 6593421565760167369
+      botiquin_abierto_40: -1566669606344530182
+      botiquin_abierto_41: -2681892339689985851
+      botiquin_abierto_42: 5720846807771199614
+      botiquin_abierto_43: 3124250307111209374
+      botiquin_abierto_44: -8914014566489183797
+      botiquin_abierto_45: -3097288173280140837
+      botiquin_abierto_46: -687632858804009267
+      botiquin_abierto_5: 2084794909350193120
+      botiquin_abierto_6: -2199799619122928442
+      botiquin_abierto_7: 3341127271084196742
+      botiquin_abierto_8: -1665809929978676675
+      botiquin_abierto_9: -4113949366475546981
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

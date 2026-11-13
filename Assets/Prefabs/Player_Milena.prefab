@@ -512,6 +512,9 @@ MonoBehaviour:
   ammoUI: {fileID: 0}
   macheteIcon: {fileID: 0}
   subfusilIcon: {fileID: 0}
+  customCursor: {fileID: 0}
+  spriteCursorMachete: {fileID: -3544453155671468836, guid: 7f4fa2d87309f1949bbac8b900d48404, type: 3}
+  spriteCursorSubfusil: {fileID: -5657078978471054008, guid: 02620e1569aafb24ca0e212916a44709, type: 3}
   isUsingMelee: 1
 --- !u!114 &2351459723101302582
 MonoBehaviour:

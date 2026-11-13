@@ -36,6 +36,13 @@ public class PlayerHealth : MonoBehaviour
     public float flashSpeed = 1.5f;
     public float maxFlashAlpha = 0.4f;
 
+    [Header("Feedback de Impacto")]
+    public Color flashColor = Color.red;
+    public float flashDuration = 0.15f;
+
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
+
     [Header("Al morir")]
     [Tooltip("Activo: los enemigos se destruyen al morir. Desactivado: se quedan congelados en la escena y se ven detrás del desenfoque de la pantalla de muerte.")]
     public bool destruirEnemigosAlMorir = false;
@@ -54,6 +61,12 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth == 0f)
         {
             currentHealth = maxHealth;
+        }
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) 
+        {
+            originalColor = spriteRenderer.color;
         }
 
         UpdateHealthUI();
@@ -98,6 +111,12 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damageAmount, DeathCause causa = DeathCause.Desconocida)
     {
         if (isDead || isInvulnerable) return;   // muerto o con escudo: ignoramos el daño
+
+        if (spriteRenderer != null) 
+        {
+            StartCoroutine(FlashRoutine());
+        }
+
 
         ultimaCausa = causa;
 
@@ -217,4 +236,12 @@ public class PlayerHealth : MonoBehaviour
             Debug.LogWarning("No hay GameManager en la escena: no se mostrará la pantalla de muerte. Inicia el juego desde el Menú Principal.");
         }
     }
+
+    private System.Collections.IEnumerator FlashRoutine()
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
+    }
+
 }

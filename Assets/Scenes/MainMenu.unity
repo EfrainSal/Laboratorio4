@@ -329,7 +329,7 @@ MonoBehaviour:
   _videoSpeed: 0.5
   _mixer: {fileID: 24100000, guid: 9b3863c0db5669c46afbae5f3a72478c, type: 2}
   _sfxPreview: {fileID: 1843314653}
-  _gameSceneName: Piso3_V10
+  _gameSceneName: Debugscene
   _characterSprites:
   - {fileID: 21300000, guid: 0a3edacca786b6f42b9240fd21612f9d, type: 3}
   - {fileID: 21300000, guid: dba709c408e792e4698b1fe4c206efa4, type: 3}

@@ -14,7 +14,8 @@ public class EnemyHealth : MonoBehaviour
     public float knockbackTime = 0.2f; 
 
     private Rigidbody2D rb;
-    private EnemyAI enemyAI;
+    private MeleeEnemyAI meleeAI;
+    private RangedEnemyAI rangedAI;
     private Transform player;
 
     [Header("Dropeo")]
@@ -30,16 +31,29 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip sfxSpawnOcio;  // Asigna: Monstruo_Grunido.mp3
     public AudioClip sfxMuerte;     // Asigna: Muerte_Enemigo.ogg
 
+    [Header("Feedback Visual")]
+    public Color flashColor = Color.red;
+    public float flashDuration = 0.15f;
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
+
     void Start()
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
-        enemyAI = GetComponent<EnemyAI>();
+        meleeAI = GetComponent<MeleeEnemyAI>();
+        rangedAI = GetComponent<RangedEnemyAI>();
         
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) player = playerObj.transform;
 
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null) 
+        {
+            originalColor = spriteRenderer.color;
+        }
         
         // Evita que 7 enemigos suenen en el mismo milisegundo al spawnear
         StartCoroutine(ReproducirSonidoSpawnConRetraso());
@@ -51,6 +65,11 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damageAmount)
     {
         currentHealth -= damageAmount;
+
+        if (spriteRenderer != null) 
+        {
+            StartCoroutine(FlashRoutine());
+        }
 
         ReproducirSFX(sfxDanio, true);
         
@@ -71,13 +90,22 @@ public class EnemyHealth : MonoBehaviour
 
     private IEnumerator ApplyKnockback()
     {
-        if (enemyAI != null && rb != null && player != null)
+        if (rb != null && player != null)
         {
-            enemyAI.isKnockedBack = true;
+
+            if (meleeAI != null) meleeAI.isKnockedBack = true;
+            if (rangedAI != null) rangedAI.isKnockedBack = true;
             Vector2 knockbackDirection = (transform.position - player.position).normalized;
             rb.linearVelocity = knockbackDirection * knockbackForce;
             yield return new WaitForSeconds(knockbackTime);
-            enemyAI.isKnockedBack = false;
+
+            // Detiene el empuje
+            rb.linearVelocity = Vector2.zero;
+
+            // Restaura el control de la IA
+            if (meleeAI != null) meleeAI.isKnockedBack = false;
+            if (rangedAI != null) rangedAI.isKnockedBack = false;
+            
         }
     }
 
@@ -159,5 +187,12 @@ public class EnemyHealth : MonoBehaviour
             audioSource.pitch = variarPitch ? Random.Range(0.85f, 1.15f) : 1f;
             audioSource.PlayOneShot(clip);
         }
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(flashDuration);
+        spriteRenderer.color = originalColor;
     }
 }
