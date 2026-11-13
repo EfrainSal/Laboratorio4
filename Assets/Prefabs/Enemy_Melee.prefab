@@ -270,6 +270,9 @@ GameObject:
   - component: {fileID: 6454223911596055069}
   - component: {fileID: 1297222702079749756}
   - component: {fileID: 3816331306037110208}
+  - component: {fileID: 6592166765224185725}
+  - component: {fileID: 4271315882144789644}
+  - component: {fileID: 3908816651859699152}
   m_Layer: 6
   m_Name: Enemy_Melee
   m_TagString: Enemy
@@ -340,14 +343,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -419
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 966837f52c332bb4bb3735e49f91e39c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b98fbd433b8c6a468b180120c087b4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.96000004, y: 0.96000004}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -378,7 +381,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5073587994316777686
 MonoBehaviour:
@@ -420,6 +423,8 @@ MonoBehaviour:
   capaMuros:
     serializedVersion: 2
     m_Bits: 256
+  wobbleSpeed: 5
+  wobbleAmount: 0.4
   patrolSpeed: 1
   patrolRadius: 4
   patrolWaitTime: 2
@@ -573,6 +578,46 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.45000005}
-  m_Size: {x: 0.96000004, y: 0.96000004}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0.12}
+  m_Size: {x: 0.5, y: 0.24}
+  m_Direction: 1
+--- !u!114 &6592166765224185725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898294941097351476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3830bcaae45f2db49a5d03cde4e3e024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Laboratorio4.Animacion.AnimadorSprites8Direcciones
+  biblioteca: {fileID: 11400000, guid: cfde7175dd05df848b725753066d9746, type: 2}
+--- !u!114 &4271315882144789644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898294941097351476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a973efdb263bc4b9230963d2dc6966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaboratorioYiba.Piso3V10.Piso3V10OrdenVisual
+  dinamico: 1
+  desfase: 0
+--- !u!114 &3908816651859699152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898294941097351476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5df9404978a2149ad008d0b48dabb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RetroalimentacionDano
+  duracionFlash: 0.18

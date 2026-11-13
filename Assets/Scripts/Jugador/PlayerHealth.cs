@@ -97,13 +97,14 @@ public class PlayerHealth : MonoBehaviour
     /// <param name="causa">Qué te está golpeando; define el mensaje de la pantalla de muerte.</param>
     public void TakeDamage(float damageAmount, DeathCause causa = DeathCause.Desconocida)
     {
-        if (isDead || isInvulnerable) return;   // muerto o con escudo: ignoramos el daño
+        if (isDead || isInvulnerable || damageAmount <= 0f) return;
 
         ultimaCausa = causa;
 
         // El daño se aplica UNA sola vez, ya reducido por la defensa (con su tope máximo)
         float defensa = Mathf.Clamp(defensaPorcentual, 0f, defensaMaxima);
         float dañoFinal = damageAmount * (1f - defensa / 100f);
+        GetComponent<RetroalimentacionDano>()?.Mostrar(Mathf.Min(currentHealth, dañoFinal), true);
 
         currentHealth = Mathf.Clamp(currentHealth - dañoFinal, 0f, maxHealth);
         UpdateHealthUI();
@@ -150,6 +151,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        GetComponent<AnimacionJasonDinamica>()?.Morir();
         Debug.Log($"¡El jugador ha muerto! Causa: {ultimaCausa}");
 
         // 1. Limpiar pantalla roja
@@ -167,7 +169,9 @@ public class PlayerHealth : MonoBehaviour
         // Desactivamos el resto de scripts del jugador, pero NO este (su Update anima la barra roja)
         foreach (MonoBehaviour behaviour in GetComponents<MonoBehaviour>())
         {
-            if (behaviour != this) behaviour.enabled = false;
+            if (behaviour != this && !(behaviour is AnimacionJasonDinamica)
+                && !(behaviour is RetroalimentacionDano)
+                && !(behaviour is Laboratorio4.Animacion.AnimadorSprites8Direcciones)) behaviour.enabled = false;
         }
 
         // 3. Enemigos: destruirlos o congelarlos
@@ -188,11 +192,8 @@ public class PlayerHealth : MonoBehaviour
         }
 
         // 4. Desactivar el spawner
-        EnemySpawner spawner = FindAnyObjectByType<EnemySpawner>();
-        if (spawner != null)
-        {
+        foreach (EnemySpawner spawner in FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None))
             spawner.enabled = false;
-        }
 
         // 5. Simular la muerte sin desactivar el GameObject (así sigue el Update de la barra roja)
         if (ocultarSpriteAlMorir)

@@ -1,0 +1,77 @@
+Pruebas desde MainMenu. Guardado aislado dentro de Reports/Gameplay.
+
+JASON: PASS
+PASS Arranque desde MainMenu
+PASS Un solo jugador activo y un solo spawneo de jugador
+PASS Personaje elegido conservado
+PASS LevelManager conecta el HUD de Debugscene al jugador existente
+PASS HUD de vida visible
+PASS La barra de vida responde al dano real
+PASS Texto de vida actualizado
+PASS Sin sprites de disparo del personaje
+PASS Arma como objeto independiente del cuerpo
+PASS Mira blanca generada por codigo y activa
+PASS Dispositivo de mouse disponible
+PASS Apuntado hacia la derecha sin volteo incorrecto
+PASS Arma situada a la altura de la cadera
+PASS Dispositivo de mouse disponible
+PASS Apuntado izquierdo conserva el arma derecha mediante flip vertical
+PASS Cambio a machete conserva orientacion y combate existentes
+PASS Cambio de vuelta al subfusil restaura el arma visible
+PASS Disparo consume municion desde la boca del arma independiente
+PASS El disparo no cambia los sprites del cuerpo
+PASS Pausa restaura el cursor para la interfaz
+PASS Tres spawners originales con ambas variantes de Sorbo
+PASS EnemySpawner activa una oleada al entrar en su radio
+PASS Spawn registra la activacion en LevelManager
+PASS Cooldown impide oleadas inmediatas
+PASS El spawner original vuelve a generar al vencer su cooldown
+PASS La muerte real dispara Game Over mediante GameManager
+PASS La muerte detiene todos los spawners
+PASS Muerte consume solo el guardado aislado de prueba
+PASS Pantalla Game Over visible y juego congelado
+PASS Game Over oculta HUD, arma y mira del gameplay
+PASS Botones Reintentar y Menu habilitados
+PASS Reintentar conserva el personaje sin duplicarlo
+PASS Reintentar restaura vida, HUD y control del juego
+PASS Reintentar restaura la mira blanca
+PASS Game Over vuelve al MainMenu sin dejar el juego pausado
+PASS Flujo completo sin errores ni excepciones
+
+MILENA: PASS
+PASS Arranque desde MainMenu
+PASS Un solo jugador activo y un solo spawneo de jugador
+PASS Personaje elegido conservado
+PASS LevelManager conecta el HUD de Debugscene al jugador existente
+PASS HUD de vida visible
+PASS La barra de vida responde al dano real
+PASS Texto de vida actualizado
+PASS Sin sprites de disparo del personaje
+PASS Arma como objeto independiente del cuerpo
+PASS Mira blanca generada por codigo y activa
+PASS Dispositivo de mouse disponible
+PASS Apuntado hacia la derecha sin volteo incorrecto
+PASS Arma situada a la altura de la cadera
+PASS Dispositivo de mouse disponible
+PASS Apuntado izquierdo conserva el arma derecha mediante flip vertical
+PASS Cambio a machete conserva orientacion y combate existentes
+PASS Cambio de vuelta al subfusil restaura el arma visible
+PASS Disparo consume municion desde la boca del arma independiente
+PASS El disparo no cambia los sprites del cuerpo
+PASS Pausa restaura el cursor para la interfaz
+PASS Tres spawners originales con ambas variantes de Sorbo
+PASS EnemySpawner activa una oleada al entrar en su radio
+PASS Spawn registra la activacion en LevelManager
+PASS Cooldown impide oleadas inmediatas
+PASS El spawner original vuelve a generar al vencer su cooldown
+PASS La muerte real dispara Game Over mediante GameManager
+PASS La muerte detiene todos los spawners
+PASS Muerte consume solo el guardado aislado de prueba
+PASS Pantalla Game Over visible y juego congelado
+PASS Game Over oculta HUD, arma y mira del gameplay
+PASS Botones Reintentar y Menu habilitados
+PASS Reintentar conserva el personaje sin duplicarlo
+PASS Reintentar restaura vida, HUD y control del juego
+PASS Reintentar restaura la mira blanca
+PASS Game Over vuelve al MainMenu sin dejar el juego pausado
+PASS Flujo completo sin errores ni excepciones

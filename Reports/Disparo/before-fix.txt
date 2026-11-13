@@ -1,0 +1,6 @@
+RESULTADO: FAIL
+PASS Jason: Accion Attack original de tipo Button
+PASS Jason: Sin clic no dispara
+PASS Jason: Mantener clic genera disparos a la cadencia configurada
+PASS Jason: La accion reconoce la liberacion del clic
+FAIL Soltar clic detiene todos los disparos siguientes (municion=25, esperada=27)

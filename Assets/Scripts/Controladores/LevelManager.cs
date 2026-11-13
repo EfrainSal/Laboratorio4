@@ -9,6 +9,12 @@ public class LevelManager : MonoBehaviour
     [Header("Spawneo del Jugador")]
     [Tooltip("El punto donde aparecerá el jugador al iniciar el nivel")]
     public Transform puntoDeInicio;
+    private GameObject jugadorExistente;
+
+    public void UsarJugadorExistente(GameObject jugador)
+    {
+        jugadorExistente = jugador;
+    }
 
     [Header("Referencias UI - Inventario")]
     public TextMeshProUGUI textoVendasUI;
@@ -30,6 +36,9 @@ public class LevelManager : MonoBehaviour
     [Header("Condiciones del Piso")]
     [SerializeField] private int enemigosParaAvanzar = 10;
     [SerializeField] private int spawnersRequeridos = 3;
+    [SerializeField] private bool contarSoloEnemigosDeSpawners;
+    public int EnemigosDerrotados => enemigosDerrotados;
+    public bool TarjetaGenerada => llaveDropeada;
     
     [Header("Objetos de Progresión")]
     [SerializeField] private GameObject llavePrefab;
@@ -73,7 +82,9 @@ public class LevelManager : MonoBehaviour
 
         // 1. Instanciar al jugador
         GameObject prefabAInstanciar = GameManager.Instance.ObtenerPrefabJugador();
-        GameObject jugadorInstanciado = Instantiate(prefabAInstanciar, puntoDeInicio.position, Quaternion.identity);
+        GameObject jugadorInstanciado = jugadorExistente != null
+            ? jugadorExistente
+            : Instantiate(prefabAInstanciar, puntoDeInicio.position, Quaternion.identity);
 
         // --- NUEVO: Inyectar UI a la Habilidad ---
         int idPersonaje = GameManager.Instance.personajeSeleccionado;
@@ -102,6 +113,10 @@ public class LevelManager : MonoBehaviour
         SaveData datosGuardados = GameManager.Instance.DatosCargados;
         if (datosGuardados != null)
         {
+            enemigosDerrotados = datosGuardados.enemigosDerrotadosPiso;
+            // Si no se recogió antes de guardar, permitir que el siguiente Sorbo la vuelva a soltar.
+            llaveDropeada = datosGuardados.tarjetaGenerada && datosGuardados.llavesCount > 0;
+            VerificarCondiciones();
             // Mover al jugador a donde estaba al guardar
             jugadorInstanciado.transform.position = new Vector3(datosGuardados.posicionX, datosGuardados.posicionY, 0f);
         }
@@ -166,7 +181,7 @@ public class LevelManager : MonoBehaviour
             armas.subfusilIcon = subfusilIconGO;
             armas.ammoUI = ammoUIGO;
             
-            armas.EquipWeapon(true);
+            armas.EquipWeapon(armas.isUsingMelee);
         }
 
         PlayerShooting disparo = jugadorInstanciado.GetComponent<PlayerShooting>();
@@ -175,13 +190,11 @@ public class LevelManager : MonoBehaviour
             disparo.ammoText = ammoTextUI;
             if (datosGuardados != null)
             {
-                disparo.currentAmmoInClip = datosGuardados.currentAmmoInClip;
-                disparo.totalAmmo = datosGuardados.totalAmmo;
+                disparo.RestaurarMunicion(datosGuardados.currentAmmoInClip, datosGuardados.totalAmmo);
             }
             else if (GameManager.Instance.usarDatosDeTransicion)
             {
-                disparo.currentAmmoInClip = GameManager.Instance.municionCargadorPendiente;
-                disparo.totalAmmo = GameManager.Instance.municionTotalPendiente;
+                disparo.RestaurarMunicion(GameManager.Instance.municionCargadorPendiente, GameManager.Instance.municionTotalPendiente);
             }
             disparo.UpdateAmmoUI();
         }
@@ -193,14 +206,13 @@ public class LevelManager : MonoBehaviour
             if (datosGuardados != null)
             {
                 exp.puntosDeMejora = datosGuardados.puntosDeMejora;
+                exp.RestaurarProgreso(datosGuardados.nivelJugador, datosGuardados.experienciaJugador);
             }
             else if (GameManager.Instance.usarDatosDeTransicion)
             {
                 exp.puntosDeMejora = GameManager.Instance.puntosDeMejoraPendientes;
+                exp.RestaurarProgreso(GameManager.Instance.nivelActualPendiente, GameManager.Instance.expActualPendiente);
                 
-                // Si decidiste pasar también el nivel y experiencia de la barra, descomenta:
-                // exp.nivelActual = GameManager.Instance.nivelActualPendiente;
-                // exp.experienciaActual = GameManager.Instance.expActualPendiente;
             }
         }
 
@@ -213,8 +225,9 @@ public class LevelManager : MonoBehaviour
         GameManager.Instance.usarDatosDeTransicion = false;
     }
 
-    public void RegistrarEnemigoDerrotado(Vector3 posicionMuerte)
+    public void RegistrarEnemigoDerrotado(Vector3 posicionMuerte, EnemySpawner origen = null)
     {
+        if (contarSoloEnemigosDeSpawners && origen == null) return;
         enemigosDerrotados++;
         VerificarCondiciones();
 
@@ -237,7 +250,7 @@ public class LevelManager : MonoBehaviour
         if (!condicionesCumplidas && enemigosDerrotados >= enemigosParaAvanzar && spawnersActivados >= spawnersRequeridos)
         {
             condicionesCumplidas = true;
-            Debug.Log("Cuota alcanzada. El próximo enemigo derrotado soltará la llave.");
+            Debug.Log("Cuota alcanzada. Este enemigo soltará la Tarjeta de Acceso.");
         }
     }
 

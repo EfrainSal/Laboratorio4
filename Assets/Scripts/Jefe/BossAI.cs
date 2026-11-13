@@ -34,6 +34,13 @@ public class BossAI : MonoBehaviour
     private Transform player;
     private Rigidbody2D rb;
     private float zPosition;
+    private AnimacionJefeDinamica animacion;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animacion = GetComponent<AnimacionJefeDinamica>();
+    }
 
     void Start()
     {
@@ -47,6 +54,11 @@ public class BossAI : MonoBehaviour
 
     void FixedUpdate()
     {
+    if (DeathScreenController.GameplayBlocked)
+    {
+        rb.linearVelocity = Vector2.zero;
+        return;
+    }
     // Congelar posición en Z
     transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
 
@@ -86,7 +98,7 @@ public class BossAI : MonoBehaviour
 
     public void CambiarFase(int nuevaFase)
     {
-        CurrentPhase = nuevaFase;
+        CurrentPhase = Mathf.Clamp(nuevaFase, 1, 3);
         // Opcional: Añadir un rugido o cambio de color aquí
         Debug.Log("¡El Jefe ha entrado en la Fase " + nuevaFase + "!");
     }
@@ -145,6 +157,7 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator EjecutarZarpazo(float damage, float knockback, Color telegraphColor)
     {
+        animacion?.ComenzarAccion("Ataque", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
         // Feedback visual breve antes de pegar
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         Color originalColor = sr.color;
@@ -153,14 +166,14 @@ public class BossAI : MonoBehaviour
         yield return new WaitForSeconds(0.4f); // Tiempo de anticipación del golpe
 
         // Re-comprobar distancia para ver si el jugador lo esquivó
-        if (player != null && Vector2.Distance(transform.position, player.position) <= attackRange * 1.5f)
+        if (player != null && !DeathScreenController.GameplayBlocked && Vector2.Distance(transform.position, player.position) <= attackRange * 1.5f)
         {
             PlayerHealth pHealth = player.GetComponent<PlayerHealth>();
             Rigidbody2D pRb = player.GetComponent<Rigidbody2D>();
 
             if (pHealth != null)
             {
-                pHealth.TakeDamage(damage, DeathCause.Mutante);
+                pHealth.TakeDamage(damage, DeathCause.Jefe);
                 if (pRb != null)
                 {
                     Vector2 pushDir = (player.position - transform.position).normalized;
@@ -175,10 +188,17 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator EjecutarBulletHell()
     {
+        animacion?.ComenzarAccion("BolaDePoder", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
         // Carga energía por 1 segundo
         yield return new WaitForSeconds(1f);
 
-        float angleStep = 360f / bulletsAmount;
+        if (DeathScreenController.GameplayBlocked || bossBulletPrefab == null || firePoint == null)
+        {
+            TerminarAtaque();
+            yield break;
+        }
+
+        float angleStep = 360f / Mathf.Max(1, bulletsAmount);
         float currentAngle = 0f;
 
         for (int i = 0; i < bulletsAmount; i++)
@@ -195,8 +215,15 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator EjecutarInvocacion()
     {
+        animacion?.ComenzarAccion("CampoEnergia", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
         // Rugido largo
         yield return new WaitForSeconds(1.5f);
+
+        if (DeathScreenController.GameplayBlocked)
+        {
+            TerminarAtaque();
+            yield break;
+        }
 
         if (basicEnemiesToSummon.Length > 0)
         {
@@ -215,7 +242,16 @@ public class BossAI : MonoBehaviour
 
     private void TerminarAtaque(float cooldownExtra = 0f)
     {
+        animacion?.TerminarAccion();
         isAttacking = false;
         attackTimer = timeBetweenAttacks + cooldownExtra;
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        isAttacking = false;
+        animacion?.TerminarAccion();
+        if (rb != null) rb.linearVelocity = Vector2.zero;
     }
 }

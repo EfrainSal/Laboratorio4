@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MeleeEnemyAI : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class MeleeEnemyAI : MonoBehaviour
     public float attackCooldown = 1.2f;
     public float knockbackForce = 5f;
     private float lastAttackTime;
+    private bool atacando;
 
     [Header("Audio")]
     public AudioClip sfxAlerta;
@@ -59,7 +61,9 @@ public class MeleeEnemyAI : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
 
-        if (player == null || isKnockedBack) return; 
+        if (player == null) { rb.linearVelocity = Vector2.zero; return; }
+        if (isKnockedBack) return;
+        if (atacando) { rb.linearVelocity = Vector2.zero; return; }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
@@ -185,23 +189,34 @@ public class MeleeEnemyAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (Time.time >= lastAttackTime + attackCooldown)
+            if (!atacando && Time.time >= lastAttackTime + attackCooldown)
             {
-                PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-                Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
-                
-                if (playerHealth != null)
-                {
-                    playerHealth.TakeDamage(damage, DeathCause.Mutante);
-                    lastAttackTime = Time.time;
-
-                    if (playerRb != null)
-                    {
-                        Vector2 pushDirection = (collision.transform.position - transform.position).normalized;
-                        playerRb.AddForce(pushDirection * knockbackForce, ForceMode2D.Impulse);
-                    }
-                }
+                lastAttackTime = Time.time;
+                StartCoroutine(AtacarJugador(collision.gameObject));
             }
         }
+    }
+
+    private IEnumerator AtacarJugador(GameObject objetivo)
+    {
+        atacando = true;
+        var visual = GetComponent<AnimacionEnemigoDinamica>();
+        float espera = visual != null ? visual.Atacar(objetivo.transform.position) : 0f;
+        if (espera > 0f) yield return new WaitForSeconds(espera);
+        if (objetivo != null && objetivo.activeInHierarchy && !isKnockedBack
+            && Vector2.Distance(objetivo.transform.position, transform.position) <= 0.95f)
+        {
+            objetivo.GetComponent<PlayerHealth>()?.TakeDamage(damage, DeathCause.Mutante);
+            var cuerpoJugador = objetivo.GetComponent<Rigidbody2D>();
+            if (cuerpoJugador != null)
+                cuerpoJugador.AddForce((objetivo.transform.position - transform.position).normalized * knockbackForce, ForceMode2D.Impulse);
+        }
+        atacando = false;
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        atacando = false;
     }
 }

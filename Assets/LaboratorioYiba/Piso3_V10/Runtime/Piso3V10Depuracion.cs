@@ -32,7 +32,7 @@ namespace LaboratorioYiba.Piso3V10
                 if (visible) Construir();
                 else Limpiar();
             }
-            if (Piso3V10Entrada.PulsoReinicio() && jugador != null)
+            if (Piso3V10Entrada.PulsoReinicio() && jugador != null && jugador.isActiveAndEnabled)
             {
                 jugador.Reiniciar();
             }

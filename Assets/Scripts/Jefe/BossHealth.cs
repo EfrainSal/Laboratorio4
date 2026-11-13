@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,101 +7,89 @@ public class BossHealth : MonoBehaviour
     [Header("Salud del Jefe")]
     public float maxHealth = 1500f;
     private float currentHealth;
-
+    public float CurrentHealth => currentHealth;
+    public bool IsDead { get; private set; }
     [Header("Efectos de Daño")]
     public float trailSpeed = 3f;
-
-    // Referencias privadas que el script buscará automáticamente
-    private GameObject bossHealthUIContainer;
-    private Image healthBarFill;
-    private Image damageTrailFill;
+    [Header("HUD de la escena de combate")]
+    public GameObject bossHealthUIContainer;
+    public Image healthBarFill;
+    public Image damageTrailFill;
     private BossAI bossAI;
 
-    void Start()
+    private void Awake()
     {
         currentHealth = maxHealth;
         bossAI = GetComponent<BossAI>();
-
-        // Encontrar el contenedor usando FindObjectOfType (busca incluso inactivos si le pasamos 'true')
-        Canvas canvas = FindAnyObjectByType<Canvas>();
-        if (canvas != null)
-        {
-            Transform containerTransform = canvas.transform.Find("BossHealthContainer");
-            if (containerTransform != null)
-            {
-                bossHealthUIContainer = containerTransform.gameObject;
-                healthBarFill = containerTransform.Find("Fill").GetComponent<Image>();
-                damageTrailFill = containerTransform.Find("DamageTrail").GetComponent<Image>();
-                
-                bossHealthUIContainer.SetActive(true);
-            }
-            else
-            {
-                Debug.LogWarning("No se encontró 'BossHealthContainer' dentro del Canvas.");
-            }
-        }
-
-        ActualizarUI();
-        if (damageTrailFill != null) damageTrailFill.fillAmount = currentHealth / maxHealth;
     }
-
-    void Update()
+    private void Start()
     {
-        // Animación del rastro de daño (bajando suavemente como en el Player)
-        if (damageTrailFill != null && healthBarFill != null && damageTrailFill.fillAmount > healthBarFill.fillAmount)
+        // Compatibilidad con escenas anteriores; Nivel1 guarda referencias explícitas.
+        if (bossHealthUIContainer == null)
         {
-            damageTrailFill.fillAmount = Mathf.Lerp(damageTrailFill.fillAmount, healthBarFill.fillAmount, Time.deltaTime * trailSpeed);
+            foreach (var canvas in FindObjectsByType<Canvas>(FindObjectsSortMode.None))
+            {
+                if (canvas.gameObject.scene != gameObject.scene) continue;
+                var contenedor = canvas.transform.Find("BossHealthContainer");
+                if (contenedor == null) continue;
+                bossHealthUIContainer = contenedor.gameObject;
+                healthBarFill = contenedor.Find("Fill")?.GetComponent<Image>();
+                damageTrailFill = contenedor.Find("DamageTrail")?.GetComponent<Image>();
+                break;
+            }
         }
+        if (bossHealthUIContainer != null) bossHealthUIContainer.SetActive(true);
+        ActualizarUI();
+        if (damageTrailFill != null) damageTrailFill.fillAmount = 1;
     }
-
+    private void Update()
+    {
+        if (damageTrailFill != null && healthBarFill != null && damageTrailFill.fillAmount > healthBarFill.fillAmount)
+            damageTrailFill.fillAmount = Mathf.Lerp(damageTrailFill.fillAmount, healthBarFill.fillAmount, Time.deltaTime * trailSpeed);
+    }
     public void TakeDamage(float damageAmount)
     {
-        currentHealth -= damageAmount;
+        if (IsDead || damageAmount <= 0) return;
+        currentHealth = Mathf.Max(0, currentHealth - damageAmount);
         ActualizarUI();
-        EvaluarFase();
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        if (currentHealth <= 0) Die();
+        else EvaluarFase();
     }
-
     private void EvaluarFase()
     {
-        float porcentajeVida = currentHealth / maxHealth;
-
-        if (porcentajeVida <= 0.33f && bossAI.CurrentPhase != 3)
-        {
-            bossAI.CambiarFase(3);
-        }
-        else if (porcentajeVida <= 0.66f && porcentajeVida > 0.33f && bossAI.CurrentPhase != 2)
-        {
-            bossAI.CambiarFase(2);
-        }
+        if (bossAI == null) return;
+        float porcentaje = currentHealth / maxHealth;
+        int fase = porcentaje <= .33f ? 3 : porcentaje <= .66f ? 2 : 1;
+        if (fase != bossAI.CurrentPhase) bossAI.CambiarFase(fase);
     }
-
     private void ActualizarUI()
     {
-        if (healthBarFill != null)
-        {
-            healthBarFill.fillAmount = Mathf.Clamp01(currentHealth / maxHealth);
-        }
+        if (healthBarFill != null) healthBarFill.fillAmount = Mathf.Clamp01(currentHealth / maxHealth);
     }
-
     private void Die()
     {
-        // Ocultar la barra de vida al morir
-        if (bossHealthUIContainer != null)
-        {
-            bossHealthUIContainer.SetActive(false);
-        }
-
+        IsDead = true;
+        if (bossAI != null) bossAI.enabled = false;
+        var rb = GetComponent<Rigidbody2D>();
+        if (rb != null) { rb.linearVelocity = Vector2.zero; rb.simulated = false; }
+        foreach (var col in GetComponents<Collider2D>()) col.enabled = false;
+        float duracion = GetComponent<AnimacionJefeDinamica>()?.Morir() ?? 0f;
+        if (bossHealthUIContainer != null) bossHealthUIContainer.SetActive(false);
+        foreach (var bala in FindObjectsByType<BossBullet>(FindObjectsSortMode.None))
+            if (bala.gameObject.scene == gameObject.scene) Destroy(bala.gameObject);
+        // La victoria detiene el combate: los ataques pendientes no pueden matar al ganador.
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null && player.TryGetComponent<PlayerHealth>(out var salud)) salud.isInvulnerable = true;
         if (GameManager.Instance != null && GameManager.Instance.RunActiva)
         {
-            GameManager.Instance.RegistrarBajaEnemiga(500); 
-            GameManager.Instance.CompletarRunVictoria();    
+            GameManager.Instance.RegistrarBajaEnemiga(500);
+            GameManager.Instance.CompletarRunVictoria();
         }
-
+        StartCoroutine(RetirarTrasAnimacion(duracion));
+    }
+    private IEnumerator RetirarTrasAnimacion(float duracion)
+    {
+        yield return new WaitForSecondsRealtime(duracion);
         Destroy(gameObject);
     }
 }

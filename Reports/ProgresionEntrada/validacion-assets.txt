@@ -1,0 +1,23 @@
+PASS resources-baseline.json: 271 archivos intactos; diferencias=[]
+PASS protected-baseline.json: 7 archivos intactos; diferencias=[]
+PASS Entrada referencia prefab original Spawner_lvl1
+PASS Entrada referencia prefab original Spawner_lvl2
+PASS Entrada referencia prefab original Spawner_lvl3
+PASS MainMenu inicia en Entrada
+PASS Entrada incluida en compilación
+PASS Puerta enlazada a Piso3_V10
+PASS Tarjeta usa sprite raíz Sprites/TarjetaAcceso.png
+PASS Jason: filo invertido, tamaño mitad, sin círculo
+PASS Jason: ocho sprites spritesApuntar
+PASS Jason: ocho sprites spritesDisparo
+PASS Milena: filo invertido, tamaño mitad, sin círculo
+PASS Milena: ocho sprites spritesApuntar
+PASS Milena: ocho sprites spritesDisparo
+PASS ConsumirVenda en tecla 1
+PASS ConsumirEstimulante en tecla 2
+PASS ConsumirBotiquin en tecla 3
+PASS Jefe ausente de MainMenu
+PASS Jefe ausente de Escenario1_Entrada
+PASS Jefe ausente de Piso3_V10
+PASS Jefe presente exclusivamente en Nivel1
+PASS Prueba Play de recorrido completo aprobada

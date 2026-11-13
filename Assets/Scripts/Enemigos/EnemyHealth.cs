@@ -4,9 +4,11 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public EnemySpawner OrigenSpawner { get; set; }
     [Header("Salud")]
     public float maxHealth = 30f;
     private float currentHealth;
+    public float CurrentHealth => currentHealth;
 
     [Header("UI y Feedback")]
     public Image healthBarFill; 
@@ -16,6 +18,9 @@ public class EnemyHealth : MonoBehaviour
     private Rigidbody2D rb;
     private EnemyAI enemyAI;
     private Transform player;
+    private MeleeEnemyAI meleeAI;
+    private RangedEnemyAI rangedAI;
+    private bool muerto;
 
     [Header("Dropeo")]
     public GameObject ammoDropPrefab; 
@@ -35,6 +40,8 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         enemyAI = GetComponent<EnemyAI>();
+        meleeAI = GetComponent<MeleeEnemyAI>();
+        rangedAI = GetComponent<RangedEnemyAI>();
         
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null) player = playerObj.transform;
@@ -50,6 +57,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
+        if (muerto || damageAmount <= 0f) return;
+        GetComponent<RetroalimentacionDano>()?.Mostrar(Mathf.Min(currentHealth, damageAmount), false);
         currentHealth -= damageAmount;
 
         ReproducirSFX(sfxDanio, true);
@@ -71,18 +80,32 @@ public class EnemyHealth : MonoBehaviour
 
     private IEnumerator ApplyKnockback()
     {
-        if (enemyAI != null && rb != null && player != null)
+        if (rb != null && player != null)
         {
-            enemyAI.isKnockedBack = true;
+            if (enemyAI != null) enemyAI.isKnockedBack = true;
+            if (meleeAI != null) meleeAI.isKnockedBack = true;
+            if (rangedAI != null) rangedAI.isKnockedBack = true;
             Vector2 knockbackDirection = (transform.position - player.position).normalized;
             rb.linearVelocity = knockbackDirection * knockbackForce;
             yield return new WaitForSeconds(knockbackTime);
-            enemyAI.isKnockedBack = false;
+            if (enemyAI != null) enemyAI.isKnockedBack = false;
+            if (meleeAI != null) meleeAI.isKnockedBack = false;
+            if (rangedAI != null) rangedAI.isKnockedBack = false;
         }
     }
 
     private void Die()
         {
+            if (muerto) return;
+            muerto = true;
+            StopAllCoroutines();
+            if (enemyAI != null) enemyAI.enabled = false;
+            if (meleeAI != null) meleeAI.enabled = false;
+            if (rangedAI != null) rangedAI.enabled = false;
+            if (rb != null) { rb.linearVelocity = Vector2.zero; rb.simulated = false; }
+            foreach (var collider in GetComponents<Collider2D>()) collider.enabled = false;
+            var animacion = GetComponent<AnimacionEnemigoDinamica>();
+            float duracionMuerte = animacion != null ? animacion.Morir() : 0f;
             // Otorgar experiencia al jugador antes de morir
             if (player != null)
             {
@@ -105,7 +128,7 @@ public class EnemyHealth : MonoBehaviour
 
             if (LevelManager.Instance != null)
             {
-                LevelManager.Instance.RegistrarEnemigoDerrotado(transform.position);
+                LevelManager.Instance.RegistrarEnemigoDerrotado(transform.position, OrigenSpawner);
             }
 
     // ---> CORRECCIÓN: Avisar al GameManager Global para las estadísticas <---
@@ -128,7 +151,7 @@ public class EnemyHealth : MonoBehaviour
                 AudioSource.PlayClipAtPoint(sfxMuerte, transform.position, 1f);
             }
 
-            Destroy(gameObject); 
+            Destroy(gameObject, duracionMuerte);
         }
 
     private IEnumerator ReproducirSonidoSpawnConRetraso()

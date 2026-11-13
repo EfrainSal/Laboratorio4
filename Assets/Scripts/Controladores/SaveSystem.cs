@@ -5,7 +5,19 @@ using UnityEngine;
 
 public static class SaveSystem
 {
-    private static string SavePath => Path.Combine(Application.persistentDataPath, "run_suspend.dat");
+#if UNITY_EDITOR
+    public static string RutaDePruebas { get; set; }
+#endif
+    private static string SavePath
+    {
+        get
+        {
+#if UNITY_EDITOR
+            if (!string.IsNullOrEmpty(RutaDePruebas)) return RutaDePruebas;
+#endif
+            return Path.Combine(Application.persistentDataPath, "run_suspend.dat");
+        }
+    }
     private static string TempPath => SavePath + ".tmp";
 
     // Llave AES-128 (16 bytes). Es ofuscación contra edición casual, no seguridad real.

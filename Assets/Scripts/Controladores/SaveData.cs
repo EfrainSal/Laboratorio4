@@ -2,6 +2,11 @@
 public class SaveData
 {
     public int version = 1;
+    public string escenaActual;
+    public int enemigosDerrotadosPiso;
+    public bool tarjetaGenerada;
+    public int nivelJugador = 1;
+    public float experienciaJugador;
 
     // Datos de la run
     public int personajeSeleccionado;

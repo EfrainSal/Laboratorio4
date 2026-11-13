@@ -1,0 +1,60 @@
+PASS Nueva partida apunta a Entrada incluida en Build Settings
+PASS Sólo hay un jugador real activo
+PASS Controladores del prototipo inactivos
+PASS Dr. Yiba ausente de Entrada
+PASS HUD y pantalla de muerte conectados
+PASS Tres spawners en Entrada
+PASS Usado prefab original Spawner_lvl1
+PASS Usado prefab original Spawner_lvl2
+PASS Usado prefab original Spawner_lvl3
+PASS Movimiento D responde en Entrada
+PASS 1 consume sólo venda y cura 10
+PASS 2 consume sólo adrenalina y cura 30
+PASS 3 consume botiquín y cura 30
+PASS Filo reflejado conservando mango y punta
+PASS Machete mide exactamente la mitad
+PASS Círculo amarillo oculto
+PASS Mango anclado a la mano al reflejar y escalar
+PASS Filo y agarre se reflejan hacia la izquierda
+PASS Sprite de reposo dirección 0
+PASS Fogonazo dirección 0
+PASS Sprite de reposo dirección 1
+PASS Fogonazo dirección 1
+PASS Sprite de reposo dirección 2
+PASS Fogonazo dirección 2
+PASS Sprite de reposo dirección 3
+PASS Fogonazo dirección 3
+PASS Sprite de reposo dirección 4
+PASS Fogonazo dirección 4
+PASS Sprite de reposo dirección 5
+PASS Fogonazo dirección 5
+PASS Sprite de reposo dirección 6
+PASS Fogonazo dirección 6
+PASS Sprite de reposo dirección 7
+PASS Fogonazo dirección 7
+PASS Soltar clic detiene el disparo
+PASS Q cambia al machete
+PASS R recarga el subfusil
+PASS Puerta F rechaza jugador sin tarjeta
+PASS Puerta informa que falta la tarjeta
+PASS Oleada original Spawner_lvl1 respeta cantidades
+PASS Oleada original Spawner_lvl3 respeta cantidades
+PASS Oleada original Spawner_lvl2 respeta cantidades
+PASS Enemigo ajeno a spawners no cuenta para tarjeta
+PASS 9 bajas únicas no generan tarjeta; muerte duplicada no suma
+PASS Guardado de prueba cifrado correcto
+PASS Guardado contiene piso y cuota parcial
+PASS Continuar vuelve a Entrada y restaura las 9 bajas
+PASS El Sorbo número 10 suelta una tarjeta
+PASS Tarjeta aparece donde cayó el Sorbo
+PASS Bajas posteriores no duplican tarjeta
+PASS Pickup físico recoge la tarjeta una sola vez
+PASS F con tarjeta avanza exactamente un piso a Piso3
+PASS Puerta consume tarjeta y conserva consumibles
+PASS Transición conserva vida y munición
+PASS Transición conserva nivel y experiencia
+PASS Dr. Yiba ausente de Piso3
+PASS Nueva partida Milena usa su prefab real en Entrada
+PASS Milena comparte machete reducido y 8 fogonazos
+PASS Muerte muestra Game Over y bloquea controles
+PASS Sin errores ni excepciones durante el recorrido

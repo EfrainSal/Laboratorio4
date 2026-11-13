@@ -21,12 +21,13 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         // Inicializamos con el machete equipado
-        EquipWeapon(true);
+        EquipWeapon(isUsingMelee);
     }
 
     // Se llama automáticamente al presionar la tecla Q (Acción: SwitchWeapon)
     public void OnSwitchWeapon(InputValue value)
     {
+        if (DeathScreenController.GameplayBlocked) return;
         if (value.isPressed)
         {
             isUsingMelee = !isUsingMelee;
@@ -36,6 +37,8 @@ public class WeaponManager : MonoBehaviour
 
     public void EquipWeapon(bool useMelee)
     {
+        isUsingMelee = useMelee;
+        if (useMelee) GetComponent<ArmaIndependiente>()?.CancelarDisparoVisual();
         // Activa/Desactiva los scripts de combate
         if (meleeWeapon != null) meleeWeapon.enabled = useMelee;
         if (rangedWeapon != null) rangedWeapon.enabled = !useMelee;

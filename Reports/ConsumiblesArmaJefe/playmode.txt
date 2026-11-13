@@ -1,0 +1,134 @@
+RESULTADO: PASS
+PASS Jason: MainMenu no contiene jefe
+PASS Jason: El mapa de MainMenu no contiene jefe
+PASS Jason: PlayerInput usa Gameplay/Player
+PASS Jason: ConsumirVenda tiene control de teclado resuelto
+PASS Jason: ConsumirBotiquin tiene control de teclado resuelto
+PASS Jason: ConsumirEstimulante tiene control de teclado resuelto
+PASS Jason: 1 cura y descuenta venda, HUD conectado
+PASS Jason: 2 cura y descuenta botiquin
+PASS Jason: 3 cura, descuenta estimulante y aplica su bufo
+PASS Jason: El bufo termina sin alterar valores base
+PASS Jason: Vida llena no consume una venda
+PASS Jason: Pausa bloquea curacion y consumo
+PASS Jason: El mando tambien usa la accion Gameplay de curacion
+PASS Jason: Los 16 sprites unicos del arma estan conectados
+PASS Jason: Reposo del arma, direccion 0
+PASS Jason: Orientacion del sprite correcta, direccion 0
+PASS Jason: Un disparo real muestra el fogonazo, direccion 0
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 0
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 0
+PASS Jason: Reposo del arma, direccion 1
+PASS Jason: Orientacion del sprite correcta, direccion 1
+PASS Jason: Un disparo real muestra el fogonazo, direccion 1
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 1
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 1
+PASS Jason: Reposo del arma, direccion 2
+PASS Jason: Orientacion del sprite correcta, direccion 2
+PASS Jason: Un disparo real muestra el fogonazo, direccion 2
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 2
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 2
+PASS Jason: Reposo del arma, direccion 3
+PASS Jason: Orientacion del sprite correcta, direccion 3
+PASS Jason: Un disparo real muestra el fogonazo, direccion 3
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 3
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 3
+PASS Jason: Reposo del arma, direccion 4
+PASS Jason: Orientacion del sprite correcta, direccion 4
+PASS Jason: Un disparo real muestra el fogonazo, direccion 4
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 4
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 4
+PASS Jason: Reposo del arma, direccion 5
+PASS Jason: Orientacion del sprite correcta, direccion 5
+PASS Jason: Un disparo real muestra el fogonazo, direccion 5
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 5
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 5
+PASS Jason: Reposo del arma, direccion 6
+PASS Jason: Orientacion del sprite correcta, direccion 6
+PASS Jason: Un disparo real muestra el fogonazo, direccion 6
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 6
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 6
+PASS Jason: Reposo del arma, direccion 7
+PASS Jason: Orientacion del sprite correcta, direccion 7
+PASS Jason: Un disparo real muestra el fogonazo, direccion 7
+PASS Jason: El cuerpo del arma no salta al cambiar de lienzo, direccion 7
+PASS Jason: Soltar detiene balas y el arma vuelve a reposo, direccion 7
+PASS Jason: El cuerpo no usa sprites de disparo
+PASS Jason: Machete conserva postura y circulo oculto
+PASS Milena: El mapa de MainMenu no contiene jefe
+PASS Milena: PlayerInput usa Gameplay/Player
+PASS Milena: ConsumirVenda tiene control de teclado resuelto
+PASS Milena: ConsumirBotiquin tiene control de teclado resuelto
+PASS Milena: ConsumirEstimulante tiene control de teclado resuelto
+PASS Milena: 1 cura y descuenta venda, HUD conectado
+PASS Milena: 2 cura y descuenta botiquin
+PASS Milena: 3 cura, descuenta estimulante y aplica su bufo
+PASS Milena: El bufo termina sin alterar valores base
+PASS Milena: Vida llena no consume una venda
+PASS Milena: Pausa bloquea curacion y consumo
+PASS Milena: El mando tambien usa la accion Gameplay de curacion
+PASS Milena: Los 16 sprites unicos del arma estan conectados
+PASS Milena: Reposo del arma, direccion 0
+PASS Milena: Orientacion del sprite correcta, direccion 0
+PASS Milena: Un disparo real muestra el fogonazo, direccion 0
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 0
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 0
+PASS Milena: Reposo del arma, direccion 1
+PASS Milena: Orientacion del sprite correcta, direccion 1
+PASS Milena: Un disparo real muestra el fogonazo, direccion 1
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 1
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 1
+PASS Milena: Reposo del arma, direccion 2
+PASS Milena: Orientacion del sprite correcta, direccion 2
+PASS Milena: Un disparo real muestra el fogonazo, direccion 2
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 2
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 2
+PASS Milena: Reposo del arma, direccion 3
+PASS Milena: Orientacion del sprite correcta, direccion 3
+PASS Milena: Un disparo real muestra el fogonazo, direccion 3
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 3
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 3
+PASS Milena: Reposo del arma, direccion 4
+PASS Milena: Orientacion del sprite correcta, direccion 4
+PASS Milena: Un disparo real muestra el fogonazo, direccion 4
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 4
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 4
+PASS Milena: Reposo del arma, direccion 5
+PASS Milena: Orientacion del sprite correcta, direccion 5
+PASS Milena: Un disparo real muestra el fogonazo, direccion 5
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 5
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 5
+PASS Milena: Reposo del arma, direccion 6
+PASS Milena: Orientacion del sprite correcta, direccion 6
+PASS Milena: Un disparo real muestra el fogonazo, direccion 6
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 6
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 6
+PASS Milena: Reposo del arma, direccion 7
+PASS Milena: Orientacion del sprite correcta, direccion 7
+PASS Milena: Un disparo real muestra el fogonazo, direccion 7
+PASS Milena: El cuerpo del arma no salta al cambiar de lienzo, direccion 7
+PASS Milena: Soltar detiene balas y el arma vuelve a reposo, direccion 7
+PASS Milena: El cuerpo no usa sprites de disparo
+PASS Milena: Machete conserva postura y circulo oculto
+PASS Nivel1: Un solo jefe en su escena independiente
+PASS Nivel1: Seis estados del jefe resuelven sus ocho direcciones
+PASS Nivel1: HUD de vida del jefe conectado y visible
+PASS Nivel1: HUD del jefe no tapa la vida del jugador
+PASS Nivel1: El jefe persigue y reproduce Correr
+PASS Nivel1: Zarpazo vinculado a Ataque
+PASS Nivel1: Zarpazo aplica dano al jugador
+PASS Nivel1: Dano y HUD activan fase 2
+PASS Nivel1: Bullet Hell vinculado a BolaDePoder
+PASS Nivel1: Bullet Hell genera el anillo de proyectiles en movimiento
+PASS Nivel1: Proyectil del jefe dana mediante colision real
+PASS Nivel1: Dano activa fase 3
+PASS Nivel1: Invocacion referencia ambos Sorbos existentes
+PASS Nivel1: Invocacion vinculada a CampoEnergia
+PASS Nivel1: Invocacion crea Sorbos con mecanicas y animaciones
+PASS Nivel1: Muerte detiene la IA, oculta barra y reproduce sus sprites
+PASS Nivel1: Matar al jefe concede una sola victoria y su puntuacion
+PASS Nivel1: Victoria visible, cadaver retirado y gameplay bloqueado
+PASS Nivel1: Victoria del jefe llega al ranking aislado
+PASS Nivel1: Boton de continuar habilitado
+PASS Nivel1: Continuar vuelve a MainMenu sin colocar alli al jefe
+PASS Nivel1: Flujo completo sin errores ni excepciones

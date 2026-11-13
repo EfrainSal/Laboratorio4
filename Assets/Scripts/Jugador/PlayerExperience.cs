@@ -35,6 +35,14 @@ public class PlayerExperience : MonoBehaviour
         ActualizarUI();
     }
 
+    public void RestaurarProgreso(int nivel, float experiencia)
+    {
+        nivelActual = Mathf.Max(1, nivel);
+        experienciaActual = Mathf.Max(0, experiencia);
+        expParaSiguienteNivel = 100f * Mathf.Pow(multiplicadorDificultad, nivelActual - 1);
+        ActualizarUI();
+    }
+
     private void SubirDeNivel()
     {
         // Restamos la exp requerida (conservando el sobrante)

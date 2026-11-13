@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34058440}
   - component: {fileID: 34058441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39538447}
   - component: {fileID: 39538448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_061
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40090766}
   - component: {fileID: 40090767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_072
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,6 +889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaDeCultivo_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8382411664536593777, guid: bd1089bea1206d445bbfdeb234d5c58c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -909,7 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86864047}
   - component: {fileID: 86864048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95471032}
   - component: {fileID: 95471033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103285511}
   - component: {fileID: 103285512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_187
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104561365}
   - component: {fileID: 104561366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_179
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111499849}
   - component: {fileID: 111499850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_182
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112957827}
   - component: {fileID: 112957828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124005329}
   - component: {fileID: 124005330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1547,7 +1551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136789642}
   - component: {fileID: 136789643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1645,11 +1649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2722349500063330760, guid: cfc910cf66a31574291024575b1bda8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.23
+      value: 4.02
       objectReference: {fileID: 0}
     - target: {fileID: 2722349500063330760, guid: cfc910cf66a31574291024575b1bda8b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.44
+      value: -6.8
       objectReference: {fileID: 0}
     - target: {fileID: 2722349500063330760, guid: cfc910cf66a31574291024575b1bda8b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1685,11 +1689,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947537582940285817, guid: cfc910cf66a31574291024575b1bda8b, type: 3}
       propertyPath: m_SortingOrder
-      value: 744
+      value: 680
       objectReference: {fileID: 0}
     - target: {fileID: 8944607900509636016, guid: cfc910cf66a31574291024575b1bda8b, type: 3}
       propertyPath: m_Name
       value: CarritoMuestras_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944607900509636016, guid: cfc910cf66a31574291024575b1bda8b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1777,6 +1785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MesaDeAnalisis_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7229175956679693808, guid: bb8a9d4e8fa44a94581135345101749a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1797,7 +1809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 145945189}
   - component: {fileID: 145945190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151658262}
   - component: {fileID: 151658263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1953,7 +1965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 152259962}
   - component: {fileID: 152259963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2085,6 +2097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ServidorAzul_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7610289934974848211, guid: 1761a3b070f39d944bd585bac6705cde, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8236824672690221585, guid: 1761a3b070f39d944bd585bac6705cde, type: 3}
       propertyPath: m_SortingOrder
       value: -30000
@@ -2117,7 +2133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155395668}
   - component: {fileID: 155395669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_239
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,7 +2303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158034264}
   - component: {fileID: 158034265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_234
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2641,7 +2657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181257897}
   - component: {fileID: 181257898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2719,7 +2735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182590882}
   - component: {fileID: 182590883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2797,7 +2813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194640704}
   - component: {fileID: 194640705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_184
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2875,7 +2891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196861868}
   - component: {fileID: 196861869}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_154
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2953,7 +2969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198382878}
   - component: {fileID: 198382879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_089
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3031,7 +3047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202726538}
   - component: {fileID: 202726539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3109,7 +3125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210384157}
   - component: {fileID: 210384158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_237
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3241,7 +3257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211348535}
   - component: {fileID: 211348536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_070
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3319,7 +3335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 212634120}
   - component: {fileID: 212634121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_235
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3397,7 +3413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 226564214}
   - component: {fileID: 226564215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_238
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3475,7 +3491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232899207}
   - component: {fileID: 232899208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_132
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3553,7 +3569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242886511}
   - component: {fileID: 242886512}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3631,7 +3647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244891104}
   - component: {fileID: 244891105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3709,7 +3725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246686006}
   - component: {fileID: 246686007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_073
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3787,7 +3803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 248515445}
   - component: {fileID: 248515446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_058
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3865,7 +3881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 251245244}
   - component: {fileID: 251245245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_098
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3943,13 +3959,13 @@ GameObject:
   m_Component:
   - component: {fileID: 253940164}
   - component: {fileID: 253940165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BloqueoAcceso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &253940164
 Transform:
   m_ObjectHideFlags: 0
@@ -3959,7 +3975,7 @@ Transform:
   m_GameObject: {fileID: 253940163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.47058833, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04117657, z: 0}
   m_LocalScale: {x: 1.1764705, y: 1.1764705, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4009,7 +4025,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7600001, y: 1.3600001}
+  m_Size: {x: 0.91247505, y: 0.27}
   m_EdgeRadius: 0
 --- !u!1 &263657338
 GameObject:
@@ -4113,7 +4129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 266443766}
   - component: {fileID: 266443767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_082
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4191,7 +4207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 281697703}
   - component: {fileID: 281697704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_062
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4269,7 +4285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282010527}
   - component: {fileID: 282010528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4531,7 +4547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297038290}
   - component: {fileID: 297038291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_138
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4609,7 +4625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299583049}
   - component: {fileID: 299583050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_175
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4687,7 +4703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302696699}
   - component: {fileID: 302696700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_172
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4765,7 +4781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321475280}
   - component: {fileID: 321475281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4843,7 +4859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338881160}
   - component: {fileID: 338881161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_193
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5197,7 +5213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353048734}
   - component: {fileID: 353048735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5275,7 +5291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358136401}
   - component: {fileID: 358136402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5353,7 +5369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364328691}
   - component: {fileID: 364328692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_165
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5431,7 +5447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371951750}
   - component: {fileID: 371951751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5601,7 +5617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 377505728}
   - component: {fileID: 377505729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5669,6 +5685,88 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 17.48, y: 0.6999999}
   m_EdgeRadius: 0
+--- !u!1001 &378367713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1673393714}
+    m_Modifications:
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: maxEnemies
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: minEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: spawnRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: activationRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388471406796503558, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439871043970909860, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_Name
+      value: Spawner_Sorbos_3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+--- !u!4 &378367714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+  m_PrefabInstance: {fileID: 378367713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &383568948
 GameObject:
   m_ObjectHideFlags: 0
@@ -5679,7 +5777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383568949}
   - component: {fileID: 383568950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_102
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5849,7 +5947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387567081}
   - component: {fileID: 387567082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_199
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6019,7 +6117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391462426}
   - component: {fileID: 391462427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_177
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6097,7 +6195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403280670}
   - component: {fileID: 403280671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6175,7 +6273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407681822}
   - component: {fileID: 407681823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6253,7 +6351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419137214}
   - component: {fileID: 419137215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_230
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6331,7 +6429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422631239}
   - component: {fileID: 422631240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6409,7 +6507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424745937}
   - component: {fileID: 424745938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6487,7 +6585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435373803}
   - component: {fileID: 435373804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_189
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6603,7 +6701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446095854}
   - component: {fileID: 446095855}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_190
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6681,7 +6779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452288551}
   - component: {fileID: 452288552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6759,7 +6857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 483219060}
   - component: {fileID: 483219061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_236
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6929,7 +7027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486406661}
   - component: {fileID: 486406662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7007,7 +7105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488307531}
   - component: {fileID: 488307532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_212
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7085,7 +7183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488641404}
   - component: {fileID: 488641405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_225
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7177,6 +7275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SillaLaboratorio_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3007831822089875035, guid: bfeac982ebcac1b4893fc3da829aaa4c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437174695722998014, guid: bfeac982ebcac1b4893fc3da829aaa4c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.81
@@ -7253,7 +7355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492944137}
   - component: {fileID: 492944138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7331,7 +7433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496054201}
   - component: {fileID: 496054202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_116
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7414,6 +7516,10 @@ PrefabInstance:
     - target: {fileID: 2016800175737692328, guid: 8726838a1737ecd469d6a89a33b24cde, type: 3}
       propertyPath: m_Name
       value: BarrilPeligroso_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016800175737692328, guid: 8726838a1737ecd469d6a89a33b24cde, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3161717646364921904, guid: 8726838a1737ecd469d6a89a33b24cde, type: 3}
       propertyPath: m_LocalScale.x
@@ -7587,7 +7693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 502393277}
   - component: {fileID: 502393278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7665,7 +7771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 504276592}
   - component: {fileID: 504276593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_156
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7868,7 +7974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508292448}
   - component: {fileID: 508292449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_159
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7936,6 +8042,82 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.8799996, y: 0.059999466}
   m_EdgeRadius: 0
+--- !u!1001 &515533153
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3736240170227537986, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736240170227537986, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221041214015719678, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433198789250061215, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_Name
+      value: HUDGameplay
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+--- !u!114 &515533154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3686230417565730935, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+  m_PrefabInstance: {fileID: 515533153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3285d25954897ca489ddf0b580b0c364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1 &535279407
 GameObject:
   m_ObjectHideFlags: 0
@@ -7946,7 +8128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535279408}
   - component: {fileID: 535279409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_097
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8024,7 +8206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 547225362}
   - component: {fileID: 547225363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_195
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8286,7 +8468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577489637}
   - component: {fileID: 577489638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_227
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8364,7 +8546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 580658573}
   - component: {fileID: 580658574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_232
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8442,7 +8624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582280118}
   - component: {fileID: 582280119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8520,7 +8702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582363834}
   - component: {fileID: 582363835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8598,7 +8780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591705880}
   - component: {fileID: 591705881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_080
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8676,7 +8858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595079992}
   - component: {fileID: 595079993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_151
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8754,7 +8936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596298010}
   - component: {fileID: 596298011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_069
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8924,7 +9106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609443614}
   - component: {fileID: 609443615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_143
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9002,7 +9184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620060365}
   - component: {fileID: 620060366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_198
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9080,7 +9262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620219504}
   - component: {fileID: 620219505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9344,6 +9526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArchivadoresDobles_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1990437673755913335, guid: d6e673d0bb861ff45b0fd712b601c5ae, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4625015363930098275, guid: d6e673d0bb861ff45b0fd712b601c5ae, type: 3}
       propertyPath: m_Size.y
       value: 0.3388
@@ -9430,6 +9616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GabineteManchado_01
       objectReference: {fileID: 0}
+    - target: {fileID: 934317283337383154, guid: 93a52756f9e24f24db75607b41d6910c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2749155121665010830, guid: 93a52756f9e24f24db75607b41d6910c, type: 3}
       propertyPath: m_SortingOrder
       value: 1458
@@ -9514,7 +9704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661829309}
   - component: {fileID: 661829310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9592,7 +9782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662340417}
   - component: {fileID: 662340418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9847,7 +10037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 677102633}
   - component: {fileID: 677102634}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_185
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9925,7 +10115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687509504}
   - component: {fileID: 687509505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_142
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10036,7 +10226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700443624}
   - component: {fileID: 700443625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_125
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10114,7 +10304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706724296}
   - component: {fileID: 706724297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10192,7 +10382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 709489727}
   - component: {fileID: 709489728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10270,7 +10460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719324994}
   - component: {fileID: 719324995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_178
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10348,7 +10538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722568132}
   - component: {fileID: 722568133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_228
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10426,7 +10616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725049798}
   - component: {fileID: 725049799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_222
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10504,7 +10694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728363150}
   - component: {fileID: 728363151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_071
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10582,7 +10772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731644840}
   - component: {fileID: 731644841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_186
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10752,7 +10942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 747955859}
   - component: {fileID: 747955860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11014,7 +11204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772855537}
   - component: {fileID: 772855538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_194
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11522,7 +11712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797691720}
   - component: {fileID: 797691721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11590,6 +11780,88 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7399998, y: 0.02000022}
   m_EdgeRadius: 0
+--- !u!1001 &799546968
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1673393714}
+    m_Modifications:
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -16.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: maxEnemies
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: minEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: spawnRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: activationRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388471406796503558, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439871043970909860, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_Name
+      value: Spawner_Sorbos_2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+--- !u!4 &799546969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+  m_PrefabInstance: {fileID: 799546968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &825315195
 GameObject:
   m_ObjectHideFlags: 0
@@ -11600,7 +11872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825315196}
   - component: {fileID: 825315197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_095
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11684,6 +11956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaquinaSellada_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6305699831648877298, guid: 54a7fa7437a37164c916d5a966f0414d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7247983824304385073, guid: 54a7fa7437a37164c916d5a966f0414d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.05
@@ -11764,7 +12040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839105858}
   - component: {fileID: 839105859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_216
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12004,6 +12280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanqueRoto_A_01
       objectReference: {fileID: 0}
+    - target: {fileID: 9039725384166757863, guid: 91dd8938b6b87f045a8dc3980763fa4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12024,7 +12304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 844935670}
   - component: {fileID: 844935671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_213
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12194,7 +12474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848893465}
   - component: {fileID: 848893466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_191
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12262,6 +12542,66 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.040001, y: 0.26000023}
   m_EdgeRadius: 0
+--- !u!1 &849779433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 849779435}
+  - component: {fileID: 849779434}
+  m_Layer: 0
+  m_Name: IntegracionPersonajesMainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &849779434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849779433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7084a513119b6674097a129467ca1531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Laboratorio4.Animacion.InicioPersonajesDesdeMenu
+  jugadorOriginal: {fileID: 1793440275}
+  sorbosOriginales:
+  - {fileID: 969897526}
+  - {fileID: 1601771032}
+  - {fileID: 1594575142}
+  - {fileID: 1447548932}
+  - {fileID: 965236764}
+  - {fileID: 1059432629}
+  - {fileID: 1324813778}
+  prefabJason: {fileID: 4445733836767800532, guid: 80801492dfa731c45b64fd11938f9e81, type: 3}
+  prefabMilena: {fileID: 4445733836767800532, guid: 8bc5cc053021ba646abc0f894333c4ed, type: 3}
+  sorboA: {fileID: 8898294941097351476, guid: 9d83f1516b0baab428d3e084c4057235, type: 3}
+  sorboB: {fileID: 8898294941097351476, guid: 8a6bbf9e26b814542895cfac328beee2, type: 3}
+  camara: {fileID: 1463343505}
+  materialEscenario: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  gestorNivel: {fileID: 515533154}
+--- !u!4 &849779435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849779433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874451664
 GameObject:
   m_ObjectHideFlags: 0
@@ -12272,7 +12612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874451665}
   - component: {fileID: 874451666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_128
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12350,7 +12690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875424026}
   - component: {fileID: 875424027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_180
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12428,7 +12768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 876566533}
   - component: {fileID: 876566534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_133
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12506,7 +12846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888233462}
   - component: {fileID: 888233463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_166
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12584,7 +12924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899462638}
   - component: {fileID: 899462639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_054
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12662,7 +13002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899757254}
   - component: {fileID: 899757255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_149
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12740,7 +13080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 907088916}
   - component: {fileID: 907088917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_221
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12818,7 +13158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925183390}
   - component: {fileID: 925183391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_122
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12896,7 +13236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938021722}
   - component: {fileID: 938021723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_129
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13066,7 +13406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 942051242}
   - component: {fileID: 942051243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_076
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14054,7 +14394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 973640840}
   - component: {fileID: 973640841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_224
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14132,7 +14472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977376022}
   - component: {fileID: 977376023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_207
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14210,7 +14550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982515989}
   - component: {fileID: 982515990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_197
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14288,7 +14628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985479052}
   - component: {fileID: 985479053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_083
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14366,7 +14706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988078116}
   - component: {fileID: 988078117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_164
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14536,7 +14876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991527506}
   - component: {fileID: 991527507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_055
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14614,7 +14954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 992706878}
   - component: {fileID: 992706879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_174
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14692,7 +15032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999113280}
   - component: {fileID: 999113281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14770,7 +15110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002961048}
   - component: {fileID: 1002961049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_209
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14848,7 +15188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003671313}
   - component: {fileID: 1003671314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14926,7 +15266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1004224017}
   - component: {fileID: 1004224018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15096,7 +15436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1016241714}
   - component: {fileID: 1016241715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_068
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15450,7 +15790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1038778787}
   - component: {fileID: 1038778788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15528,7 +15868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039372948}
   - component: {fileID: 1039372949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15606,7 +15946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047356821}
   - component: {fileID: 1047356822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_170
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15776,7 +16116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049535994}
   - component: {fileID: 1049535995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_087
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15854,7 +16194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054632811}
   - component: {fileID: 1054632812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_077
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16341,7 +16681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066795337}
   - component: {fileID: 1066795338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_114
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16508,7 +16848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077112268}
   - component: {fileID: 1077112269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_141
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16632,7 +16972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082418248}
   - component: {fileID: 1082418249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16711,6 +17051,10 @@ PrefabInstance:
     - target: {fileID: 5497425576329174268, guid: cc69a1c56fa4dc44fb354cb93367ed01, type: 3}
       propertyPath: m_Name
       value: PlantaMarchita_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497425576329174268, guid: cc69a1c56fa4dc44fb354cb93367ed01, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5549699405981241791, guid: cc69a1c56fa4dc44fb354cb93367ed01, type: 3}
       propertyPath: m_LocalScale.x
@@ -16796,7 +17140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089186397}
   - component: {fileID: 1089186398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16966,7 +17310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103010540}
   - component: {fileID: 1103010541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_086
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17230,7 +17574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124670564}
   - component: {fileID: 1124670565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17308,7 +17652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126364263}
   - component: {fileID: 1126364264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_158
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17386,7 +17730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141383514}
   - component: {fileID: 1141383515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17762,6 +18106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TanqueRoto_B_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8986755626546112490, guid: cec04ee331a17984797269af83bc7f4d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9134334862321382393, guid: cec04ee331a17984797269af83bc7f4d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.08
@@ -17830,7 +18178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187534281}
   - component: {fileID: 1187534282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_223
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17908,7 +18256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194923881}
   - component: {fileID: 1194923882}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_105
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17986,7 +18334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1212351227}
   - component: {fileID: 1212351228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_220
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18064,7 +18412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1218231865}
   - component: {fileID: 1218231866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18142,7 +18490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220073999}
   - component: {fileID: 1220074000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18220,7 +18568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227673959}
   - component: {fileID: 1227673960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_063
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18298,7 +18646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239418103}
   - component: {fileID: 1239418104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18376,7 +18724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244675837}
   - component: {fileID: 1244675838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_211
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18454,7 +18802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1250459499}
   - component: {fileID: 1250459500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_231
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18532,7 +18880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251383109}
   - component: {fileID: 1251383110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18610,7 +18958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253186330}
   - component: {fileID: 1253186331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_137
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18790,6 +19138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VitrinaReactivos_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1751866077030021060, guid: e6bd90ed7a64cdb4baa304bd4278a117, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5549391000114834594, guid: e6bd90ed7a64cdb4baa304bd4278a117, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.14
@@ -18876,6 +19228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Botiquin_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1715280417916491978, guid: b98c256404c2cdf44b3a80201ec410a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5353876480784896177, guid: b98c256404c2cdf44b3a80201ec410a3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.99
@@ -18952,7 +19308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1267713328}
   - component: {fileID: 1267713329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_205
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19030,7 +19386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270371838}
   - component: {fileID: 1270371839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19108,7 +19464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271062239}
   - component: {fileID: 1271062240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_162
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19186,7 +19542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1275494159}
   - component: {fileID: 1275494160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19264,7 +19620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277261872}
   - component: {fileID: 1277261873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_219
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19342,7 +19698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1278560314}
   - component: {fileID: 1278560315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_059
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19512,7 +19868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282107596}
   - component: {fileID: 1282107597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_176
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19774,7 +20130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299183994}
   - component: {fileID: 1299183995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_183
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19852,7 +20208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1299601205}
   - component: {fileID: 1299601206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_090
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19930,7 +20286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1301545766}
   - component: {fileID: 1301545767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_091
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20284,7 +20640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322641991}
   - component: {fileID: 1322641992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_064
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20771,7 +21127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325763012}
   - component: {fileID: 1325763013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20941,7 +21297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334353674}
   - component: {fileID: 1334353675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_206
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21019,7 +21375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341771376}
   - component: {fileID: 1341771377}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_241
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21097,7 +21453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348653104}
   - component: {fileID: 1348653105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_093
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21359,7 +21715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381368893}
   - component: {fileID: 1381368894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_085
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21529,7 +21885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393885698}
   - component: {fileID: 1393885699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21699,7 +22055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399720347}
   - component: {fileID: 1399720348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_088
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21777,7 +22133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399756554}
   - component: {fileID: 1399756555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_074
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21855,7 +22211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1400321945}
   - component: {fileID: 1400321946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_120
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21933,7 +22289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406699570}
   - component: {fileID: 1406699571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_140
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22011,7 +22367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410637748}
   - component: {fileID: 1410637749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_233
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22339,6 +22695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerminalExperimentos_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8004058885033823536, guid: 788316185d3cd1d46bb75d2af34cf907, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8934618390631118198, guid: 788316185d3cd1d46bb75d2af34cf907, type: 3}
       propertyPath: m_SortingOrder
       value: -30000
@@ -22368,6 +22728,10 @@ PrefabInstance:
     - target: {fileID: 6305699831648877298, guid: 54a7fa7437a37164c916d5a966f0414d, type: 3}
       propertyPath: m_Name
       value: MaquinaSellada_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305699831648877298, guid: 54a7fa7437a37164c916d5a966f0414d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7247983824304385073, guid: 54a7fa7437a37164c916d5a966f0414d, type: 3}
       propertyPath: m_LocalScale.x
@@ -22541,7 +22905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445660320}
   - component: {fileID: 1445660321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_057
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23028,7 +23392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451185589}
   - component: {fileID: 1451185590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_204
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23106,7 +23470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1454590388}
   - component: {fileID: 1454590389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_126
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23481,7 +23845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465383954}
   - component: {fileID: 1465383955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_157
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23559,7 +23923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486617783}
   - component: {fileID: 1486617784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_067
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23637,7 +24001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504191990}
   - component: {fileID: 1504191991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_171
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23807,7 +24171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519860902}
   - component: {fileID: 1519860903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23885,7 +24249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543976120}
   - component: {fileID: 1543976121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_135
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23963,7 +24327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1547751503}
   - component: {fileID: 1547751504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24041,7 +24405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552417064}
   - component: {fileID: 1552417065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_218
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24119,7 +24483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558488349}
   - component: {fileID: 1558488350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24197,7 +24561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1565961966}
   - component: {fileID: 1565961967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24275,7 +24639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1569422682}
   - component: {fileID: 1569422683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24353,7 +24717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572637567}
   - component: {fileID: 1572637568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_136
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24431,7 +24795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1593315431}
   - component: {fileID: 1593315432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_201
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24918,7 +25282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594936568}
   - component: {fileID: 1594936569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24996,7 +25360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1601077733}
   - component: {fileID: 1601077734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_155
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25483,7 +25847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611709782}
   - component: {fileID: 1611709783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_203
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25775,7 +26139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628641358}
   - component: {fileID: 1628641359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_121
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25853,7 +26217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1634059657}
   - component: {fileID: 1634059658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_167
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25931,7 +26295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1634580762}
   - component: {fileID: 1634580763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26103,6 +26467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantaMarchita_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5497425576329174268, guid: cc69a1c56fa4dc44fb354cb93367ed01, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5549699405981241791, guid: cc69a1c56fa4dc44fb354cb93367ed01, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.84
@@ -26187,7 +26555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644635946}
   - component: {fileID: 1644635947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_217
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26449,7 +26817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1664946906}
   - component: {fileID: 1664946907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_060
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26527,7 +26895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1667501498}
   - component: {fileID: 1667501499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_153
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26595,6 +26963,40 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.74, y: 0.019999504}
   m_EdgeRadius: 0
+--- !u!1 &1673393713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673393714}
+  m_Layer: 0
+  m_Name: SpawnersSorbos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1673393714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673393713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1839076207}
+  - {fileID: 799546969}
+  - {fileID: 378367714}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1673896919
 GameObject:
   m_ObjectHideFlags: 0
@@ -26697,7 +27099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690283283}
   - component: {fileID: 1690283284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26775,7 +27177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702788919}
   - component: {fileID: 1702788920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26854,6 +27256,10 @@ PrefabInstance:
     - target: {fileID: 253483121359208154, guid: fddc2634a40984146bdbd8e6d7921ff6, type: 3}
       propertyPath: m_Name
       value: CamillaRuedas_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 253483121359208154, guid: fddc2634a40984146bdbd8e6d7921ff6, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3845668393734618447, guid: fddc2634a40984146bdbd8e6d7921ff6, type: 3}
       propertyPath: m_LocalScale.x
@@ -26939,7 +27345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710945683}
   - component: {fileID: 1710945684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_124
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27017,7 +27423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1712908800}
   - component: {fileID: 1712908801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27095,7 +27501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717665403}
   - component: {fileID: 1717665404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_226
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27173,7 +27579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1721668531}
   - component: {fileID: 1721668532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_065
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27251,7 +27657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735291379}
   - component: {fileID: 1735291380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_161
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27329,7 +27735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747381506}
   - component: {fileID: 1747381507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_131
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27573,7 +27979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759669015}
   - component: {fileID: 1759669016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_229
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27889,6 +28295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CajasApiladas_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2893497427785794428, guid: c1a4d2bb2d7968c46aee9ce23fd30b04, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6290774506815399105, guid: c1a4d2bb2d7968c46aee9ce23fd30b04, type: 3}
       propertyPath: m_SortingOrder
       value: -30000
@@ -28013,7 +28423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773792645}
   - component: {fileID: 1773792646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_214
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28712,7 +29122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796128696}
   - component: {fileID: 1796128697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_127
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28790,7 +29200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1802070782}
   - component: {fileID: 1802070783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28960,7 +29370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810564746}
   - component: {fileID: 1810564747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_202
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29038,7 +29448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1815692046}
   - component: {fileID: 1815692047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_096
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29116,7 +29526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816346612}
   - component: {fileID: 1816346613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_210
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29260,6 +29670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RackIndustrial_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6002157728543144759, guid: d0005835795b40949a9b5ebd1e33714f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29372,7 +29786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1830886135}
   - component: {fileID: 1830886136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29450,7 +29864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836321234}
   - component: {fileID: 1836321235}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_081
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29518,6 +29932,88 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.299999, y: 0.099999905}
   m_EdgeRadius: 0
+--- !u!1001 &1839076206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1673393714}
+    m_Modifications:
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: maxEnemies
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: minEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: spawnRadius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578245519048921888, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: activationRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388471406796503558, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439871043970909860, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+      propertyPath: m_Name
+      value: Spawner_Sorbos_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+--- !u!4 &1839076207 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2236615634474583519, guid: c72a08f87420a8c4cba31d4d59073924, type: 3}
+  m_PrefabInstance: {fileID: 1839076206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842192096
 GameObject:
   m_ObjectHideFlags: 0
@@ -29528,7 +30024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842192097}
   - component: {fileID: 1842192098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_139
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29882,13 +30378,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1852076150}
   - component: {fileID: 1852076151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BloqueoAcceso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1852076150
 Transform:
   m_ObjectHideFlags: 0
@@ -29960,7 +30456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854929952}
   - component: {fileID: 1854929953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_134
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30222,7 +30718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888935324}
   - component: {fileID: 1888935325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_079
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30300,7 +30796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890169905}
   - component: {fileID: 1890169906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_181
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30378,7 +30874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1892784331}
   - component: {fileID: 1892784332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30548,7 +31044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898223238}
   - component: {fileID: 1898223239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30626,7 +31122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1901589814}
   - component: {fileID: 1901589815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_084
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30704,7 +31200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903986153}
   - component: {fileID: 1903986154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30966,7 +31462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907611542}
   - component: {fileID: 1907611543}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31044,7 +31540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909298191}
   - component: {fileID: 1909298192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_208
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31122,7 +31618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914589069}
   - component: {fileID: 1914589070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_094
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31200,7 +31696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915194816}
   - component: {fileID: 1915194817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31388,6 +31884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EscritorioPrincipal_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4074771594380465420, guid: a7591de5c3126f041bf8d52e8fd91e5e, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6250269120907726631, guid: a7591de5c3126f041bf8d52e8fd91e5e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.87
@@ -31548,7 +32048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921395961}
   - component: {fileID: 1921395962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31718,7 +32218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940639312}
   - component: {fileID: 1940639313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_078
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31796,7 +32296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941394093}
   - component: {fileID: 1941394094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31874,7 +32374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949137052}
   - component: {fileID: 1949137053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32136,7 +32636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957379144}
   - component: {fileID: 1957379145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_115
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32306,7 +32806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969367923}
   - component: {fileID: 1969367924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_163
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32384,7 +32884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973701423}
   - component: {fileID: 1973701424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_215
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32462,7 +32962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986383878}
   - component: {fileID: 1986383879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_092
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32540,7 +33040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986782837}
   - component: {fileID: 1986782838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_150
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32618,7 +33118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999637810}
   - component: {fileID: 1999637811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_117
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32696,7 +33196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001707231}
   - component: {fileID: 2001707232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32958,7 +33458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2019854966}
   - component: {fileID: 2019854967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33036,7 +33536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033322835}
   - component: {fileID: 2033322836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_196
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33298,7 +33798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044234527}
   - component: {fileID: 2044234528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33376,7 +33876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2046480592}
   - component: {fileID: 2046480593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_168
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33454,7 +33954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048400947}
   - component: {fileID: 2048400948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33532,7 +34032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056679621}
   - component: {fileID: 2056679622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_160
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33611,6 +34111,10 @@ PrefabInstance:
     - target: {fileID: 3172260225786419328, guid: e7d2c5af2f0eefc44975444fccf5b03f, type: 3}
       propertyPath: m_Name
       value: VentiladorMuro_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172260225786419328, guid: e7d2c5af2f0eefc44975444fccf5b03f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4575470723039573157, guid: e7d2c5af2f0eefc44975444fccf5b03f, type: 3}
       propertyPath: m_LocalScale.x
@@ -33770,7 +34274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065112478}
   - component: {fileID: 2065112479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33849,6 +34353,10 @@ PrefabInstance:
     - target: {fileID: 2735201477074396203, guid: b67bdf0331c0cdc4691b2b825bd62bbb, type: 3}
       propertyPath: m_Name
       value: Archivador_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735201477074396203, guid: b67bdf0331c0cdc4691b2b825bd62bbb, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6422078855196092612, guid: b67bdf0331c0cdc4691b2b825bd62bbb, type: 3}
       propertyPath: m_Size.y
@@ -34118,7 +34626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096886616}
   - component: {fileID: 2096886617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_188
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34196,7 +34704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108885961}
   - component: {fileID: 2108885962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_192
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34274,7 +34782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2115692340}
   - component: {fileID: 2115692341}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_075
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34352,7 +34860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2117551529}
   - component: {fileID: 2117551530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34430,7 +34938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125753398}
   - component: {fileID: 2125753399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_099
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34508,7 +35016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139938637}
   - component: {fileID: 2139938638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34586,7 +35094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143153484}
   - component: {fileID: 2143153485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muro_240
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34758,3 +35266,6 @@ SceneRoots:
   - {fileID: 1463343508}
   - {fileID: 1080460803}
   - {fileID: 445473765}
+  - {fileID: 849779435}
+  - {fileID: 515533153}
+  - {fileID: 1673393714}

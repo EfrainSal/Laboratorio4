@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class PlayerCombat : MonoBehaviour
     public void OnAttack(InputValue value)
     {
         // Si el script está desactivado por el Manager, Unity no procesará esto
-        if (!enabled) return; 
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
 
         if (value.isPressed && Time.time >= nextAttackTime)
         {
@@ -33,25 +34,30 @@ public class PlayerCombat : MonoBehaviour
 
     void Attack()
     {
+        if (attackPoint == null) return;
+        GetComponent<ArmaIndependiente>()?.ActualizarApuntado();
+        GetComponent<MacheteAnimacion>()?.Reproducir();
+        GetComponent<AnimacionJasonDinamica>()?.ReproducirAccion("Ataque");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         bool golpeoEnemigo = false; 
+        var golpeados = new HashSet<Component>();
 
         foreach (Collider2D enemy in hitEnemies)
         {
             // Intentar dañar enemigo normal
-            EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealth = enemy.GetComponentInParent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(attackDamage);
+                if (golpeados.Add(enemyHealth)) enemyHealth.TakeDamage(attackDamage);
                 golpeoEnemigo = true; 
             }
             else
             {
                 // Intentar dañar al Jefe
-                BossHealth bossHealth = enemy.GetComponent<BossHealth>();
+                BossHealth bossHealth = enemy.GetComponentInParent<BossHealth>();
                 if (bossHealth != null)
                 {
-                    bossHealth.TakeDamage(attackDamage);
+                    if (golpeados.Add(bossHealth)) bossHealth.TakeDamage(attackDamage);
                     golpeoEnemigo = true;
                 }
             }

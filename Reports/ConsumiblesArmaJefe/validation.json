@@ -1,0 +1,69 @@
+{
+  "protected_files": 271,
+  "modified_or_missing_resources": [],
+  "protected_scenes_and_machete_changed": [],
+  "existing_weapon_configuration_preserved": {
+    "Player_Jason": true,
+    "Player_Milena": true
+  },
+  "duplicate_guids": {},
+  "doctor_yiba_scenes": [
+    "Assets/Scenes/Nivel1.unity"
+  ],
+  "build_scene_paths_exist": true,
+  "unique_weapon_sprites": 16,
+  "legacy_weapon_copies": {
+    "ARMA-LABORATORIO4_01.png": [
+      "Apuntar/Arma_Apuntar_0_Sur.png"
+    ],
+    "ARMA-LABORATORIO4_02.png": [
+      "Apuntar/Arma_Apuntar_1_Sureste.png"
+    ],
+    "ARMA-LABORATORIO4_03.png": [
+      "Apuntar/Arma_Apuntar_2_Este.png"
+    ],
+    "ARMA-LABORATORIO4_04.png": [
+      "Apuntar/Arma_Apuntar_3_Noreste.png"
+    ],
+    "ARMA-LABORATORIO4_05.png": [
+      "Apuntar/Arma_Apuntar_4_Norte.png"
+    ],
+    "ARMA-LABORATORIO4_06.png": [
+      "Apuntar/Arma_Apuntar_5_Noroeste.png"
+    ],
+    "ARMA-LABORATORIO4_07.png": [
+      "Apuntar/Arma_Apuntar_6_Oeste.png"
+    ],
+    "ARMA-LABORATORIO4_08.png": [
+      "Apuntar/Arma_Apuntar_7_Suroeste.png"
+    ],
+    "Arma_laboratorio4-disparando_0001.png": [
+      "Disparar/Arma_Disparar_0_Sur.png"
+    ],
+    "Arma_laboratorio4-disparando_0002.png": [
+      "Disparar/Arma_Disparar_1_Sureste.png"
+    ],
+    "Arma_laboratorio4-disparando_0003.png": [
+      "Disparar/Arma_Disparar_2_Este.png"
+    ],
+    "Arma_laboratorio4-disparando_0004.png": [
+      "Disparar/Arma_Disparar_3_Noreste.png"
+    ],
+    "Arma_laboratorio4-disparando_0005.png": [
+      "Disparar/Arma_Disparar_4_Norte.png"
+    ],
+    "Arma_laboratorio4-disparando_0006.png": [
+      "Disparar/Arma_Disparar_5_Noroeste.png"
+    ],
+    "Arma_laboratorio4-disparando_0007.png": [
+      "Disparar/Arma_Disparar_6_Oeste.png"
+    ],
+    "Arma_laboratorio4-disparando_0008.png": [
+      "Disparar/Arma_Disparar_7_Suroeste.png"
+    ]
+  },
+  "boss_sprite_frames": 288,
+  "playmode_pass": true,
+  "passed_checks": 133,
+  "failed_checks": []
+}

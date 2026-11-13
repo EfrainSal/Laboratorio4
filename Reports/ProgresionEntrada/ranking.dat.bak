@@ -1,0 +1,48 @@
+{
+    "version": 2,
+    "topScores": [
+        {
+            "recordId": "611812c196f6473a9a43d6400a312e64",
+            "playerName": "niñopro",
+            "score": 25,
+            "time": 21.438133239746094,
+            "characterId": 1,
+            "date": "2026-11-13T01:26:37.3441255Z",
+            "uploaded": false,
+            "victory": false
+        },
+        {
+            "recordId": "2a0d071a71b84608b5204a6029ec7868",
+            "playerName": "niñopro",
+            "score": 0,
+            "time": 0.922329843044281,
+            "characterId": 2,
+            "date": "2026-11-13T01:23:30.4844859Z",
+            "uploaded": false,
+            "victory": false
+        }
+    ],
+    "topTimes": [],
+    "pendingUploads": [
+        {
+            "recordId": "2a0d071a71b84608b5204a6029ec7868",
+            "playerName": "niñopro",
+            "score": 0,
+            "time": 0.922329843044281,
+            "characterId": 2,
+            "date": "2026-11-13T01:23:30.4844859Z",
+            "uploaded": false,
+            "victory": false
+        },
+        {
+            "recordId": "611812c196f6473a9a43d6400a312e64",
+            "playerName": "niñopro",
+            "score": 25,
+            "time": 21.438133239746094,
+            "characterId": 1,
+            "date": "2026-11-13T01:26:37.3441255Z",
+            "uploaded": false,
+            "victory": false
+        }
+    ]
+}

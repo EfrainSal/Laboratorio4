@@ -47,6 +47,7 @@ public class ShieldAbility : MonoBehaviour
 
     public void OnAbility(InputValue value)
     {
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
         if (value.isPressed && habilidadLista)
         {
             StartCoroutine(ActivarEscudo());
@@ -56,6 +57,7 @@ public class ShieldAbility : MonoBehaviour
     private IEnumerator ActivarEscudo()
     {
         habilidadLista = false;
+        GetComponent<AnimacionJasonDinamica>()?.ReproducirAccion("Habilidad");
 
         if (sfxSource != null && sonidoEscudo != null) sfxSource.PlayOneShot(sonidoEscudo);
         

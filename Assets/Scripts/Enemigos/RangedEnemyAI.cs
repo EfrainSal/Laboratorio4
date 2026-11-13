@@ -37,6 +37,7 @@ public class RangedEnemyAI : MonoBehaviour
 
     [HideInInspector] public bool isKnockedBack = false;
     private bool isCharging = false;
+    public int DisparosRealizados { get; private set; }
 
     private Transform player;
     private Rigidbody2D rb;
@@ -227,9 +228,16 @@ public class RangedEnemyAI : MonoBehaviour
             yield return null;
         }
 
-        if (bulletPrefab != null && player != null && firePoint != null && TieneLineaDeVision(player.position))
+        if (!isKnockedBack && player != null)
+        {
+            var animacion = GetComponent<AnimacionEnemigoDinamica>();
+            float espera = animacion != null ? animacion.Atacar(player.position) : 0f;
+            if (espera > 0f) yield return new WaitForSeconds(espera);
+        }
+        if (!isKnockedBack && bulletPrefab != null && player != null && firePoint != null && TieneLineaDeVision(player.position))
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            DisparosRealizados++;
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             
             if (bulletRb != null)
@@ -242,5 +250,12 @@ public class RangedEnemyAI : MonoBehaviour
         if (chargeIndicatorFill != null) chargeIndicatorFill.fillAmount = 0f;
         yield return new WaitForSeconds(0.5f);
         isCharging = false;
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        isCharging = false;
+        if (chargeIndicatorFill != null) chargeIndicatorFill.fillAmount = 0f;
     }
 }

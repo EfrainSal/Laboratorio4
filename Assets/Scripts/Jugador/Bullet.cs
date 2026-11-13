@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float lifetime = 3f; // Tiempo de vida si no choca con nada
 
     private Vector2 previousPosition;
+    private bool impactoAplicado;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if (impactoAplicado) return;
         Vector2 currentPosition = transform.position;
         Vector2 direction = currentPosition - previousPosition;
         float distance = direction.magnitude;
@@ -37,16 +39,17 @@ public class Bullet : MonoBehaviour
                 }
                 else
                 {
+                    impactoAplicado = true;
                     // Daño a enemigos normales
                     if (hit.collider.CompareTag("Enemy"))
                     {
-                        EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+                        EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>();
                         if (enemyHealth != null) enemyHealth.TakeDamage(damage);
                     }
                     // Daño al Jefe
                     else if (hit.collider.CompareTag("Boss"))
                     {
-                        BossHealth bossHealth = hit.collider.GetComponent<BossHealth>();
+                        BossHealth bossHealth = hit.collider.GetComponentInParent<BossHealth>();
                         if (bossHealth != null) bossHealth.TakeDamage(damage);
                     }
                     
@@ -63,16 +66,17 @@ public class Bullet : MonoBehaviour
     // Mantenemos OnTriggerEnter2D como método de respaldo
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Drop")) return;
+        if (impactoAplicado || collision.CompareTag("Player") || collision.CompareTag("Drop")) return;
+        impactoAplicado = true;
 
         if (collision.CompareTag("Enemy"))
         {
-            EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+            EnemyHealth enemyHealth = collision.GetComponentInParent<EnemyHealth>();
             if (enemyHealth != null) enemyHealth.TakeDamage(damage);
         }
         else if (collision.CompareTag("Boss"))
         {
-            BossHealth bossHealth = collision.GetComponent<BossHealth>();
+            BossHealth bossHealth = collision.GetComponentInParent<BossHealth>();
             if (bossHealth != null) bossHealth.TakeDamage(damage);
         }
         

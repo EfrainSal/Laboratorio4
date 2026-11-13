@@ -24,23 +24,38 @@ public class PlayerShooting : MonoBehaviour
     public AudioClip sonidoDisparo;   
 
     private float nextFireTime = 0f;
-    private bool isShooting = false;  
+    private bool municionRestaurada;
+    private PlayerInput entrada;
+    private InputAction accionDisparo;
+
+    void Awake()
+    {
+        entrada = GetComponent<PlayerInput>();
+    }
 
     void Start()
     {
-        currentAmmoInClip = maxClipSize; 
+        if (!municionRestaurada) currentAmmoInClip = maxClipSize;
         UpdateAmmoUI();
     }
 
-    // Método crucial de seguridad: detiene el disparo si el script se desactiva
+    public void RestaurarMunicion(int cargador, int reserva)
+    {
+        municionRestaurada = true;
+        currentAmmoInClip = Mathf.Clamp(cargador, 0, maxClipSize);
+        totalAmmo = Mathf.Max(0, reserva);
+        UpdateAmmoUI();
+    }
+
     void OnDisable()
     {
-        isShooting = false;
+        accionDisparo = null;
     }
 
     void Update()
     {
-        if (isShooting && Time.time >= nextFireTime && currentAmmoInClip > 0)
+        if (DeathScreenController.GameplayBlocked) return;
+        if (DisparoMantenido() && Time.time >= nextFireTime && currentAmmoInClip > 0)
         {
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
 
@@ -49,16 +64,22 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    // Cambiado de OnShoot a OnAttack
-    public void OnAttack(InputValue value)
+    private bool DisparoMantenido()
     {
-        if (!enabled) return;
-        isShooting = value.isPressed;
+        if (entrada == null || !entrada.isActiveAndEnabled || !entrada.inputIsActive) return false;
+        var mapa = entrada.currentActionMap;
+        if (mapa == null) return false;
+        if (accionDisparo == null || accionDisparo.actionMap != mapa)
+            accionDisparo = mapa.FindAction("Attack", false);
+
+        // Send Messages no comunica canceled para acciones Button. Leer la acción
+        // del jugador cada frame evita conservar el clic después de soltarlo.
+        return accionDisparo != null && accionDisparo.enabled && accionDisparo.IsPressed();
     }
 
     public void OnReload(InputValue value)
     {
-        if (!enabled) return; // No recargar si tienes el machete en mano
+        if (!enabled || DeathScreenController.GameplayBlocked) return;
 
         if (value.isPressed)
         {
@@ -68,10 +89,12 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
+        GetComponent<ArmaIndependiente>()?.ActualizarApuntado();
         currentAmmoInClip--;
         UpdateAmmoUI();
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GetComponent<ArmaIndependiente>()?.MostrarDisparo();
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {

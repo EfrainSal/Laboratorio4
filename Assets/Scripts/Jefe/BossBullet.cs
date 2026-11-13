@@ -8,7 +8,7 @@ public class BossBullet : MonoBehaviour
     public float lifetime = 4f;
 
     [Header("Muerte")]
-    public DeathCause deathCause = DeathCause.Disparo; // Si tienes DeathCause.Jefe, úsalo aquí
+    public DeathCause deathCause = DeathCause.Jefe;
 
     private Rigidbody2D rb;
 

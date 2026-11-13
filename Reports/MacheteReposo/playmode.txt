@@ -1,0 +1,27 @@
+RESULTADO: PASS
+PASS Jason: Personaje elegido desde MainMenu
+PASS Jason: El mango permanece en la mano
+PASS Jason: Hoja levantada en reposo hacia derecha
+PASS Jason: Circulo amarillo oculto
+PASS Jason: El mango permanece en la mano
+PASS Jason: El tajo dirige la hoja hacia el objetivo
+PASS Jason: El mango permanece en la mano
+PASS Jason: Hoja levantada en reposo hacia izquierda
+PASS Jason: Circulo amarillo oculto
+PASS Jason: El mango permanece en la mano
+PASS Jason: El tajo dirige la hoja hacia el objetivo
+PASS Jason: Altura de cadera conservada
+PASS Jason: Subfusil y salida de bala conservan su configuracion
+PASS Milena: Personaje elegido desde MainMenu
+PASS Milena: El mango permanece en la mano
+PASS Milena: Hoja levantada en reposo hacia derecha
+PASS Milena: Circulo amarillo oculto
+PASS Milena: El mango permanece en la mano
+PASS Milena: El tajo dirige la hoja hacia el objetivo
+PASS Milena: El mango permanece en la mano
+PASS Milena: Hoja levantada en reposo hacia izquierda
+PASS Milena: Circulo amarillo oculto
+PASS Milena: El mango permanece en la mano
+PASS Milena: El tajo dirige la hoja hacia el objetivo
+PASS Milena: Altura de cadera conservada
+PASS Milena: Subfusil y salida de bala conservan su configuracion
