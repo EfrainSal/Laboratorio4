@@ -31,6 +31,13 @@ public class BossAI : MonoBehaviour
     public GameObject[] basicEnemiesToSummon; // Arrastra aquí tus prefabs Enemy_Melee y Ranged
     public int enemiesToSpawn = 3;
 
+    [Header("Audio y Sonidos")]
+    public AudioSource audioSource;
+    public AudioClip sfxRecargaEnergia; // Jefe_Recarga_Energia
+    public AudioClip sfxDisparo;        // Jefe_Disparo
+    public AudioClip sfxInvocacion;     // Jefe_Rugido_Largo_1
+    public AudioClip sfxAtaquePesado;   // Jefe_Rugido_Largo_2
+
     private Transform player;
     private Rigidbody2D rb;
     private float zPosition;
@@ -40,6 +47,7 @@ public class BossAI : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animacion = GetComponent<AnimacionJefeDinamica>();
+        if (audioSource == null) audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -147,7 +155,7 @@ public class BossAI : MonoBehaviour
             // 10% Zarpazo Pesado Especial
             else 
             {
-                if (distance <= attackRange * 1.5f) StartCoroutine(EjecutarZarpazo(damageZarpazoLetal, knockbackLetal, Color.red));
+                if (distance <= attackRange * 1.5f) StartCoroutine(EjecutarZarpazo(damageZarpazoLetal, knockbackLetal, Color.red, true));
                 else StartCoroutine(EjecutarBulletHell()); // Si está muy lejos, dispara
             }
         }
@@ -155,9 +163,11 @@ public class BossAI : MonoBehaviour
 
     // --- CORRUTINAS DE ATAQUES ---
 
-    private IEnumerator EjecutarZarpazo(float damage, float knockback, Color telegraphColor)
+    private IEnumerator EjecutarZarpazo(float damage, float knockback, Color telegraphColor, bool esAtaquePesado = false)
     {
         animacion?.ComenzarAccion("Ataque", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
+        if (esAtaquePesado) ReproducirSFX(sfxAtaquePesado);
+
         // Feedback visual breve antes de pegar
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
         Color originalColor = sr.color;
@@ -189,6 +199,7 @@ public class BossAI : MonoBehaviour
     private IEnumerator EjecutarBulletHell()
     {
         animacion?.ComenzarAccion("BolaDePoder", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
+        ReproducirSFX(sfxRecargaEnergia);
         // Carga energía por 1 segundo
         yield return new WaitForSeconds(1f);
 
@@ -197,6 +208,8 @@ public class BossAI : MonoBehaviour
             TerminarAtaque();
             yield break;
         }
+
+        ReproducirSFX(sfxDisparo);
 
         float angleStep = 360f / Mathf.Max(1, bulletsAmount);
         float currentAngle = 0f;
@@ -216,6 +229,7 @@ public class BossAI : MonoBehaviour
     private IEnumerator EjecutarInvocacion()
     {
         animacion?.ComenzarAccion("CampoEnergia", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
+        ReproducirSFX(sfxInvocacion);
         // Rugido largo
         yield return new WaitForSeconds(1.5f);
 
@@ -238,6 +252,14 @@ public class BossAI : MonoBehaviour
         }
 
         TerminarAtaque(3.5f);
+    }
+
+    private void ReproducirSFX(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 
     private void TerminarAtaque(float cooldownExtra = 0f)

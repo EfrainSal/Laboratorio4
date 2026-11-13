@@ -7,6 +7,7 @@ using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
@@ -163,8 +164,10 @@ public static class IntegrarConsumiblesArmaJefe
                 serializado.FindProperty("_cinematicSceneName").stringValue = "MainMenu";
                 serializado.ApplyModifiedPropertiesWithoutUndo();
             }
+            ConfigurarAudioPantallasYJefeEnEscena(escena, ai);
             EditorSceneManager.MarkSceneDirty(escena);
             EditorSceneManager.SaveScene(escena);
+            ConfigurarAudioEnHudYEscenas();
             informe.Add("PASS DoctorYiba conectado exclusivamente en " + EscenaJefe + ": 6 estados, 3 fases, HUD, proyectiles e invocaciones.");
             RepararRutasBuild();
             AssetDatabase.SaveAssets();
@@ -173,6 +176,140 @@ public static class IntegrarConsumiblesArmaJefe
             Debug.Log("[ConsumiblesArmaJefe] Integracion aplicada. Jefe solamente en Nivel1.");
         }
         finally { EditorSceneManager.RestoreSceneManagerSetup(anterior); }
+    }
+
+    [MenuItem("Laboratorio 4/Audio/Integrar musica muerte victoria y sonidos jefe")]
+    public static void IntegrarAudioPantallasYJefe()
+    {
+        if (EditorApplication.isPlaying || !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+        Selection.activeObject = null;
+        StageUtility.GoToMainStage();
+        var anterior = EditorSceneManager.GetSceneManagerSetup();
+        try
+        {
+            ConfigurarAudioEnHudYEscenas();
+            var escena = EditorSceneManager.OpenScene(EscenaJefe);
+            var ai = Object.FindFirstObjectByType<BossAI>();
+            ConfigurarAudioPantallasYJefeEnEscena(escena, ai);
+            EditorSceneManager.MarkSceneDirty(escena);
+            EditorSceneManager.SaveScene(escena);
+            AssetDatabase.SaveAssets();
+            Debug.Log("[Audio] Integrados Musica_Game_Over, Musica_Victoria_Jefe y los 4 SFX del jefe en Nivel1.");
+        }
+        finally { EditorSceneManager.RestoreSceneManagerSetup(anterior); }
+    }
+
+    private static void ConfigurarAudioEnHudYEscenas()
+    {
+        var mixer = AssetDatabase.LoadAssetAtPath<AudioMixer>("Assets/Audio/MainMixer.mixer");
+        var grupoMusic = mixer != null ? mixer.FindMatchingGroups("Music").FirstOrDefault() : null;
+        var clipGameOver = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Musica/Musica_Game_Over.wav");
+
+        if (File.Exists(IntegrarGameplayPiso3.HudPrefab))
+        {
+            var hud = PrefabUtility.LoadPrefabContents(IntegrarGameplayPiso3.HudPrefab);
+            try
+            {
+                var death = hud.GetComponentInChildren<DeathScreenController>(true);
+                if (death != null) AsignarAudioMuerte(death, clipGameOver, mixer, grupoMusic);
+                PrefabUtility.SaveAsPrefabAsset(hud, IntegrarGameplayPiso3.HudPrefab);
+            }
+            finally { PrefabUtility.UnloadPrefabContents(hud); }
+        }
+
+        foreach (string rutaEscena in new[] { "Assets/Scenes/Escenario1_Entrada.unity", "Assets/Scenes/Piso3_V10.unity", "Assets/Scenes/E3_Laboratorio.unity", "Assets/Scenes/Debugscene.unity" })
+        {
+            if (!File.Exists(rutaEscena)) continue;
+            var esc = EditorSceneManager.OpenScene(rutaEscena);
+            var death = esc.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<DeathScreenController>(true)).FirstOrDefault();
+            if (death != null)
+            {
+                AsignarAudioMuerte(death, clipGameOver, mixer, grupoMusic);
+                EditorSceneManager.MarkSceneDirty(esc);
+                EditorSceneManager.SaveScene(esc);
+            }
+        }
+    }
+
+    private static void ConfigurarAudioPantallasYJefeEnEscena(Scene escena, BossAI ai)
+    {
+        var mixer = AssetDatabase.LoadAssetAtPath<AudioMixer>("Assets/Audio/MainMixer.mixer");
+        var grupoMusic = mixer != null ? mixer.FindMatchingGroups("Music").FirstOrDefault() : null;
+        var grupoSfx = mixer != null ? mixer.FindMatchingGroups("SFX").FirstOrDefault() : null;
+
+        var clipGameOver = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Musica/Musica_Game_Over.wav");
+        var clipVictoria = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/Musica/Musica_Victoria_Jefe.wav");
+
+        var death = escena.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<DeathScreenController>(true)).FirstOrDefault();
+        if (death != null) AsignarAudioMuerte(death, clipGameOver, mixer, grupoMusic);
+
+        var victoria = escena.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<VictoryScreenController>(true)).FirstOrDefault();
+        if (victoria != null) AsignarAudioVictoria(victoria, clipVictoria, mixer, grupoMusic);
+
+        if (ai != null)
+        {
+            var jefe = ai.gameObject;
+            var source = jefe.GetComponent<AudioSource>();
+            if (source == null) source = jefe.AddComponent<AudioSource>();
+            source.playOnAwake = false;
+            source.loop = false;
+            source.spatialBlend = 0f;
+            source.volume = 1f;
+            if (grupoSfx != null) source.outputAudioMixerGroup = grupoSfx;
+
+            ai.audioSource = source;
+            ai.sfxRecargaEnergia = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/SFX/Jefe_Recarga_Energia.ogg");
+            ai.sfxDisparo = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/SFX/Jefe_Disparo.ogg");
+            ai.sfxInvocacion = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/SFX/Jefe_Rugido_Largo_1.mp3");
+            ai.sfxAtaquePesado = AssetDatabase.LoadAssetAtPath<AudioClip>("Assets/Audio/SFX/Jefe_Rugido_Largo_2.mp3");
+            EditorUtility.SetDirty(ai);
+            EditorUtility.SetDirty(source);
+        }
+    }
+
+    private static void AsignarAudioMuerte(DeathScreenController death, AudioClip clip, AudioMixer mixer, AudioMixerGroup grupoMusic)
+    {
+        var source = death.GetComponent<AudioSource>();
+        if (source == null)
+        {
+            var hijo = death.transform.parent != null ? death.transform.parent.Find("SonidoMuerte") : null;
+            if (hijo != null) source = hijo.GetComponent<AudioSource>();
+        }
+        if (source == null) source = death.gameObject.AddComponent<AudioSource>();
+
+        source.clip = clip;
+        source.playOnAwake = false;
+        source.loop = false;
+        source.spatialBlend = 0f;
+        source.volume = 1f;
+        if (grupoMusic != null) source.outputAudioMixerGroup = grupoMusic;
+
+        var so = new SerializedObject(death);
+        so.FindProperty("_deathSting").objectReferenceValue = source;
+        if (mixer != null) so.FindProperty("_mixer").objectReferenceValue = mixer;
+        so.ApplyModifiedPropertiesWithoutUndo();
+        EditorUtility.SetDirty(source);
+        EditorUtility.SetDirty(death);
+    }
+
+    private static void AsignarAudioVictoria(VictoryScreenController victoria, AudioClip clip, AudioMixer mixer, AudioMixerGroup grupoMusic)
+    {
+        var source = victoria.GetComponent<AudioSource>();
+        if (source == null) source = victoria.gameObject.AddComponent<AudioSource>();
+
+        source.clip = clip;
+        source.playOnAwake = false;
+        source.loop = false;
+        source.spatialBlend = 0f;
+        source.volume = 1f;
+        if (grupoMusic != null) source.outputAudioMixerGroup = grupoMusic;
+
+        var so = new SerializedObject(victoria);
+        so.FindProperty("_victorySting").objectReferenceValue = source;
+        if (mixer != null) so.FindProperty("_mixer").objectReferenceValue = mixer;
+        so.ApplyModifiedPropertiesWithoutUndo();
+        EditorUtility.SetDirty(source);
+        EditorUtility.SetDirty(victoria);
     }
     private static Sprite[] CargarArma(string accion)
     {

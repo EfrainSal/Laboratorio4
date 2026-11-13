@@ -15140,6 +15140,7 @@ MonoBehaviour:
   selectorPrototipo: {fileID: 1397}
   puntoDeInicio: {fileID: 870424406}
   camara: {fileID: 1396}
+  camaraE3: {fileID: 0}
   gestorNivel: {fileID: 870424403}
   prefabJason: {fileID: 4445733836767800532, guid: 80801492dfa731c45b64fd11938f9e81, type: 3}
 --- !u!4 &1885989347
