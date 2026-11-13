@@ -19,7 +19,7 @@ namespace Laboratorio4.Recepcion
             if (Application.CanStreamedLevelBeLoaded(escenaDestino))
             {
                 usada = true;
-                SceneManager.LoadScene(escenaDestino);
+                TransicionEntrePisos.CargarEscena(escenaDestino);
             }
             else
                 Debug.LogWarning("[Recepción] La escena '" + escenaDestino + "' no está en Build Settings. Agrégala o cambia 'Escena Destino' en Salida_Escenario1.");

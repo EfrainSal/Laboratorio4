@@ -1,0 +1,2 @@
+MainMenu -> Recepcion -> recoger tarjeta junto a la salida -> F en el panel -> Escenario1_Entrada.
+Interfaz de controles conservada. Recoger la tarjeta sólo la guarda en el inventario.

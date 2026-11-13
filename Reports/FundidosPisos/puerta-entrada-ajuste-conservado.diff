@@ -1,0 +1,29 @@
+diff --git a/Assets/Scenes/Escenario1_Entrada.unity b/Assets/Scenes/Escenario1_Entrada.unity
+index 2e455c4..15ea2dd 100644
+--- a/Assets/Scenes/Escenario1_Entrada.unity
++++ b/Assets/Scenes/Escenario1_Entrada.unity
+@@ -5140,11 +5140,11 @@ PrefabInstance:
+       objectReference: {fileID: 0}
+     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
+       propertyPath: m_LocalPosition.x
+-      value: 47.04
++      value: 47
+       objectReference: {fileID: 0}
+     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
+       propertyPath: m_LocalPosition.y
+-      value: -6.18
++      value: -5.63
+       objectReference: {fileID: 0}
+     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
+       propertyPath: m_LocalPosition.z
+@@ -5178,6 +5178,10 @@ PrefabInstance:
+       propertyPath: m_LocalEulerAnglesHint.z
+       value: 0
+       objectReference: {fileID: 0}
++    - target: {fileID: 7510312503975377780, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
++      propertyPath: m_SortingOrder
++      value: 563
++      objectReference: {fileID: 0}
+     - target: {fileID: 7704715513855716656, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
+       propertyPath: m_Name
+       value: Puerta_Salida_Piso2

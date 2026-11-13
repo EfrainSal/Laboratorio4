@@ -1,0 +1,29 @@
+PASS 271 archivos preexistentes de Resources intactos: []
+PASS Piso3_V10 conservada sin cambios
+PASS MainMenu conservada sin cambios
+PASS Cinematicas conservada sin cambios
+PASS Galeria_Personajes conservada sin cambios
+PASS Recepcion: iluminación global a 0
+PASS Recepcion: luz local 1 conserva el perfil de Piso3
+PASS Escenario1_Entrada: iluminación global a 0
+PASS Escenario1_Entrada: luz local 1 conserva el perfil de Piso3
+PASS Escenario1_Entrada: luz local 2 conserva el perfil de Piso3
+PASS Todas las piezas serializadas de Entrada usan el material iluminado de Piso3
+PASS Piso3_V10: iluminación global a 0
+PASS E3_Laboratorio: iluminación global a 0
+PASS E3_Laboratorio: luz local 1 conserva el perfil de Piso3
+PASS Escenario4_Jefe: iluminación global a 0
+PASS Escenario4_Jefe: luz local 1 conserva el perfil de Piso3
+PASS Nivel1: iluminación global a 0
+PASS Debugscene: iluminación global a 0
+PASS Prueba 1: iluminación global a 0
+PASS Piso3_Modular: iluminación global a 0
+PASS Piso3_Modular: luz local 1 conserva el perfil de Piso3
+PASS Piso3_Modular: luz local 2 conserva el perfil de Piso3
+PASS Piso3_Final_Modular: iluminación global a 0
+PASS Piso3_Final_Modular: luz local 1 conserva el perfil de Piso3
+PASS Piso3_Final_Modular: luz local 2 conserva el perfil de Piso3
+PASS La reconstrucción conserva oscuridad: IntegrarInicioRecepcion.cs
+PASS La reconstrucción conserva oscuridad: IntegrarProgresionEntrada.cs
+PASS La reconstrucción conserva oscuridad: IntegrarConsumiblesArmaJefe.cs
+PASS Prueba de render real en los ocho mapas principales aprobada

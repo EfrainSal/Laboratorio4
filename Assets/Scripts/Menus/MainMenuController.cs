@@ -29,7 +29,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private AudioSource _sfxPreview;         
 
     [Header("Escenas")]
-    [SerializeField] private string _gameSceneName = "SampleScene";
+    [SerializeField] private string _gameSceneName = "Recepcion";
 
     [Header("Sprites de Personajes (0: Jason, 1: Milena)")] // NUEVO
     [SerializeField] private Sprite[] _characterSprites;    // NUEVO
@@ -133,7 +133,7 @@ public class MainMenuController : MonoBehaviour
         _leftShadeTexture = CreateGradientTexture(Color.black, 0.88f, 0f, true);
         _leftShade.style.backgroundImage = new StyleBackground(_leftShadeTexture);
 
-        _buttonGradientTexture = CreateGradientTexture(Color.white, 1f, 0f, false);
+        _buttonGradientTexture = CrearGradienteBoton();
         _root.Query<Button>(className: MenuButtonClass)
              .ForEach(b => b.style.backgroundImage = new StyleBackground(_buttonGradientTexture));
 
@@ -218,6 +218,8 @@ public class MainMenuController : MonoBehaviour
         source.Play();
         source.playbackSpeed = _videoSpeed;   
     }
+
+    public static Texture2D CrearGradienteBoton() => CreateGradientTexture(Color.white, 1f, 0f, false);
 
     private static Texture2D CreateGradientTexture(Color color, float alphaStart, float alphaEnd, bool smooth)
     {

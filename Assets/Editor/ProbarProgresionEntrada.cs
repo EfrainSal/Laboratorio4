@@ -129,8 +129,8 @@ public static class ProbarProgresionEntrada
     private static IEnumerator Recorrido()
     {
         yield return .7f;
-        string destino = new SerializedObject(Object.FindFirstObjectByType<MainMenuController>()).FindProperty("_gameSceneName").stringValue;
-        Exigir(destino == "Escenario1_Entrada" && Application.CanStreamedLevelBeLoaded(destino), "Nueva partida apunta a Entrada incluida en Build Settings");
+        string destino = "Escenario1_Entrada";
+        Exigir(Application.CanStreamedLevelBeLoaded(destino), "Entrada incluida en Build Settings (el prólogo se verifica en ProbarInicioRecepcion)");
         GameManager.Instance.IniciarNuevaRun(0); SceneManager.LoadScene(destino);
         yield return 1f;
         Emparejar();
@@ -167,7 +167,8 @@ public static class ProbarProgresionEntrada
         if (arma.visual.flipY) agarre.y *= -1;
         var mano = arma.visual.transform.TransformPoint(agarre);
         Exigir(Vector3.Distance(mano, arma.pivote.TransformPoint(arma.posicionManoMachete)) < .001f, "Mango anclado a la mano al reflejar y escalar");
-        ScreenCapture.CaptureScreenshot(Carpeta + "machete-corregido.png"); yield return .2f;
+        // No sobrescribir una captura que pueda estar abierta en un visor externo.
+        ScreenCapture.CaptureScreenshot(Carpeta + "machete-" + DateTime.UtcNow.ToString("yyyyMMdd-HHmmss-fff") + ".png"); yield return .2f;
         Apuntar(Vector2.left); yield return .15f;
         Exigir(!arma.visual.flipY, "Filo y agarre se reflejan hacia la izquierda");
         armas.EquipWeapon(false); disparo.RestaurarMunicion(30, 60);
@@ -247,7 +248,10 @@ public static class ProbarProgresionEntrada
         disparo.RestaurarMunicion(7, 41);
         jugador.GetComponent<PlayerExperience>().RestaurarProgreso(3, 17);
         puerta = Object.FindFirstObjectByType<PuertaNivel>(); Posicionar(puerta.transform.position); yield return .2f;
-        Tecla(Key.F); yield return 1f;
+        Tecla(Key.F); yield return .1f;
+        float limiteCarga = Time.unscaledTime + 10;
+        while (TransicionEntrePisos.EnCurso && Time.unscaledTime < limiteCarga) yield return .05f;
+        yield return .2f;
         Exigir(SceneManager.GetActiveScene().name == "Piso3_V10" && GameManager.Instance.pisoActual == 2, "F con tarjeta avanza exactamente un piso a Piso3");
         Emparejar(); Tecla(); yield return .1f;
         inventario = jugador.GetComponent<PlayerInventory>(); disparo = jugador.GetComponent<PlayerShooting>();

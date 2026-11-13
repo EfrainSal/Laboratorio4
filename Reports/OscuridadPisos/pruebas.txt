@@ -1,0 +1,42 @@
+PASS Inicio desde MainMenu con GameManager
+PASS Recepcion: sin iluminación ambiental que lave la oscuridad
+PASS Recepcion: el jugador tiene luz local activa
+PASS Recepcion: intensidad, radio, caída y color iguales a Piso3
+PASS Recepcion: las piezas del mapa responden a la luz 2D
+PASS Recepcion: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Escenario1_Entrada: sin iluminación ambiental que lave la oscuridad
+PASS Escenario1_Entrada: el jugador tiene luz local activa
+PASS Escenario1_Entrada: intensidad, radio, caída y color iguales a Piso3
+PASS Escenario1_Entrada: las piezas del mapa responden a la luz 2D
+PASS Escenario1_Entrada: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Piso3_V10: sin iluminación ambiental que lave la oscuridad
+PASS Piso3_V10: el jugador tiene luz local activa
+PASS Piso3_V10: intensidad, radio, caída y color iguales a Piso3
+PASS Piso3_V10: las piezas del mapa responden a la luz 2D
+PASS Piso3_V10: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS E3_Laboratorio: sin iluminación ambiental que lave la oscuridad
+PASS E3_Laboratorio: el jugador tiene luz local activa
+PASS E3_Laboratorio: intensidad, radio, caída y color iguales a Piso3
+PASS E3_Laboratorio: las piezas del mapa responden a la luz 2D
+PASS E3_Laboratorio: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Escenario4_Jefe: sin iluminación ambiental que lave la oscuridad
+PASS Escenario4_Jefe: el jugador tiene luz local activa
+PASS Escenario4_Jefe: intensidad, radio, caída y color iguales a Piso3
+PASS Escenario4_Jefe: las piezas del mapa responden a la luz 2D
+PASS Escenario4_Jefe: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Nivel1: sin iluminación ambiental que lave la oscuridad
+PASS Nivel1: el jugador tiene luz local activa
+PASS Nivel1: intensidad, radio, caída y color iguales a Piso3
+PASS Nivel1: las piezas del mapa responden a la luz 2D
+PASS Nivel1: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Debugscene: sin iluminación ambiental que lave la oscuridad
+PASS Debugscene: el jugador tiene luz local activa
+PASS Debugscene: intensidad, radio, caída y color iguales a Piso3
+PASS Debugscene: las piezas del mapa responden a la luz 2D
+PASS Debugscene: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Prueba 1: sin iluminación ambiental que lave la oscuridad
+PASS Prueba 1: el jugador tiene luz local activa
+PASS Prueba 1: intensidad, radio, caída y color iguales a Piso3
+PASS Prueba 1: las piezas del mapa responden a la luz 2D
+PASS Prueba 1: render iluminado junto al jugador y negro fuera de alcance (1.000/0.000)
+PASS Recorrido de iluminación sin errores ni excepciones

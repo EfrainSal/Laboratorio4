@@ -1,0 +1,10 @@
+PASS Recepcion: luces globales atenuadas=0, luces locales añadidas=0, materiales compatibles=0
+PASS Escenario1_Entrada: luces globales atenuadas=0, luces locales añadidas=0, materiales compatibles=0
+PASS Piso3_V10 conservado como referencia.
+PASS E3_Laboratorio: luces globales atenuadas=0, luces locales añadidas=1, materiales compatibles=0
+PASS Escenario4_Jefe: luces globales atenuadas=0, luces locales añadidas=1, materiales compatibles=0
+PASS Nivel1: luces globales atenuadas=1, luces locales añadidas=0, materiales compatibles=0
+PASS Debugscene: luces globales atenuadas=1, luces locales añadidas=0, materiales compatibles=0
+PASS Prueba 1: luces globales atenuadas=0, luces locales añadidas=0, materiales compatibles=0
+PASS Piso3_Modular: luces globales atenuadas=0, luces locales añadidas=2, materiales compatibles=0
+PASS Piso3_Final_Modular: luces globales atenuadas=0, luces locales añadidas=2, materiales compatibles=0

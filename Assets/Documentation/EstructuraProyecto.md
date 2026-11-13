@@ -28,6 +28,8 @@ La raíz de trabajo de Unity es **Assets**. El contenido de las cinco carpetas d
 
 `MainMenu`, `Debugscene`, `Nivel1` y las demás escenas principales mantienen sus nombres y ubicaciones. Inicia la partida desde **Assets/Scenes/MainMenu.unity**. La reubicación no cambia el recorrido del juego ni añade al jefe a ningún mapa.
 
+El flujo de inicio posterior a la reestructuración es **MainMenu → Recepcion → recoger Tarjeta de Acceso → F en el panel de salida → Escenario1_Entrada**. La tarjeta se recoge del suelo junto a la puerta y se guarda en el inventario; la interacción con el panel realiza el cambio de escena. Los detalles editables están en `Reports/InicioRecepcion/LEEME.md`.
+
 ## Referencias y mantenimiento
 
 Los movimientos se realizaron mediante `AssetDatabase.MoveAsset`, conservando los archivos `.meta` y sus GUID. Se actualizaron las rutas de los integradores, los constructores, los layouts JSON, las herramientas de validación y la lista de escenas de compilación. Las llamadas que cargan escenas por nombre siguen usando los mismos nombres.

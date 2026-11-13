@@ -1,0 +1,10 @@
+PASS 271 archivos protegidos de resources-baseline.json intactos: []
+PASS 4 archivos protegidos de escenas-protegidas.json intactos: []
+PASS Nueva partida empieza en Recepcion
+PASS Recepcion contiene InicioGameplayRecepcion
+PASS Recepcion contiene PantallaControlesInicio
+PASS Recepcion contiene TarjetaSalidaRecepcion
+PASS Panel apunta al nombre real Escenario1_Entrada
+PASS Panel de salida conectado con el objetivo de recepción
+PASS Ambas escenas disponibles en compilación
+PASS Prueba Play de Jason y Milena con tarjeta y F aprobada
