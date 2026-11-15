@@ -25,6 +25,7 @@ public class BossBullet : MonoBehaviour
         if (collision.CompareTag("Enemy") ||
             collision.CompareTag("Boss") ||
             collision.CompareTag("Drop") ||
+            collision.GetComponentInParent<AyudanteJefeAI>() != null ||
             collision.GetComponentInParent<Bullet>() != null ||
             collision.GetComponentInParent<BossBullet>() != null ||
             collision.GetComponentInParent<EnemyBullet>() != null) return;

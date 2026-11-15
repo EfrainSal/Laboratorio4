@@ -517,6 +517,9 @@ MonoBehaviour:
   textoVendas: {fileID: 0}
   textoBotiquines: {fileID: 0}
   textoEstimulantes: {fileID: 0}
+  iconoTarjetaUI: {fileID: 0}
+  mensajeTarjetaRecogida: "TARJETA OBTENIDA  /  Ac\xE9rcate al panel de la puerta de salida"
+  duracionAvisoTarjeta: 3
   audioSource: {fileID: 3861281069416560983}
   sfxRecogerObjeto: {fileID: 8300000, guid: e0e96afa8b4fbff429556d13c8e11a91, type: 3}
   sfxRecogerEspecial: {fileID: 8300000, guid: a12bb67f14f8b5b49a1ffa3521ef1173, type: 3}
@@ -797,6 +800,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8b4da14f82ba3af43a5a5a2cb2c4f08a, type: 3}
   duracionDisparoVisual: 0.12
   retrocesoVisual: 0.035
+  controlManual: 0
   invertirFiloMachete: 1
   escalaMachete: 0.7
   rotacionReposoMachete: 180

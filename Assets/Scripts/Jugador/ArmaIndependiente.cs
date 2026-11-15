@@ -17,8 +17,9 @@ public class ArmaIndependiente : MonoBehaviour
     public Sprite[] spritesDisparo = new Sprite[8];
     [Min(0.01f)] public float duracionDisparoVisual = 0.12f;
     [Min(0f)] public float retrocesoVisual = 0.035f;
+    [HideInInspector] public bool controlManual = false;
     private float ultimoDisparo = float.NegativeInfinity;
-    public bool DisparoVisualActivo => armas != null && !armas.isUsingMelee
+    public bool DisparoVisualActivo => (armas == null || !armas.isUsingMelee)
         && Time.time - ultimoDisparo < duracionDisparoVisual;
 
     [Header("Machete: postura y agarre")]
@@ -42,7 +43,7 @@ public class ArmaIndependiente : MonoBehaviour
     public void MostrarDisparo()
     {
         ultimoDisparo = Time.time;
-        ActualizarApuntado();
+        if (!controlManual) ActualizarApuntado();
     }
 
     public void CancelarDisparoVisual() { ultimoDisparo = float.NegativeInfinity; }
@@ -57,7 +58,7 @@ public class ArmaIndependiente : MonoBehaviour
 
     private void LateUpdate()
     {
-        ActualizarApuntado();
+        if (!controlManual) ActualizarApuntado();
     }
 
     public void ActualizarApuntado()

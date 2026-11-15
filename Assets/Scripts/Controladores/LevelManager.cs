@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     public Transform puntoDeInicio;
     private GameObject jugadorExistente;
     public GameObject JugadorActual { get; private set; }
+    public GameObject AyudanteActual { get; private set; }
 
     public void UsarJugadorExistente(GameObject jugador)
     {
@@ -351,6 +352,37 @@ public class LevelManager : MonoBehaviour
         }
         
         GameManager.Instance.usarDatosDeTransicion = false;
+
+        // 6. Si estamos en el Piso 4 (Escenario4_Jefe), instanciar al personaje no elegido como ayudante
+        PrepararAyudanteJefe(jugadorInstanciado);
+    }
+
+    private void PrepararAyudanteJefe(GameObject jugadorInstanciado)
+    {
+        if (AyudanteActual != null || GameManager.Instance == null) return;
+
+        string nombreEscena = SceneManager.GetActiveScene().name;
+        bool esEscenaJefe = nombreEscena == "Escenario4_Jefe" || FindAnyObjectByType<BossAI>() != null;
+        if (!esEscenaJefe) return;
+
+        GameObject prefabAyudante = GameManager.Instance.ObtenerPrefabAyudante();
+        if (prefabAyudante == null) return;
+
+        Vector3 basePos = jugadorInstanciado != null
+            ? jugadorInstanciado.transform.position
+            : (puntoDeInicio != null ? puntoDeInicio.position : Vector3.zero);
+        Vector3 posicionAyudante = basePos + new Vector3(1.6f, -0.75f, 0f);
+
+        // Desactivar temporalmente el prefab antes de instanciar para que no corran Awake/OnEnable
+        // de PlayerInput, MiraPersonalizada ni PlayerShooting antes de convertirlo en IA ayudante
+        bool estadoOriginalPrefab = prefabAyudante.activeSelf;
+        prefabAyudante.SetActive(false);
+        GameObject instanciaAyudante = Instantiate(prefabAyudante, posicionAyudante, Quaternion.identity);
+        prefabAyudante.SetActive(estadoOriginalPrefab);
+
+        AyudanteJefeAI.ConfigurarInstanciaComoAyudante(instanciaAyudante);
+        instanciaAyudante.SetActive(true);
+        AyudanteActual = instanciaAyudante;
     }
 
     public void RegistrarEnemigoDerrotado(Vector3 posicionMuerte, EnemySpawner origen = null)

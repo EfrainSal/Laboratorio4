@@ -59,8 +59,23 @@ public class BossAI : MonoBehaviour
         zPosition = transform.position.z;
         attackTimer = timeBetweenAttacks;
 
+        ActualizarReferenciaJugador();
+    }
+
+    private void ActualizarReferenciaJugador()
+    {
+        // El jefe SIEMPRE debe seguir al jugador real y nunca al ayudante
+        if (LevelManager.Instance != null && LevelManager.Instance.JugadorActual != null)
+        {
+            player = LevelManager.Instance.JugadorActual.transform;
+            return;
+        }
+
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) player = playerObj.transform;
+        if (playerObj != null && playerObj.GetComponent<AyudanteJefeAI>() == null)
+        {
+            player = playerObj.transform;
+        }
     }
 
     void FixedUpdate()
@@ -73,15 +88,11 @@ public class BossAI : MonoBehaviour
     // Congelar posición en Z
     transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
 
-    // Si el jugador aún no existe o no se ha encontrado, buscarlo dinámicamente
-    if (player == null)
+    // Si el jugador aún no existe o cambió la referencia, asegurar que sea siempre el jugador real
+    if (player == null || player.GetComponent<AyudanteJefeAI>() != null)
     {
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null) 
-        {
-            player = playerObj.transform;
-        }
-        else 
+        ActualizarReferenciaJugador();
+        if (player == null)
         {
             rb.linearVelocity = Vector2.zero;
             return; // Detenerse y esperar al siguiente frame

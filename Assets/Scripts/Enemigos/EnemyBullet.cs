@@ -17,10 +17,10 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ignorar a otros enemigos para que no se disparen entre ellos
-        if (collision.CompareTag("Enemy")) return;
-
-        if (collision.CompareTag("Drop")) return;
+        // Ignorar a otros enemigos y al ayudante inmortal para que no bloquee balas
+        if (collision.CompareTag("Enemy") ||
+            collision.CompareTag("Drop") ||
+            collision.GetComponentInParent<AyudanteJefeAI>() != null) return;
 
         // Si choca con el jugador, le hace daño
         if (collision.CompareTag("Player"))

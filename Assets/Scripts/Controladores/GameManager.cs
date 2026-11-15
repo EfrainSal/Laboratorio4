@@ -106,6 +106,14 @@ public class GameManager : MonoBehaviour
         return personajeSeleccionado == 0 ? prefabJason : prefabMilena;
     }
 
+    /// <summary>
+    /// Devuelve el prefab del personaje que NO fue elegido por el jugador (para el ayudante del Piso 4).
+    /// </summary>
+    public GameObject ObtenerPrefabAyudante()
+    {
+        return personajeSeleccionado == 0 ? prefabMilena : prefabJason;
+    }
+
     // ---------------------------------------------------------
     // GESTIÓN DE LA RUN (Roguelike)
     // ---------------------------------------------------------
