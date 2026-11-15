@@ -49,8 +49,8 @@
                 </ui:VisualElement>
 
                 <!-- Input del nombre para el ranking -->
-                <ui:TextField name="PlayerNameInput" label="NOMBRE (RANKING):" max-length="12" class="player-name-input"/>
-                <ui:Label text="* Escribe entre 3 y 12 caracteres (Ej: SUPERVIVIENTE)" class="input-hint"/>
+                <ui:TextField name="PlayerNameInput" label="NOMBRE (Rank):" max-length="14" class="player-name-input"/>
+                <ui:Label text="* Escribe entre 3 y 14 caracteres (Ej: SUPERVIVIENTE)" class="input-hint"/>
 
                 <ui:VisualElement class="panel-actions">
                     <ui:Button text="&lt; VOLVER" name="PlayBackButton" class="btn-action"/>
@@ -117,7 +117,7 @@
         <ui:VisualElement class="hud-corner corner-br" picking-mode="Ignore"><ui:VisualElement class="hud-corner-inner" picking-mode="Ignore"/></ui:VisualElement>
 
         <ui:VisualElement class="footer-left" picking-mode="Ignore">
-            <ui:Label text="v0.1" class="footer-text" picking-mode="Ignore"/>
+            <ui:Label text="v1.0.0" class="footer-text" picking-mode="Ignore"/>
             <ui:Label text="CONEXIÓN ESTABLE" class="footer-text footer-ok" picking-mode="Ignore"/>
         </ui:VisualElement>
         <ui:VisualElement class="footer-right" picking-mode="Ignore">

@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720d62925fbf52e47980ff1adc0914e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmmoDrop
-  minAmmo: 2
-  maxAmmo: 5
+  minAmmo: 15
+  maxAmmo: 20
 --- !u!114 &4053430420850277685
 MonoBehaviour:
   m_ObjectHideFlags: 0
