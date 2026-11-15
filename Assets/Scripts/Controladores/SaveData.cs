@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 [System.Serializable]
 public class SaveData
 {
@@ -7,6 +9,10 @@ public class SaveData
     public bool tarjetaGenerada;
     public int nivelJugador = 1;
     public float experienciaJugador;
+
+    // Persistencia de objetos del piso (evita farmeo al guardar/cargar)
+    public List<string> objetosRecogidosPiso = new List<string>();
+    public List<string> contenedoresAbiertosPiso = new List<string>();
 
     // Datos de la run
     public int personajeSeleccionado;

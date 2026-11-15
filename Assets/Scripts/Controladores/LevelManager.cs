@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -57,7 +60,117 @@ public class LevelManager : MonoBehaviour
     private bool condicionesCumplidas = false;
     private bool llaveDropeada = false;
 
-    public bool JugadorTieneLlave { get; set; } = false; 
+    public bool JugadorTieneLlave { get; set; } = false;
+
+    private readonly HashSet<string> objetosRecogidosPiso = new HashSet<string>();
+    private readonly HashSet<string> contenedoresAbiertosPiso = new HashSet<string>();
+
+    public List<string> ObtenerObjetosRecogidosPiso() => new List<string>(objetosRecogidosPiso);
+    public List<string> ObtenerContenedoresAbiertosPiso() => new List<string>(contenedoresAbiertosPiso);
+
+    public static string GenerarIdObjetoEscena(GameObject obj)
+    {
+        if (obj == null) return string.Empty;
+        string escena = obj.scene.IsValid() ? obj.scene.name : SceneManager.GetActiveScene().name;
+        string ruta = obj.name;
+        Transform padre = obj.transform.parent;
+        while (padre != null)
+        {
+            ruta = padre.name + "/" + ruta;
+            padre = padre.parent;
+        }
+        Vector3 pos = obj.transform.position;
+        return string.Format(
+            CultureInfo.InvariantCulture,
+            "{0}:{1}:{2:F2}_{3:F2}",
+            escena,
+            ruta,
+            pos.x,
+            pos.y
+        );
+    }
+
+    public void RegistrarObjetoRecogido(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            objetosRecogidosPiso.Add(id);
+        }
+    }
+
+    public void RegistrarContenedorAbierto(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+        {
+            contenedoresAbiertosPiso.Add(id);
+        }
+    }
+
+    private void RestaurarEstadoObjetosEscena(SaveData datos)
+    {
+        objetosRecogidosPiso.Clear();
+        contenedoresAbiertosPiso.Clear();
+
+        if (datos.objetosRecogidosPiso != null)
+        {
+            foreach (string id in datos.objetosRecogidosPiso)
+            {
+                if (!string.IsNullOrEmpty(id)) objetosRecogidosPiso.Add(id);
+            }
+        }
+
+        if (datos.contenedoresAbiertosPiso != null)
+        {
+            foreach (string id in datos.contenedoresAbiertosPiso)
+            {
+                if (!string.IsNullOrEmpty(id)) contenedoresAbiertosPiso.Add(id);
+            }
+        }
+
+        foreach (var pickup in FindObjectsByType<ItemPickup>())
+        {
+            if (pickup == null) continue;
+            string id = !string.IsNullOrEmpty(pickup.IdPersistencia)
+                ? pickup.IdPersistencia
+                : GenerarIdObjetoEscena(pickup.gameObject);
+            pickup.IdPersistencia = id;
+
+            if (objetosRecogidosPiso.Contains(id))
+            {
+                pickup.gameObject.SetActive(false);
+                Destroy(pickup.gameObject);
+            }
+        }
+
+        foreach (var ammo in FindObjectsByType<AmmoDrop>())
+        {
+            if (ammo == null) continue;
+            string id = !string.IsNullOrEmpty(ammo.IdPersistencia)
+                ? ammo.IdPersistencia
+                : GenerarIdObjetoEscena(ammo.gameObject);
+            ammo.IdPersistencia = id;
+
+            if (objetosRecogidosPiso.Contains(id))
+            {
+                ammo.gameObject.SetActive(false);
+                Destroy(ammo.gameObject);
+            }
+        }
+
+        foreach (var contenedor in FindObjectsByType<BotiquinInteractable>())
+        {
+            if (contenedor == null) continue;
+            string id = !string.IsNullOrEmpty(contenedor.IdPersistencia)
+                ? contenedor.IdPersistencia
+                : GenerarIdObjetoEscena(contenedor.gameObject);
+
+            if (contenedoresAbiertosPiso.Contains(id))
+            {
+                bool recompensaYaRecogida = objetosRecogidosPiso.Contains(id + "_Drop");
+                contenedor.RestaurarEstadoAbierto(!recompensaYaRecogida);
+            }
+        }
+    }
 
     private void Awake()
     {
@@ -120,6 +233,7 @@ public class LevelManager : MonoBehaviour
             // Si no se recogió antes de guardar, permitir que el siguiente Sorbo la vuelva a soltar.
             llaveDropeada = datosGuardados.tarjetaGenerada && datosGuardados.llavesCount > 0;
             VerificarCondiciones();
+            RestaurarEstadoObjetosEscena(datosGuardados);
             // Mover al jugador a donde estaba al guardar
             jugadorInstanciado.transform.position = new Vector3(datosGuardados.posicionX, datosGuardados.posicionY, 0f);
         }

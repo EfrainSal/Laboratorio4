@@ -6,9 +6,15 @@ public class ItemPickup : MonoBehaviour
     public enum PickupType { Venda, Botiquin, Estimulante, Llave }
     public PickupType tipoDeObjeto;
     private bool recogido;
+    public string IdPersistencia { get; set; }
 
     private void Awake()
     {
+        if (string.IsNullOrEmpty(IdPersistencia))
+        {
+            IdPersistencia = LevelManager.GenerarIdObjetoEscena(gameObject);
+        }
+
         if (GetComponent<BrilloObjeto>() == null)
         {
             gameObject.AddComponent<BrilloObjeto>();
@@ -25,8 +31,12 @@ public class ItemPickup : MonoBehaviour
             {
                 recogido = true;
                 inventario.AgregarObjeto(tipoDeObjeto);
-                if (tipoDeObjeto == PickupType.Llave && LevelManager.Instance != null)
-                    LevelManager.Instance.RecogerLlave();
+                if (LevelManager.Instance != null)
+                {
+                    LevelManager.Instance.RegistrarObjetoRecogido(IdPersistencia);
+                    if (tipoDeObjeto == PickupType.Llave)
+                        LevelManager.Instance.RecogerLlave();
+                }
                 Destroy(gameObject);
             }
         }

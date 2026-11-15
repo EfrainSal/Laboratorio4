@@ -250,6 +250,8 @@ public class GameManager : MonoBehaviour
         {
             data.enemigosDerrotadosPiso = LevelManager.Instance.EnemigosDerrotados;
             data.tarjetaGenerada = LevelManager.Instance.TarjetaGenerada;
+            data.objetosRecogidosPiso = LevelManager.Instance.ObtenerObjetosRecogidosPiso();
+            data.contenedoresAbiertosPiso = LevelManager.Instance.ObtenerContenedoresAbiertosPiso();
         }
 
         // Buscamos al jugador en la escena para sacarle sus datos exactos
