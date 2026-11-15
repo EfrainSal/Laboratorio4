@@ -455,7 +455,7 @@ SpriteRenderer:
   m_SortingOrder: -419
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: e3a6e0987626ae343a931063fcae95ba, type: 3}
-  m_Color: {r: 0.90943396, g: 0.7456891, b: 0, a: 1}
+  m_Color: {r: 0.9547169, g: 0.9201043, b: 0.45213944, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3b81acee764594b972477afbc814fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 20
+  maxHealth: 15
   healthBarFill: {fileID: 2468429247153389428}
   knockbackForce: 5
   knockbackTime: 0.2

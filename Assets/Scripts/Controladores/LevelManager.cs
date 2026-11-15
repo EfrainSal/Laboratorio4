@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI textoVendasUI;
     public TextMeshProUGUI textoBotiquinesUI;
     public TextMeshProUGUI textoEstimulantesUI;
+    public GameObject tarjetaIconoUI;
 
     [Header("Referencias UI - Salud")]
     public Image healthBarFillUI;
@@ -127,9 +128,21 @@ public class LevelManager : MonoBehaviour
         PlayerInventory inventario = jugadorInstanciado.GetComponent<PlayerInventory>();
         if (inventario != null)
         {
+            if (tarjetaIconoUI == null)
+            {
+                Transform healthContainer = healthBarFillUI != null ? healthBarFillUI.transform.parent : null;
+                if (healthContainer != null)
+                {
+                    Transform found = healthContainer.Find("TarjetaIconoUI");
+                    if (found == null && healthContainer.parent != null)
+                        found = healthContainer.parent.Find("TarjetaIconoUI");
+                    if (found != null) tarjetaIconoUI = found.gameObject;
+                }
+            }
             inventario.textoVendas = textoVendasUI;
             inventario.textoBotiquines = textoBotiquinesUI;
             inventario.textoEstimulantes = textoEstimulantesUI;
+            inventario.iconoTarjetaUI = tarjetaIconoUI;
             
             if (datosGuardados != null)
             {

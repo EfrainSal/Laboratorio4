@@ -36,22 +36,34 @@ public class AvisoPuertaUI : MonoBehaviour
 
     public static bool Mostrar(PuertaNivel puerta, string mensaje, float duracion)
     {
+        return MostrarEnEscena(puerta != null ? puerta.gameObject : null, mensaje, duracion, puerta != null ? puerta.textoMensajeUI : null);
+    }
+
+    public static bool MostrarGlobal(string mensaje, float duracion)
+    {
+        GameObject referenciaEscena = LevelManager.Instance != null ? LevelManager.Instance.gameObject : null;
+        return MostrarEnEscena(referenciaEscena, mensaje, duracion, null);
+    }
+
+    private static bool MostrarEnEscena(GameObject contexto, string mensaje, float duracion, TMPro.TextMeshProUGUI textoUIReferencia)
+    {
         var recepcion = FindFirstObjectByType<PantallaControlesInicio>();
         if (recepcion != null && recepcion.MostrarAvisoPuerta(mensaje, duracion)) return true;
+        var escenaObjetivo = contexto != null ? contexto.scene : UnityEngine.SceneManagement.SceneManager.GetActiveScene();
         AvisoPuertaUI aviso = null;
         foreach (var actual in FindObjectsByType<AvisoPuertaUI>(FindObjectsSortMode.None))
-            if (actual.gameObject.scene == puerta.gameObject.scene) { aviso = actual; break; }
+            if (actual.gameObject.scene == escenaObjetivo) { aviso = actual; break; }
         if (aviso == null)
         {
             PanelSettings referencia = null;
             foreach (var documento in FindObjectsByType<UIDocument>(FindObjectsSortMode.None))
-                if (documento.gameObject.scene == puerta.gameObject.scene && documento.panelSettings != null)
+                if (documento.gameObject.scene == escenaObjetivo && documento.panelSettings != null)
                 { referencia = documento.panelSettings; break; }
             if (referencia == null) return false;
             var go = new GameObject("AvisosPuerta");
-            var canvas = puerta.textoMensajeUI != null ? puerta.textoMensajeUI.GetComponentInParent<Canvas>() : FindFirstObjectByType<Canvas>();
+            var canvas = textoUIReferencia != null ? textoUIReferencia.GetComponentInParent<Canvas>() : FindFirstObjectByType<Canvas>();
             if (canvas != null) go.transform.SetParent(canvas.transform, false);
-            else UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go, puerta.gameObject.scene);
+            else UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(go, escenaObjetivo);
             var ui = go.AddComponent<UIDocument>();
             // Copiar los ajustes conserva fuentes/tema sin alterar el asset que comparten otras UI.
             var copia = Instantiate(referencia);

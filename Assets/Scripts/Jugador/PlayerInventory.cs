@@ -27,6 +27,9 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI textoVendas;
     public TextMeshProUGUI textoBotiquines;
     public TextMeshProUGUI textoEstimulantes;
+    public GameObject iconoTarjetaUI;
+    public string mensajeTarjetaRecogida = "TARJETA OBTENIDA  /  Acércate al panel de la puerta de salida";
+    public float duracionAvisoTarjeta = 3f;
 
     [Header("Audio SFX")]
     public AudioSource audioSource; // Arrastra aquí el AudioSource de tu Player
@@ -90,6 +93,10 @@ public class PlayerInventory : MonoBehaviour
                 llavesCount++; 
                 Debug.Log("¡Llave obtenida!");
                 ReproducirSFX(sfxRecogerEspecial);
+                if (!string.IsNullOrEmpty(mensajeTarjetaRecogida))
+                {
+                    AvisoPuertaUI.MostrarGlobal(mensajeTarjetaRecogida, duracionAvisoTarjeta);
+                }
                 break;
         }
         ActualizarUI();
@@ -184,5 +191,6 @@ public class PlayerInventory : MonoBehaviour
         if (textoVendas != null) textoVendas.text = "" + vendasCount;
         if (textoBotiquines != null) textoBotiquines.text = "Botiquín [3]: " + botiquinesCount;
         if (textoEstimulantes != null) textoEstimulantes.text = "" + estimulantesCount;
+        if (iconoTarjetaUI != null) iconoTarjetaUI.SetActive(llavesCount > 0);
     }
 }
