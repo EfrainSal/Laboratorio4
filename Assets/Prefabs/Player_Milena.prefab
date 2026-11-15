@@ -278,7 +278,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: c6450d5df13004b4aa00462023a5ad21, type: 3}
-  m_Color: {r: 0.9529412, g: 0.9196595, b: 0.1647059, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -572,6 +572,7 @@ MonoBehaviour:
   fuerzaDash: 25
   duracionDash: 0.2
   cooldown: 3
+  reduccionCooldownPorBaja: 1
   iconoHabilidad: {fileID: -3016375755711065567, guid: ed1b4053c71a11042aa50aa027bb63db, type: 3}
   colorListo: {r: 0, g: 1, b: 1, a: 1}
   colorEnCooldown: {r: 0, g: 0.5, b: 0.5, a: 1}

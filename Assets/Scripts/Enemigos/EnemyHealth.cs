@@ -218,13 +218,35 @@ public class EnemyHealth : MonoBehaviour
             foreach (var collider in GetComponentsInChildren<Collider2D>()) collider.enabled = false;
             var animacion = GetComponent<AnimacionEnemigoDinamica>();
             float duracionMuerte = animacion != null ? animacion.Morir() : 0f;
-            // Otorgar experiencia al jugador antes de morir
+            // Otorgar experiencia y reducción de cooldown de habilidad al jugador antes de morir
+            if (player == null)
+            {
+                GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+                if (playerObj != null) player = playerObj.transform;
+                else if (LevelManager.Instance != null && LevelManager.Instance.JugadorActual != null)
+                {
+                    player = LevelManager.Instance.JugadorActual.transform;
+                }
+            }
+
             if (player != null)
             {
                 PlayerExperience playerXP = player.GetComponent<PlayerExperience>();
                 if (playerXP != null)
                 {
                     playerXP.GanarExperiencia(experienciaAlMorir);
+                }
+
+                ShieldAbility shieldAbility = player.GetComponent<ShieldAbility>();
+                if (shieldAbility != null)
+                {
+                    shieldAbility.ReducirCooldown(shieldAbility.reduccionCooldownPorBaja);
+                }
+
+                DashAbility dashAbility = player.GetComponent<DashAbility>();
+                if (dashAbility != null)
+                {
+                    dashAbility.ReducirCooldown(dashAbility.reduccionCooldownPorBaja);
                 }
             }
 

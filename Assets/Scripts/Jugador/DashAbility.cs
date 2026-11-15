@@ -9,6 +9,7 @@ public class DashAbility : MonoBehaviour
     public float fuerzaDash = 25f;
     public float duracionDash = 0.2f;
     public float cooldown = 3f;
+    public float reduccionCooldownPorBaja = 1f;
 
     [Header("Configuración de UI")]
     public Sprite iconoHabilidad; // Arrastra aquí el sprite de la habilidad (icono_desliz...)
@@ -21,6 +22,8 @@ public class DashAbility : MonoBehaviour
 
     private bool habilidadLista = true;
     private bool haciendoDash = false;
+    private bool enCooldown = false;
+    private float tiempoCooldownActual = 0f;
     private Vector2 direccionInput;
 
     [Header("Audio")]
@@ -95,19 +98,22 @@ public class DashAbility : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer(capaJugador);
 
         // --- Inicio del Cooldown ---
+        enCooldown = true;
+        tiempoCooldownActual = 0f;
         if (skillBarFill != null)
         {
             skillBarFill.color = colorEnCooldown;
             skillBarFill.fillAmount = 0f;
         }
 
-        tiempo = 0f;
-        while (tiempo < cooldown)
+        while (tiempoCooldownActual < cooldown)
         {
-            tiempo += Time.deltaTime;
-            if (skillBarFill != null) skillBarFill.fillAmount = tiempo / cooldown;
+            tiempoCooldownActual += Time.deltaTime;
+            if (skillBarFill != null) skillBarFill.fillAmount = Mathf.Clamp01(tiempoCooldownActual / cooldown);
             yield return null;
         }
+
+        enCooldown = false;
 
         // Habilidad lista de nuevo
         if (skillBarFill != null)
@@ -117,5 +123,16 @@ public class DashAbility : MonoBehaviour
         }
         
         habilidadLista = true;
+    }
+
+    public void ReducirCooldown(float segundos)
+    {
+        if (!enCooldown || segundos <= 0f) return;
+
+        tiempoCooldownActual = Mathf.Min(cooldown, tiempoCooldownActual + segundos);
+        if (skillBarFill != null)
+        {
+            skillBarFill.fillAmount = Mathf.Clamp01(tiempoCooldownActual / cooldown);
+        }
     }
 }

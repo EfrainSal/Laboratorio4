@@ -8,6 +8,7 @@ public class ShieldAbility : MonoBehaviour
     [Header("Configuración del Escudo")]
     public float duracionEscudo = 3f;
     public float cooldown = 8f;
+    public float reduccionCooldownPorBaja = 1f;
     public GameObject escudoVisual;
 
     [Header("Configuración de UI")]
@@ -23,6 +24,8 @@ public class ShieldAbility : MonoBehaviour
     public AudioClip sonidoEscudo;
 
     private bool habilidadLista = true;
+    private bool enCooldown = false;
+    private float tiempoCooldownActual = 0f;
     private PlayerHealth playerHealth;
     private WeaponManager weaponManager;
     public bool IsShieldActive { get; private set; }
@@ -89,19 +92,22 @@ public class ShieldAbility : MonoBehaviour
         if (escudoVisual != null) escudoVisual.SetActive(false);
 
         // --- Inicio del Cooldown ---
+        enCooldown = true;
+        tiempoCooldownActual = 0f;
         if (skillBarFill != null)
         {
             skillBarFill.color = colorEnCooldown;
             skillBarFill.fillAmount = 0f;
         }
 
-        tiempo = 0f;
-        while (tiempo < cooldown)
+        while (tiempoCooldownActual < cooldown)
         {
-            tiempo += Time.deltaTime;
-            if (skillBarFill != null) skillBarFill.fillAmount = tiempo / cooldown;
+            tiempoCooldownActual += Time.deltaTime;
+            if (skillBarFill != null) skillBarFill.fillAmount = Mathf.Clamp01(tiempoCooldownActual / cooldown);
             yield return null;
         }
+
+        enCooldown = false;
 
         // Habilidad lista de nuevo
         if (skillBarFill != null)
@@ -113,9 +119,21 @@ public class ShieldAbility : MonoBehaviour
         habilidadLista = true;
     }
 
+    public void ReducirCooldown(float segundos)
+    {
+        if (!enCooldown || segundos <= 0f) return;
+
+        tiempoCooldownActual = Mathf.Min(cooldown, tiempoCooldownActual + segundos);
+        if (skillBarFill != null)
+        {
+            skillBarFill.fillAmount = Mathf.Clamp01(tiempoCooldownActual / cooldown);
+        }
+    }
+
     private void OnDisable()
     {
         IsShieldActive = false;
+        enCooldown = false;
         if (playerHealth != null) playerHealth.isInvulnerable = false;
         if (escudoVisual != null) escudoVisual.SetActive(false);
     }

@@ -523,6 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShieldAbility
   duracionEscudo: 3
   cooldown: 8
+  reduccionCooldownPorBaja: 1
   escudoVisual: {fileID: 5515118308549593939}
   iconoHabilidad: {fileID: 493239664086911757, guid: c835ba46b4d75d54f852ec4fa435207a, type: 3}
   colorListo: {r: 0, g: 1, b: 1, a: 1}
