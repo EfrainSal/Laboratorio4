@@ -491,7 +491,7 @@ MonoBehaviour:
   totalAmmo: 60
   reloadDuration: 1.5
   sfxSource: {fileID: 3861281069416560983}
-  sonidoDisparo: {fileID: 8300000, guid: 1cbf983e9d863f2418c9a439c7c81643, type: 3}
+  sonidoDisparo: {fileID: 8300000, guid: 07b45a8e183ca484ab418fe3999941e9, type: 3}
 --- !u!114 &4668186451430304283
 MonoBehaviour:
   m_ObjectHideFlags: 0

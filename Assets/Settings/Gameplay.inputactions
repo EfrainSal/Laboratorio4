@@ -80,7 +80,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "cc04f4eb-0756-41e2-a8f6-f2027ae0af09",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,

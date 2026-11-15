@@ -386,7 +386,7 @@ MonoBehaviour:
   isInvulnerable: 0
   cargadoDesdeGuardado: 0
   sfxSource: {fileID: 9116492846357870993}
-  sonidoDanio: {fileID: 8300000, guid: 1082cc8991afcc4458317f6776d0b92e, type: 3}
+  sonidoDanio: {fileID: 8300000, guid: 3ac2d2dc691198546b59512c3885c1f8, type: 3}
   defensaPorcentual: 0
   defensaMaxima: 80
   healthBarFill: {fileID: 0}
@@ -443,7 +443,7 @@ MonoBehaviour:
   totalAmmo: 60
   reloadDuration: 1.5
   sfxSource: {fileID: 9116492846357870993}
-  sonidoDisparo: {fileID: 8300000, guid: 1cbf983e9d863f2418c9a439c7c81643, type: 3}
+  sonidoDisparo: {fileID: 8300000, guid: 07b45a8e183ca484ab418fe3999941e9, type: 3}
 --- !u!114 &4668186451430304283
 MonoBehaviour:
   m_ObjectHideFlags: 0
