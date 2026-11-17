@@ -35,7 +35,9 @@ public class IntroduccionComic : MonoBehaviour
         instancia = this;
         Personaje = GameManager.Instance != null ? GameManager.Instance.personajeSeleccionado : PlayerPrefs.GetInt("SelectedCharacter", 0);
         Personaje = Personaje == 1 ? 1 : 0;
-        tiempoAnterior = Time.timeScale; pausaAnterior = PauseMenuController.PauseBlocked; tiempoGuardado = true;
+        tiempoAnterior = Time.timeScale > 0f ? Time.timeScale : 1f;
+        pausaAnterior = false;
+        tiempoGuardado = true;
         Time.timeScale = 0; PauseMenuController.PauseBlocked = true;
         // Silenciar también la música persistente del menú, sin añadir ni modificar archivos de audio.
         volumenAnterior = AudioListener.volume; audioPausadoAnterior = AudioListener.pause; audioGuardado = true;

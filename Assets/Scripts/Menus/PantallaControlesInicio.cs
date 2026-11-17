@@ -77,7 +77,8 @@ public class PantallaControlesInicio : MonoBehaviour
         EstiloAvisoRecepcion.Aplicar(objetivo, textoObjetivo);
         objetivo.style.display = DisplayStyle.None; raiz.Add(objetivo);
         tiempoAnterior = TransicionEntrePisos.EnCurso ? TransicionEntrePisos.EscalaTiempoAnterior : Time.timeScale;
-        pausaAnterior = TransicionEntrePisos.EnCurso ? TransicionEntrePisos.BloqueoPausaAnterior : PauseMenuController.PauseBlocked;
+        if (tiempoAnterior <= 0f) tiempoAnterior = 1f;
+        pausaAnterior = false;
         poseePausa = true; Time.timeScale = 0; PauseMenuController.PauseBlocked = true;
         inicio = Time.unscaledTime; RefrescarControles(); continuar.Focus();
     }

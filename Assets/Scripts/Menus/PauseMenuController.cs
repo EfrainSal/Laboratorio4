@@ -66,7 +66,10 @@ public class PauseMenuController : MonoBehaviour
     void Awake()
     {
         IsPaused = false;
-        PauseBlocked = false;
+        if (!TransicionEntrePisos.EnCurso && !PantallaControlesInicio.IsShowing && !IntroduccionComic.EnCurso)
+        {
+            PauseBlocked = false;
+        }
 
         // ESC en teclado y Start/Menú en mandos (Xbox, PlayStation Options, etc.)
         _pauseAction = new InputAction("Pause", InputActionType.Button);
