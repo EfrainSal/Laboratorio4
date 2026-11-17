@@ -197,7 +197,7 @@ public class AyudanteJefeAI : MonoBehaviour
 
     private void Update()
     {
-        if (DeathScreenController.GameplayBlocked)
+        if (DeathScreenController.GameplayBlocked || ComicFinal.EsperaCombate(this))
         {
             return;
         }
@@ -212,7 +212,7 @@ public class AyudanteJefeAI : MonoBehaviour
     {
         if (rb == null) return;
 
-        if (DeathScreenController.GameplayBlocked)
+        if (DeathScreenController.GameplayBlocked || ComicFinal.EsperaCombate(this))
         {
             rb.linearVelocity = Vector2.zero;
             return;

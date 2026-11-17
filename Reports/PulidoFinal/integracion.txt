@@ -1,0 +1,13 @@
+PASS Sprite Assets/Sprites/Proyectiles/SorboB_Acido.png: alpha real, filtro Point, silueta normalizada de 702 px; bounds (1.79, 1.79, 0.20).
+PASS Sprite Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png: alpha real, filtro Point, silueta normalizada de 804 px; bounds (1.92, 1.27, 0.20).
+PASS Enemy: prioridad SFX 192, radio de escucha 10
+PASS Enemy_Melee: prioridad SFX 192, radio de escucha 10
+PASS Enemy_Ranged: prioridad SFX 192, radio de escucha 10
+PASS Player_Jason: prioridad SFX 0 para el jugador
+PASS Player_Milena: prioridad SFX 0 para el jugador
+PASS DoctorYiba Quieto: cuadros por dirección 1,1,1,1,1,1,1,1
+PASS DoctorYiba Correr: cuadros por dirección 8,8,8,8,8,8,8,8
+PASS DoctorYiba Ataque: cuadros por dirección 9,9,9,9,9,9,9,9
+PASS DoctorYiba BolaDePoder: cuadros por dirección 9,9,9,9,9,9,9,9
+PASS DoctorYiba CampoEnergia: cuadros por dirección 9,9,9,9,9,9,9,9
+PASS DoctorYiba Muerte: cuadros por dirección 9,9,9,9,9,9,9,9

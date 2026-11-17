@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27558318684628c4fb5a3e02bfdbe37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BrilloObjeto
-  colorBrillo: {r: 0.35, g: 0.95, b: 1, a: 0.95}
+  colorBrillo: {r: 0.9939997, g: 1, b: 0.34901965, a: 0.95}
   grosorBordePixeles: 3.5
   velocidadPulso: 3.2
   opacidadMinima: 0.38

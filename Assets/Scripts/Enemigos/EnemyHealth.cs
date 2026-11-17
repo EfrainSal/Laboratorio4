@@ -43,6 +43,8 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip sfxDanio;      // Asigna: Monstruo_Chillido.mp3
     public AudioClip sfxSpawnOcio;  // Asigna: Monstruo_Grunido.mp3
     public AudioClip sfxMuerte;     // Asigna: Muerte_Enemigo.ogg
+    [Min(.1f)] public float radioEscucha = 10f;
+    [Range(0, 1)] public float volumenCercano = .55f;
 
     void Awake()
     {
@@ -61,6 +63,7 @@ public class EnemyHealth : MonoBehaviour
         if (playerObj != null) player = playerObj.transform;
 
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
+        if (audioSource != null) { audioSource.Stop(); audioSource.playOnAwake = false; audioSource.spatialBlend = 0; audioSource.priority = 192; }
 
         EstablecerOpacidadBarraVida(0f);
         
@@ -283,9 +286,8 @@ public class EnemyHealth : MonoBehaviour
 
             if (sfxMuerte != null)
             {
-                // Usamos PlayClipAtPoint porque el enemigo se va a destruir, 
-                // si usáramos su propio AudioSource, el sonido se cortaría de golpe al morir.
-                AudioSource.PlayClipAtPoint(sfxMuerte, transform.position, 1f);
+                // La voz limitada sobrevive al cadáver sin eludir el radio ni saturar la mezcla.
+                ReproducirSonido(sfxMuerte);
             }
 
             Destroy(gameObject, duracionMuerte);
@@ -313,11 +315,9 @@ public class EnemyHealth : MonoBehaviour
 
     private void ReproducirSFX(AudioClip clip, bool variarPitch = false)
     {
-        if (audioSource != null && clip != null)
-        {
-            // Variar el pitch hace que cada monstruo suene de distinto tamaño
-            audioSource.pitch = variarPitch ? Random.Range(0.85f, 1.15f) : 1f;
-            audioSource.PlayOneShot(clip);
-        }
+        ReproducirSonido(clip, variarPitch);
     }
+    public bool ReproducirSonido(AudioClip clip, bool variarPitch = false) =>
+        AudioEnemigosCercanos.Reproducir(clip, transform, audioSource, radioEscucha, volumenCercano,
+            variarPitch ? Random.Range(.85f, 1.15f) : 1f);
 }

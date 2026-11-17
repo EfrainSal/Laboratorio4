@@ -16,7 +16,20 @@ public class WeaponManager : MonoBehaviour
     public GameObject macheteIcon;  // Asigna el GameObject de la imagen del Machete
     public GameObject subfusilIcon; // Asigna el GameObject de la imagen del Subfusil
 
+    [Header("Sprites estáticos del HUD (orientados a la derecha)")]
+    public Sprite spriteMacheteHUD;
+    public Sprite spriteSubfusilHUD;
+
     public bool isUsingMelee = true; // True = Machete, False = Subfusil
+    public void SincronizarIcono()
+    {
+        var objeto = isUsingMelee ? macheteIcon : subfusilIcon;
+        var sprite = isUsingMelee ? spriteMacheteHUD : spriteSubfusilHUD;
+        if (objeto == null || sprite == null) return;
+        // El HUD sólo cambia de imagen al equipar. No depende del apuntado ni del disparo.
+        var imagen = objeto.GetComponent<Image>();
+        if (imagen != null) imagen.sprite = sprite;
+    }
 
     void Start()
     {
@@ -67,5 +80,6 @@ public class WeaponManager : MonoBehaviour
         {
             subfusilIcon.SetActive(!useMelee);
         }
+        SincronizarIcono();
     }
 }

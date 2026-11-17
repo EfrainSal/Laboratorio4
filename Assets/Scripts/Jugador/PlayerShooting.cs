@@ -48,6 +48,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Start()
     {
+        if (sfxSource != null) { sfxSource.priority = 0; sfxSource.spatialBlend = 0; }
         if (!municionRestaurada) currentAmmoInClip = maxClipSize;
         UpdateAmmoUI();
     }
@@ -203,6 +204,7 @@ public class PlayerShooting : MonoBehaviour
         // ---> REPRODUCIR SONIDO DE DISPARO <---
         if (sfxSource != null && sonidoDisparo != null)
         {
+            AudioEnemigosCercanos.PriorizarDisparoJugador();
             sfxSource.PlayOneShot(sonidoDisparo);
         }
 

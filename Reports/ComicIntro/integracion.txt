@@ -1,0 +1,1 @@
+PASS: 12 sprites recortados sin cabeceras; 8 viñetas por personaje; escena habilitada; ningún audio añadido.

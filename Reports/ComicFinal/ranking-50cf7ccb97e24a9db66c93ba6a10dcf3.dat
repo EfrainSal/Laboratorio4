@@ -1,0 +1,69 @@
+{
+    "version": 2,
+    "topScores": [
+        {
+            "recordId": "21905772e65a4ba681b25a18ae5d65a0",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.2939453125,
+            "characterId": 1,
+            "date": "2026-11-16T22:30:13.3109080Z",
+            "uploaded": false,
+            "victory": true
+        },
+        {
+            "recordId": "ac5b6c5f31bb4106992f0518db35a287",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.4427490234375,
+            "characterId": 2,
+            "date": "2026-11-16T22:30:20.0090609Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ],
+    "topTimes": [
+        {
+            "recordId": "21905772e65a4ba681b25a18ae5d65a0",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.2939453125,
+            "characterId": 1,
+            "date": "2026-11-16T22:30:13.3109080Z",
+            "uploaded": false,
+            "victory": true
+        },
+        {
+            "recordId": "ac5b6c5f31bb4106992f0518db35a287",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.4427490234375,
+            "characterId": 2,
+            "date": "2026-11-16T22:30:20.0090609Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ],
+    "pendingUploads": [
+        {
+            "recordId": "21905772e65a4ba681b25a18ae5d65a0",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.2939453125,
+            "characterId": 1,
+            "date": "2026-11-16T22:30:13.3109080Z",
+            "uploaded": false,
+            "victory": true
+        },
+        {
+            "recordId": "ac5b6c5f31bb4106992f0518db35a287",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.4427490234375,
+            "characterId": 2,
+            "date": "2026-11-16T22:30:20.0090609Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ]
+}

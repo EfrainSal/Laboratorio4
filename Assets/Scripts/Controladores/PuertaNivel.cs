@@ -12,6 +12,9 @@ public class PuertaNivel : MonoBehaviour
     [Tooltip("Desactivar en la recepción/prólogo para conservar el índice del primer piso.")]
     public bool avanzarContadorPiso = true;
     public bool JugadorEnRango => jugadorEnRango;
+    public bool Cargando => cargando;
+    private static readonly HashSet<PuertaNivel> activas = new HashSet<PuertaNivel>();
+    public static IEnumerable<PuertaNivel> Activas => activas;
 
     [Header("UI Feedback")]
     public TextMeshProUGUI textoMensajeUI;
@@ -29,6 +32,12 @@ public class PuertaNivel : MonoBehaviour
     private PlayerInput entradaJugador;
     private bool cargando;
     private readonly HashSet<Collider2D> contactos = new HashSet<Collider2D>();
+    private void OnEnable() { activas.Add(this); }
+    private void OnDisable()
+    {
+        activas.Remove(this); contactos.Clear(); jugadorEnRango = false;
+        inventarioJugador = null; entradaJugador = null;
+    }
 
     private void Start()
     {
@@ -42,6 +51,9 @@ public class PuertaNivel : MonoBehaviour
     {
         // Leer la copia de Gameplay que está habilitada y emparejada con este jugador.
         if (cargando || DeathScreenController.GameplayBlocked || !jugadorEnRango) return;
+        var interaccion = entradaJugador != null ? entradaJugador.GetComponent<InteraccionJugador>() : null;
+        if ((UIManagerNotas.Instance != null && UIManagerNotas.Instance.NotaActiva) ||
+            (interaccion != null && (interaccion.TieneObjetivo || interaccion.UltimoFotogramaInteraccion == Time.frameCount))) return;
         var accion = entradaJugador != null ? entradaJugador.currentActionMap?.FindAction("Interact", false) : accionInteractuar?.action;
         if (accion != null && accion.WasPressedThisFrame())
         {
@@ -73,6 +85,8 @@ public class PuertaNivel : MonoBehaviour
         var inventario = collision.GetComponentInParent<PlayerInventory>();
         if (inventario != null && inventario.isActiveAndEnabled)
         {
+            if (LevelManager.Instance != null && LevelManager.Instance.JugadorActual != null &&
+                inventario.gameObject != LevelManager.Instance.JugadorActual) return;
             contactos.Add(collision);
             jugadorEnRango = true;
             inventarioJugador = inventario;
@@ -106,7 +120,10 @@ public class PuertaNivel : MonoBehaviour
         // Conservar la referencia de TMP para las escenas antiguas, sin mostrar su franja gris.
         if (textoMensajeUI != null)
             textoMensajeUI.gameObject.SetActive(false);
-        if (AvisoPuertaUI.Mostrar(this, mensajeFaltaLlave, duracionMensaje))
+        var avisoInteraccion = inventarioJugador != null ? inventarioJugador.GetComponent<AvisoInteraccionUI>() : null;
+        // Sustituir el texto en el mismo panel de F; el aviso antiguo sólo cubre escenas sin ese panel.
+        if ((avisoInteraccion != null && avisoInteraccion.PuedeMostrarAvisoPuerta(this)) ||
+            AvisoPuertaUI.Mostrar(this, mensajeFaltaLlave, duracionMensaje))
             finAviso = Time.unscaledTime + Mathf.Max(.1f, duracionMensaje);
     }
 }

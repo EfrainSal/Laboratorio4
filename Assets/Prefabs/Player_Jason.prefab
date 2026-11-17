@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
   attackPoint: {fileID: 8569696971921828008}
-  attackRange: 0.8
+  attackRange: 0.5
   attackDamage: 10
   enemyLayers:
     serializedVersion: 2
@@ -469,6 +469,9 @@ MonoBehaviour:
   textoVendas: {fileID: 0}
   textoBotiquines: {fileID: 0}
   textoEstimulantes: {fileID: 0}
+  iconoTarjetaUI: {fileID: 0}
+  mensajeTarjetaRecogida: "TARJETA OBTENIDA  /  Ac\xE9rcate al panel de la puerta de salida"
+  duracionAvisoTarjeta: 3
   audioSource: {fileID: 9116492846357870993}
   sfxRecogerObjeto: {fileID: 8300000, guid: e0e96afa8b4fbff429556d13c8e11a91, type: 3}
   sfxRecogerEspecial: {fileID: 8300000, guid: a12bb67f14f8b5b49a1ffa3521ef1173, type: 3}
@@ -508,6 +511,8 @@ MonoBehaviour:
   ammoUI: {fileID: 0}
   macheteIcon: {fileID: 0}
   subfusilIcon: {fileID: 0}
+  spriteMacheteHUD: {fileID: 21300000, guid: 3ce02f5cd31e42b4f9c0d59bc5c4248b, type: 3}
+  spriteSubfusilHUD: {fileID: 21300000, guid: a4b059f778dd156488efe4522e604bf6, type: 3}
   isUsingMelee: 0
 --- !u!114 &4237692109959222417
 MonoBehaviour:
@@ -551,7 +556,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -738,7 +743,7 @@ MonoBehaviour:
   subfusil: {fileID: 21300000, guid: 22a6f3b186fb6cb479e07023bb8a8f2e, type: 3}
   machete: {fileID: -3544453155671468836, guid: 7f4fa2d87309f1949bbac8b900d48404, type: 3}
   cadera: {x: -0.04, y: 0.24}
-  anchoArma: 0.9
+  anchoArma: 0.7
   spritesApuntar:
   - {fileID: 21300000, guid: 085b9d86879d6064fb2ea46a03de87b7, type: 3}
   - {fileID: 21300000, guid: 8092c4882f928c448a21add8be42148a, type: 3}
@@ -759,10 +764,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8b4da14f82ba3af43a5a5a2cb2c4f08a, type: 3}
   duracionDisparoVisual: 0.12
   retrocesoVisual: 0.035
+  controlManual: 0
   invertirFiloMachete: 1
   escalaMachete: 0.7
   rotacionReposoMachete: 180
-  posicionManoMachete: {x: 0.25, y: 0}
+  posicionManoMachete: {x: 0.2, y: 0}
   agarreMachete: {x: 0.78, y: 0.8}
 --- !u!114 &1664316089188151987
 MonoBehaviour:

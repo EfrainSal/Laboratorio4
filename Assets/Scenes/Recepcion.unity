@@ -6776,6 +6776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1644645580}
   - component: {fileID: 1644645581}
+  - component: {fileID: 1644645582}
   m_Layer: 0
   m_Name: Puerta_Salida_Escenario1
   m_TagString: Untagged
@@ -6858,6 +6859,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1644645582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644645579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27558318684628c4fb5a3e02bfdbe37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrilloObjeto
+  colorBrillo: {r: 0.4509804, g: 0.9882353, b: 1, a: 0.85}
+  grosorBordePixeles: 2.2
+  velocidadPulso: 3.2
+  opacidadMinima: 0.38
+  opacidadMaxima: 0.92
+  restaurarBrilloSpriteBase: 1
 --- !u!1 &1647671122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8508,7 +8527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1962484988
 Transform:
   m_ObjectHideFlags: 0
@@ -8595,7 +8614,11 @@ MonoBehaviour:
         m_SelectedSource:
           rid: -2
         m_Provider2DCache:
-          rid: -2
+          rid: 1062290225136664662
+    - rid: 1062290225136664662
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!1 &2047146121
 GameObject:
   m_ObjectHideFlags: 0

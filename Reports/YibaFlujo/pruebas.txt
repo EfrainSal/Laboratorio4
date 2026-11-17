@@ -1,0 +1,83 @@
+PASS MainMenu sin cómic final ni jefe
+PASS Referencias del mapa final completas, personaje 0
+PASS El piso permite caminar antes de acercarse al compañero
+PASS Punto de aparición fuera del umbral del jefe
+PASS El otro protagonista espera junto al spawn sin disparar ni activar la viñeta
+PASS Compañero cercano y CircleCollider2D Trigger real
+PASS Sin combate ni daño al jefe antes del reencuentro
+PASS Cruzar el umbral abre una sola viñeta sin consumir el clic de entrada
+PASS Proximidad oscurece primero el gameplay, sin salto directo al cómic
+PASS Entrada al reencuentro: misma cortina llega a negro completo y vuelve a cero
+PASS Reencuentro de la ruta elegida 0
+PASS Lectura congela acción y bloquea controles de combate y pausa
+PASS Cómic completamente silencioso y sin AudioSource
+PASS Sólo navegación inferior, sin títulos superiores
+PASS Sin tiempo de run ni disparos durante lectura
+PASS Salida al combate: misma cortina llega a negro completo y vuelve a cero
+PASS Clic/Esc inician combate en el mismo mapa
+PASS Se restaura el audio previo al combatir
+PASS Rugido audible desde la entrada, sobre AudioSource propio y grupo SFX
+PASS Rugido y sacudida de cámara arrancan juntos
+PASS Inicio sólo una vez y sacudida finaliza sin dejar desplazamiento
+PASS Dr. Yiba reanuda su IA después de la viñeta
+PASS Pies compactos sin fricción y navegación con despeje propio
+PASS SFX reproducido y audible: Jefe_Rugido_Largo_2
+PASS SFX reproducido y audible: Jefe_Recarga_Energia
+PASS SFX reproducido y audible: Jefe_Disparo
+PASS SFX reproducido y audible: Jefe_Rugido_Largo_1
+PASS Las muestras de salida de Yiba contienen señal de audio real
+PASS E4_MuroCobertura_08: ruta alrededor de cobertura que bloquea línea recta
+PASS E4_MuroCobertura_08: Yiba rodea la esquina y alcanza al jugador sin atravesar el muro
+PASS E4_MuroCobertura_09: ruta alrededor de cobertura que bloquea línea recta
+PASS E4_MuroCobertura_09: Yiba rodea la esquina y alcanza al jugador sin atravesar el muro
+PASS Yiba usa profundidad dinámica por sus pies, en lugar del orden cero
+PASS Cabeza y cuerpo se dibujan delante del muro/puerta superior
+PASS Victoria y puntuación originales registradas una vez al derrotar a Yiba
+PASS Muerte de Yiba inicia fundido antes del epílogo (transición=True, opacidad=0)
+PASS Entrada al desenlace: misma cortina llega a negro completo y vuelve a cero
+PASS Derrota abre confesión antes de mostrar victoria
+PASS Victoria espera al desenlace y permanece silencioso
+PASS Siguiente oscurece antes de sustituir la viñeta
+PASS Paso de confesión a escape: misma cortina llega a negro completo y vuelve a cero
+PASS Clic muestra escape con refuerzos antes del resumen
+PASS Cierre hacia victoria: misma cortina llega a negro completo y vuelve a cero
+PASS Último clic/Esc abre pantalla existente de Incursión Completada
+PASS Pantalla original de victoria sobre fondo negro
+PASS Fondo negro sin tintes ni barridos verdes sobre el epílogo
+PASS Resumen conserva estadísticas sin registrar otra victoria al cerrar cómic
+PASS Una entrada de ranking por run, sin enviar pruebas a la API
+PASS Referencias del mapa final completas, personaje 1
+PASS El piso permite caminar antes de acercarse al compañero
+PASS Punto de aparición fuera del umbral del jefe
+PASS El otro protagonista espera junto al spawn sin disparar ni activar la viñeta
+PASS Compañero cercano y CircleCollider2D Trigger real
+PASS Sin combate ni daño al jefe antes del reencuentro
+PASS Cruzar el umbral abre una sola viñeta sin consumir el clic de entrada
+PASS Proximidad oscurece primero el gameplay, sin salto directo al cómic
+PASS Entrada al reencuentro: misma cortina llega a negro completo y vuelve a cero
+PASS Reencuentro de la ruta elegida 1
+PASS Lectura congela acción y bloquea controles de combate y pausa
+PASS Cómic completamente silencioso y sin AudioSource
+PASS Sólo navegación inferior, sin títulos superiores
+PASS Sin tiempo de run ni disparos durante lectura
+PASS Salida al combate: misma cortina llega a negro completo y vuelve a cero
+PASS Clic/Esc inician combate en el mismo mapa
+PASS Se restaura el audio previo al combatir
+PASS Rugido audible desde la entrada, sobre AudioSource propio y grupo SFX
+PASS Rugido y sacudida de cámara arrancan juntos
+PASS Inicio sólo una vez y sacudida finaliza sin dejar desplazamiento
+PASS Dr. Yiba reanuda su IA después de la viñeta
+PASS Victoria y puntuación originales registradas una vez al derrotar a Yiba
+PASS Muerte de Yiba inicia fundido antes del epílogo (transición=True, opacidad=0)
+PASS Entrada al desenlace: misma cortina llega a negro completo y vuelve a cero
+PASS Derrota abre confesión antes de mostrar victoria
+PASS Victoria espera al desenlace y permanece silencioso
+PASS Cierre hacia victoria: misma cortina llega a negro completo y vuelve a cero
+PASS Último clic/Esc abre pantalla existente de Incursión Completada
+PASS Pantalla original de victoria sobre fondo negro
+PASS Fondo negro sin tintes ni barridos verdes sobre el epílogo
+PASS Resumen conserva estadísticas sin registrar otra victoria al cerrar cómic
+PASS Una entrada de ranking por run, sin enviar pruebas a la API
+PASS Nueva run reinicia el reencuentro
+PASS Salir durante fundido cancela la cortina y restaura tiempo y audio
+PASS Recorrido sin errores ni excepciones

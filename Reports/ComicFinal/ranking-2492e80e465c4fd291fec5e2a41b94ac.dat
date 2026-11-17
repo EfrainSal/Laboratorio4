@@ -1,0 +1,39 @@
+{
+    "version": 2,
+    "topScores": [
+        {
+            "recordId": "b518aec7d63e442cb789f9556a51a426",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 330.5606689453125,
+            "characterId": 1,
+            "date": "2026-11-16T23:44:20.7235389Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ],
+    "topTimes": [
+        {
+            "recordId": "b518aec7d63e442cb789f9556a51a426",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 330.5606689453125,
+            "characterId": 1,
+            "date": "2026-11-16T23:44:20.7235389Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ],
+    "pendingUploads": [
+        {
+            "recordId": "b518aec7d63e442cb789f9556a51a426",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 330.5606689453125,
+            "characterId": 1,
+            "date": "2026-11-16T23:44:20.7235389Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ]
+}

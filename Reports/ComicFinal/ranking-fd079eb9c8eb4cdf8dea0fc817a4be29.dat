@@ -1,0 +1,69 @@
+{
+    "version": 2,
+    "topScores": [
+        {
+            "recordId": "dfe5558a20bb4a4faa938e9667ef3861",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.3426818847656,
+            "characterId": 1,
+            "date": "2026-11-16T23:13:28.0824682Z",
+            "uploaded": false,
+            "victory": true
+        },
+        {
+            "recordId": "28e53d51b825470180b9f8035fd85d4b",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.54620361328125,
+            "characterId": 2,
+            "date": "2026-11-16T23:13:34.6852524Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ],
+    "topTimes": [
+        {
+            "recordId": "dfe5558a20bb4a4faa938e9667ef3861",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.3426818847656,
+            "characterId": 1,
+            "date": "2026-11-16T23:13:28.0824682Z",
+            "uploaded": false,
+            "victory": true
+        },
+        {
+            "recordId": "28e53d51b825470180b9f8035fd85d4b",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.54620361328125,
+            "characterId": 2,
+            "date": "2026-11-16T23:13:34.6852524Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ],
+    "pendingUploads": [
+        {
+            "recordId": "dfe5558a20bb4a4faa938e9667ef3861",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.3426818847656,
+            "characterId": 1,
+            "date": "2026-11-16T23:13:28.0824682Z",
+            "uploaded": false,
+            "victory": true
+        },
+        {
+            "recordId": "28e53d51b825470180b9f8035fd85d4b",
+            "playerName": "ComicFinalQA",
+            "score": 2140,
+            "time": 322.54620361328125,
+            "characterId": 2,
+            "date": "2026-11-16T23:13:34.6852524Z",
+            "uploaded": false,
+            "victory": true
+        }
+    ]
+}

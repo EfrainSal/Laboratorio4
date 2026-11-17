@@ -202,6 +202,8 @@ public class LevelManager : MonoBehaviour
             ? jugadorExistente
             : Instantiate(prefabAInstanciar, puntoDeInicio.position, Quaternion.identity);
         JugadorActual = jugadorInstanciado;
+        if (jugadorInstanciado.GetComponent<AvisoInteraccionUI>() == null)
+            jugadorInstanciado.AddComponent<AvisoInteraccionUI>();
 
         // --- NUEVO: Inyectar UI a la Habilidad ---
         int idPersonaje = GameManager.Instance.personajeSeleccionado;
@@ -310,7 +312,9 @@ public class LevelManager : MonoBehaviour
             armas.subfusilIcon = subfusilIconGO;
             armas.ammoUI = ammoUIGO;
             
-            armas.EquipWeapon(armas.isUsingMelee);
+            bool cuerpoACuerpo = datosGuardados != null ? datosGuardados.armaCuerpoACuerpo :
+                GameManager.Instance.usarDatosDeTransicion ? GameManager.Instance.armaCuerpoACuerpoPendiente : armas.isUsingMelee;
+            armas.EquipWeapon(cuerpoACuerpo);
         }
 
         PlayerShooting disparo = jugadorInstanciado.GetComponent<PlayerShooting>();

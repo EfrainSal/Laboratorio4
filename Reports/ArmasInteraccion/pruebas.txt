@@ -1,0 +1,68 @@
+PASS Guardado antiguo sin campo de arma conserva subfusil predeterminado
+PASS Personaje 0: sin aviso lejos de interactuables
+PASS Personaje 0: arma y HUD correctos al llegar a Recepcion
+PASS Aviso F de puerta en Recepcion
+PASS F sin tarjeta reemplaza el texto en el mismo aviso de interacción
+PASS No aparece otro aviso de tarjeta debajo
+PASS Al expirar vuelve la indicación F en el mismo panel
+PASS Aviso oculto al pausar
+PASS Aviso vuelve al reanudar
+PASS Aviso de puerta desaparece al salir de rango
+PASS F con tarjeta cambia realmente de piso
+PASS Persistencia de vida sin regresión
+PASS Personaje 0: arma y HUD correctos al llegar a Escenario1_Entrada
+PASS Aviso F de puerta en Escenario1_Entrada
+PASS F sin tarjeta reemplaza el texto en el mismo aviso de interacción
+PASS No aparece otro aviso de tarjeta debajo
+PASS Al expirar vuelve la indicación F en el mismo panel
+PASS Aviso oculto al pausar
+PASS Aviso vuelve al reanudar
+PASS Aviso de puerta desaparece al salir de rango
+PASS F con tarjeta cambia realmente de piso
+PASS Persistencia de vida sin regresión
+PASS Personaje 0: arma y HUD correctos al llegar a Piso3_V10
+PASS Personaje 0: aviso F de nota
+PASS F abre nota y oculta prompt durante lectura
+PASS F cierra nota y restaura prompt en rango
+PASS Aviso de nota desaparece al alejarse
+PASS Personaje 0: aviso F de botiquín cerrado
+PASS F abre contenedor y retira aviso del botiquín ya abierto
+PASS Guardar partida conserva arma equipada
+PASS Archivo cifrado contiene machete equipado
+PASS Continuar lee guardado de prueba
+PASS Personaje 0: continuar restaura machete y HUD
+PASS Nueva partida limpia arma de transición anterior
+PASS Personaje 1: sin aviso lejos de interactuables
+PASS Personaje 1: arma y HUD correctos al llegar a Recepcion
+PASS Aviso F de puerta en Recepcion
+PASS F sin tarjeta reemplaza el texto en el mismo aviso de interacción
+PASS No aparece otro aviso de tarjeta debajo
+PASS Al expirar vuelve la indicación F en el mismo panel
+PASS Aviso oculto al pausar
+PASS Aviso vuelve al reanudar
+PASS Aviso de puerta desaparece al salir de rango
+PASS F con tarjeta cambia realmente de piso
+PASS Persistencia de vida sin regresión
+PASS Personaje 1: arma y HUD correctos al llegar a Escenario1_Entrada
+PASS Aviso F de puerta en Escenario1_Entrada
+PASS F sin tarjeta reemplaza el texto en el mismo aviso de interacción
+PASS No aparece otro aviso de tarjeta debajo
+PASS Al expirar vuelve la indicación F en el mismo panel
+PASS Aviso oculto al pausar
+PASS Aviso vuelve al reanudar
+PASS Aviso de puerta desaparece al salir de rango
+PASS F con tarjeta cambia realmente de piso
+PASS Persistencia de vida sin regresión
+PASS Personaje 1: arma y HUD correctos al llegar a Piso3_V10
+PASS Personaje 1: aviso F de nota
+PASS F abre nota y oculta prompt durante lectura
+PASS F cierra nota y restaura prompt en rango
+PASS Aviso de nota desaparece al alejarse
+PASS Personaje 1: aviso F de botiquín cerrado
+PASS F abre contenedor y retira aviso del botiquín ya abierto
+PASS Guardar partida conserva arma equipada
+PASS Archivo cifrado contiene machete equipado
+PASS Continuar lee guardado de prueba
+PASS Personaje 1: continuar restaura machete y HUD
+PASS Nueva partida limpia arma de transición anterior
+PASS Mecánicas y avisos sin errores ni excepciones

@@ -9,7 +9,7 @@ public class UIManagerNotas : MonoBehaviour
     public GameObject panelNota; // Asigna aquí el PanelNotaUI
     public Image imagenNotaMostrada; // Asigna aquí la ImagenNotaMostrada
 
-    public bool NotaActiva => panelNota.activeSelf;
+    public bool NotaActiva => panelNota != null && panelNota.activeSelf;
 
     private void Awake()
     {

@@ -42,4 +42,6 @@ public class SaveData
     // Armas (PlayerShooting)
     public int currentAmmoInClip;
     public int totalAmmo;
+    // Campo ausente en archivos antiguos: false mantiene el subfusil predeterminado.
+    public bool armaCuerpoACuerpo;
 }

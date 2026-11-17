@@ -127,7 +127,14 @@ public static class ProbarAvisosYVidaJefe
             Exigir(puerta.textoMensajeUI == null || !puerta.textoMensajeUI.gameObject.activeInHierarchy, nombre + ": franja gris antigua oculta");
             var aviso = Object.FindFirstObjectByType<AvisoPuertaUI>();
             VisualElement panel;
-            if (recepcion != null)
+            var interaccion = Jugador.GetComponent<AvisoInteraccionUI>();
+            if (interaccion != null && interaccion.Visible)
+            {
+                Exigir(interaccion.Mensaje == puerta.mensajeFaltaLlave && (aviso == null || !aviso.Visible) &&
+                    (recepcion == null || !recepcion.AvisoPuertaVisible), nombre + ": tarjeta sustituye al aviso F sin duplicarse");
+                panel = Jugador.GetComponentsInChildren<UIDocument>().Select(d => d.rootVisualElement.Q<VisualElement>("AvisoInteraccion")).First(p => p != null);
+            }
+            else if (recepcion != null)
             {
                 Exigir(recepcion.AvisoPuertaVisible && aviso == null, "Recepcion reutiliza su panel sin duplicar avisos");
                 panel = recepcion.GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("ObjetivoRecepcion");

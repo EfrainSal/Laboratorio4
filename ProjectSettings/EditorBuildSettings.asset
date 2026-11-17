@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escenario4_Jefe.unity
     guid: c0f9c5e76d7cc7e4fbb5f1ab776bdb3f
+  - enabled: 1
+    path: Assets/Scenes/IntroduccionComic.unity
+    guid: 38b529da954ee32488042dd360e2a2d9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

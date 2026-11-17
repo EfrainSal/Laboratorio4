@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2818354668373263316}
   - component: {fileID: 1868679786231166938}
   - component: {fileID: 2651317154568322319}
+  - component: {fileID: -8366721198968883518}
   m_Layer: 0
   m_Name: BotiquinInteractuable
   m_TagString: Interactuable
@@ -230,6 +231,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8366721198968883518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163422058438700234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27558318684628c4fb5a3e02bfdbe37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrilloObjeto
+  colorBrillo: {r: 1, g: 0.92, b: 0.45, a: 0.85}
+  grosorBordePixeles: 2.2
+  velocidadPulso: 3.2
+  opacidadMinima: 0.38
+  opacidadMaxima: 0.92
+  restaurarBrilloSpriteBase: 1
 --- !u!1 &2948245353488604717
 GameObject:
   m_ObjectHideFlags: 0

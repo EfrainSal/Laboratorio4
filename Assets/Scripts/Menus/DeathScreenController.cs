@@ -21,7 +21,7 @@ public class DeathScreenController : MonoBehaviour
     /// <summary>Usa esto en tus scripts de gameplay: bloquea el input en pausa, muerte o panel de mejoras.</summary>
     public static bool GameplayBlocked =>
         IsShowing || VictoryScreenController.IsShowing || PauseMenuController.IsPaused || UpgradePanelController.IsOpen
-        || PantallaControlesInicio.BloqueaJuego || TransicionEntrePisos.EnCurso;
+        || PantallaControlesInicio.BloqueaJuego || TransicionEntrePisos.EnCurso || ComicFinal.EnCurso;
 
     private const string HiddenClass = "hidden";
     private const string VisibleClass = "visible";

@@ -1,0 +1,3 @@
+PASS 317 archivos existentes de Resources/audio intactos por SHA256.
+PASS 0 archivos nuevos de audio.
+Unity: 83 comprobaciones correctas, 0 errores.

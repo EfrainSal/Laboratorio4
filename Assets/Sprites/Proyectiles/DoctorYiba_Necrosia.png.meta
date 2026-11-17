@@ -1,0 +1,860 @@
+fileFormatVersion: 2
+guid: cfbbf7a25aaac964683e6e0e97edfca4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3998468582979339909
+    second: DoctorYiba_Necrosia_0
+  - first:
+      213: -5616784428016859833
+    second: DoctorYiba_Necrosia_1
+  - first:
+      213: -852201692214776038
+    second: DoctorYiba_Necrosia_2
+  - first:
+      213: -6642819985526148664
+    second: DoctorYiba_Necrosia_3
+  - first:
+      213: -1907244018666082904
+    second: DoctorYiba_Necrosia_4
+  - first:
+      213: -7758666187168807375
+    second: DoctorYiba_Necrosia_5
+  - first:
+      213: 4815936112460730377
+    second: DoctorYiba_Necrosia_6
+  - first:
+      213: 6299396672983920102
+    second: DoctorYiba_Necrosia_7
+  - first:
+      213: 8530055107644360600
+    second: DoctorYiba_Necrosia_8
+  - first:
+      213: -7488011565162081010
+    second: DoctorYiba_Necrosia_9
+  - first:
+      213: 3933347095583736066
+    second: DoctorYiba_Necrosia_10
+  - first:
+      213: 7811025322383768397
+    second: DoctorYiba_Necrosia_11
+  - first:
+      213: 7870060441312792483
+    second: DoctorYiba_Necrosia_12
+  - first:
+      213: 8949044508558078115
+    second: DoctorYiba_Necrosia_13
+  - first:
+      213: -2407286291529614902
+    second: DoctorYiba_Necrosia_14
+  - first:
+      213: 2196040755660360622
+    second: DoctorYiba_Necrosia_15
+  - first:
+      213: 687870907994798338
+    second: DoctorYiba_Necrosia_16
+  - first:
+      213: -6640307954902785952
+    second: DoctorYiba_Necrosia_17
+  - first:
+      213: 6754796558198760209
+    second: DoctorYiba_Necrosia_18
+  - first:
+      213: -950110550596204241
+    second: DoctorYiba_Necrosia_19
+  - first:
+      213: 1861526444261443471
+    second: DoctorYiba_Necrosia_20
+  - first:
+      213: -1161109702138742292
+    second: DoctorYiba_Necrosia_21
+  - first:
+      213: -74420034411369025
+    second: DoctorYiba_Necrosia_22
+  - first:
+      213: 1721663435786436683
+    second: DoctorYiba_Necrosia_23
+  - first:
+      213: 8393663376147386279
+    second: DoctorYiba_Necrosia_24
+  - first:
+      213: 4361513486730610081
+    second: DoctorYiba_Necrosia_25
+  - first:
+      213: -366479619180500269
+    second: DoctorYiba_Necrosia_26
+  - first:
+      213: 734919784569042659
+    second: DoctorYiba_Necrosia_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.49641928, y: 0.50683594}
+  spritePixelsToUnits: 804
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1237
+        height: 982
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79f4f132069288c0800000000000000
+      internalID: -3998468582979339909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 685
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7450c1c525c2d02b0800000000000000
+      internalID: -5616784428016859833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_2
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 663
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f2d8a731f5c24f0800000000000000
+      internalID: -852201692214776038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_3
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 255
+        width: 285
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c139d71b66ffc3a0800000000000000
+      internalID: -6642819985526148664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 655
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad6b678bab1885e0800000000000000
+      internalID: -1907244018666082904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_5
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 656
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13608feb53ea35490800000000000000
+      internalID: -7758666187168807375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_6
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 651
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900923cd064a5d240800000000000000
+      internalID: 4815936112460730377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_7
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 591
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edeb7006e3fb6750800000000000000
+      internalID: 6299396672983920102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 566
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89706ad1de7d06670800000000000000
+      internalID: 8530055107644360600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_9
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 543
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e055f78972d351890800000000000000
+      internalID: -7488011565162081010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_10
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 513
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 201459af75e069630800000000000000
+      internalID: 3933347095583736066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 511
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bf3486526566c60800000000000000
+      internalID: 7811025322383768397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_12
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 461
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af8d452642183d60800000000000000
+      internalID: 7870060441312792483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_13
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 453
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0b3c30194613c70800000000000000
+      internalID: 8949044508558078115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_14
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 463
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9b5b84fd9979ed0800000000000000
+      internalID: -2407286291529614902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_15
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 473
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab8a61ae67e97e10800000000000000
+      internalID: 2196040755660360622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_16
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 451
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209fa5242fecb8900800000000000000
+      internalID: 687870907994798338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_17
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 421
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060a1dcc813e8d3a0800000000000000
+      internalID: -6640307954902785952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_18
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 422
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113e7756eabddbd50800000000000000
+      internalID: 6754796558198760209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_19
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 405
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29cc56fc7780d2f0800000000000000
+      internalID: -950110550596204241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_20
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 373
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f870332307875d910800000000000000
+      internalID: 1861526444261443471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_21
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 345
+        width: 23
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9b2c2b0e8e2efe0800000000000000
+      internalID: -1161109702138742292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_22
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 375
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbdecbc7f5b97fef0800000000000000
+      internalID: -74420034411369025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_23
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 367
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4044d8e5c394e710800000000000000
+      internalID: 1721663435786436683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_24
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 342
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af887b7e584c7470800000000000000
+      internalID: 8393663376147386279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_25
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 240
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a547ab6865378c30800000000000000
+      internalID: 4361513486730610081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_26
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 55
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da63516ab00aeaf0800000000000000
+      internalID: -366479619180500269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoctorYiba_Necrosia_27
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 17
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6f4a976a5f23a00800000000000000
+      internalID: 734919784569042659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DoctorYiba_Necrosia_0: -3998468582979339909
+      DoctorYiba_Necrosia_1: -5616784428016859833
+      DoctorYiba_Necrosia_10: 3933347095583736066
+      DoctorYiba_Necrosia_11: 7811025322383768397
+      DoctorYiba_Necrosia_12: 7870060441312792483
+      DoctorYiba_Necrosia_13: 8949044508558078115
+      DoctorYiba_Necrosia_14: -2407286291529614902
+      DoctorYiba_Necrosia_15: 2196040755660360622
+      DoctorYiba_Necrosia_16: 687870907994798338
+      DoctorYiba_Necrosia_17: -6640307954902785952
+      DoctorYiba_Necrosia_18: 6754796558198760209
+      DoctorYiba_Necrosia_19: -950110550596204241
+      DoctorYiba_Necrosia_2: -852201692214776038
+      DoctorYiba_Necrosia_20: 1861526444261443471
+      DoctorYiba_Necrosia_21: -1161109702138742292
+      DoctorYiba_Necrosia_22: -74420034411369025
+      DoctorYiba_Necrosia_23: 1721663435786436683
+      DoctorYiba_Necrosia_24: 8393663376147386279
+      DoctorYiba_Necrosia_25: 4361513486730610081
+      DoctorYiba_Necrosia_26: -366479619180500269
+      DoctorYiba_Necrosia_27: 734919784569042659
+      DoctorYiba_Necrosia_3: -6642819985526148664
+      DoctorYiba_Necrosia_4: -1907244018666082904
+      DoctorYiba_Necrosia_5: -7758666187168807375
+      DoctorYiba_Necrosia_6: 4815936112460730377
+      DoctorYiba_Necrosia_7: 6299396672983920102
+      DoctorYiba_Necrosia_8: 8530055107644360600
+      DoctorYiba_Necrosia_9: -7488011565162081010
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

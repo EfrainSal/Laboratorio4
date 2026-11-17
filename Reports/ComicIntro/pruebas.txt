@@ -1,0 +1,65 @@
+PASS Escena del cómic sin dependencias de audio
+PASS Llegada: cuatro viñetas sin franja superior de títulos
+PASS RutaJason: cuatro viñetas sin franja superior de títulos
+PASS RutaMilena: cuatro viñetas sin franja superior de títulos
+PASS Menú dirige a introducción con personaje 0
+PASS Ocho viñetas; confirmar personaje no omite la primera
+PASS Cómic silencioso y partida detenida
+PASS Sin componentes de audio en la escena del cómic
+PASS Indicadores siguiente >> y Esc visibles
+PASS Sin avance automático ni tiempo de partida durante lectura
+PASS Personaje 0: viñeta 1 de la ruta correcta
+PASS Indicadores dibujados en viñeta 1
+PASS Mantener el clic avanza sólo una viñeta
+PASS Personaje 0: viñeta 2 de la ruta correcta
+PASS Indicadores dibujados en viñeta 2
+PASS Personaje 0: viñeta 3 de la ruta correcta
+PASS Indicadores dibujados en viñeta 3
+PASS Personaje 0: viñeta 4 de la ruta correcta
+PASS Indicadores dibujados en viñeta 4
+PASS Personaje 0: viñeta 5 de la ruta correcta
+PASS Indicadores dibujados en viñeta 5
+PASS Personaje 0: viñeta 6 de la ruta correcta
+PASS Indicadores dibujados en viñeta 6
+PASS Personaje 0: viñeta 7 de la ruta correcta
+PASS Indicadores dibujados en viñeta 7
+PASS Personaje 0: viñeta 8 de la ruta correcta
+PASS Indicadores dibujados en viñeta 8
+PASS Último clic lleva a recepción con el personaje elegido
+PASS Al salir se restaura el estado de audio previo
+PASS Menú dirige a introducción con personaje 1
+PASS Ocho viñetas; confirmar personaje no omite la primera
+PASS Cómic silencioso y partida detenida
+PASS Sin componentes de audio en la escena del cómic
+PASS Indicadores siguiente >> y Esc visibles
+PASS Sin avance automático ni tiempo de partida durante lectura
+PASS Personaje 1: viñeta 1 de la ruta correcta
+PASS Indicadores dibujados en viñeta 1
+PASS Mantener el clic avanza sólo una viñeta
+PASS Personaje 1: viñeta 2 de la ruta correcta
+PASS Indicadores dibujados en viñeta 2
+PASS Personaje 1: viñeta 3 de la ruta correcta
+PASS Indicadores dibujados en viñeta 3
+PASS Personaje 1: viñeta 4 de la ruta correcta
+PASS Indicadores dibujados en viñeta 4
+PASS Personaje 1: viñeta 5 de la ruta correcta
+PASS Indicadores dibujados en viñeta 5
+PASS Personaje 1: viñeta 6 de la ruta correcta
+PASS Indicadores dibujados en viñeta 6
+PASS Personaje 1: viñeta 7 de la ruta correcta
+PASS Indicadores dibujados en viñeta 7
+PASS Personaje 1: viñeta 8 de la ruta correcta
+PASS Indicadores dibujados en viñeta 8
+PASS Último clic lleva a recepción con el personaje elegido
+PASS Al salir se restaura el estado de audio previo
+PASS Esc omite toda la cinemática, personaje 0, desde viñeta 1
+PASS Esc restaura audio y no deja mute persistente
+PASS Esc omite toda la cinemática, personaje 1, desde viñeta 1
+PASS Esc restaura audio y no deja mute persistente
+PASS Esc omite toda la cinemática, personaje 0, desde viñeta 4
+PASS Esc restaura audio y no deja mute persistente
+PASS Esc omite toda la cinemática, personaje 1, desde viñeta 8
+PASS Esc restaura audio y no deja mute persistente
+PASS Guardar partida de prueba al llegar a recepción
+PASS Continuar conserva su flujo y no repite introducción
+PASS Introducción sin errores ni excepciones

@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public int estimulantesPendientes = 0;
     public int municionCargadorPendiente = 0;
     public int municionTotalPendiente = 0;
+    public bool armaCuerpoACuerpoPendiente = false;
     // (Opcional) Si quieres guardar la experiencia actual
     public float expActualPendiente = 0f; 
     public int nivelActualPendiente = 1;
@@ -97,6 +98,8 @@ public class GameManager : MonoBehaviour
         if (exp != null) { puntosDeMejoraPendientes = exp.puntosDeMejora; expActualPendiente = exp.experienciaActual; nivelActualPendiente = exp.nivelActual; }
         var disparo = salud.GetComponent<PlayerShooting>();
         if (disparo != null) { municionCargadorPendiente = disparo.currentAmmoInClip; municionTotalPendiente = disparo.totalAmmo; }
+        var armas = salud.GetComponent<WeaponManager>();
+        armaCuerpoACuerpoPendiente = armas != null && armas.isUsingMelee;
         return true;
     }
 
@@ -142,6 +145,7 @@ public class GameManager : MonoBehaviour
         estimulantesPendientes = 0;
         municionCargadorPendiente = 0;
         municionTotalPendiente = 0;
+        armaCuerpoACuerpoPendiente = false;
         expActualPendiente = 0f;
         nivelActualPendiente = 1;
 
@@ -296,6 +300,8 @@ public class GameManager : MonoBehaviour
                 data.currentAmmoInClip = shoot.currentAmmoInClip;
                 data.totalAmmo = shoot.totalAmmo;
             }
+            var armas = player.GetComponent<WeaponManager>();
+            data.armaCuerpoACuerpo = armas != null && armas.isUsingMelee;
         }
 
         bool guardado = SaveSystem.Guardar(data);

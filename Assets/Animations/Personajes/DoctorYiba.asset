@@ -35,7 +35,7 @@ MonoBehaviour:
     - frames:
       - {fileID: 21300000, guid: bf50be4bb19c5ba4fae1e608b3369b8f, type: 3}
   - nombre: Correr
-    fps: 10
+    fps: 12
     bucle: 1
     direcciones:
     - frames:

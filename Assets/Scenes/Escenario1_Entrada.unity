@@ -5132,19 +5132,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.77633107
+      value: 0.9753126
       objectReference: {fileID: 0}
     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8043728
+      value: 0.9949281
       objectReference: {fileID: 0}
     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.01
+      value: 46.9967
       objectReference: {fileID: 0}
     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.59
+      value: -5.64
       objectReference: {fileID: 0}
     - target: {fileID: 298187488616580949, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5180,7 +5180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7510312503975377780, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_SortingOrder
-      value: 559
+      value: 564
       objectReference: {fileID: 0}
     - target: {fileID: 7704715513855716656, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
       propertyPath: m_Name
@@ -5189,7 +5189,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7704715513855716656, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1092617618}
   m_SourcePrefab: {fileID: 100100000, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
 --- !u!4 &1149 stripped
 Transform:
@@ -14989,6 +14992,29 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+--- !u!1 &1092617617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7704715513855716656, guid: fc47f2aae2d256e4c92ff84c10d9571d, type: 3}
+  m_PrefabInstance: {fileID: 1148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1092617618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092617617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27558318684628c4fb5a3e02bfdbe37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BrilloObjeto
+  colorBrillo: {r: 0.4509804, g: 0.9882353, b: 1, a: 0.85}
+  grosorBordePixeles: 2.2
+  velocidadPulso: 3.2
+  opacidadMinima: 0.38
+  opacidadMaxima: 0.92
+  restaurarBrilloSpriteBase: 1
 --- !u!1001 &1144747526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15404,6 +15430,10 @@ PrefabInstance:
       propertyPath: textoMensajeUI
       value: 
       objectReference: {fileID: 870424405}
+    - target: {fileID: 8056978251474130044, guid: 89da680da4c6b7a41999d396463bcec0, type: 3}
+      propertyPath: mensajeFaltaLlave
+      value: Necesito la Tarjeta de Acceso.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

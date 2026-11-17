@@ -157,7 +157,10 @@ public static class ProbarInicioRecepcion
         for (int id = 0; id < 2; id++)
         {
             personajeCaptura = id;
-            ConfirmarPersonaje(id); yield return .9f; Emparejar(id == 1); yield return .15f;
+            ConfirmarPersonaje(id); yield return .2f;
+            var introduccion = Object.FindFirstObjectByType<IntroduccionComic>();
+            Exigir(introduccion != null && introduccion.Personaje == id, "La introducción precede a recepción con la ruta seleccionada");
+            introduccion.Saltar(); yield return 1.2f; Emparejar(id == 1); yield return .15f;
             Exigir(SceneManager.GetActiveScene().name == "Recepcion", "Recepcion carga antes de Entrada, personaje " + id);
             Exigir(Object.FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None).Length == 1 && jugador.name.StartsWith(id == 0 ? "Player_Jason" : "Player_Milena"), "Sólo aparece el prefab seleccionado, personaje " + id);
             Exigir(Object.FindObjectsByType<RecepcionJugador>(FindObjectsSortMode.None).Length == 0, "Controlador del prototipo desactivado");

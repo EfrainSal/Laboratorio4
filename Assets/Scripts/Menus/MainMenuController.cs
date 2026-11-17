@@ -30,6 +30,7 @@ public class MainMenuController : MonoBehaviour
 
     [Header("Escenas")]
     [SerializeField] private string _gameSceneName = "Recepcion";
+    [SerializeField] private string _introSceneName = IntroduccionComic.NombreEscena;
 
     [Header("Sprites de Personajes (0: Jason, 1: Milena)")] // NUEVO
     [SerializeField] private Sprite[] _characterSprites;    // NUEVO
@@ -391,6 +392,8 @@ public class MainMenuController : MonoBehaviour
     private void OnConfirmCharacter()
     {
         if (_selectedCharacter < 0 || string.IsNullOrWhiteSpace(_playerNameInput.value)) return;
+        if (!Application.CanStreamedLevelBeLoaded(_introSceneName))
+        { Debug.LogError("Falta habilitar la introducción del cómic en Build Settings: " + _introSceneName); return; }
 
         PlayerPrefs.SetString(PlayerRankingNameKey, _playerNameInput.value.Trim());
         PlayerPrefs.SetInt(SelectedCharacterKey, _selectedCharacter);
@@ -406,7 +409,7 @@ public class MainMenuController : MonoBehaviour
         }
 
         SaveSystem.Borrar();
-        SceneManager.LoadScene(_gameSceneName);
+        SceneManager.LoadScene(_introSceneName);
     }
 
     // ------------------------------------------------------------------

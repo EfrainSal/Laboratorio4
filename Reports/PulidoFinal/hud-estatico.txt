@@ -1,0 +1,43 @@
+PASS Personaje 0: mapa activo
+PASS Personaje 0: machete es Image UI sin componentes de arma
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 0
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 1
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 2
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 3
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 4
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 5
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 6
+PASS Personaje 0: HUD fijo a la derecha, machete, apuntado del jugador 7
+PASS Personaje 0: subfusil es Image UI sin componentes de arma
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 0
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 1
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 2
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 3
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 4
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 5
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 6
+PASS Personaje 0: HUD fijo a la derecha, subfusil, apuntado del jugador 7
+PASS Personaje 0: disparo y fogonazo sólo en arma jugable, HUD conserva imagen estática
+PASS Personaje 0: HUD continúa estático después del disparo
+PASS Personaje 1: mapa activo
+PASS Personaje 1: machete es Image UI sin componentes de arma
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 0
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 1
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 2
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 3
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 4
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 5
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 6
+PASS Personaje 1: HUD fijo a la derecha, machete, apuntado del jugador 7
+PASS Personaje 1: subfusil es Image UI sin componentes de arma
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 0
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 1
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 2
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 3
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 4
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 5
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 6
+PASS Personaje 1: HUD fijo a la derecha, subfusil, apuntado del jugador 7
+PASS Personaje 1: disparo y fogonazo sólo en arma jugable, HUD conserva imagen estática
+PASS Personaje 1: HUD continúa estático después del disparo
+PASS HUD estático sin errores ni excepciones

@@ -89,7 +89,7 @@ public class BossHealth : MonoBehaviour
     }
     public void TakeDamage(float damageAmount)
     {
-        if (IsDead || damageAmount <= 0) return;
+        if (IsDead || damageAmount <= 0 || ComicFinal.EsperaCombate(this) || ComicFinal.EnCurso) return;
         currentHealth = Mathf.Max(0, currentHealth - damageAmount);
         ActualizarUI();
         if (currentHealth <= 0) Die();

@@ -14,6 +14,7 @@ namespace Laboratorio4.Animacion
         private ClipPersonaje actual;
         private int direccion;
         private float tiempo;
+        private float duracionActual;
         private SpriteRenderer render;
 
         private void Awake() { render = GetComponent<SpriteRenderer>(); Reproducir("Quieto", 0); }
@@ -27,11 +28,17 @@ namespace Laboratorio4.Animacion
         {
             var siguiente = Buscar(nombre);
             if (siguiente == null) return;
-            if (actual != siguiente || reiniciar) { tiempo = 0f; Terminada = false; }
+            if (actual != siguiente || reiniciar) { tiempo = 0f; duracionActual = 0f; Terminada = false; }
             actual = siguiente;
             direccion = ((dir % 8) + 8) % 8;
             Mostrar();
         }
+        public float Duracion(string nombre, int dir)
+        {
+            var clip = Buscar(nombre);
+            return clip != null ? (Frames(clip, dir)?.Length ?? 0) / Mathf.Max(1f, clip.fps) : 0;
+        }
+        public void AjustarDuracionActual(float segundos) { duracionActual = Mathf.Max(0, segundos); }
         private void Update()
         {
             if (actual == null) return;
@@ -43,7 +50,8 @@ namespace Laboratorio4.Animacion
             if (render == null) render = GetComponent<SpriteRenderer>();
             var frames = Frames(actual, direccion);
             if (frames == null) return;
-            int fotograma = Mathf.FloorToInt(tiempo * Mathf.Max(1f, actual.fps));
+            float fps = duracionActual > 0 ? frames.Length / duracionActual : Mathf.Max(1f, actual.fps);
+            int fotograma = Mathf.FloorToInt(tiempo * fps);
             Terminada = !actual.bucle && fotograma >= frames.Length;
             FotogramaActual = actual.bucle ? fotograma % frames.Length : Mathf.Min(fotograma, frames.Length - 1);
             render.sprite = frames[FotogramaActual];

@@ -1,0 +1,5 @@
+PASS 317 archivos existentes de Resources/audio intactos por SHA256.
+PASS PNG aprobado sin cambios: A-reencuentro-jason.png
+PASS PNG aprobado sin cambios: A-reencuentro-milena.png
+PASS PNG aprobado sin cambios: B1-ultimas-palabras.png
+PASS PNG aprobado sin cambios: B2-escape.png

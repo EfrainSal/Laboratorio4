@@ -55,6 +55,7 @@ public class VictoryScreenController : MonoBehaviour
     private RunSummary _summary;
     private string _messageFull = "";
     private bool _shown;
+    private bool _fondoNegro;
     private float _burstEnd, _nextBurstAt;
 
     void Awake()
@@ -115,7 +116,8 @@ public class VictoryScreenController : MonoBehaviour
         if (_shown) return;
         _shown = true;
         _summary = summary;
-        StartCoroutine(ShowRoutine());
+        _fondoNegro = ComicFinal.ReproducirDesenlace(() => StartCoroutine(ShowRoutine()));
+        if (!_fondoNegro) StartCoroutine(ShowRoutine());
     }
 
     [ContextMenu("Probar pantalla de victoria")]
@@ -139,11 +141,13 @@ public class VictoryScreenController : MonoBehaviour
         if (_mixer != null) _mixer.SetFloat("MusicVolume", _musicDuckDb);
         if (_victorySting != null) _victorySting.Play();
 
-        Time.timeScale = _slowMotionScale;
-        yield return new WaitForSecondsRealtime(_slowMotionSeconds);
-
         RenderTexture blurred = null;
-        yield return StartCoroutine(BackdropBlur.Capture(rt => blurred = rt, _blurSteps));
+        if (!_fondoNegro)
+        {
+            Time.timeScale = _slowMotionScale;
+            yield return new WaitForSecondsRealtime(_slowMotionSeconds);
+            yield return StartCoroutine(BackdropBlur.Capture(rt => blurred = rt, _blurSteps));
+        }
 
         Time.timeScale = 0f;
         foreach (var go in _hideOnVictory)
@@ -151,6 +155,16 @@ public class VictoryScreenController : MonoBehaviour
 
         _blurRT = blurred;
         if (_blurRT != null) _backdrop.style.backgroundImage = Background.FromRenderTexture(_blurRT);
+        if (_fondoNegro)
+        {
+            _overlay.style.backgroundColor = Color.black;
+            _backdrop.style.backgroundImage = new StyleBackground(StyleKeyword.None);
+            _backdrop.style.backgroundColor = Color.black;
+            _overlay.Q<VisualElement>("DeathTint").style.backgroundColor = Color.clear;
+            // El epílogo termina sobre negro, sin la viñeta verde ni el barrido del fondo de combate.
+            _vignette.style.display = DisplayStyle.None;
+            _scanBar.style.display = DisplayStyle.None;
+        }
 
         PopulateUI();
 

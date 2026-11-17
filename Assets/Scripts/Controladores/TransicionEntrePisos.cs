@@ -16,6 +16,8 @@ public class TransicionEntrePisos : MonoBehaviour
     [Min(.05f)] public float duracionOscurecer = .35f;
     [Min(.05f)] public float duracionIluminar = .4f;
     private CanvasGroup grupo;
+    private Coroutine fundidoLocal;
+    private Object propietarioLocal;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ReiniciarEstado()
@@ -28,18 +30,52 @@ public class TransicionEntrePisos : MonoBehaviour
         if (EnCurso || string.IsNullOrWhiteSpace(escena) || !Application.CanStreamedLevelBeLoaded(escena)) return false;
         if (conservarEstadoJugador && GameManager.Instance != null && GameManager.Instance.RunActiva)
             GameManager.Instance.CapturarDatosDeTransicion();
-        if (instancia == null)
-        {
-            var go = new GameObject("TransicionEntrePisos");
-            instancia = go.AddComponent<TransicionEntrePisos>();
-            DontDestroyOnLoad(go);
-            instancia.CrearCortina();
-        }
+        AsegurarCortina();
         EscalaTiempoAnterior = Time.timeScale;
         BloqueoPausaAnterior = PauseMenuController.PauseBlocked;
         EscenaDestino = escena; EnCurso = true;
         instancia.StartCoroutine(instancia.CambiarEscena(escena));
         return true;
+    }
+    private static void AsegurarCortina()
+    {
+        if (instancia != null) return;
+        var go = new GameObject("TransicionEntrePisos");
+        instancia = go.AddComponent<TransicionEntrePisos>();
+        DontDestroyOnLoad(go); instancia.CrearCortina();
+    }
+    // Misma cortina, curvas y duraciones que entre pisos; la escena actual permanece cargada.
+    public static bool FundirPantalla(System.Action bajoNegro, System.Action alTerminar, Object propietario)
+    {
+        if (EnCurso || propietario == null) return false;
+        AsegurarCortina();
+        EscalaTiempoAnterior = Time.timeScale; BloqueoPausaAnterior = PauseMenuController.PauseBlocked;
+        EscenaDestino = null; EnCurso = true; instancia.propietarioLocal = propietario;
+        instancia.fundidoLocal = instancia.StartCoroutine(instancia.FundirEnEscena(bajoNegro, alTerminar));
+        return true;
+    }
+    public static void CancelarFundidoLocal(Object propietario)
+    {
+        if (instancia == null || instancia.propietarioLocal != propietario || instancia.fundidoLocal == null) return;
+        instancia.StopCoroutine(instancia.fundidoLocal);
+        instancia.fundidoLocal = null; instancia.propietarioLocal = null; instancia.Finalizar();
+    }
+    private IEnumerator FundirEnEscena(System.Action bajoNegro, System.Action alTerminar)
+    {
+        bool completado = false;
+        Time.timeScale = 0; PauseMenuController.PauseBlocked = true; grupo.blocksRaycasts = true;
+        try
+        {
+            yield return Fundir(0, 1, duracionOscurecer);
+            yield return null; // Un fotograma completamente negro antes de cambiar la viñeta.
+            if (propietarioLocal == null) yield break;
+            bajoNegro?.Invoke();
+            yield return null;
+            yield return Fundir(1, 0, duracionIluminar);
+            completado = true;
+        }
+        finally { fundidoLocal = null; propietarioLocal = null; Finalizar(); }
+        if (completado) alTerminar?.Invoke();
     }
     private void CrearCortina()
     {

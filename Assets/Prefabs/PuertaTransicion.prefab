@@ -153,7 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuertaNivel
   nombreSiguienteEscena: Piso3_V10
+  avanzarContadorPiso: 1
   textoMensajeUI: {fileID: 0}
-  mensajeFaltaLlave: "Necesito la Tarjeta de Acceso. Elimina 10 Sorbos y rec\xF3gela. [F] Interactuar"
+  mensajeFaltaLlave: Necesito la Tarjeta de Acceso.
   duracionMensaje: 2.5
   accionInteractuar: {fileID: 0}

@@ -8,6 +8,8 @@ public class BossAI : MonoBehaviour
     [Header("Movimiento")]
     public float moveSpeed = 2.5f;
     public float attackRange = 2f; // Distancia para pegar un zarpazo
+    [Min(.1f)] public float aceleracion = 12f;
+    [Min(.1f)] public float desaceleracion = 18f;
 
     [Header("Cooldowns")]
     public float timeBetweenAttacks = 2f;
@@ -40,26 +42,61 @@ public class BossAI : MonoBehaviour
     public AudioClip sfxDisparo;        // Jefe_Disparo
     public AudioClip sfxInvocacion;     // Jefe_Rugido_Largo_1
     public AudioClip sfxAtaquePesado;   // Jefe_Rugido_Largo_2
+    public AudioClip sfxRugidoInicio;
+    [Min(.1f)] public float radioEscucha = 36f;
+    [Range(0, 1)] public float volumenCercano = .8f;
+    [Header("Inicio del combate")]
+    [Min(.1f)] public float duracionInicio = 1.1f;
+    [Min(0)] public float intensidadSacudida = .16f;
+    [Min(.1f)] public float duracionSacudida = .7f;
+    public int RugidosIniciales { get; private set; }
+    public AudioClip UltimoSonido { get; private set; }
 
     private Transform player;
     private Rigidbody2D rb;
-    private float zPosition;
     private AnimacionJefeDinamica animacion;
+    private NavegacionJefe navegacion;
+    private SacudidaCamaraJefe sacudida;
+    private bool inicioSolicitado, inicioAnunciado, rugiendo;
+    private float finInicio;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animacion = GetComponent<AnimacionJefeDinamica>();
+        navegacion = GetComponent<NavegacionJefe>();
+        if (navegacion == null) navegacion = gameObject.AddComponent<NavegacionJefe>();
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.Stop(); audioSource.enabled = true; audioSource.mute = false; audioSource.loop = false;
+        audioSource.playOnAwake = false; audioSource.spatialBlend = 0; audioSource.priority = 64;
+        audioSource.dopplerLevel = 0; audioSource.ignoreListenerPause = false;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        rb.freezeRotation = true;
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        zPosition = transform.position.z;
         attackTimer = timeBetweenAttacks;
 
         ActualizarReferenciaJugador();
+    }
+    public void IniciarCombateDramatico()
+    {
+        if (inicioAnunciado) return;
+        inicioAnunciado = true; inicioSolicitado = true;
+    }
+    private void Update() { ActualizarVolumenJefe(); }
+    private void ActualizarVolumenJefe()
+    {
+        if (audioSource == null) return;
+        if (player == null) ActualizarReferenciaJugador();
+        float distancia = player != null ? Vector2.Distance(player.position, transform.position) : radioEscucha;
+        float ganancia = distancia < radioEscucha ? Mathf.Lerp(1, .4f, Mathf.InverseLerp(4, radioEscucha, distancia)) : 0;
+        float disparos = AudioEnemigosCercanos.Instancia != null ? Mathf.Max(.55f, AudioEnemigosCercanos.Instancia.GananciaEnemigos) : 1;
+        audioSource.volume = DeathScreenController.GameplayBlocked || Time.timeScale <= 0 ? 0 : volumenCercano * ganancia * disparos;
     }
 
     private void ActualizarReferenciaJugador()
@@ -80,16 +117,14 @@ public class BossAI : MonoBehaviour
 
     void FixedUpdate()
     {
-    if (DeathScreenController.GameplayBlocked)
+    if (DeathScreenController.GameplayBlocked || ComicFinal.EsperaCombate(this))
     {
         rb.linearVelocity = Vector2.zero;
         return;
     }
-    // Congelar posición en Z
-    transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
-
     // Si el jugador aún no existe o cambió la referencia, asegurar que sea siempre el jugador real
-    if (player == null || player.GetComponent<AyudanteJefeAI>() != null)
+    if (player == null || player.GetComponent<AyudanteJefeAI>() != null ||
+        (LevelManager.Instance != null && LevelManager.Instance.JugadorActual != null && player != LevelManager.Instance.JugadorActual.transform))
     {
         ActualizarReferenciaJugador();
         if (player == null)
@@ -97,6 +132,26 @@ public class BossAI : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             return; // Detenerse y esperar al siguiente frame
         }
+    }
+
+    if (inicioSolicitado)
+    {
+        inicioSolicitado = false; rugiendo = true; finInicio = Time.time + duracionInicio; RugidosIniciales++;
+        ReproducirSFX(sfxRugidoInicio != null ? sfxRugidoInicio : sfxInvocacion);
+        var camara = Camera.main;
+        if (camara != null)
+        {
+            sacudida = camara.GetComponent<SacudidaCamaraJefe>();
+            if (sacudida == null) sacudida = camara.gameObject.AddComponent<SacudidaCamaraJefe>();
+            sacudida.Disparar(duracionSacudida, intensidadSacudida);
+        }
+        animacion?.ComenzarAccion("CampoEnergia", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down, duracionInicio);
+        attackTimer = timeBetweenAttacks;
+    }
+    if (rugiendo)
+    {
+        if (Time.time < finInicio) { rb.linearVelocity = Vector2.zero; return; }
+        rugiendo = false; animacion?.TerminarAccion();
     }
 
     // Si el jefe ya está atacando, detener su movimiento
@@ -107,8 +162,14 @@ public class BossAI : MonoBehaviour
     }
 
     // Perseguir al jugador
-    Vector2 direction = (player.position - transform.position).normalized;
-    rb.linearVelocity = direction * moveSpeed;
+    Vector2 delta = player.position - transform.position;
+    Vector2 objetivoVelocidad = delta.magnitude > attackRange * .8f || !navegacion.PasoLibre(rb.position, player.position)
+        ? navegacion.Direccion(player.position) * moveSpeed : Vector2.zero;
+    Vector2 velocidad = Vector2.MoveTowards(rb.linearVelocity, objetivoVelocidad,
+        (objetivoVelocidad.sqrMagnitude > 0 ? aceleracion : desaceleracion) * Time.fixedDeltaTime);
+    if (velocidad.sqrMagnitude > .0001f && !navegacion.PasoFisicoLibre(rb.position, rb.position + velocidad * Time.fixedDeltaTime))
+        velocidad = navegacion.PasoFisicoLibre(rb.position, rb.position + objetivoVelocidad * Time.fixedDeltaTime) ? objetivoVelocidad : Vector2.zero;
+    rb.linearVelocity = velocidad;
 
     // Lógica de ataque
     attackTimer -= Time.fixedDeltaTime;
@@ -127,10 +188,12 @@ public class BossAI : MonoBehaviour
 
     private void DecidirAtaque()
     {
-        isAttacking = true;
-        rb.linearVelocity = Vector2.zero; // El jefe se detiene para atacar
-
         float distance = Vector2.Distance(transform.position, player.position);
+        // Si no puede pegar, seguir caminando sin insertar un fotograma de Quieto cada 0.2 s.
+        bool lineaLibre = navegacion.PasoLibre(rb.position, player.position);
+        if ((CurrentPhase == 1 && distance > attackRange) || !lineaLibre) { attackTimer = .2f; return; }
+        isAttacking = true;
+        rb.linearVelocity = Vector2.zero;
 
         if (CurrentPhase == 1)
         {
@@ -179,8 +242,8 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator EjecutarZarpazo(float damage, float knockback, Color telegraphColor, bool esAtaquePesado = false)
     {
-        animacion?.ComenzarAccion("Ataque", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
-        if (esAtaquePesado) ReproducirSFX(sfxAtaquePesado);
+        float duracion = animacion != null ? animacion.ComenzarAccion("Ataque", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down) : .4f;
+        ReproducirSFX(sfxAtaquePesado != null ? sfxAtaquePesado : sfxInvocacion);
 
         // Feedback visual breve antes de pegar
         SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
@@ -190,7 +253,7 @@ public class BossAI : MonoBehaviour
         yield return new WaitForSeconds(0.4f); // Tiempo de anticipación del golpe
 
         // Re-comprobar distancia para ver si el jugador lo esquivó
-        if (player != null && !DeathScreenController.GameplayBlocked && Vector2.Distance(transform.position, player.position) <= attackRange * 1.5f)
+        if (player != null && !DeathScreenController.GameplayBlocked && navegacion.PasoLibre(rb.position, player.position) && Vector2.Distance(transform.position, player.position) <= attackRange * 1.5f)
         {
             PlayerHealth pHealth = player.GetComponent<PlayerHealth>();
             Rigidbody2D pRb = player.GetComponent<Rigidbody2D>();
@@ -207,12 +270,14 @@ public class BossAI : MonoBehaviour
         }
 
         sr.color = originalColor;
+        // Conservar los cuadros de impacto/recuperación, que antes se cortaban a los 0.4 s.
+        if (duracion > .4f) yield return new WaitForSeconds(duracion - .4f);
         TerminarAtaque();
     }
 
     private IEnumerator EjecutarBulletHell()
     {
-        animacion?.ComenzarAccion("BolaDePoder", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
+        animacion?.ComenzarAccion("BolaDePoder", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down, 1f);
         ReproducirSFX(sfxRecargaEnergia);
         // Carga energía por 1 segundo
         yield return new WaitForSeconds(1f);
@@ -253,7 +318,7 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator EjecutarInvocacion()
     {
-        animacion?.ComenzarAccion("CampoEnergia", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down);
+        animacion?.ComenzarAccion("CampoEnergia", player != null ? (Vector2)player.position : (Vector2)transform.position + Vector2.down, 1.5f);
         ReproducirSFX(sfxInvocacion);
         // Rugido largo
         yield return new WaitForSeconds(1.5f);
@@ -281,9 +346,11 @@ public class BossAI : MonoBehaviour
 
     private void ReproducirSFX(AudioClip clip)
     {
-        if (audioSource != null && clip != null)
+        if (audioSource != null && clip != null && !DeathScreenController.GameplayBlocked)
         {
-            audioSource.PlayOneShot(clip);
+            // Una sola voz propia para Yiba: no se pierde en la cola limitada de Sorbos ni suma rugidos.
+            audioSource.Stop(); audioSource.clip = clip; audioSource.pitch = 1; UltimoSonido = clip;
+            ActualizarVolumenJefe(); audioSource.Play();
         }
     }
 
@@ -300,5 +367,7 @@ public class BossAI : MonoBehaviour
         isAttacking = false;
         animacion?.TerminarAccion();
         if (rb != null) rb.linearVelocity = Vector2.zero;
+        if (audioSource != null) audioSource.Stop();
+        if (sacudida != null) sacudida.Cancelar();
     }
 }

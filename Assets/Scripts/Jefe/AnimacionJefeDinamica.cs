@@ -8,6 +8,7 @@ public class AnimacionJefeDinamica : MonoBehaviour
     private Rigidbody2D cuerpo;
     private int direccion;
     private bool accion, muerto;
+    private bool corriendo;
 
     private void Awake()
     {
@@ -18,19 +19,25 @@ public class AnimacionJefeDinamica : MonoBehaviour
     {
         if (muerto || accion) return;
         Vector2 velocidad = cuerpo.linearVelocity;
-        if (velocidad.sqrMagnitude > .01f)
+        corriendo = velocidad.sqrMagnitude > (corriendo ? .0025f : .01f);
+        if (corriendo)
         {
-            direccion = AnimacionJasonDinamica.Direccion8(velocidad);
+            int candidata = AnimacionJasonDinamica.Direccion8(velocidad);
+            // Histéresis angular: no oscilar entre dos vistas al cruzar una diagonal.
+            Vector2 eje = Quaternion.Euler(0, 0, direccion * 45f) * Vector2.down;
+            if (Vector2.Angle(eje, velocidad) > 28f) direccion = candidata;
             animador.Reproducir("Correr", direccion);
         }
         else animador.Reproducir("Quieto", direccion);
     }
-    public void ComenzarAccion(string nombre, Vector2 objetivo)
+    public float ComenzarAccion(string nombre, Vector2 objetivo, float duracion = 0f)
     {
-        if (muerto) return;
+        if (muerto) return 0;
         direccion = AnimacionJasonDinamica.Direccion8(objetivo - (Vector2)transform.position);
         accion = true;
         animador.Reproducir(nombre, direccion, true);
+        if (duracion > 0) animador.AjustarDuracionActual(duracion);
+        return duracion > 0 ? duracion : animador.Duracion(nombre, direccion);
     }
     public void TerminarAccion() { accion = false; }
     public float Morir()

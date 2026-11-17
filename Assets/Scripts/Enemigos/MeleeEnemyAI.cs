@@ -74,8 +74,7 @@ public class MeleeEnemyAI : MonoBehaviour
                 jugadorDetectado = true;
                 if (audioSource != null && sfxAlerta != null)
                 {
-                    audioSource.pitch = Random.Range(0.9f, 1.1f);
-                    audioSource.PlayOneShot(sfxAlerta);
+                    GetComponent<EnemyHealth>()?.ReproducirSonido(sfxAlerta, true);
                 }
             }
 

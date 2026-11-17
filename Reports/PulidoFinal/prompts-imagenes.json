@@ -1,0 +1,13 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "path": "Assets/Sprites/Proyectiles/SorboB_Acido.png",
+      "prompt": "Use case: stylized-concept. Asset type: one production game projectile sprite, transparent PNG for a top-down pixel-art survival game Laboratorio 4. Draw a SINGLE compact acid-plasma glob seen from above, centered, isolated with generous transparent padding. Strict green palette only: dark forest-green broken outline, emerald/lime liquid shell, pale mint-green luminous nucleus, 3 or 4 irregular acid droplets very close to the body, a tiny short tapering splash tail pointing down. Reads as a dangerous organic acidic glob, NOT a plain flat circle, no skull, no text, no UI, no background, no ground shadow. Authentic low-resolution 32x32/48x48 pixel-art design enlarged with crisp square pixel clusters and no antialiasing, no blurred glow. Silhouette nearly circular so it can travel in every direction; main body occupies roughly 60% of canvas. Top-down view, fixed sprite, transparent outside the sprite."
+    },
+    {
+      "path": "Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png",
+      "prompt": "Use case: stylized-concept. Asset type: one production boss projectile sprite, transparent PNG for top-down pixel-art horror game Laboratorio 4. A SINGLE top-down Necrosia viral spore emitted by a biological mutant boss, centered and isolated. Distinct silhouette: irregular dark plum chitin shell with 6 short uneven thorn-like protrusions, a luminous sickly yellow-green nucleus with two small lime-green vacuoles, tiny red-violet fleshy seams; muted purple organic fragments close to the core. Menacing biological energy capsule rather than a circle or ordinary fireball. Authentic 48x48/64x64 pixel-art design enlarged with crisp square pixel clusters, limited palette, hard stepped edges, no antialiasing, no blurred glow. Near-radial shape for bullets moving in all directions. Main spore occupies roughly 65% of canvas, generous fully transparent padding. No text, no UI, no decorative border, no background, no ground shadow, no character."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+PASS Assets/Prefabs/EnemyBullet.prefab: sprite nuevo enlazado
+PASS Assets/Prefabs/EnemyBullet.prefab: color propio y visible en oscuridad
+PASS Assets/Prefabs/EnemyBullet.prefab: textura pixel art sin suavizado ni mipmaps
+PASS Assets/Prefabs/EnemyBullet.prefab: escala y colisión conservadas (bounds (1.79, 1.79, 0.20))
+PASS Assets/Prefabs/Bullet_Boss.prefab: sprite nuevo enlazado
+PASS Assets/Prefabs/Bullet_Boss.prefab: color propio y visible en oscuridad
+PASS Assets/Prefabs/Bullet_Boss.prefab: textura pixel art sin suavizado ni mipmaps
+PASS Assets/Prefabs/Bullet_Boss.prefab: escala y colisión conservadas (bounds (1.92, 1.27, 0.20))
+PASS Personaje 0: mapa activo
+PASS Personaje 0: HUD mismo sprite machete dirección 0
+PASS Personaje 0: HUD mismo sprite machete dirección 1
+PASS Personaje 0: HUD mismo sprite machete dirección 2
+PASS Personaje 0: HUD mismo sprite machete dirección 3
+PASS Personaje 0: HUD mismo sprite machete dirección 4
+PASS Personaje 0: HUD mismo sprite machete dirección 5
+PASS Personaje 0: HUD mismo sprite machete dirección 6
+PASS Personaje 0: HUD mismo sprite machete dirección 7
+PASS Personaje 0: HUD mismo sprite subfusil dirección 0
+PASS Personaje 0: HUD mismo sprite subfusil dirección 1
+PASS Personaje 0: HUD mismo sprite subfusil dirección 2
+PASS Personaje 0: HUD mismo sprite subfusil dirección 3
+PASS Personaje 0: HUD mismo sprite subfusil dirección 4
+PASS Personaje 0: HUD mismo sprite subfusil dirección 5
+PASS Personaje 0: HUD mismo sprite subfusil dirección 6
+PASS Personaje 0: HUD mismo sprite subfusil dirección 7
+PASS Personaje 0: enemigo cercano audible
+PASS Una voz por enemigo
+PASS Daño/alerta/muerte no se superponen en un emisor
+PASS Prioridad baja del enemigo y mixer SFX conservado
+PASS Atenuación a ocho unidades
+PASS Enemigos fuera de radio inaudibles
+PASS Multitud de veinte limitada a cuatro voces Sorbos
+PASS Disparo real consume bala, prioridad cero y atenúa enemigos al 25%
+PASS Voces activas reducidas al disparar
+PASS HUD sincroniza fogonazo real del arma
+PASS Mezcla de enemigos recuperada tras disparo
+PASS Jefe con dos voces propias y Sorbos con cuatro
+PASS Sonido de muerte sobrevive a desaparición del emisor dentro de radio
+PASS Personaje 1: mapa activo
+PASS Personaje 1: HUD mismo sprite machete dirección 0
+PASS Personaje 1: HUD mismo sprite machete dirección 1
+PASS Personaje 1: HUD mismo sprite machete dirección 2
+PASS Personaje 1: HUD mismo sprite machete dirección 3
+PASS Personaje 1: HUD mismo sprite machete dirección 4
+PASS Personaje 1: HUD mismo sprite machete dirección 5
+PASS Personaje 1: HUD mismo sprite machete dirección 6
+PASS Personaje 1: HUD mismo sprite machete dirección 7
+PASS Personaje 1: HUD mismo sprite subfusil dirección 0
+PASS Personaje 1: HUD mismo sprite subfusil dirección 1
+PASS Personaje 1: HUD mismo sprite subfusil dirección 2
+PASS Personaje 1: HUD mismo sprite subfusil dirección 3
+PASS Personaje 1: HUD mismo sprite subfusil dirección 4
+PASS Personaje 1: HUD mismo sprite subfusil dirección 5
+PASS Personaje 1: HUD mismo sprite subfusil dirección 6
+PASS Personaje 1: HUD mismo sprite subfusil dirección 7
+PASS Personaje 1: enemigo cercano audible
+PASS Una voz por enemigo
+PASS Daño/alerta/muerte no se superponen en un emisor
+PASS Prioridad baja del enemigo y mixer SFX conservado
+PASS Atenuación a ocho unidades
+PASS Enemigos fuera de radio inaudibles
+PASS Multitud de veinte limitada a cuatro voces Sorbos
+PASS Disparo real consume bala, prioridad cero y atenúa enemigos al 25%
+PASS Voces activas reducidas al disparar
+PASS HUD sincroniza fogonazo real del arma
+PASS Mezcla de enemigos recuperada tras disparo
+PASS Jefe con dos voces propias y Sorbos con cuatro
+PASS Sonido de muerte sobrevive a desaparición del emisor dentro de radio
+PASS Cambio de piso limpia sonidos antiguos
+PASS Jefe probado exclusivamente en Escenario4_Jefe
+PASS Jefe persigue sin microparadas y reproduce los ocho cuadros de carrera (velocidad 2–2, objetivo 2, frames 4,5,6,7,0,1,2,3, estado Correr)
+PASS Jefe con interpolación física y colisión continua
+PASS Zarpazo conserva nueve cuadros, incluido impacto y recuperación
+PASS Zarpazo vuelve a locomoción al finalizar
+PASS Carga distribuye nueve cuadros durante el segundo de preparación
+PASS Ataque real del jefe usa esporas Necrosia nuevas (balas 10, prefab Assets/Prefabs/Bullet_Boss.prefab, sprites Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png,Assets/Sprites/Proyectiles/DoctorYiba_Necrosia.png)
+PASS Ejecución sin errores ni excepciones
