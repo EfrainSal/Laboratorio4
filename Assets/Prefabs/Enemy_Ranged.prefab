@@ -593,7 +593,7 @@ MonoBehaviour:
   patrolWaitTime: 2
   bulletPrefab: {fileID: 8902530838803603131, guid: 5a6495456d1f7be499ac81501cb8349d, type: 3}
   firePoint: {fileID: 7173344857536393783}
-  bulletForce: 20
+  bulletForce: 10
   chargeTime: 1.5
   sfxAlerta: {fileID: 8300000, guid: ca3ac0d63b6e5e8499c6a41e83a7c42f, type: 3}
   chargeIndicatorFill: {fileID: 6628574277423224032}

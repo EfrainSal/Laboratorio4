@@ -512,7 +512,7 @@ MonoBehaviour:
   macheteIcon: {fileID: 0}
   subfusilIcon: {fileID: 0}
   spriteMacheteHUD: {fileID: 21300000, guid: 3ce02f5cd31e42b4f9c0d59bc5c4248b, type: 3}
-  spriteSubfusilHUD: {fileID: 21300000, guid: a4b059f778dd156488efe4522e604bf6, type: 3}
+  spriteSubfusilHUD: {fileID: -1011888055539018564, guid: cf117f1dbb5909040949a2326b3b604b, type: 3}
   isUsingMelee: 0
 --- !u!114 &4237692109959222417
 MonoBehaviour:

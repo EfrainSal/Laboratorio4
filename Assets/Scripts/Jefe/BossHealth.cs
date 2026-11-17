@@ -17,8 +17,9 @@ public class BossHealth : MonoBehaviour
     public Image damageTrailFill;
     [Header("Posición de la barra del jefe")]
     public Vector2 margenBarra = new Vector2(40f, 20f);
-    public float anchoMaximoBarra = 853.398f;
+    public float anchoMaximoBarra = 544.57f;
     public float separacionDelJugador = 24f;
+    public bool igualarTamanoBarraJugador = true;
     private BossAI bossAI;
     private Vector2 tamanoPantalla;
     private float anchoOriginal;
@@ -72,8 +73,18 @@ public class BossHealth : MonoBehaviour
         var jugador = padre.Find("HealthBarContainer") as RectTransform;
         float disponible = padre.rect.width - margenBarra.x * 2;
         float distanciaSuperior = margenBarra.y;
+        float anchoObjetivo = anchoMaximoBarra;
+        float altoObjetivo = 0f;
         if (jugador != null)
         {
+            if (igualarTamanoBarraJugador)
+            {
+                var fondoJugador = jugador.Find("Background") as RectTransform;
+                var limitesMarcoJugador = RectTransformUtility.CalculateRelativeRectTransformBounds(padre, fondoJugador != null ? fondoJugador : jugador);
+                if (limitesMarcoJugador.size.x > 1f) anchoObjetivo = limitesMarcoJugador.size.x;
+                if (limitesMarcoJugador.size.y > 1f) altoObjetivo = limitesMarcoJugador.size.y;
+            }
+
             var limitesJugador = RectTransformUtility.CalculateRelativeRectTransformBounds(padre, jugador);
             float espacioDerecho = padre.rect.xMax - margenBarra.x - limitesJugador.max.x - separacionDelJugador;
             if (espacioDerecho >= 320) disponible = Mathf.Min(disponible, espacioDerecho);
@@ -83,8 +94,14 @@ public class BossHealth : MonoBehaviour
         }
         barra.anchorMin = barra.anchorMax = barra.pivot = Vector2.one;
         barra.anchoredPosition = new Vector2(-margenBarra.x, -distanciaSuperior);
-        float escala = Mathf.Min(anchoMaximoBarra, Mathf.Max(1, disponible)) / anchoOriginal;
-        barra.localScale = new Vector3(escala, escala, 1);
+        float escalaX = Mathf.Min(anchoObjetivo, Mathf.Max(1, disponible)) / anchoOriginal;
+        float escalaY = escalaX;
+        if (igualarTamanoBarraJugador && altoObjetivo > 1f && barra.rect.height > 1f)
+        {
+            float proporcionAncho = escalaX / (anchoObjetivo / anchoOriginal);
+            escalaY = (altoObjetivo / barra.rect.height) * proporcionAncho;
+        }
+        barra.localScale = new Vector3(escalaX, escalaY, 1);
         tamanoPantalla = new Vector2(Screen.width, Screen.height);
     }
     public void TakeDamage(float damageAmount)

@@ -13,6 +13,7 @@ public class SaveData
     // Persistencia de objetos del piso (evita farmeo al guardar/cargar)
     public List<string> objetosRecogidosPiso = new List<string>();
     public List<string> contenedoresAbiertosPiso = new List<string>();
+    public List<string> notasLeidasPiso = new List<string>();
 
     // Datos de la run
     public int personajeSeleccionado;

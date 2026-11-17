@@ -43,7 +43,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int enemigosParaAvanzar = 10;
     [SerializeField] private int spawnersRequeridos = 3;
     [SerializeField] private bool contarSoloEnemigosDeSpawners;
+    [Tooltip("Límite máximo de enemigos vivos al mismo tiempo en este piso (<= 0 significa sin límite)")]
+    public int limiteEnemigosSpawneados = 10;
     public int EnemigosDerrotados => enemigosDerrotados;
+    public int EnemigosVivosCount => ContarEnemigosVivos();
+    public int TotalNotasPiso => totalNotasPiso;
+    public int NotasLeidasCount => notasLeidasCount;
+    public int EnemigosRestantes => Mathf.Max(0, enemigosParaAvanzar - enemigosDerrotados);
+    public int NotasRestantes => Mathf.Max(0, totalNotasPiso - notasLeidasCount);
     public bool TarjetaGenerada => llaveDropeada;
     
     [Header("Objetos de Progresión")]
@@ -51,23 +58,35 @@ public class LevelManager : MonoBehaviour
     
     [Header("Estado Actual (Solo lectura)")]
     [SerializeField] private int enemigosDerrotados = 0;
+    [SerializeField] private int enemigosVivosActuales = 0;
     [SerializeField] private int spawnersActivados = 0;
+    [SerializeField] private int totalNotasPiso = 0;
+    [SerializeField] private int notasLeidasCount = 0;
 
     // Añade esto en la parte superior donde tienes tus otros [Header]
     [Header("Referencias UI - Habilidad")]
     public Image skillBarFillUI; // La imagen "Fill" de la barra de habilidad
     public Image skillIconUI; // La imagen donde va el icono de la habilidad
 
+    [Header("Referencias UI - Progreso del Piso")]
+    public GameObject panelProgresoPisoUI;
+    public TextMeshProUGUI textoEnemigosRestantesUI;
+    public TextMeshProUGUI textoNotasRestantesUI;
+
     private bool condicionesCumplidas = false;
     private bool llaveDropeada = false;
+    private bool tieneultimaPosicionEnemigo = false;
+    private Vector3 ultimaPosicionEnemigo;
 
     public bool JugadorTieneLlave { get; set; } = false;
 
     private readonly HashSet<string> objetosRecogidosPiso = new HashSet<string>();
     private readonly HashSet<string> contenedoresAbiertosPiso = new HashSet<string>();
+    private readonly HashSet<string> notasLeidasPiso = new HashSet<string>();
 
     public List<string> ObtenerObjetosRecogidosPiso() => new List<string>(objetosRecogidosPiso);
     public List<string> ObtenerContenedoresAbiertosPiso() => new List<string>(contenedoresAbiertosPiso);
+    public List<string> ObtenerNotasLeidasPiso() => new List<string>(notasLeidasPiso);
 
     public static string GenerarIdObjetoEscena(GameObject obj)
     {
@@ -111,6 +130,7 @@ public class LevelManager : MonoBehaviour
     {
         objetosRecogidosPiso.Clear();
         contenedoresAbiertosPiso.Clear();
+        notasLeidasPiso.Clear();
 
         if (datos.objetosRecogidosPiso != null)
         {
@@ -125,6 +145,14 @@ public class LevelManager : MonoBehaviour
             foreach (string id in datos.contenedoresAbiertosPiso)
             {
                 if (!string.IsNullOrEmpty(id)) contenedoresAbiertosPiso.Add(id);
+            }
+        }
+
+        if (datos.notasLeidasPiso != null)
+        {
+            foreach (string id in datos.notasLeidasPiso)
+            {
+                if (!string.IsNullOrEmpty(id)) notasLeidasPiso.Add(id);
             }
         }
 
@@ -170,6 +198,135 @@ public class LevelManager : MonoBehaviour
                 bool recompensaYaRecogida = objetosRecogidosPiso.Contains(id + "_Drop");
                 contenedor.RestaurarEstadoAbierto(!recompensaYaRecogida);
             }
+        }
+    }
+
+    private void InicializarNotasYProgresoUI()
+    {
+        if (panelProgresoPisoUI == null || textoEnemigosRestantesUI == null || textoNotasRestantesUI == null)
+        {
+            Canvas canvas = healthBarFillUI != null ? healthBarFillUI.GetComponentInParent<Canvas>() : FindFirstObjectByType<Canvas>();
+            if (canvas != null)
+            {
+                if (panelProgresoPisoUI == null)
+                {
+                    Transform foundPanel = canvas.transform.Find("FloorProgressContainer");
+                    if (foundPanel != null) panelProgresoPisoUI = foundPanel.gameObject;
+                }
+                if (textoEnemigosRestantesUI == null)
+                {
+                    Transform t = panelProgresoPisoUI != null ? panelProgresoPisoUI.transform.Find("EnemigosRestantesText") : canvas.transform.Find("EnemigosRestantesText");
+                    if (t != null) textoEnemigosRestantesUI = t.GetComponent<TextMeshProUGUI>();
+                }
+                if (textoNotasRestantesUI == null)
+                {
+                    Transform t = panelProgresoPisoUI != null ? panelProgresoPisoUI.transform.Find("NotasRestantesText") : canvas.transform.Find("NotasRestantesText");
+                    if (t != null) textoNotasRestantesUI = t.GetComponent<TextMeshProUGUI>();
+                }
+            }
+        }
+
+        RecalcularNotasEscena();
+        ActualizarUIProgresoPiso();
+    }
+
+    public void RecalcularNotasEscena()
+    {
+        var notas = FindObjectsByType<NotaInteractable>(FindObjectsSortMode.None);
+        int total = 0;
+        int leidas = 0;
+        foreach (var nota in notas)
+        {
+            if (nota == null || !nota.isActiveAndEnabled) continue;
+            total++;
+            string id = !string.IsNullOrEmpty(nota.IdPersistencia) ? nota.IdPersistencia : GenerarIdObjetoEscena(nota.gameObject);
+            if (nota.YaLeida || notasLeidasPiso.Contains(id))
+            {
+                nota.MarcarComoLeida();
+                notasLeidasPiso.Add(id);
+                leidas++;
+            }
+        }
+        totalNotasPiso = total;
+        notasLeidasCount = leidas;
+    }
+
+    public void ActualizarUIProgresoPiso()
+    {
+        string nombreEscena = SceneManager.GetActiveScene().name;
+        bool ocultarEnEscena = nombreEscena == "Recepcion" || nombreEscena == "Escenario4_Jefe" || nombreEscena == "MainMenu" || FindAnyObjectByType<BossAI>() != null || enemigosParaAvanzar > 100000;
+
+        if (panelProgresoPisoUI != null)
+        {
+            panelProgresoPisoUI.SetActive(!ocultarEnEscena);
+        }
+
+        if (ocultarEnEscena) return;
+
+        int enemigosFaltantes = Mathf.Max(0, enemigosParaAvanzar - enemigosDerrotados);
+        int notasFaltantes = Mathf.Max(0, totalNotasPiso - notasLeidasCount);
+
+        if (textoEnemigosRestantesUI != null)
+        {
+            textoEnemigosRestantesUI.text = $"Enemigos restantes: {enemigosFaltantes}";
+        }
+
+        if (textoNotasRestantesUI != null)
+        {
+            textoNotasRestantesUI.text = $"Notas por leer: {notasFaltantes}";
+        }
+    }
+
+    public int ContarEnemigosVivos()
+    {
+        int vivos = 0;
+        foreach (var e in FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None))
+        {
+            if (e != null && e.isActiveAndEnabled && !e.IsDead && (!contarSoloEnemigosDeSpawners || e.OrigenSpawner != null))
+            {
+                vivos++;
+            }
+        }
+        enemigosVivosActuales = vivos;
+        return vivos;
+    }
+
+    public int ObtenerCupoSpawneoPiso(int cantidadSolicitada)
+    {
+        if (cantidadSolicitada <= 0) return 0;
+        int vivos = ContarEnemigosVivos();
+        if (limiteEnemigosSpawneados <= 0) return cantidadSolicitada;
+        int disponibles = Mathf.Max(0, limiteEnemigosSpawneados - vivos);
+        return Mathf.Min(cantidadSolicitada, disponibles);
+    }
+
+    public void RegistrarEnemigoSpawneado(int cantidad = 1)
+    {
+        if (cantidad <= 0) return;
+        enemigosVivosActuales += cantidad;
+    }
+
+    public void RegistrarNotaLeida(NotaInteractable nota)
+    {
+        if (nota == null) return;
+        string id = !string.IsNullOrEmpty(nota.IdPersistencia)
+            ? nota.IdPersistencia
+            : GenerarIdObjetoEscena(nota.gameObject);
+        nota.MarcarComoLeida();
+        notasLeidasPiso.Add(id);
+
+        RecalcularNotasEscena();
+        VerificarCondiciones();
+        ActualizarUIProgresoPiso();
+
+        if (condicionesCumplidas && !llaveDropeada && llavePrefab != null)
+        {
+            Vector3 posDrop = JugadorActual != null
+                ? JugadorActual.transform.position
+                : (tieneultimaPosicionEnemigo ? ultimaPosicionEnemigo : nota.transform.position);
+            Instantiate(llavePrefab, posDrop, Quaternion.identity);
+            llaveDropeada = true;
+            Debug.Log("¡Condiciones cumplidas tras leer todas las notas! Se soltó la llave de salida.");
         }
     }
 
@@ -235,11 +392,14 @@ public class LevelManager : MonoBehaviour
             enemigosDerrotados = datosGuardados.enemigosDerrotadosPiso;
             // Si no se recogió antes de guardar, permitir que el siguiente Sorbo la vuelva a soltar.
             llaveDropeada = datosGuardados.tarjetaGenerada && datosGuardados.llavesCount > 0;
-            VerificarCondiciones();
             RestaurarEstadoObjetosEscena(datosGuardados);
             // Mover al jugador a donde estaba al guardar
             jugadorInstanciado.transform.position = new Vector3(datosGuardados.posicionX, datosGuardados.posicionY, 0f);
         }
+
+        ContarEnemigosVivos();
+        InicializarNotasYProgresoUI();
+        VerificarCondiciones();
 
         // 2. Inyectar UI y Datos al Inventario
         PlayerInventory inventario = jugadorInstanciado.GetComponent<PlayerInventory>();
@@ -391,9 +551,13 @@ public class LevelManager : MonoBehaviour
 
     public void RegistrarEnemigoDerrotado(Vector3 posicionMuerte, EnemySpawner origen = null)
     {
+        enemigosVivosActuales = Mathf.Max(0, enemigosVivosActuales - 1);
         if (contarSoloEnemigosDeSpawners && origen == null) return;
         enemigosDerrotados++;
+        ultimaPosicionEnemigo = posicionMuerte;
+        tieneultimaPosicionEnemigo = true;
         VerificarCondiciones();
+        ActualizarUIProgresoPiso();
 
         if (condicionesCumplidas && !llaveDropeada && llavePrefab != null)
         {
@@ -411,10 +575,12 @@ public class LevelManager : MonoBehaviour
 
     private void VerificarCondiciones()
     {
-        if (!condicionesCumplidas && enemigosDerrotados >= enemigosParaAvanzar && spawnersActivados >= spawnersRequeridos)
+        RecalcularNotasEscena();
+        bool todasLasNotasLeidas = notasLeidasCount >= totalNotasPiso;
+        if (!condicionesCumplidas && enemigosDerrotados >= enemigosParaAvanzar && spawnersActivados >= spawnersRequeridos && todasLasNotasLeidas)
         {
             condicionesCumplidas = true;
-            Debug.Log("Cuota alcanzada. Este enemigo soltará la Tarjeta de Acceso.");
+            Debug.Log("Cuota de enemigos y notas alcanzada. Se puede soltar la Tarjeta de Acceso.");
         }
     }
 

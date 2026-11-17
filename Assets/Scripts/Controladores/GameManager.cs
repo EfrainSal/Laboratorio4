@@ -264,6 +264,7 @@ public class GameManager : MonoBehaviour
             data.tarjetaGenerada = LevelManager.Instance.TarjetaGenerada;
             data.objetosRecogidosPiso = LevelManager.Instance.ObtenerObjetosRecogidosPiso();
             data.contenedoresAbiertosPiso = LevelManager.Instance.ObtenerContenedoresAbiertosPiso();
+            data.notasLeidasPiso = LevelManager.Instance.ObtenerNotasLeidasPiso();
         }
 
         // Buscamos al jugador en la escena para sacarle sus datos exactos

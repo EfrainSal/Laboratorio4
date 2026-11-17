@@ -7366,6 +7366,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.99999774
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000069
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809836178358522651, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 3686230417565730935, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
       propertyPath: llavePrefab
       value: 
@@ -7439,6 +7471,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+--- !u!114 &814917322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5738957676579914969, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+  m_PrefabInstance: {fileID: 814917321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &814917323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5082300702506566660, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+  m_PrefabInstance: {fileID: 814917321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &814917324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2519611633341585783, guid: 0b6f66c641b2ddf42a371d2fe4b5e45d, type: 3}
+  m_PrefabInstance: {fileID: 814917321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &826953704
 GameObject:
   m_ObjectHideFlags: 0
@@ -10835,8 +10894,8 @@ MonoBehaviour:
   knockbackZarpazo: 8
   bossBulletPrefab: {fileID: 6474643717541286641, guid: b351d83c3a314304e80a7241ee08e63f, type: 3}
   firePoint: {fileID: 73056767}
-  bulletsAmount: 12
-  burstCount: 3
+  bulletsAmount: 15
+  burstCount: 6
   timeBetweenBursts: 0.25
   burstRotationOffset: 10
   damageZarpazoLetal: 45
@@ -10844,7 +10903,7 @@ MonoBehaviour:
   basicEnemiesToSummon:
   - {fileID: 8898294941097351476, guid: 9d83f1516b0baab428d3e084c4057235, type: 3}
   - {fileID: 8898294941097351476, guid: 8a6bbf9e26b814542895cfac328beee2, type: 3}
-  enemiesToSpawn: 3
+  enemiesToSpawn: 6
   audioSource: {fileID: 1598170380}
   sfxRecargaEnergia: {fileID: 8300000, guid: cc8e3291b7c774041aa3bc5785da81f2, type: 3}
   sfxDisparo: {fileID: 8300000, guid: c25e638de49f0a04187ee0de6471becb, type: 3}
@@ -10870,12 +10929,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   maxHealth: 1500
   trailSpeed: 3
-  bossHealthUIContainer: {fileID: 0}
-  healthBarFill: {fileID: 0}
-  damageTrailFill: {fileID: 0}
+  bossHealthUIContainer: {fileID: 814917324}
+  healthBarFill: {fileID: 814917323}
+  damageTrailFill: {fileID: 814917322}
   margenBarra: {x: 40, y: 20}
-  anchoMaximoBarra: 853.398
+  anchoMaximoBarra: 544.5721
   separacionDelJugador: 24
+  igualarTamanoBarraJugador: 1
 --- !u!50 &1598170376
 Rigidbody2D:
   serializedVersion: 5

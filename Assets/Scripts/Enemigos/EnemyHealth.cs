@@ -23,6 +23,7 @@ public class EnemyHealth : MonoBehaviour
     private MeleeEnemyAI meleeAI;
     private RangedEnemyAI rangedAI;
     private bool muerto;
+    public bool IsDead => muerto;
     private CanvasGroup healthBarCanvasGroup;
     private Image[] healthBarImages;
     private float[] healthBarBaseAlphas;

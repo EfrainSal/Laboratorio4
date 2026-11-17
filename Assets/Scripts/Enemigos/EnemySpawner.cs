@@ -64,6 +64,11 @@ public class EnemySpawner : MonoBehaviour
         if (enemyPrefabs.Length == 0) return; // Evita errores si no asignas prefabs
 
         int enemiesToSpawn = Random.Range(minEnemies, maxEnemies + 1);
+        if (LevelManager.Instance != null)
+        {
+            enemiesToSpawn = LevelManager.Instance.ObtenerCupoSpawneoPiso(enemiesToSpawn);
+        }
+        if (enemiesToSpawn <= 0) return;
 
         for (int i = 0; i < enemiesToSpawn; i++)
         {
@@ -85,6 +90,11 @@ public class EnemySpawner : MonoBehaviour
             var enemigo = Instantiate(prefabElegido, spawnPosition, Quaternion.identity);
             var salud = enemigo.GetComponent<EnemyHealth>();
             if (salud != null) salud.OrigenSpawner = this;
+
+            if (LevelManager.Instance != null)
+            {
+                LevelManager.Instance.RegistrarEnemigoSpawneado();
+            }
 
             if (multiplicadorRangoDeteccion > 0f && !Mathf.Approximately(multiplicadorRangoDeteccion, 1f))
             {
