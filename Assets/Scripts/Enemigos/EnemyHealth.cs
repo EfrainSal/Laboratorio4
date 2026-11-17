@@ -66,6 +66,14 @@ public class EnemyHealth : MonoBehaviour
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
         if (audioSource != null) { audioSource.Stop(); audioSource.playOnAwake = false; audioSource.spatialBlend = 0; audioSource.priority = 192; }
 
+        foreach (BossAI boss in FindObjectsByType<BossAI>(FindObjectsSortMode.None))
+        {
+            if (boss != null && boss.gameObject.scene == gameObject.scene)
+            {
+                boss.IgnorarColisionConEnemigo(gameObject);
+            }
+        }
+
         EstablecerOpacidadBarraVida(0f);
         
         // Evita que 7 enemigos suenen en el mismo milisegundo al spawnear

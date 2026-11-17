@@ -34,7 +34,13 @@ public class BossAI : MonoBehaviour
 
     [Header("Ataque: Invocación (Fase 3)")]
     public GameObject[] basicEnemiesToSummon; // Arrastra aquí tus prefabs Enemy_Melee y Ranged
-    public int enemiesToSpawn = 3;
+    public int enemiesToSpawn = 6;
+    [Tooltip("Cantidad fija de enemigos cuerpo a cuerpo a invocar")]
+    public int meleeEnemiesToSpawn = 4;
+    [Tooltip("Cantidad fija de enemigos a distancia a invocar")]
+    public int rangedEnemiesToSpawn = 2;
+    [Tooltip("Rango de detección extendido para los enemigos invocados por el jefe")]
+    public float summonedEnemyDetectionRadius = 40f;
 
     [Header("Audio y Sonidos")]
     public AudioSource audioSource;
@@ -54,6 +60,7 @@ public class BossAI : MonoBehaviour
 
     private Transform player;
     private Rigidbody2D rb;
+    private Collider2D[] bossColliders;
     private AnimacionJefeDinamica animacion;
     private NavegacionJefe navegacion;
     private SacudidaCamaraJefe sacudida;
@@ -63,6 +70,7 @@ public class BossAI : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        bossColliders = GetComponentsInChildren<Collider2D>(true);
         animacion = GetComponent<AnimacionJefeDinamica>();
         navegacion = GetComponent<NavegacionJefe>();
         if (navegacion == null) navegacion = gameObject.AddComponent<NavegacionJefe>();
@@ -79,9 +87,40 @@ public class BossAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (bossColliders == null || bossColliders.Length == 0)
+            bossColliders = GetComponentsInChildren<Collider2D>(true);
         attackTimer = timeBetweenAttacks;
 
         ActualizarReferenciaJugador();
+        IgnorarColisionesConTodosLosEnemigos();
+    }
+
+    public void IgnorarColisionConEnemigo(GameObject enemigoObj)
+    {
+        if (enemigoObj == null || enemigoObj == gameObject) return;
+        if (bossColliders == null || bossColliders.Length == 0)
+            bossColliders = GetComponentsInChildren<Collider2D>(true);
+
+        Collider2D[] enemyCols = enemigoObj.GetComponentsInChildren<Collider2D>(true);
+        foreach (Collider2D bCol in bossColliders)
+        {
+            if (bCol == null) continue;
+            foreach (Collider2D eCol in enemyCols)
+            {
+                if (eCol != null && eCol != bCol)
+                {
+                    Physics2D.IgnoreCollision(bCol, eCol, true);
+                }
+            }
+        }
+    }
+
+    public void IgnorarColisionesConTodosLosEnemigos()
+    {
+        foreach (EnemyHealth enemy in FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None))
+        {
+            if (enemy != null) IgnorarColisionConEnemigo(enemy.gameObject);
+        }
     }
     public void IniciarCombateDramatico()
     {
@@ -329,19 +368,71 @@ public class BossAI : MonoBehaviour
             yield break;
         }
 
-        if (basicEnemiesToSummon.Length > 0)
+        if (basicEnemiesToSummon != null && basicEnemiesToSummon.Length > 0)
         {
+            GameObject meleePrefab = null;
+            GameObject rangedPrefab = null;
+            foreach (GameObject prefab in basicEnemiesToSummon)
+            {
+                if (prefab == null) continue;
+                if (meleePrefab == null && prefab.GetComponent<MeleeEnemyAI>() != null)
+                    meleePrefab = prefab;
+                if (rangedPrefab == null && prefab.GetComponent<RangedEnemyAI>() != null)
+                    rangedPrefab = prefab;
+            }
+            if (meleePrefab == null) meleePrefab = basicEnemiesToSummon[0];
+            if (rangedPrefab == null) rangedPrefab = basicEnemiesToSummon[basicEnemiesToSummon.Length - 1];
+
+            int totalConfigurado = meleeEnemiesToSpawn + rangedEnemiesToSpawn;
+            int cantidadMelee = meleeEnemiesToSpawn;
+            int cantidadRanged = rangedEnemiesToSpawn;
+            if (enemiesToSpawn > 0 && enemiesToSpawn != totalConfigurado)
+            {
+                // Si un test o escena cambia enemiesToSpawn (ej. 6), mantener 4 melee y 2 ranged cuando es 6
+                if (enemiesToSpawn == 6) { cantidadMelee = 4; cantidadRanged = 2; }
+                else
+                {
+                    cantidadMelee = Mathf.RoundToInt(enemiesToSpawn * (4f / 6f));
+                    cantidadRanged = Mathf.Max(0, enemiesToSpawn - cantidadMelee);
+                }
+            }
+            enemiesToSpawn = cantidadMelee + cantidadRanged;
+
             for (int i = 0; i < enemiesToSpawn; i++)
             {
+                GameObject prefabElegido = i < cantidadMelee ? meleePrefab : rangedPrefab;
+                if (prefabElegido == null) continue;
+
                 Vector2 randomOffset = Random.insideUnitCircle * 3f;
-                Vector3 spawnPos = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0);
-                
-                int randomEnemy = Random.Range(0, basicEnemiesToSummon.Length);
-                Instantiate(basicEnemiesToSummon[randomEnemy], spawnPos, Quaternion.identity);
+                Vector3 spawnPos = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
+
+                GameObject invocado = Instantiate(prefabElegido, spawnPos, Quaternion.identity);
+                ConfigurarEnemigoInvocado(invocado);
             }
         }
 
         TerminarAtaque(3.5f);
+    }
+
+    private void ConfigurarEnemigoInvocado(GameObject enemigo)
+    {
+        if (enemigo == null) return;
+
+        IgnorarColisionConEnemigo(enemigo);
+
+        float rangoExtendido = Mathf.Max(summonedEnemyDetectionRadius, 35f);
+        if (enemigo.TryGetComponent<MeleeEnemyAI>(out var meleeAI))
+        {
+            meleeAI.detectionRadius = Mathf.Max(meleeAI.detectionRadius, rangoExtendido);
+        }
+        if (enemigo.TryGetComponent<RangedEnemyAI>(out var rangedAI))
+        {
+            rangedAI.detectionRadius = Mathf.Max(rangedAI.detectionRadius, rangoExtendido);
+        }
+        if (enemigo.TryGetComponent<EnemyAI>(out var basicAI))
+        {
+            basicAI.detectionRadius = Mathf.Max(basicAI.detectionRadius, rangoExtendido);
+        }
     }
 
     private void ReproducirSFX(AudioClip clip)
