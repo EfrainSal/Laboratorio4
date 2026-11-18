@@ -168,12 +168,14 @@ public class UpgradePanelController : MonoBehaviour
     // ------------------------------------------------------------------
     private void OnTogglePressed(InputAction.CallbackContext ctx)
     {
+        if (!GestorModoEntrada.ContextoPermitido(ctx)) return;
         if (IsOpen) Close();
         else Open();
     }
 
     private void OnBackPressed(InputAction.CallbackContext ctx)
     {
+        if (!GestorModoEntrada.ContextoPermitido(ctx)) return;
         if (IsOpen) Close();
     }
 

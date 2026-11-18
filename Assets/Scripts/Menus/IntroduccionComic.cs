@@ -27,6 +27,8 @@ public class IntroduccionComic : MonoBehaviour
     private float tiempoAnterior, volumenAnterior;
     private int primerFotograma;
 
+    private TextMeshProUGUI etiquetaSaltar, etiquetaSiguiente;
+
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Reiniciar() { instancia = null; }
     private void Awake()
@@ -47,9 +49,30 @@ public class IntroduccionComic : MonoBehaviour
     private void Update()
     {
         if (finalizando) return;
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame) { Saltar(); return; }
-        // El clic que confirmó el personaje no debe saltarse la primera viñeta.
-        if (Time.frameCount > primerFotograma + 1 && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame) Avanzar();
+        GestorModoEntrada.ActualizarDeteccionAutomatica();
+        ActualizarLeyendasControles();
+
+        bool permitirTeclado = GestorModoEntrada.PermitirTecladoYRaton();
+        bool permitirMando = GestorModoEntrada.PermitirMando;
+
+        if (permitirTeclado && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        { Saltar(); return; }
+
+        if (permitirMando && Gamepad.current != null &&
+            (Gamepad.current.startButton.wasPressedThisFrame || Gamepad.current.buttonEast.wasPressedThisFrame))
+        { Saltar(); return; }
+
+        // El clic o botón que confirmó el personaje no debe saltarse la primera viñeta.
+        if (Time.frameCount <= primerFotograma + 1) return;
+
+        bool avanzarRatonTeclado = permitirTeclado &&
+            ((Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame) ||
+             (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)));
+
+        bool avanzarMando = permitirMando && Gamepad.current != null &&
+            (Gamepad.current.buttonSouth.wasPressedThisFrame || Gamepad.current.rightTrigger.wasPressedThisFrame);
+
+        if (avanzarRatonTeclado || avanzarMando) Avanzar();
     }
     public void Avanzar()
     {
@@ -102,8 +125,17 @@ public class IntroduccionComic : MonoBehaviour
             degradado.SetPixel(0, y, color); degradado.SetPixel(1, y, color);
         }
         degradado.Apply(); spriteDegradado = Sprite.Create(degradado, new Rect(0, 0, 2, 128), new Vector2(.5f, .5f)); pie.sprite = spriteDegradado;
-        CrearTexto("Saltar", "Esc · Saltar cinemática", raiz.transform, false);
-        CrearTexto("Siguiente", "siguiente >>", raiz.transform, true);
+        etiquetaSaltar = CrearTexto("Saltar", "Esc · Saltar cinemática", raiz.transform, false);
+        etiquetaSiguiente = CrearTexto("Siguiente", "siguiente >>", raiz.transform, true);
+        ActualizarLeyendasControles();
+    }
+    private void ActualizarLeyendasControles()
+    {
+        bool mando = GestorModoEntrada.UsandoMando;
+        if (etiquetaSaltar != null)
+            etiquetaSaltar.text = mando ? "Start / B · Saltar cinemática" : "Esc · Saltar cinemática";
+        if (etiquetaSiguiente != null)
+            etiquetaSiguiente.text = mando ? "A · siguiente >>" : "siguiente >>";
     }
     private static Image CrearImagen(string nombre, Transform padre)
     {
@@ -112,7 +144,7 @@ public class IntroduccionComic : MonoBehaviour
     }
     private static void Estirar(RectTransform rect)
     { rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one; rect.offsetMin = rect.offsetMax = Vector2.zero; }
-    private static void CrearTexto(string nombre, string contenido, Transform padre, bool derecha)
+    private static TextMeshProUGUI CrearTexto(string nombre, string contenido, Transform padre, bool derecha)
     {
         var go = new GameObject(nombre, typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI)); go.transform.SetParent(padre, false);
         var rect = go.GetComponent<RectTransform>(); rect.anchorMin = new Vector2(derecha ? .52f : 0, 0); rect.anchorMax = new Vector2(derecha ? 1 : .48f, 0);
@@ -122,6 +154,7 @@ public class IntroduccionComic : MonoBehaviour
         label.alignment = derecha ? TextAlignmentOptions.MidlineRight : TextAlignmentOptions.MidlineLeft;
         label.enableAutoSizing = false; label.fontSize = derecha ? 32 : 26;
         label.ForceMeshUpdate();
+        return label;
     }
     private void RestaurarTiempo()
     {

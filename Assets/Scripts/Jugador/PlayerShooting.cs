@@ -154,7 +154,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (DisparoMantenido() && Time.time >= nextFireTime && currentAmmoInClip > 0)
         {
-            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
+            if (!GestorModoEntrada.UsandoMando && EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return;
 
             Shoot();
             nextFireTime = Time.time + fireRate;

@@ -93,7 +93,14 @@ public class PantallaControlesInicio : MonoBehaviour
 
     private void RefrescarControles()
     {
-        esquema = entrada != null ? entrada.currentControlScheme : "Keyboard&Mouse";
+        if (entrada != null) GestorModoEntrada.AplicarAPlayerInput(entrada);
+        esquema = GestorModoEntrada.ModoActual == ModoEntrada.Mando
+            ? "Gamepad"
+            : (GestorModoEntrada.ModoActual == ModoEntrada.TecladoYRaton
+                ? "Keyboard&Mouse"
+                : (entrada != null && !string.IsNullOrEmpty(entrada.currentControlScheme)
+                    ? entrada.currentControlScheme
+                    : (GestorModoEntrada.UsandoMando ? "Gamepad" : "Keyboard&Mouse")));
         bool mando = esquema == "Gamepad";
         foreach (var par in teclas)
         {
@@ -145,8 +152,14 @@ public class PantallaControlesInicio : MonoBehaviour
         bool pulsado = false, nuevaPulsacion = false;
         if (entrada != null) foreach (var dispositivo in entrada.devices)
         {
-            if (dispositivo is Keyboard k) { pulsado |= k.enterKey.isPressed; nuevaPulsacion |= k.enterKey.wasPressedThisFrame; }
-            if (dispositivo is Gamepad g) { pulsado |= g.buttonSouth.isPressed || g.startButton.isPressed; nuevaPulsacion |= g.buttonSouth.wasPressedThisFrame || g.startButton.wasPressedThisFrame; }
+            if (dispositivo is Keyboard k && GestorModoEntrada.PermitirTecladoYRaton()) { pulsado |= k.enterKey.isPressed; nuevaPulsacion |= k.enterKey.wasPressedThisFrame; }
+            if (dispositivo is Gamepad g && GestorModoEntrada.PermitirMando) { pulsado |= g.buttonSouth.isPressed || g.startButton.isPressed; nuevaPulsacion |= g.buttonSouth.wasPressedThisFrame || g.startButton.wasPressedThisFrame; }
+        }
+        if (Gamepad.current != null && GestorModoEntrada.PermitirMando)
+        {
+            var g = Gamepad.current;
+            pulsado |= g.buttonSouth.isPressed || g.startButton.isPressed;
+            nuevaPulsacion |= g.buttonSouth.wasPressedThisFrame || g.startButton.wasPressedThisFrame;
         }
         if (!pulsado) confirmacionLista = true;
         if (confirmacionLista && nuevaPulsacion) Cerrar();

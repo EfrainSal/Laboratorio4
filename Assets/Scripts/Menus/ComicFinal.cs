@@ -33,6 +33,7 @@ public class ComicFinal : MonoBehaviour
     private Image imagen;
     private Texture2D texturaDegradado;
     private Sprite spriteDegradado;
+    private TextMeshProUGUI etiquetaSaltar, etiquetaSiguiente;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Reiniciar() { instancia = null; }
@@ -52,11 +53,25 @@ public class ComicFinal : MonoBehaviour
             return;
         }
         if (cerrando) return;
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        GestorModoEntrada.ActualizarDeteccionAutomatica();
+        ActualizarLeyendasControles();
+
+        bool permitirTeclado = GestorModoEntrada.PermitirTecladoYRaton();
+        bool permitirMando = GestorModoEntrada.PermitirMando;
+
+        if ((permitirTeclado && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame) ||
+            (permitirMando && Gamepad.current != null && (Gamepad.current.startButton.wasPressedThisFrame || Gamepad.current.buttonEast.wasPressedThisFrame)))
         { if (transicion) omitirPendiente = true; else Saltar(); return; }
         if (transicion) return;
         if (Time.frameCount <= primerFotograma + 1) return;
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame) Avanzar();
+
+        bool avanzarRatonTeclado = permitirTeclado &&
+            ((Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame) ||
+             (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)));
+        bool avanzarMando = permitirMando && Gamepad.current != null &&
+            (Gamepad.current.buttonSouth.wasPressedThisFrame || Gamepad.current.rightTrigger.wasPressedThisFrame);
+
+        if (avanzarRatonTeclado || avanzarMando) Avanzar();
     }
     private void PrepararAyudante()
     {
@@ -181,7 +196,16 @@ public class ComicFinal : MonoBehaviour
             texturaDegradado.SetPixel(0, y, color); texturaDegradado.SetPixel(1, y, color);
         }
         texturaDegradado.Apply(); spriteDegradado = Sprite.Create(texturaDegradado, new Rect(0, 0, 2, 128), new Vector2(.5f, .5f)); degradado.sprite = spriteDegradado;
-        Texto("Esc · Saltar cinemática", false); Texto("siguiente >>", true);
+        etiquetaSaltar = Texto("Esc · Saltar cinemática", false); etiquetaSiguiente = Texto("siguiente >>", true);
+        ActualizarLeyendasControles();
+    }
+    private void ActualizarLeyendasControles()
+    {
+        bool mando = GestorModoEntrada.UsandoMando;
+        if (etiquetaSaltar != null)
+            etiquetaSaltar.text = mando ? "Start / B · Saltar cinemática" : "Esc · Saltar cinemática";
+        if (etiquetaSiguiente != null)
+            etiquetaSiguiente.text = mando ? "A · siguiente >>" : "siguiente >>";
     }
     private static Image NuevaImagen(string nombre, Transform padre)
     {
@@ -190,7 +214,7 @@ public class ComicFinal : MonoBehaviour
     }
     private static void Estirar(RectTransform rect)
     { rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one; rect.offsetMin = rect.offsetMax = Vector2.zero; }
-    private void Texto(string contenido, bool derecha)
+    private TextMeshProUGUI Texto(string contenido, bool derecha)
     {
         var go = new GameObject(derecha ? "Siguiente" : "Saltar", typeof(RectTransform), typeof(CanvasRenderer), typeof(TextMeshProUGUI)); go.transform.SetParent(pie.transform, false);
         var rect = go.GetComponent<RectTransform>(); rect.anchorMin = new Vector2(derecha ? .52f : 0, 0); rect.anchorMax = new Vector2(derecha ? 1 : .48f, 0);
@@ -198,6 +222,7 @@ public class ComicFinal : MonoBehaviour
         var label = go.GetComponent<TextMeshProUGUI>(); label.text = contenido; label.raycastTarget = false;
         label.font = TMP_Settings.defaultFontAsset; label.fontStyle = FontStyles.Bold; label.color = new Color(.94f, .96f, .94f);
         label.alignment = derecha ? TextAlignmentOptions.MidlineRight : TextAlignmentOptions.MidlineLeft; label.fontSize = derecha ? 32 : 26;
+        return label;
     }
     private void OnDisable()
     {

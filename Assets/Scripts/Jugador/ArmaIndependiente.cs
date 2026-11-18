@@ -67,17 +67,46 @@ public class ArmaIndependiente : MonoBehaviour
         if (DeathScreenController.GameplayBlocked) return;
         if (camara == null) camara = Camera.main;
         if (camara == null || pivote == null) return;
+        bool usandoMando = GestorModoEntrada.ModoActual == ModoEntrada.Mando
+                           || (GestorModoEntrada.ModoActual == ModoEntrada.Automatico &&
+                               ((entrada != null && entrada.currentControlScheme == "Gamepad") || GestorModoEntrada.UsandoMando));
+
+        if (usandoMando)
+        {
+            Gamepad mandoActivo = Gamepad.current;
+            if (entrada != null)
+            {
+                foreach (var dispositivo in entrada.devices)
+                {
+                    if (dispositivo is Gamepad m) { mandoActivo = m; break; }
+                }
+            }
+
+            if (mandoActivo != null && GestorModoEntrada.PermitirMando)
+            {
+                Vector2 direccion = mandoActivo.rightStick.ReadValue();
+                if (direccion.sqrMagnitude > .1f)
+                {
+                    Apuntar((Vector2)pivote.position + direccion);
+                    return;
+                }
+            }
+
+            var mira = GetComponent<MiraPersonalizada>();
+            if (mira != null && mira.EstaActiva && mira.PosicionMundoMando.sqrMagnitude > 0.001f)
+            {
+                Apuntar(mira.PosicionMundoMando);
+            }
+            return;
+        }
+
+        if (!GestorModoEntrada.PermitirTecladoYRaton()) return;
+
         Mouse mouse = Mouse.current;
         if (entrada != null)
         {
             foreach (var dispositivo in entrada.devices)
             {
-                if (dispositivo is Gamepad mando && entrada.currentControlScheme == "Gamepad")
-                {
-                    Vector2 direccion = mando.rightStick.ReadValue();
-                    if (direccion.sqrMagnitude > .1f) Apuntar((Vector2)pivote.position + direccion);
-                    return;
-                }
                 if (dispositivo is Mouse emparejado) mouse = emparejado;
             }
         }

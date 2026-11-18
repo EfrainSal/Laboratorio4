@@ -29,8 +29,9 @@ public class MovimientoPlayer : MonoBehaviour
     private Vector2 direccionMovimiento;
     private Vector2 posicionRaton;
     private Vector2 joystickApuntado;
-    private Vector2 direccionMirada;
+    private Vector2 direccionMirada = Vector2.right;
     private float temporizadorPasos;
+    private PlayerInput entrada;
 
     public Vector2 DireccionEntrada => direccionMovimiento;
     public Vector2 DireccionMirada => direccionMirada;
@@ -39,7 +40,9 @@ public class MovimientoPlayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main; 
-        sfxSource = GetComponent<AudioSource>(); 
+        sfxSource = GetComponent<AudioSource>();
+        entrada = GetComponent<PlayerInput>();
+        if (entrada != null) GestorModoEntrada.AplicarAPlayerInput(entrada);
         rb.freezeRotation = true; 
 
         // Inicializar el rastro
@@ -55,16 +58,19 @@ public class MovimientoPlayer : MonoBehaviour
 
     public void OnLookMouse(InputValue value)
     {
+        if (!GestorModoEntrada.PermitirTecladoYRaton()) return;
         posicionRaton = value.Get<Vector2>();
     }
 
     public void OnAimGamepad(InputValue value)
     {
+        if (!GestorModoEntrada.PermitirMando) { joystickApuntado = Vector2.zero; return; }
         joystickApuntado = value.Get<Vector2>();
     }
 
     void Update()
     {
+        if (entrada != null) GestorModoEntrada.AplicarAPlayerInput(entrada);
         ActualizarDireccionMirada();
         ManejarSonidoPasos();
     }
@@ -94,16 +100,38 @@ public class MovimientoPlayer : MonoBehaviour
 
     private void ActualizarDireccionMirada()
     {
-        if (joystickApuntado.sqrMagnitude > 0.1f)
-            direccionMirada = joystickApuntado.normalized;
-        else
+        bool usandoMando = GestorModoEntrada.ModoActual == ModoEntrada.Mando
+                           || (GestorModoEntrada.ModoActual == ModoEntrada.Automatico &&
+                               ((entrada != null && entrada.currentControlScheme == "Gamepad") || GestorModoEntrada.UsandoMando));
+
+        if (usandoMando)
         {
-            if (cam == null) cam = Camera.main;
-            if (cam == null) return;
-            if (Mouse.current != null) posicionRaton = Mouse.current.position.ReadValue();
-            Vector3 posRatonMundo = cam.ScreenToWorldPoint(posicionRaton);
-            direccionMirada = ((Vector2)posRatonMundo - (Vector2)transform.position).normalized;
+            Vector2 stick = joystickApuntado;
+            if (stick.sqrMagnitude < 0.01f && Gamepad.current != null && GestorModoEntrada.PermitirMando)
+            {
+                stick = Gamepad.current.rightStick.ReadValue();
+            }
+
+            if (stick.sqrMagnitude > 0.1f)
+            {
+                direccionMirada = stick.normalized;
+            }
+            else if (direccionMirada.sqrMagnitude < 0.01f && direccionMovimiento.sqrMagnitude > 0.1f)
+            {
+                direccionMirada = direccionMovimiento.normalized;
+            }
+            return;
         }
+
+        if (!GestorModoEntrada.PermitirTecladoYRaton()) return;
+
+        if (cam == null) cam = Camera.main;
+        if (cam == null) return;
+        if (Mouse.current != null) posicionRaton = Mouse.current.position.ReadValue();
+        Vector3 posRatonMundo = cam.ScreenToWorldPoint(posicionRaton);
+        Vector2 dirRaton = (Vector2)posRatonMundo - (Vector2)transform.position;
+        if (dirRaton.sqrMagnitude > 0.0001f)
+            direccionMirada = dirRaton.normalized;
     }
 
     private void MoverJugador()

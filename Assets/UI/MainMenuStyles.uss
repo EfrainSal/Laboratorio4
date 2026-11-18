@@ -435,6 +435,114 @@
     background-color: rgb(255, 42, 42);
 }
 
+/* ---------- Selector de Tipo de Entrada ---------- */
+.input-mode-row {
+    flex-direction: row;
+    margin-top: 2px;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.btn-input-mode {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 38px;
+    margin: 0 4px;
+    padding: 0 8px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    -unity-font-style: bold;
+    color: rgb(201, 198, 192);
+    background-color: rgba(7, 7, 7, 0.85);
+    border-width: 1px;
+    border-color: rgb(90, 90, 88);
+    border-radius: 0;
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.12s;
+}
+
+.btn-input-mode:hover, .btn-input-mode:focus {
+    border-color: rgb(255, 42, 42);
+    color: rgb(255, 255, 255);
+    background-color: rgba(209, 18, 27, 0.45);
+}
+
+.btn-input-mode.input-mode-selected {
+    background-color: rgba(111, 174, 69, 0.25);
+    border-color: rgb(111, 174, 69);
+    border-width: 2px;
+    color: rgb(240, 238, 234);
+}
+
+.btn-input-mode.input-mode-selected:focus {
+    background-color: rgb(111, 174, 69);
+    border-color: rgb(150, 210, 100);
+    color: rgb(7, 7, 7);
+}
+
+.input-mode-hint {
+    color: rgb(184, 181, 176);
+    font-size: 12px;
+    margin-top: 8px;
+    white-space: normal;
+    -unity-font-style: italic;
+}
+
+.gamepad-name-panel {
+    margin-top: -10px;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    background-color: rgba(7, 7, 7, 0.88);
+    border-width: 1px;
+    border-color: rgb(111, 174, 69);
+}
+
+.gamepad-name-title {
+    color: rgb(111, 174, 69);
+    font-size: 12px;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+    margin-bottom: 6px;
+}
+
+.gamepad-keys-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.btn-gamepad-key {
+    min-width: 34px;
+    height: 30px;
+    margin: 2px;
+    padding: 0 6px;
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: rgb(240, 238, 234);
+    background-color: rgba(28, 32, 35, 0.9);
+    border-width: 1px;
+    border-color: rgb(75, 75, 73);
+    border-radius: 0;
+}
+
+.btn-gamepad-key:hover, .btn-gamepad-key:focus {
+    background-color: rgb(209, 18, 27);
+    border-color: rgb(255, 42, 42);
+    color: rgb(255, 255, 255);
+}
+
+.btn-gamepad-key-action {
+    min-width: 72px;
+    border-color: rgb(111, 174, 69);
+    color: rgb(111, 174, 69);
+}
+
+.btn-gamepad-key-action:hover, .btn-gamepad-key-action:focus {
+    background-color: rgb(111, 174, 69);
+    border-color: rgb(150, 210, 100);
+    color: rgb(7, 7, 7);
+}
+
 /* ---------- Marco HUD ---------- */
 .hud-corner {
     position: absolute; width: 220px; height: 130px; border-color: rgb(90, 90, 88);

@@ -176,6 +176,7 @@ public class PauseMenuController : MonoBehaviour
     // ------------------------------------------------------------------
     private void OnPausePressed(InputAction.CallbackContext ctx)
     {
+        if (!GestorModoEntrada.ContextoPermitido(ctx)) return;
         if (TransicionEntrePisos.EnCurso) return;
         if (!_isPaused)
         {
@@ -190,6 +191,7 @@ public class PauseMenuController : MonoBehaviour
 
     private void OnBackPressed(InputAction.CallbackContext ctx)
     {
+        if (!GestorModoEntrada.ContextoPermitido(ctx)) return;
         if (_isPaused) GoBack();
     }
 

@@ -88,6 +88,22 @@
                         </ui:VisualElement>
                         <ui:Slider name="SfxSlider" low-value="0" high-value="1" value="0.8" class="volume-slider"/>
                     </ui:VisualElement>
+
+                    <ui:VisualElement class="divider" style="margin-top: 8px; margin-bottom: 14px;"/>
+                    <ui:Label text="Ajustes de controles" class="panel-subtitle" style="margin-bottom: 10px;"/>
+
+                    <ui:VisualElement class="slider-block">
+                        <ui:VisualElement class="row">
+                            <ui:Label text="TIPO DE ENTRADA" class="row-label"/>
+                            <ui:Label text="AUTOMÁTICO" name="InputModeValueLabel" class="row-value"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="InputModeSelector" class="input-mode-row">
+                            <ui:Button text="AUTOMÁTICO" name="InputModeAutoButton" class="btn-input-mode"/>
+                            <ui:Button text="TECLADO Y RATÓN" name="InputModeKbmButton" class="btn-input-mode"/>
+                            <ui:Button text="MANDO" name="InputModeGamepadButton" class="btn-input-mode"/>
+                        </ui:VisualElement>
+                        <ui:Label text="Automático detecta el control en uso. Teclado y ratón o Mando fuerzan ese dispositivo." name="InputModeHintLabel" class="input-mode-hint"/>
+                    </ui:VisualElement>
                 </ui:VisualElement>
 
                 <ui:VisualElement class="panel-actions">
