@@ -38,6 +38,8 @@ public class PlayerShooting : MonoBehaviour
 
     private GameObject reloadIndicatorRoot;
     private Image reloadBarFill;
+    private TextMeshProUGUI ammoTextConfigurado;
+    private float ammoFontSizeOriginal = 10f;
 
     void Awake()
     {
@@ -272,9 +274,29 @@ public class PlayerShooting : MonoBehaviour
     {
         if (ammoText != null)
         {
-            ammoText.text = isReloading
-                ? "Recargando..."
-                : currentAmmoInClip + " / " + totalAmmo;
+            if (ammoTextConfigurado != ammoText)
+            {
+                ammoTextConfigurado = ammoText;
+                ammoFontSizeOriginal = ammoText.fontSize > 0f ? ammoText.fontSize : 10f;
+                ammoText.textWrappingMode = TextWrappingModes.NoWrap;
+                ammoText.overflowMode = TextOverflowModes.Overflow;
+                RectTransform rt = ammoText.rectTransform;
+                if (rt != null && rt.sizeDelta.x < 75f)
+                {
+                    rt.sizeDelta = new Vector2(78f, rt.sizeDelta.y);
+                }
+            }
+
+            if (isReloading)
+            {
+                ammoText.fontSize = Mathf.Max(6f, ammoFontSizeOriginal * 0.72f);
+                ammoText.text = "Recargando...";
+            }
+            else
+            {
+                ammoText.fontSize = ammoFontSizeOriginal;
+                ammoText.text = currentAmmoInClip + " / " + totalAmmo;
+            }
         }
     }
 }

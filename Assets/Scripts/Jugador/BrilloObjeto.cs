@@ -27,6 +27,9 @@ public class BrilloObjeto : MonoBehaviour
 
     private SpriteRenderer renderBase;
     private SpriteRenderer[] bordes;
+    private GameObject contenedorBordes;
+    private NotaInteractable notaInteractable;
+    private BotiquinInteractable botiquinInteractable;
     private static Material materialUnlitCompartido;
     private float desfaseTiempo;
 
@@ -45,8 +48,26 @@ public class BrilloObjeto : MonoBehaviour
     private void Awake()
     {
         desfaseTiempo = Random.Range(0f, Mathf.PI * 2f);
+        notaInteractable = GetComponent<NotaInteractable>();
+        botiquinInteractable = GetComponent<BotiquinInteractable>();
         ConfigurarColorPorTipo();
         InicializarBordes();
+    }
+
+    public void DesactivarBrillo()
+    {
+        if (bordes != null)
+        {
+            for (int i = 0; i < bordes.Length; i++)
+            {
+                if (bordes[i] != null) bordes[i].enabled = false;
+            }
+        }
+        if (contenedorBordes != null)
+        {
+            contenedorBordes.SetActive(false);
+        }
+        enabled = false;
     }
 
     private void ConfigurarColorPorTipo()
@@ -124,6 +145,7 @@ public class BrilloObjeto : MonoBehaviour
         }
 
         GameObject contenedor = new GameObject("BrilloContorno");
+        contenedorBordes = contenedor;
         contenedor.transform.SetParent(transform, false);
         contenedor.transform.localPosition = Vector3.zero;
         contenedor.transform.localRotation = Quaternion.identity;
@@ -163,6 +185,13 @@ public class BrilloObjeto : MonoBehaviour
     private void LateUpdate()
     {
         if (renderBase == null || bordes == null) return;
+
+        if ((notaInteractable != null && notaInteractable.YaLeida) ||
+            (botiquinInteractable != null && botiquinInteractable.YaAbierto))
+        {
+            DesactivarBrillo();
+            return;
+        }
 
         float pulso = (Mathf.Sin(Time.unscaledTime * velocidadPulso + desfaseTiempo) + 1f) * 0.5f;
         float alpha = Mathf.Lerp(opacidadMinima, opacidadMaxima, pulso) * renderBase.color.a;

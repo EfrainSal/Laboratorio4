@@ -22,6 +22,11 @@ public class BotiquinInteractable : MonoBehaviour
         {
             IdPersistencia = LevelManager.GenerarIdObjetoEscena(gameObject);
         }
+
+        if (GetComponent<BrilloObjeto>() == null)
+        {
+            gameObject.AddComponent<BrilloObjeto>();
+        }
     }
 
     public void Abrir()
@@ -29,6 +34,7 @@ public class BotiquinInteractable : MonoBehaviour
         if (yaAbierto) return;
 
         yaAbierto = true;
+        GetComponent<BrilloObjeto>()?.DesactivarBrillo();
 
         if (LevelManager.Instance != null)
         {
@@ -53,6 +59,7 @@ public class BotiquinInteractable : MonoBehaviour
     public void RestaurarEstadoAbierto(bool soltarRecompensaPendiente)
     {
         yaAbierto = true;
+        GetComponent<BrilloObjeto>()?.DesactivarBrillo();
         if (anim == null) anim = GetComponent<Animator>();
         if (anim != null)
         {

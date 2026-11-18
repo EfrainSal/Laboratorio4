@@ -26,6 +26,7 @@ public class NotaInteractable : MonoBehaviour
     public void MarcarComoLeida()
     {
         yaLeida = true;
+        GetComponent<BrilloObjeto>()?.DesactivarBrillo();
     }
 
     // Esta función la llamará el jugador
@@ -45,6 +46,7 @@ public class NotaInteractable : MonoBehaviour
         if (!yaLeida)
         {
             yaLeida = true;
+            GetComponent<BrilloObjeto>()?.DesactivarBrillo();
             if (LevelManager.Instance != null)
             {
                 LevelManager.Instance.RegistrarNotaLeida(this);
