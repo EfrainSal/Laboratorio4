@@ -268,12 +268,12 @@ public class LevelManager : MonoBehaviour
 
         if (textoEnemigosRestantesUI != null)
         {
-            textoEnemigosRestantesUI.text = $"Enemigos restantes: {enemigosFaltantes}";
+            textoEnemigosRestantesUI.text = $": {enemigosFaltantes}";
         }
 
         if (textoNotasRestantesUI != null)
         {
-            textoNotasRestantesUI.text = $"Notas por leer: {notasFaltantes}";
+            textoNotasRestantesUI.text = $": {notasFaltantes}";
         }
     }
 

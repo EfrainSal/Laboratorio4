@@ -36,7 +36,7 @@
                             <ui:Label text="?" class="portrait-placeholder"/>
                         </ui:VisualElement>
                         <ui:Label text="JASON" class="char-name"/>
-                        <ui:Label text="Salud balanceada." class="char-role"/>
+                        <ui:Label text="Usa un escudo para volverse invulnerable." class="char-role"/>
                     </ui:VisualElement>
 
                     <ui:VisualElement name="CharacterCard1" class="char-card" focusable="true">
@@ -44,7 +44,7 @@
                             <ui:Label text="?" class="portrait-placeholder"/>
                         </ui:VisualElement>
                         <ui:Label text="MILENA" class="char-name"/>
-                        <ui:Label text="Mayor agilidad." class="char-role"/>
+                        <ui:Label text="Usa un dash tactico para reposicionarse." class="char-role"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
 

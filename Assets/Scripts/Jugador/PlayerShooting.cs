@@ -273,7 +273,7 @@ public class PlayerShooting : MonoBehaviour
         if (ammoText != null)
         {
             ammoText.text = isReloading
-                ? "RECARGANDO..."
+                ? "Recargando..."
                 : currentAmmoInClip + " / " + totalAmmo;
         }
     }

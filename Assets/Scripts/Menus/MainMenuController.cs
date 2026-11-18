@@ -373,7 +373,7 @@ public class MainMenuController : MonoBehaviour
     {
         bool hasCharacter = _selectedCharacter >= 0;
         string currentName = _playerNameInput.value?.Trim() ?? "";
-        bool hasValidName = currentName.Length >= 3 && currentName.Length <= 12;
+        bool hasValidName = currentName.Length >= 3 && currentName.Length <= 14;
         
         if (hasValidName)
         {
