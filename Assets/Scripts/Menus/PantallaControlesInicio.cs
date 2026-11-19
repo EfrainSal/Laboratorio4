@@ -94,13 +94,7 @@ public class PantallaControlesInicio : MonoBehaviour
     private void RefrescarControles()
     {
         if (entrada != null) GestorModoEntrada.AplicarAPlayerInput(entrada);
-        esquema = GestorModoEntrada.ModoActual == ModoEntrada.Mando
-            ? "Gamepad"
-            : (GestorModoEntrada.ModoActual == ModoEntrada.TecladoYRaton
-                ? "Keyboard&Mouse"
-                : (entrada != null && !string.IsNullOrEmpty(entrada.currentControlScheme)
-                    ? entrada.currentControlScheme
-                    : (GestorModoEntrada.UsandoMando ? "Gamepad" : "Keyboard&Mouse")));
+        esquema = GestorModoEntrada.UsandoMando ? "Gamepad" : "Keyboard&Mouse";
         bool mando = esquema == "Gamepad";
         foreach (var par in teclas)
         {
@@ -114,6 +108,7 @@ public class PantallaControlesInicio : MonoBehaviour
                 if (par.Key == "LookMouse") binding = "RATÓN";
                 binding = binding.Replace("LMB", "CLIC IZQUIERDO").Replace("Left Button", "CLIC IZQUIERDO").Replace("Space", "ESPACIO");
             }
+            if (par.Key == "Interact") binding = TextoInteraccion.Boton(entrada);
             par.Value.text = binding.ToUpperInvariant();
         }
         bool milena = jugador != null && jugador.GetComponent<DashAbility>() != null;
@@ -125,7 +120,7 @@ public class PantallaControlesInicio : MonoBehaviour
     private void Update()
     {
         if (raiz == null) return;
-        if (entrada != null && esquema != entrada.currentControlScheme) RefrescarControles();
+        if (esquema != (GestorModoEntrada.UsandoMando ? "Gamepad" : "Keyboard&Mouse")) RefrescarControles();
         if (textoObjetivo != null && !transicion)
         {
             bool tarjeta = inventario != null && inventario.llavesCount > 0;
@@ -134,9 +129,13 @@ public class PantallaControlesInicio : MonoBehaviour
                 ? enPanel ? teclas["Interact"].text + " · USAR TARJETA  /  Abrir el panel de salida"
                     : "TARJETA OBTENIDA  /  Acércate al panel de la puerta de salida"
                 : "RECEPCIÓN  /  Recoge la tarjeta del suelo, junto a la puerta de salida";
-            if (AvisoPuertaVisible) textoObjetivo.text = avisoPuerta;
+            if (AvisoPuertaVisible) textoObjetivo.text = TextoInteraccion.Formatear(avisoPuerta, entrada);
         }
-        if (!IsShowing) return;
+        if (!IsShowing)
+        {
+            if (!transicion && objetivo != null) objetivo.style.display = UIManagerNotas.Instance != null && UIManagerNotas.Instance.NotaActiva ? DisplayStyle.None : DisplayStyle.Flex;
+            return;
+        }
         if (cerrando)
         {
             float t = Mathf.Clamp01((Time.unscaledTime - inicioCierre) / duracionFundido);

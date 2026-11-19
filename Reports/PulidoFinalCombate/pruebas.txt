@@ -1,0 +1,278 @@
+PASS Recepción conserva su interfaz de controles sin banner duplicado
+PASS Personaje 0: prefab centra el mango en cadera
+PASS Personaje 0: mango fijo a 0°, tajo 0
+PASS Personaje 0: mango fijo a 10°, tajo 0
+PASS Personaje 0: mango fijo a 20°, tajo 0
+PASS Personaje 0: mango fijo a 30°, tajo 0
+PASS Personaje 0: mango fijo a 40°, tajo 0
+PASS Personaje 0: mango fijo a 50°, tajo 0
+PASS Personaje 0: mango fijo a 60°, tajo 0
+PASS Personaje 0: mango fijo a 70°, tajo 0
+PASS Personaje 0: mango fijo a 80°, tajo 0
+PASS Personaje 0: mango fijo a 90°, tajo 0
+PASS Personaje 0: mango fijo a 100°, tajo 0
+PASS Personaje 0: mango fijo a 110°, tajo 0
+PASS Personaje 0: mango fijo a 120°, tajo 0
+PASS Personaje 0: mango fijo a 130°, tajo 0
+PASS Personaje 0: mango fijo a 140°, tajo 0
+PASS Personaje 0: mango fijo a 150°, tajo 0
+PASS Personaje 0: mango fijo a 160°, tajo 0
+PASS Personaje 0: mango fijo a 170°, tajo 0
+PASS Personaje 0: mango fijo a 180°, tajo 0
+PASS Personaje 0: mango fijo a 190°, tajo 0
+PASS Personaje 0: mango fijo a 200°, tajo 0
+PASS Personaje 0: mango fijo a 210°, tajo 0
+PASS Personaje 0: mango fijo a 220°, tajo 0
+PASS Personaje 0: mango fijo a 230°, tajo 0
+PASS Personaje 0: mango fijo a 240°, tajo 0
+PASS Personaje 0: mango fijo a 250°, tajo 0
+PASS Personaje 0: mango fijo a 260°, tajo 0
+PASS Personaje 0: mango fijo a 270°, tajo 0
+PASS Personaje 0: mango fijo a 280°, tajo 0
+PASS Personaje 0: mango fijo a 290°, tajo 0
+PASS Personaje 0: mango fijo a 300°, tajo 0
+PASS Personaje 0: mango fijo a 310°, tajo 0
+PASS Personaje 0: mango fijo a 320°, tajo 0
+PASS Personaje 0: mango fijo a 330°, tajo 0
+PASS Personaje 0: mango fijo a 340°, tajo 0
+PASS Personaje 0: mango fijo a 350°, tajo 0
+PASS Personaje 0: mango fijo a 0°, tajo -60
+PASS Personaje 0: mango fijo a 10°, tajo -60
+PASS Personaje 0: mango fijo a 20°, tajo -60
+PASS Personaje 0: mango fijo a 30°, tajo -60
+PASS Personaje 0: mango fijo a 40°, tajo -60
+PASS Personaje 0: mango fijo a 50°, tajo -60
+PASS Personaje 0: mango fijo a 60°, tajo -60
+PASS Personaje 0: mango fijo a 70°, tajo -60
+PASS Personaje 0: mango fijo a 80°, tajo -60
+PASS Personaje 0: mango fijo a 90°, tajo -60
+PASS Personaje 0: mango fijo a 100°, tajo -60
+PASS Personaje 0: mango fijo a 110°, tajo -60
+PASS Personaje 0: mango fijo a 120°, tajo -60
+PASS Personaje 0: mango fijo a 130°, tajo -60
+PASS Personaje 0: mango fijo a 140°, tajo -60
+PASS Personaje 0: mango fijo a 150°, tajo -60
+PASS Personaje 0: mango fijo a 160°, tajo -60
+PASS Personaje 0: mango fijo a 170°, tajo -60
+PASS Personaje 0: mango fijo a 180°, tajo -60
+PASS Personaje 0: mango fijo a 190°, tajo -60
+PASS Personaje 0: mango fijo a 200°, tajo -60
+PASS Personaje 0: mango fijo a 210°, tajo -60
+PASS Personaje 0: mango fijo a 220°, tajo -60
+PASS Personaje 0: mango fijo a 230°, tajo -60
+PASS Personaje 0: mango fijo a 240°, tajo -60
+PASS Personaje 0: mango fijo a 250°, tajo -60
+PASS Personaje 0: mango fijo a 260°, tajo -60
+PASS Personaje 0: mango fijo a 270°, tajo -60
+PASS Personaje 0: mango fijo a 280°, tajo -60
+PASS Personaje 0: mango fijo a 290°, tajo -60
+PASS Personaje 0: mango fijo a 300°, tajo -60
+PASS Personaje 0: mango fijo a 310°, tajo -60
+PASS Personaje 0: mango fijo a 320°, tajo -60
+PASS Personaje 0: mango fijo a 330°, tajo -60
+PASS Personaje 0: mango fijo a 340°, tajo -60
+PASS Personaje 0: mango fijo a 350°, tajo -60
+PASS Personaje 0: mango fijo a 0°, tajo -120
+PASS Personaje 0: mango fijo a 10°, tajo -120
+PASS Personaje 0: mango fijo a 20°, tajo -120
+PASS Personaje 0: mango fijo a 30°, tajo -120
+PASS Personaje 0: mango fijo a 40°, tajo -120
+PASS Personaje 0: mango fijo a 50°, tajo -120
+PASS Personaje 0: mango fijo a 60°, tajo -120
+PASS Personaje 0: mango fijo a 70°, tajo -120
+PASS Personaje 0: mango fijo a 80°, tajo -120
+PASS Personaje 0: mango fijo a 90°, tajo -120
+PASS Personaje 0: mango fijo a 100°, tajo -120
+PASS Personaje 0: mango fijo a 110°, tajo -120
+PASS Personaje 0: mango fijo a 120°, tajo -120
+PASS Personaje 0: mango fijo a 130°, tajo -120
+PASS Personaje 0: mango fijo a 140°, tajo -120
+PASS Personaje 0: mango fijo a 150°, tajo -120
+PASS Personaje 0: mango fijo a 160°, tajo -120
+PASS Personaje 0: mango fijo a 170°, tajo -120
+PASS Personaje 0: mango fijo a 180°, tajo -120
+PASS Personaje 0: mango fijo a 190°, tajo -120
+PASS Personaje 0: mango fijo a 200°, tajo -120
+PASS Personaje 0: mango fijo a 210°, tajo -120
+PASS Personaje 0: mango fijo a 220°, tajo -120
+PASS Personaje 0: mango fijo a 230°, tajo -120
+PASS Personaje 0: mango fijo a 240°, tajo -120
+PASS Personaje 0: mango fijo a 250°, tajo -120
+PASS Personaje 0: mango fijo a 260°, tajo -120
+PASS Personaje 0: mango fijo a 270°, tajo -120
+PASS Personaje 0: mango fijo a 280°, tajo -120
+PASS Personaje 0: mango fijo a 290°, tajo -120
+PASS Personaje 0: mango fijo a 300°, tajo -120
+PASS Personaje 0: mango fijo a 310°, tajo -120
+PASS Personaje 0: mango fijo a 320°, tajo -120
+PASS Personaje 0: mango fijo a 330°, tajo -120
+PASS Personaje 0: mango fijo a 340°, tajo -120
+PASS Personaje 0: mango fijo a 350°, tajo -120
+PASS Subfusil conserva su altura original
+PASS Munición usa clip existente y ruta de mezcla SFX
+PASS Recogida física de munición funciona con machete equipado y suma una sola vez
+PASS Sonido sigue reproduciéndose desde el jugador después de destruir drop
+PASS Machete daña Sorbo contra pared; penetración=0
+PASS Machete daña Sorbo contra pared; penetración=0.5
+PASS Machete daña Sorbo contra pared; penetración=0.52
+PASS Machete daña Sorbo contra pared; penetración=0.62
+PASS Machete bloqueado por muro frontal en dirección (1.00, 0.00)
+PASS Machete bloqueado por muro frontal en dirección (0.00, 1.00)
+PASS Machete bloqueado por muro frontal en dirección (0.71, 0.71)
+PASS Recepción conserva su interfaz de controles sin banner duplicado
+PASS Personaje 1: prefab centra el mango en cadera
+PASS Personaje 1: mango fijo a 0°, tajo 0
+PASS Personaje 1: mango fijo a 10°, tajo 0
+PASS Personaje 1: mango fijo a 20°, tajo 0
+PASS Personaje 1: mango fijo a 30°, tajo 0
+PASS Personaje 1: mango fijo a 40°, tajo 0
+PASS Personaje 1: mango fijo a 50°, tajo 0
+PASS Personaje 1: mango fijo a 60°, tajo 0
+PASS Personaje 1: mango fijo a 70°, tajo 0
+PASS Personaje 1: mango fijo a 80°, tajo 0
+PASS Personaje 1: mango fijo a 90°, tajo 0
+PASS Personaje 1: mango fijo a 100°, tajo 0
+PASS Personaje 1: mango fijo a 110°, tajo 0
+PASS Personaje 1: mango fijo a 120°, tajo 0
+PASS Personaje 1: mango fijo a 130°, tajo 0
+PASS Personaje 1: mango fijo a 140°, tajo 0
+PASS Personaje 1: mango fijo a 150°, tajo 0
+PASS Personaje 1: mango fijo a 160°, tajo 0
+PASS Personaje 1: mango fijo a 170°, tajo 0
+PASS Personaje 1: mango fijo a 180°, tajo 0
+PASS Personaje 1: mango fijo a 190°, tajo 0
+PASS Personaje 1: mango fijo a 200°, tajo 0
+PASS Personaje 1: mango fijo a 210°, tajo 0
+PASS Personaje 1: mango fijo a 220°, tajo 0
+PASS Personaje 1: mango fijo a 230°, tajo 0
+PASS Personaje 1: mango fijo a 240°, tajo 0
+PASS Personaje 1: mango fijo a 250°, tajo 0
+PASS Personaje 1: mango fijo a 260°, tajo 0
+PASS Personaje 1: mango fijo a 270°, tajo 0
+PASS Personaje 1: mango fijo a 280°, tajo 0
+PASS Personaje 1: mango fijo a 290°, tajo 0
+PASS Personaje 1: mango fijo a 300°, tajo 0
+PASS Personaje 1: mango fijo a 310°, tajo 0
+PASS Personaje 1: mango fijo a 320°, tajo 0
+PASS Personaje 1: mango fijo a 330°, tajo 0
+PASS Personaje 1: mango fijo a 340°, tajo 0
+PASS Personaje 1: mango fijo a 350°, tajo 0
+PASS Personaje 1: mango fijo a 0°, tajo -60
+PASS Personaje 1: mango fijo a 10°, tajo -60
+PASS Personaje 1: mango fijo a 20°, tajo -60
+PASS Personaje 1: mango fijo a 30°, tajo -60
+PASS Personaje 1: mango fijo a 40°, tajo -60
+PASS Personaje 1: mango fijo a 50°, tajo -60
+PASS Personaje 1: mango fijo a 60°, tajo -60
+PASS Personaje 1: mango fijo a 70°, tajo -60
+PASS Personaje 1: mango fijo a 80°, tajo -60
+PASS Personaje 1: mango fijo a 90°, tajo -60
+PASS Personaje 1: mango fijo a 100°, tajo -60
+PASS Personaje 1: mango fijo a 110°, tajo -60
+PASS Personaje 1: mango fijo a 120°, tajo -60
+PASS Personaje 1: mango fijo a 130°, tajo -60
+PASS Personaje 1: mango fijo a 140°, tajo -60
+PASS Personaje 1: mango fijo a 150°, tajo -60
+PASS Personaje 1: mango fijo a 160°, tajo -60
+PASS Personaje 1: mango fijo a 170°, tajo -60
+PASS Personaje 1: mango fijo a 180°, tajo -60
+PASS Personaje 1: mango fijo a 190°, tajo -60
+PASS Personaje 1: mango fijo a 200°, tajo -60
+PASS Personaje 1: mango fijo a 210°, tajo -60
+PASS Personaje 1: mango fijo a 220°, tajo -60
+PASS Personaje 1: mango fijo a 230°, tajo -60
+PASS Personaje 1: mango fijo a 240°, tajo -60
+PASS Personaje 1: mango fijo a 250°, tajo -60
+PASS Personaje 1: mango fijo a 260°, tajo -60
+PASS Personaje 1: mango fijo a 270°, tajo -60
+PASS Personaje 1: mango fijo a 280°, tajo -60
+PASS Personaje 1: mango fijo a 290°, tajo -60
+PASS Personaje 1: mango fijo a 300°, tajo -60
+PASS Personaje 1: mango fijo a 310°, tajo -60
+PASS Personaje 1: mango fijo a 320°, tajo -60
+PASS Personaje 1: mango fijo a 330°, tajo -60
+PASS Personaje 1: mango fijo a 340°, tajo -60
+PASS Personaje 1: mango fijo a 350°, tajo -60
+PASS Personaje 1: mango fijo a 0°, tajo -120
+PASS Personaje 1: mango fijo a 10°, tajo -120
+PASS Personaje 1: mango fijo a 20°, tajo -120
+PASS Personaje 1: mango fijo a 30°, tajo -120
+PASS Personaje 1: mango fijo a 40°, tajo -120
+PASS Personaje 1: mango fijo a 50°, tajo -120
+PASS Personaje 1: mango fijo a 60°, tajo -120
+PASS Personaje 1: mango fijo a 70°, tajo -120
+PASS Personaje 1: mango fijo a 80°, tajo -120
+PASS Personaje 1: mango fijo a 90°, tajo -120
+PASS Personaje 1: mango fijo a 100°, tajo -120
+PASS Personaje 1: mango fijo a 110°, tajo -120
+PASS Personaje 1: mango fijo a 120°, tajo -120
+PASS Personaje 1: mango fijo a 130°, tajo -120
+PASS Personaje 1: mango fijo a 140°, tajo -120
+PASS Personaje 1: mango fijo a 150°, tajo -120
+PASS Personaje 1: mango fijo a 160°, tajo -120
+PASS Personaje 1: mango fijo a 170°, tajo -120
+PASS Personaje 1: mango fijo a 180°, tajo -120
+PASS Personaje 1: mango fijo a 190°, tajo -120
+PASS Personaje 1: mango fijo a 200°, tajo -120
+PASS Personaje 1: mango fijo a 210°, tajo -120
+PASS Personaje 1: mango fijo a 220°, tajo -120
+PASS Personaje 1: mango fijo a 230°, tajo -120
+PASS Personaje 1: mango fijo a 240°, tajo -120
+PASS Personaje 1: mango fijo a 250°, tajo -120
+PASS Personaje 1: mango fijo a 260°, tajo -120
+PASS Personaje 1: mango fijo a 270°, tajo -120
+PASS Personaje 1: mango fijo a 280°, tajo -120
+PASS Personaje 1: mango fijo a 290°, tajo -120
+PASS Personaje 1: mango fijo a 300°, tajo -120
+PASS Personaje 1: mango fijo a 310°, tajo -120
+PASS Personaje 1: mango fijo a 320°, tajo -120
+PASS Personaje 1: mango fijo a 330°, tajo -120
+PASS Personaje 1: mango fijo a 340°, tajo -120
+PASS Personaje 1: mango fijo a 350°, tajo -120
+PASS Subfusil conserva su altura original
+PASS Munición usa clip existente y ruta de mezcla SFX
+PASS Recogida física de munición funciona con machete equipado y suma una sola vez
+PASS Sonido sigue reproduciéndose desde el jugador después de destruir drop
+PASS Machete daña Sorbo contra pared; penetración=0
+PASS Machete daña Sorbo contra pared; penetración=0.5
+PASS Machete daña Sorbo contra pared; penetración=0.52
+PASS Machete daña Sorbo contra pared; penetración=0.62
+PASS Machete bloqueado por muro frontal en dirección (1.00, 0.00)
+PASS Machete bloqueado por muro frontal en dirección (0.00, 1.00)
+PASS Machete bloqueado por muro frontal en dirección (0.71, 0.71)
+PASS Inicia transición real a Escenario1_Entrada
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Escenario1_Entrada: anuncio visible sin bloquear juego ni botones
+PASS Título correcto para orden real de progresión
+PASS Banner se desvanece y retira al terminar
+PASS Inicia transición real a Piso3_V10
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Piso3_V10: anuncio visible sin bloquear juego ni botones
+PASS Título correcto para orden real de progresión
+PASS Banner se desvanece y retira al terminar
+PASS Inicia transición real a E3_Laboratorio
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS E3_Laboratorio: anuncio visible sin bloquear juego ni botones
+PASS Título correcto para orden real de progresión
+PASS Banner se desvanece y retira al terminar
+PASS Inicia transición real a Escenario4_Jefe
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Banner espera mientras la transición cubre el piso
+PASS Escenario4_Jefe: anuncio visible sin bloquear juego ni botones
+PASS Título correcto para orden real de progresión
+PASS Banner se desvanece y retira al terminar

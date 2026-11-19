@@ -40,9 +40,9 @@ public class AvisoInteraccionUI : MonoBehaviour
             LevelManager.Instance != null && LevelManager.Instance.JugadorActual == gameObject)
         {
             if (interaccion != null && interaccion.isActiveAndEnabled && interaccion.NotaCercana != null)
-            { Objetivo = interaccion.NotaCercana; Mensaje = "Oprime F para leer la nota"; }
+            { Objetivo = interaccion.NotaCercana; Mensaje = TextoInteraccion.Aviso("leer la nota"); }
             else if (interaccion != null && interaccion.isActiveAndEnabled && interaccion.BotiquinCercano != null)
-            { Objetivo = interaccion.BotiquinCercano; Mensaje = "Oprime F para abrir el botiquín"; }
+            { Objetivo = interaccion.BotiquinCercano; Mensaje = TextoInteraccion.Aviso("abrir el botiquín"); }
             else
             {
                 float distancia = float.MaxValue;
@@ -53,7 +53,7 @@ public class AvisoInteraccionUI : MonoBehaviour
                     if (d < distancia)
                     {
                         distancia = d; Objetivo = puerta;
-                        Mensaje = puerta.AvisoVisible ? puerta.mensajeFaltaLlave : "Oprime F para interactuar con la puerta";
+                        Mensaje = puerta.AvisoVisible ? TextoInteraccion.Formatear(puerta.mensajeFaltaLlave) : TextoInteraccion.Aviso("interactuar con la puerta");
                     }
                 }
             }

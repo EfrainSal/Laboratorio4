@@ -1,0 +1,2 @@
+PASS Resources: 289 archivos existentes comprobados; 0 diferencias
+PASS Play Mode: 66 comprobaciones; 0 errores

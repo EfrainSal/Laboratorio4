@@ -28,6 +28,7 @@ public class BossHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         bossAI = GetComponent<BossAI>();
+        HurtboxJefe.Asegurar(this);
     }
     private void Start()
     {
@@ -129,7 +130,7 @@ public class BossHealth : MonoBehaviour
         if (bossAI != null) bossAI.enabled = false;
         var rb = GetComponent<Rigidbody2D>();
         if (rb != null) { rb.linearVelocity = Vector2.zero; rb.simulated = false; }
-        foreach (var col in GetComponents<Collider2D>()) col.enabled = false;
+        foreach (var col in GetComponentsInChildren<Collider2D>()) col.enabled = false;
         float duracion = GetComponent<AnimacionJefeDinamica>()?.Morir() ?? 0f;
         if (bossHealthUIContainer != null) bossHealthUIContainer.SetActive(false);
         foreach (var bala in FindObjectsByType<BossBullet>(FindObjectsSortMode.None))

@@ -164,7 +164,7 @@ public static class ProbarArmasInteraccion
             Tecla(Key.F); yield return .08f; Tecla(); yield return .08f;
             Exigir(UIManagerNotas.Instance.NotaActiva && !Aviso.Visible, "F abre nota y oculta prompt durante lectura");
             Tecla(Key.F); yield return .08f; Tecla(); yield return .08f;
-            Exigir(!UIManagerNotas.Instance.NotaActiva && Aviso.Visible, "F cierra nota y restaura prompt en rango");
+            Exigir(!UIManagerNotas.Instance.NotaActiva && !Aviso.Visible && Jugador.GetComponent<InteraccionJugador>().currentInteractable == null, "F cierra nota y libera prompt y referencia de interacción");
             Mover(Jugador.transform.position + Vector3.up * 12); yield return .15f;
             Exigir(!Aviso.Visible, "Aviso de nota desaparece al alejarse"); Object.Destroy(nota.gameObject);
             var bot = Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/BotiquinInteractuable.prefab"), Jugador.transform.position + Vector3.right * 4, Quaternion.identity).GetComponent<BotiquinInteractable>();

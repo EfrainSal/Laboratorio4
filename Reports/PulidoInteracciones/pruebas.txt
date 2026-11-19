@@ -1,0 +1,66 @@
+PASS Jugador 0: partida activa después de controles
+PASS Nota tutorial explica ambos contadores y tarjeta
+PASS Nota sin collider sólido
+PASS Jugador 0: F detecta nota tutorial
+PASS Aviso celeste #6EBEC1
+PASS F abre y registra lectura sin dejar prompt
+PASS Tutorial completo cabe en pantalla y muestra la tecla actual
+PASS F cierra sin reabrir al soltar ni conservar referencia o prompt
+PASS Salir de nota limpia contacto y aviso
+PASS Salir y volver permite releer
+PASS Cambio automático a mando actualiza prompt a A (modo=Automatico, aviso=Oprime A para leer la nota)
+PASS Botón A abre nota y actualiza documento (activa=True, objetivo=NotaTutorialProgreso (NotaInteractable), esquema=Gamepad, texto=A)
+PASS Botón A cierra y limpia referencia
+PASS Cambio automático a teclado restaura F
+PASS Tras cerrar nota, F interactúa con puerta y reemplaza aviso por falta de tarjeta
+PASS Tras cerrar nota, F abre botiquín sin reabrir documento
+PASS Jugador 0: venda alcanza máximo 20
+PASS Rechaza venda 21
+PASS Jeringas alcanzan máximo 10
+PASS Rechaza jeringa 11
+PASS Aviso informa límite de jeringas incluso después de límite de vendas
+PASS Venda rechazada permanece en suelo
+PASS Tecla 1 cura y permite recoger venda pendiente con OnTriggerStay
+PASS Consumir venda produce destello verde
+PASS Destello verde termina sin quedar fijo
+PASS Restaurar cantidades antiguas respeta límites
+PASS Jugador 1: partida activa después de controles
+PASS Nota tutorial explica ambos contadores y tarjeta
+PASS Nota sin collider sólido
+PASS Jugador 1: F detecta nota tutorial
+PASS Aviso celeste #6EBEC1
+PASS F abre y registra lectura sin dejar prompt
+PASS Tutorial completo cabe en pantalla y muestra la tecla actual
+PASS F cierra sin reabrir al soltar ni conservar referencia o prompt
+PASS Salir de nota limpia contacto y aviso
+PASS Salir y volver permite releer
+PASS Cambio automático a mando actualiza prompt a A (modo=Automatico, aviso=Oprime A para leer la nota)
+PASS Botón A abre nota y actualiza documento (activa=True, objetivo=NotaTutorialProgreso (NotaInteractable), esquema=Gamepad, texto=A)
+PASS Botón A cierra y limpia referencia
+PASS Cambio automático a teclado restaura F
+PASS Tras cerrar nota, F interactúa con puerta y reemplaza aviso por falta de tarjeta
+PASS Tras cerrar nota, F abre botiquín sin reabrir documento
+PASS Jugador 1: venda alcanza máximo 20
+PASS Rechaza venda 21
+PASS Jeringas alcanzan máximo 10
+PASS Rechaza jeringa 11
+PASS Aviso informa límite de jeringas incluso después de límite de vendas
+PASS Venda rechazada permanece en suelo
+PASS Tecla 1 cura y permite recoger venda pendiente con OnTriggerStay
+PASS Consumir venda produce destello verde
+PASS Destello verde termina sin quedar fijo
+PASS Restaurar cantidades antiguas respeta límites
+PASS Bullet atraviesa nota usando física real
+PASS EnemyBullet atraviesa nota usando física real
+PASS BossBullet atraviesa nota usando física real
+PASS Bullet sigue chocando con paredes sólidas
+PASS EnemyBullet sigue chocando con paredes sólidas
+PASS BossBullet sigue chocando con paredes sólidas
+PASS Machete no daña a través de pared incluso con attackPoint al otro lado
+PASS Machete daña una vez sin obstáculo
+PASS Combate de Yiba desbloqueado después del reencuentro
+PASS Yiba conserva collider de pies y hurtbox independiente
+PASS Hurtbox cubre cuerpo completo por encima de los pies
+PASS Yiba recibe exactamente un impacto a altura 0.12 (vida=1485, anterior=1500, bala=destruida, origen=(648.62, 650.25), tiempo=1, simulando=True, hurtboxActiva=True, espera=False, posición=(650.00, 650.00, 0.00), hurtbox=Center: (650.01, 651.10, 0.00), Extents: (0.90, 1.13, 0.00))
+PASS Yiba recibe exactamente un impacto a altura 0.5 (vida=1470, anterior=1485, bala=destruida, origen=(648.62, 651.10), tiempo=1, simulando=True, hurtboxActiva=True, espera=False, posición=(650.00, 650.00, 0.00), hurtbox=Center: (650.01, 651.10, 0.00), Extents: (0.90, 1.13, 0.00))
+PASS Yiba recibe exactamente un impacto a altura 0.85 (vida=1455, anterior=1470, bala=destruida, origen=(648.62, 651.89), tiempo=1, simulando=True, hurtboxActiva=True, espera=False, posición=(650.00, 650.00, 0.00), hurtbox=Center: (650.01, 651.10, 0.00), Extents: (0.90, 1.13, 0.00))

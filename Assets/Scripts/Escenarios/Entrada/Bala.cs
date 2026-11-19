@@ -45,7 +45,7 @@ namespace Laboratorio4
             for (int i = 0; i < n; i++)
             {
                 var g = golpes[i];
-                if (g.collider == null || g.collider == tirador || g.collider.isTrigger) continue;
+                if (g.collider == null || g.collider == tirador || g.collider.isTrigger || ColisionesCombate.EsNota(g.collider)) continue;
                 if (g.distance < mejor) { mejor = g.distance; golpe = g; }
             }
             if (golpe.HasValue)

@@ -22,15 +22,20 @@ public class ItemPickup : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+    { IntentarRecoger(collision, true); }
+    private void OnTriggerStay2D(Collider2D collision)
+    { IntentarRecoger(collision, false); }
+    private void IntentarRecoger(Collider2D collision, bool avisarSiLleno)
     {
-        if (!recogido)
+        if (!recogido && !DeathScreenController.GameplayBlocked)
         {
             PlayerInventory inventario = collision.GetComponentInParent<PlayerInventory>();
             
-            if (inventario != null)
+            if (inventario != null && inventario.isActiveAndEnabled && (LevelManager.Instance == null || LevelManager.Instance.JugadorActual == inventario.gameObject))
             {
+                if (!avisarSiLleno && !inventario.PuedeRecoger(tipoDeObjeto)) return;
+                if (!inventario.IntentarAgregarObjeto(tipoDeObjeto)) return;
                 recogido = true;
-                inventario.AgregarObjeto(tipoDeObjeto);
                 if (LevelManager.Instance != null)
                 {
                     LevelManager.Instance.RegistrarObjetoRecogido(IdPersistencia);

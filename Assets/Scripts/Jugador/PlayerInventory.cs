@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public const int MaxVendas = 20, MaxJeringas = 10;
     [Header("Cantidades en Inventario")]
     public int vendasCount = 0;
     public int botiquinesCount = 0;
@@ -35,6 +36,14 @@ public class PlayerInventory : MonoBehaviour
     [Min(0.1f)] public float duracionDesvanecimientoEstimulante = 1.5f;
     public string mensajeTarjetaRecogida = "TARJETA OBTENIDA  /  Acércate al panel de la puerta de salida";
     public float duracionAvisoTarjeta = 3f;
+    [Header("Destello de la venda")]
+    public Color colorFeedbackVenda = new Color(.15f, 1f, .35f, .16f);
+    [Min(.1f)] public float duracionDestelloVenda = .7f;
+    public Color FeedbackVendaActual => overlayVenda != null ? overlayVenda.color : Color.clear;
+    private Image overlayVenda;
+    private Coroutine rutinaVenda;
+    private float siguienteAvisoCapacidad;
+    private ItemPickup.PickupType ultimoAvisoCapacidad;
 
     [Header("Audio SFX")]
     public AudioSource audioSource; // Arrastra aquí el AudioSource de tu Player
@@ -82,7 +91,14 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void AgregarObjeto(ItemPickup.PickupType tipo)
+    { IntentarAgregarObjeto(tipo); }
+
+    public bool PuedeRecoger(ItemPickup.PickupType tipo) => tipo != ItemPickup.PickupType.Venda && tipo != ItemPickup.PickupType.Estimulante ||
+        (tipo == ItemPickup.PickupType.Venda ? vendasCount < MaxVendas : estimulantesCount < MaxJeringas);
+    public bool IntentarAgregarObjeto(ItemPickup.PickupType tipo)
     {
+        NormalizarCantidades();
+        if (!PuedeRecoger(tipo)) { AvisarCapacidad(tipo); return false; }
         switch (tipo)
         {
             case ItemPickup.PickupType.Venda: 
@@ -108,6 +124,19 @@ public class PlayerInventory : MonoBehaviour
                 break;
         }
         ActualizarUI();
+        if (!PuedeRecoger(tipo)) AvisarCapacidad(tipo);
+        return true;
+    }
+    private void NormalizarCantidades()
+    { vendasCount = Mathf.Clamp(vendasCount, 0, MaxVendas); estimulantesCount = Mathf.Clamp(estimulantesCount, 0, MaxJeringas); }
+    private void AvisarCapacidad(ItemPickup.PickupType tipo)
+    {
+        if (tipo == ultimoAvisoCapacidad && Time.unscaledTime < siguienteAvisoCapacidad) return;
+        ultimoAvisoCapacidad = tipo;
+        siguienteAvisoCapacidad = Time.unscaledTime + 1.2f;
+        AvisoPuertaUI.MostrarGlobal(tipo == ItemPickup.PickupType.Venda
+            ? "VENDAS AL MÁXIMO  /  20 de 20 · No puedes recoger más vendas"
+            : "JERINGAS AL MÁXIMO  /  10 de 10 · No puedes recoger más jeringas", 2.8f);
     }
 
     // Método auxiliar para reproducir el sonido sin interrumpir otros
@@ -143,8 +172,34 @@ public class PlayerInventory : MonoBehaviour
         {
             vendasCount--;
             playerHealth.Heal(curaVendas);
+            if (rutinaVenda != null) StopCoroutine(rutinaVenda);
+            rutinaVenda = StartCoroutine(DestelloVenda());
             ActualizarUI();
         }
+    }
+
+    private IEnumerator DestelloVenda()
+    {
+        if (overlayVenda == null)
+        {
+            var referencia = playerHealth != null ? playerHealth.damageFlash : null;
+            if (referencia == null && LevelManager.Instance != null) referencia = LevelManager.Instance.damageFlashUI;
+            if (referencia == null || referencia.transform.parent == null) yield break;
+            var go = new GameObject("BandageFlash", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            go.layer = referencia.gameObject.layer; go.transform.SetParent(referencia.transform.parent, false);
+            go.transform.SetSiblingIndex(referencia.transform.GetSiblingIndex());
+            var rect = go.GetComponent<RectTransform>(); rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
+            rect.offsetMin = rect.offsetMax = Vector2.zero;
+            overlayVenda = go.GetComponent<Image>(); overlayVenda.sprite = referencia.sprite; overlayVenda.type = referencia.type;
+            overlayVenda.preserveAspect = referencia.preserveAspect; overlayVenda.fillCenter = referencia.fillCenter; overlayVenda.raycastTarget = false;
+        }
+        float tiempo = 0;
+        while (tiempo < duracionDestelloVenda)
+        {
+            var color = colorFeedbackVenda; color.a *= 1 - Mathf.Clamp01(tiempo / duracionDestelloVenda); overlayVenda.color = color;
+            tiempo += Time.deltaTime; yield return null;
+        }
+        overlayVenda.color = Color.clear; rutinaVenda = null;
     }
 
     private void ConsumirBotiquin()
@@ -273,10 +328,13 @@ public class PlayerInventory : MonoBehaviour
     private void OnDisable()
     {
         EstablecerOpacidadEstimulante(0f);
+        if (rutinaVenda != null) { StopCoroutine(rutinaVenda); rutinaVenda = null; }
+        if (overlayVenda != null) overlayVenda.color = Color.clear;
     }
 
     public void ActualizarUI()
     {
+        NormalizarCantidades();
         if (textoVendas != null) textoVendas.text = "" + vendasCount;
         if (textoBotiquines != null) textoBotiquines.text = "Botiquín [3]: " + botiquinesCount;
         if (textoEstimulantes != null) textoEstimulantes.text = "" + estimulantesCount;

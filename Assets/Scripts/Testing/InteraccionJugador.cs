@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class InteraccionJugador : MonoBehaviour
 {
@@ -7,15 +8,22 @@ public class InteraccionJugador : MonoBehaviour
     private NotaInteractable notaCercana;
     private NotaInteractable notaAbierta;
     private readonly HashSet<Collider2D> contactos = new HashSet<Collider2D>();
+    private readonly HashSet<NotaInteractable> notasCerradasEnRango = new HashSet<NotaInteractable>();
+    public Object currentInteractable { get; private set; }
     public BotiquinInteractable BotiquinCercano => botiquinCercano;
     public NotaInteractable NotaCercana => notaCercana;
     public bool TieneObjetivo => notaCercana != null || (botiquinCercano != null && !botiquinCercano.YaAbierto);
     public int UltimoFotogramaInteraccion { get; private set; } = -1;
     private void Update() { ActualizarCercanos(); }
+    private void OnEnable() { UIManagerNotas.AlCerrarNota += AlCerrarNota; }
 
-    public void OnInteract()
+    public void OnInteract(InputValue value)
     {
-        if (DeathScreenController.GameplayBlocked ||
+        if (value.isPressed) IntentarInteractuar();
+    }
+    public void IntentarInteractuar()
+    {
+        if (UltimoFotogramaInteraccion == Time.frameCount || DeathScreenController.GameplayBlocked ||
             (LevelManager.Instance != null && LevelManager.Instance.JugadorActual != null && LevelManager.Instance.JugadorActual != gameObject)) return;
         ActualizarCercanos();
         // Una nota abierta consume F; no abre también una puerta o un contenedor.
@@ -31,8 +39,9 @@ public class InteraccionJugador : MonoBehaviour
         if (notaCercana != null)
         {
             UltimoFotogramaInteraccion = Time.frameCount;
-            notaCercana.Interactuar();
-            notaAbierta = notaCercana;
+            var nota = notaCercana;
+            nota.Interactuar();
+            notaAbierta = UIManagerNotas.Instance != null && UIManagerNotas.Instance.NotaActiva ? nota : null;
         }
         else if (botiquinCercano != null && !botiquinCercano.YaAbierto)
         {
@@ -50,15 +59,33 @@ public class InteraccionJugador : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // El jugador tiene más de un collider: salir con uno no termina el otro contacto.
-        if (collision != null && collision.enabled && collision.gameObject.activeInHierarchy)
-            foreach (var propio in GetComponents<Collider2D>())
-                if (propio.enabled && Physics2D.Distance(propio, collision).distance <= .001f) return;
-        contactos.Remove(collision); ActualizarCercanos();
+        if (!EnContactoReal(collision)) contactos.Remove(collision);
+        ActualizarCercanos();
+    }
+    private bool EnContactoReal(Collider2D otro)
+    {
+        if (otro == null || !otro.enabled || !otro.gameObject.activeInHierarchy) return false;
+        foreach (var propio in GetComponents<Collider2D>())
+            if (propio.enabled && propio.gameObject.activeInHierarchy && Physics2D.Distance(propio, otro).distance <= .001f) return true;
+        return false;
+    }
+    private void AlCerrarNota(NotaInteractable nota)
+    {
+        if (notaAbierta == null && (nota == null || notaCercana != nota)) return;
+        var cerrada = nota != null ? nota : notaAbierta;
+        if (cerrada != null) notasCerradasEnRango.Add(cerrada);
+        notaAbierta = null; notaCercana = null; currentInteractable = null;
+        UltimoFotogramaInteraccion = Time.frameCount;
     }
     private void ActualizarCercanos()
     {
-        contactos.RemoveWhere(c => c == null || !c.enabled || !c.gameObject.activeInHierarchy);
+        // También comprobar geometría: un Exit perdido o varios colliders no pueden retener una nota lejana.
+        contactos.RemoveWhere(c => !EnContactoReal(c));
+        notasCerradasEnRango.RemoveWhere(n => {
+            if (n == null) return true;
+            foreach (var c in contactos) if (c.GetComponentInParent<NotaInteractable>() == n) return false;
+            return true;
+        });
         notaCercana = null; botiquinCercano = null;
         float distanciaNota = float.MaxValue, distanciaBotiquin = float.MaxValue; bool notaAbiertaEnRango = false;
         foreach (var col in contactos)
@@ -68,7 +95,7 @@ public class InteraccionJugador : MonoBehaviour
             if (nota != null && nota.isActiveAndEnabled)
             {
                 if (nota == notaAbierta) notaAbiertaEnRango = true;
-                if (d < distanciaNota) { notaCercana = nota; distanciaNota = d; }
+                if (!notasCerradasEnRango.Contains(nota) && d < distanciaNota) { notaCercana = nota; distanciaNota = d; }
             }
             var botiquin = col.GetComponentInParent<BotiquinInteractable>();
             if (botiquin != null && botiquin.isActiveAndEnabled && !botiquin.YaAbierto && d < distanciaBotiquin)
@@ -79,10 +106,12 @@ public class InteraccionJugador : MonoBehaviour
             if (UIManagerNotas.Instance != null && UIManagerNotas.Instance.NotaActiva) UIManagerNotas.Instance.OcultarNota();
             notaAbierta = null;
         }
+        currentInteractable = notaCercana != null ? (Object)notaCercana : botiquinCercano;
     }
     private void OnDisable()
     {
-        contactos.Clear(); notaCercana = null; botiquinCercano = null;
+        UIManagerNotas.AlCerrarNota -= AlCerrarNota;
+        contactos.Clear(); notasCerradasEnRango.Clear(); notaCercana = null; botiquinCercano = null; currentInteractable = null;
         if (notaAbierta != null && UIManagerNotas.Instance != null && UIManagerNotas.Instance.NotaActiva) UIManagerNotas.Instance.OcultarNota();
         notaAbierta = null;
     }

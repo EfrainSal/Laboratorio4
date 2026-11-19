@@ -33,7 +33,7 @@ namespace Laboratorio4.Escenario3
 
         private bool Ignorado(Collider2D c)
         {
-            if (c == null) return true;
+            if (c == null || ColisionesCombate.EsNota(c)) return true;
             if (ignorar != null) for (int i = 0; i < ignorar.Length; i++) if (ignorar[i] == c) return true;
             return false;
         }

@@ -9,6 +9,7 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = 0.8f; 
     public float attackDamage = 15f; 
     public LayerMask enemyLayers; 
+    public LayerMask capasObstaculos = ~0;
 
     [Header("Cadencia de Ataque")]
     public float attackRate = 2f; 
@@ -44,6 +45,12 @@ public class PlayerCombat : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            var salud = (Component)enemy.GetComponentInParent<EnemyHealth>() ?? enemy.GetComponentInParent<BossHealth>();
+            if (salud == null) continue;
+            var propio = GetComponent<Collider2D>(); var cuerpoObjetivo = salud.GetComponent<Collider2D>();
+            Vector2 origen = propio != null ? (Vector2)propio.bounds.center : (Vector2)transform.position;
+            Vector2 destino = cuerpoObjetivo != null ? cuerpoObjetivo.ClosestPoint(origen) : enemy.ClosestPoint(origen);
+            if (!ColisionesCombate.LineaLibre(origen, destino, transform, salud.transform, capasObstaculos)) continue;
             // Intentar dañar enemigo normal
             EnemyHealth enemyHealth = enemy.GetComponentInParent<EnemyHealth>();
             if (enemyHealth != null)
