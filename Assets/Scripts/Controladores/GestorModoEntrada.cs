@@ -28,6 +28,12 @@ public static class GestorModoEntrada
 
     public static event System.Action<ModoEntrada> OnModoCambiado;
     public static event System.Action<bool> OnDispositivoActivoCambiado;
+    public static event System.Action<bool> OnConexionMandoCambiada;
+
+    /// <summary>
+    /// Indica si hay al menos un mando conectado actualmente.
+    /// </summary>
+    public static bool HayMandoConectado => Gamepad.current != null || Gamepad.all.Count > 0;
 
     /// <summary>
     /// Indica si la caja de texto del nombre del jugador tiene el foco o permite escritura por teclado.
@@ -40,6 +46,10 @@ public static class GestorModoEntrada
         get
         {
             AsegurarInicializado();
+            if (_modoActual == ModoEntrada.Mando && !HayMandoConectado)
+            {
+                ManejarFaltaDeMando();
+            }
             return _modoActual;
         }
     }
@@ -52,6 +62,16 @@ public static class GestorModoEntrada
         get
         {
             AsegurarInicializado();
+            if (!HayMandoConectado)
+            {
+                if (_modoActual == ModoEntrada.Mando)
+                {
+                    ManejarFaltaDeMando();
+                }
+                _ultimoDispositivoFueMando = false;
+                return false;
+            }
+
             switch (_modoActual)
             {
                 case ModoEntrada.TecladoYRaton:
@@ -65,7 +85,7 @@ public static class GestorModoEntrada
         }
     }
 
-    public static bool PermitirMando => ModoActual != ModoEntrada.TecladoYRaton;
+    public static bool PermitirMando => ModoActual != ModoEntrada.TecladoYRaton && HayMandoConectado;
 
     public static bool PermitirTecladoYRaton(bool esInputNombre = false)
     {
@@ -90,6 +110,7 @@ public static class GestorModoEntrada
         EscribiendoNombreJugador = false;
         _posicionRatonInicializada = false;
         InputSystem.onEvent -= AlRecibirEventoInput;
+        InputSystem.onDeviceChange -= AlCambiarDispositivo;
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -107,19 +128,103 @@ public static class GestorModoEntrada
         if (guardado < 0 || guardado > 2) guardado = 0;
         _modoActual = (ModoEntrada)guardado;
 
-        _ultimoDispositivoFueMando = Gamepad.current != null && _modoActual == ModoEntrada.Mando;
+        if (_modoActual == ModoEntrada.Mando && !HayMandoConectado)
+        {
+            _modoActual = ModoEntrada.Automatico;
+            PlayerPrefs.SetInt(ClavePreferencia, (int)_modoActual);
+            PlayerPrefs.Save();
+        }
+
+        _ultimoDispositivoFueMando = HayMandoConectado && _modoActual == ModoEntrada.Mando;
 
         InputSystem.onEvent -= AlRecibirEventoInput;
         InputSystem.onEvent += AlRecibirEventoInput;
+        InputSystem.onDeviceChange -= AlCambiarDispositivo;
+        InputSystem.onDeviceChange += AlCambiarDispositivo;
+    }
+
+    private static void AlCambiarDispositivo(InputDevice device, InputDeviceChange change)
+    {
+        if (device is not Gamepad) return;
+
+        switch (change)
+        {
+            case InputDeviceChange.Added:
+            case InputDeviceChange.Reconnected:
+            case InputDeviceChange.Enabled:
+                OnConexionMandoCambiada?.Invoke(HayMandoConectado);
+                break;
+
+            case InputDeviceChange.Removed:
+            case InputDeviceChange.Disconnected:
+            case InputDeviceChange.Disabled:
+                bool quedaAlgunMando = HayMandoConectado;
+                if (!quedaAlgunMando)
+                {
+                    ManejarDesconexionDeMando();
+                }
+                OnConexionMandoCambiada?.Invoke(quedaAlgunMando);
+                break;
+        }
+    }
+
+    private static void ManejarFaltaDeMando()
+    {
+        if (_modoActual != ModoEntrada.Mando && !_ultimoDispositivoFueMando) return;
+        ManejarDesconexionDeMando();
+    }
+
+    private static void ManejarDesconexionDeMando()
+    {
+        bool estabaUsandoMando = _modoActual == ModoEntrada.Mando || _ultimoDispositivoFueMando;
+        _ultimoDispositivoFueMando = false;
+
+        if (_modoActual == ModoEntrada.Mando)
+        {
+            _modoActual = ModoEntrada.Automatico;
+            PlayerPrefs.SetInt(ClavePreferencia, (int)_modoActual);
+            PlayerPrefs.Save();
+            OnModoCambiado?.Invoke(_modoActual);
+        }
+
+        AplicarModoATodosLosPlayerInput();
+        OnDispositivoActivoCambiado?.Invoke(false);
+
+        if (estabaUsandoMando)
+        {
+            PausarPartidaPorSeguridad();
+        }
+    }
+
+    private static void PausarPartidaPorSeguridad()
+    {
+        if (!Application.isPlaying) return;
+        var menuPausa = Object.FindAnyObjectByType<PauseMenuController>();
+        if (menuPausa != null && menuPausa.isActiveAndEnabled && !PauseMenuController.IsPaused && !PauseMenuController.PauseBlocked)
+        {
+            UpgradePanelController.TryClose();
+            menuPausa.Pause();
+            Debug.Log("[GestorModoEntrada] Mando desconectado: se pausó la partida y el modo de entrada cambió automáticamente a Automático.");
+        }
     }
 
     public static void EstablecerModo(ModoEntrada nuevoModo)
     {
         AsegurarInicializado();
+
+        // Capa de seguridad: no permitir activar modo Mando si no hay un mando conectado
+        if (nuevoModo == ModoEntrada.Mando && !HayMandoConectado)
+        {
+            nuevoModo = ModoEntrada.Automatico;
+        }
+
         bool cambioModo = _modoActual != nuevoModo;
-        bool mandoAntes = UsandoMando;
+        bool mandoAntes = _ultimoDispositivoFueMando || _modoActual == ModoEntrada.Mando;
 
         _modoActual = nuevoModo;
+        if (_modoActual == ModoEntrada.Mando) _ultimoDispositivoFueMando = true;
+        else if (_modoActual == ModoEntrada.TecladoYRaton) _ultimoDispositivoFueMando = false;
+
         PlayerPrefs.SetInt(ClavePreferencia, (int)_modoActual);
         PlayerPrefs.Save();
 
@@ -142,6 +247,10 @@ public static class GestorModoEntrada
         int total = 3;
         int actual = (int)ModoActual;
         int siguiente = (actual + direccion % total + total) % total;
+        if ((ModoEntrada)siguiente == ModoEntrada.Mando && !HayMandoConectado)
+        {
+            siguiente = (siguiente + direccion % total + total) % total;
+        }
         EstablecerModo((ModoEntrada)siguiente);
     }
 
@@ -169,6 +278,14 @@ public static class GestorModoEntrada
 
     public static void ActualizarDeteccionAutomatica()
     {
+        AsegurarInicializado();
+
+        if (!HayMandoConectado && (_modoActual == ModoEntrada.Mando || _ultimoDispositivoFueMando))
+        {
+            ManejarDesconexionDeMando();
+            return;
+        }
+
         if (_modoActual != ModoEntrada.Automatico) return;
 
         if (Gamepad.current != null && HayActividadEnMando(Gamepad.current))
@@ -238,6 +355,11 @@ public static class GestorModoEntrada
         if (playerInput == null || !playerInput.isActiveAndEnabled) return;
         AsegurarInicializado();
 
+        if (!HayMandoConectado && (_modoActual == ModoEntrada.Mando || _ultimoDispositivoFueMando))
+        {
+            ManejarDesconexionDeMando();
+        }
+
         var actions = playerInput.actions;
 
         if (_modoActual == ModoEntrada.TecladoYRaton)
@@ -250,7 +372,7 @@ public static class GestorModoEntrada
             else if (Keyboard.current != null)
                 playerInput.SwitchCurrentControlScheme("Keyboard&Mouse", Keyboard.current);
         }
-        else if (_modoActual == ModoEntrada.Mando)
+        else if (_modoActual == ModoEntrada.Mando && HayMandoConectado)
         {
             playerInput.neverAutoSwitchControlSchemes = true;
             if (actions != null) actions.bindingMask = InputBinding.MaskByGroup("Gamepad");

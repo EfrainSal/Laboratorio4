@@ -480,6 +480,13 @@
     color: rgb(7, 7, 7);
 }
 
+.btn-input-mode:disabled, .btn-input-mode:disabled:hover {
+    opacity: 0.35;
+    color: rgba(201, 198, 192, 0.5);
+    background-color: rgba(7, 7, 7, 0.6);
+    border-color: rgb(60, 60, 58);
+}
+
 .input-mode-hint {
     color: rgb(184, 181, 176);
     font-size: 12px;

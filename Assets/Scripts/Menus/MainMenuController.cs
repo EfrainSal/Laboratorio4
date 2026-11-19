@@ -167,6 +167,8 @@ public class MainMenuController : MonoBehaviour
         _sfx = new VolumeChannel(_mixer, "SFXVolume", _root.Q<Slider>("SfxSlider"), _root.Q<Label>("SfxValueLabel"), 0.8f);
         _sfx.Changed += OnSfxChanged;
 
+        GestorModoEntrada.OnModoCambiado += OnModoEntradaCambiado;
+        GestorModoEntrada.OnConexionMandoCambiada += OnConexionMandoCambiada;
         ActualizarUIModoEntrada();
 
         if (_videoTexture != null) _videoBackground.style.backgroundImage = Background.FromRenderTexture(_videoTexture);
@@ -253,6 +255,9 @@ public class MainMenuController : MonoBehaviour
         _root.UnregisterCallback<NavigationSubmitEvent>(OnRootNavigationSubmit, TrickleDown.TrickleDown);
         _root.UnregisterCallback<PointerDownEvent>(OnRootPointerEvent, TrickleDown.TrickleDown);
         _root.UnregisterCallback<ClickEvent>(OnRootClickEvent, TrickleDown.TrickleDown);
+
+        GestorModoEntrada.OnModoCambiado -= OnModoEntradaCambiado;
+        GestorModoEntrada.OnConexionMandoCambiada -= OnConexionMandoCambiada;
 
         _sfx.Changed -= OnSfxChanged;
         _master.Dispose();
@@ -668,12 +673,26 @@ public class MainMenuController : MonoBehaviour
             {
                 if (evt.direction == NavigationMoveEvent.Direction.Left && idx > 0)
                 {
-                    modeButtons[idx - 1]?.Focus();
+                    for (int prev = idx - 1; prev >= 0; prev--)
+                    {
+                        if (modeButtons[prev] != null && modeButtons[prev].enabledSelf)
+                        {
+                            modeButtons[prev].Focus();
+                            break;
+                        }
+                    }
                     evt.StopPropagation();
                 }
                 else if (evt.direction == NavigationMoveEvent.Direction.Right && idx + 1 < modeButtons.Length)
                 {
-                    modeButtons[idx + 1]?.Focus();
+                    for (int next = idx + 1; next < modeButtons.Length; next++)
+                    {
+                        if (modeButtons[next] != null && modeButtons[next].enabledSelf)
+                        {
+                            modeButtons[next].Focus();
+                            break;
+                        }
+                    }
                     evt.StopPropagation();
                 }
                 else if (evt.direction == NavigationMoveEvent.Direction.Up && sfxSlider != null)
@@ -712,29 +731,45 @@ public class MainMenuController : MonoBehaviour
         };
     }
 
+    private void OnModoEntradaCambiado(ModoEntrada _) => ActualizarUIModoEntrada();
+
+    private void OnConexionMandoCambiada(bool _) => ActualizarUIModoEntrada();
+
     private void SeleccionarModoEntrada(ModoEntrada modo)
     {
+        if (modo == ModoEntrada.Mando && !GestorModoEntrada.HayMandoConectado)
+        {
+            ActualizarUIModoEntrada();
+            return;
+        }
         GestorModoEntrada.EstablecerModo(modo);
         ActualizarUIModoEntrada();
     }
 
     private void ActualizarUIModoEntrada()
     {
+        bool hayMando = GestorModoEntrada.HayMandoConectado;
+        if (_inputModeGamepadButton != null)
+        {
+            _inputModeGamepadButton.SetEnabled(hayMando);
+        }
+
         ModoEntrada modo = GestorModoEntrada.ModoActual;
         if (_inputModeValueLabel != null)
             _inputModeValueLabel.text = GestorModoEntrada.ObtenerNombreModo(modo);
 
         _inputModeAutoButton?.EnableInClassList(SelectedInputModeClass, modo == ModoEntrada.Automatico);
         _inputModeKbmButton?.EnableInClassList(SelectedInputModeClass, modo == ModoEntrada.TecladoYRaton);
-        _inputModeGamepadButton?.EnableInClassList(SelectedInputModeClass, modo == ModoEntrada.Mando);
+        _inputModeGamepadButton?.EnableInClassList(SelectedInputModeClass, modo == ModoEntrada.Mando && hayMando);
 
         if (_inputModeHintLabel != null)
         {
+            string avisoMando = hayMando ? "" : " (Conecta un mando para habilitar la opción MANDO).";
             _inputModeHintLabel.text = modo switch
             {
-                ModoEntrada.TecladoYRaton => "Fuerza controles por teclado y ratón, ignorando el mando aunque esté conectado.",
+                ModoEntrada.TecladoYRaton => "Fuerza controles por teclado y ratón, ignorando el mando aunque esté conectado." + avisoMando,
                 ModoEntrada.Mando => "Fuerza el uso del mando, ignorando teclado y ratón (salvo para escribir tu nombre).",
-                _ => "Detecta automáticamente si estás usando teclado y ratón o mando."
+                _ => "Detecta automáticamente si estás usando teclado y ratón o mando." + avisoMando
             };
         }
     }
