@@ -22,7 +22,7 @@ public class BossBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") ||
+        if (ColisionesCombate.EsNota(collision) || (collision.isTrigger && collision.GetComponentInParent<PlayerHealth>() == null) || collision.CompareTag("Enemy") ||
             collision.CompareTag("Boss") ||
             collision.CompareTag("Drop") ||
             collision.GetComponentInParent<AyudanteJefeAI>() != null ||

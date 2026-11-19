@@ -13,11 +13,11 @@ public static class EstiloAvisoRecepcion
         panel.style.maxWidth = Length.Percent(94);
         panel.style.paddingTop = panel.style.paddingBottom = 13;
         panel.style.paddingLeft = panel.style.paddingRight = 24;
-        panel.style.backgroundColor = (Color)new Color32(7, 19, 23, 240);
+        panel.style.backgroundColor = (Color)new Color32(12, 47, 55, 245);
         panel.style.borderLeftWidth = 3;
-        panel.style.borderLeftColor = (Color)new Color32(111, 179, 151, 255);
+        panel.style.borderLeftColor = (Color)new Color32(110, 190, 193, 255);
         texto.pickingMode = PickingMode.Ignore;
-        texto.style.color = (Color)new Color32(223, 236, 226, 255);
+        texto.style.color = (Color)new Color32(110, 190, 193, 255);
         texto.style.fontSize = 18;
         texto.style.unityFontStyleAndWeight = FontStyle.Bold;
         texto.style.whiteSpace = WhiteSpace.Normal;
@@ -31,6 +31,7 @@ public class AvisoPuertaUI : MonoBehaviour
     private Label texto;
     private PanelSettings ajustes;
     private float fin;
+    private string mensajeOriginal;
     public bool Visible => panel != null && Time.unscaledTime < fin && !DeathScreenController.GameplayBlocked;
     public string Mensaje => texto != null ? texto.text : "";
 
@@ -84,12 +85,13 @@ public class AvisoPuertaUI : MonoBehaviour
             aviso.panel.Add(aviso.texto); root.Add(aviso.panel);
             EstiloAvisoRecepcion.Aplicar(aviso.panel, aviso.texto);
         }
-        aviso.texto.text = mensaje; aviso.fin = Time.unscaledTime + Mathf.Max(.1f, duracion);
+        aviso.mensajeOriginal = mensaje; aviso.texto.text = TextoInteraccion.Formatear(mensaje); aviso.fin = Time.unscaledTime + Mathf.Max(.1f, duracion);
         aviso.panel.style.display = DisplayStyle.Flex;
         return true;
     }
     private void Update()
     {
+        if (texto != null) texto.text = TextoInteraccion.Formatear(mensajeOriginal);
         if (panel != null) panel.style.display = Visible ? DisplayStyle.Flex : DisplayStyle.None;
     }
     private void OnDestroy() { if (ajustes != null) Destroy(ajustes); }

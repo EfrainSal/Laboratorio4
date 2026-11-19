@@ -18,7 +18,9 @@ public class EnemyBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Ignorar a otros enemigos y al ayudante inmortal para que no bloquee balas
-        if (collision.CompareTag("Enemy") ||
+        if (ColisionesCombate.EsNota(collision) || collision.GetComponentInParent<BossHealth>() != null ||
+            collision.GetComponentInParent<Bullet>() != null || collision.GetComponentInParent<EnemyBullet>() != null || collision.GetComponentInParent<BossBullet>() != null ||
+            (collision.isTrigger && collision.GetComponentInParent<PlayerHealth>() == null) || collision.CompareTag("Enemy") ||
             collision.CompareTag("Drop") ||
             collision.GetComponentInParent<AyudanteJefeAI>() != null) return;
 

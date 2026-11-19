@@ -10,6 +10,15 @@ public class Bullet : MonoBehaviour
 
     private Vector2 previousPosition;
     private bool impactoAplicado;
+    private bool Ignorar(Collider2D c)
+    {
+        if (c == null || c.gameObject == gameObject || ColisionesCombate.EsNota(c) || c.CompareTag("Player") || c.CompareTag("Drop") ||
+            c.GetComponentInParent<AyudanteJefeAI>() != null || c.GetComponentInParent<BossBullet>() != null ||
+            c.GetComponentInParent<Bullet>() != null || c.GetComponentInParent<EnemyBullet>() != null) return true;
+        var jefe = c.GetComponentInParent<BossHealth>();
+        if (jefe != null) return c.GetComponentInParent<HurtboxJefe>() == null;
+        return c.isTrigger && c.GetComponentInParent<EnemyHealth>() == null;
+    }
 
     private void AplicarDanioJefe(BossHealth bossHealth)
     {
@@ -54,28 +63,17 @@ public class Bullet : MonoBehaviour
 
             foreach (RaycastHit2D hit in hits)
             {
-                if (hit.collider == null || hit.collider.gameObject == gameObject) continue;
-
-                // Ignorar al jugador, al ayudante de IA, drops y balas del jefe o de otros proyectiles
-                if (hit.collider.CompareTag("Player") ||
-                    hit.collider.CompareTag("Drop") ||
-                    hit.collider.GetComponentInParent<AyudanteJefeAI>() != null ||
-                    hit.collider.GetComponentInParent<BossBullet>() != null ||
-                    hit.collider.GetComponentInParent<Bullet>() != null ||
-                    hit.collider.GetComponentInParent<EnemyBullet>() != null)
-                {
-                    continue;
-                }
+                if (Ignorar(hit.collider)) continue;
 
                 impactoAplicado = true;
                 // Daño a enemigos normales
-                if (hit.collider.CompareTag("Enemy"))
+                if (hit.collider.GetComponentInParent<EnemyHealth>() != null)
                 {
                     EnemyHealth enemyHealth = hit.collider.GetComponentInParent<EnemyHealth>();
                     if (enemyHealth != null && !esDeAyudante) enemyHealth.TakeDamage(damage);
                 }
                 // Daño al Jefe
-                else if (hit.collider.CompareTag("Boss"))
+                else if (hit.collider.GetComponentInParent<HurtboxJefe>() != null)
                 {
                     BossHealth bossHealth = hit.collider.GetComponentInParent<BossHealth>();
                     AplicarDanioJefe(bossHealth);
@@ -94,21 +92,15 @@ public class Bullet : MonoBehaviour
     // Mantenemos OnTriggerEnter2D como método de respaldo
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (impactoAplicado ||
-            collision.CompareTag("Player") ||
-            collision.CompareTag("Drop") ||
-            collision.GetComponentInParent<AyudanteJefeAI>() != null ||
-            collision.GetComponentInParent<BossBullet>() != null ||
-            collision.GetComponentInParent<Bullet>() != null ||
-            collision.GetComponentInParent<EnemyBullet>() != null) return;
+        if (impactoAplicado || Ignorar(collision)) return;
         impactoAplicado = true;
 
-        if (collision.CompareTag("Enemy"))
+        if (collision.GetComponentInParent<EnemyHealth>() != null)
         {
             EnemyHealth enemyHealth = collision.GetComponentInParent<EnemyHealth>();
             if (enemyHealth != null && !esDeAyudante) enemyHealth.TakeDamage(damage);
         }
-        else if (collision.CompareTag("Boss"))
+        else if (collision.GetComponentInParent<HurtboxJefe>() != null)
         {
             BossHealth bossHealth = collision.GetComponentInParent<BossHealth>();
             AplicarDanioJefe(bossHealth);

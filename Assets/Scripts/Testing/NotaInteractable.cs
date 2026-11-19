@@ -5,6 +5,8 @@ public class NotaInteractable : MonoBehaviour
     [Header("Contenido")]
     [Tooltip("La imagen de alta resolución que se mostrará en pantalla al leer esta nota")]
     public Sprite spriteNotaAltaResolucion;
+    public string tituloNota;
+    [TextArea(5, 16)] public string textoNota;
 
     private bool yaLeida;
     public bool YaLeida => yaLeida;
@@ -12,6 +14,7 @@ public class NotaInteractable : MonoBehaviour
 
     private void Awake()
     {
+        foreach (var c in GetComponentsInChildren<Collider2D>(true)) c.isTrigger = true;
         if (string.IsNullOrEmpty(IdPersistencia))
         {
             IdPersistencia = LevelManager.GenerarIdObjetoEscena(gameObject);
@@ -38,10 +41,7 @@ public class NotaInteractable : MonoBehaviour
             return;
         }
 
-        if (UIManagerNotas.Instance != null)
-        {
-            UIManagerNotas.Instance.MostrarNota(spriteNotaAltaResolucion);
-        }
+        if (UIManagerNotas.Instance == null || !UIManagerNotas.Instance.MostrarNota(this)) return;
 
         if (!yaLeida)
         {

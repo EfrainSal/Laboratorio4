@@ -1,0 +1,2 @@
+PASS NotaTutorialProgreso en Recepcion (10.70, -11.55, 0.00)
+PASS HurtboxCuerpoCompleto en Escenario4_Jefe; collider físico original conservado.

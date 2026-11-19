@@ -43,7 +43,7 @@ namespace Laboratorio4.Escenario4
             for (int i = 0; i < hits.Count; i++)
             {
                 Collider2D c = hits[i].collider;
-                if (c == null) continue;
+                if (c == null || ColisionesCombate.EsNota(c)) continue;
                 if (ignorar != null && c.transform.IsChildOf(ignorar)) continue;
                 if (c.GetComponentInParent<E4Proyectil>() != null) continue;
                 if (c.isTrigger)

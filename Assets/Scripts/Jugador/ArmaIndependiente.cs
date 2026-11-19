@@ -29,8 +29,8 @@ public class ArmaIndependiente : MonoBehaviour
     public float escalaMachete = 0.5f;
     [Tooltip("Rotación respecto al apuntado hacia la derecha. 225° deja la hoja levantada. Se refleja automáticamente hacia la izquierda.")]
     public float rotacionReposoMachete = 225f;
-    [Tooltip("Posición del mango respecto a la cadera: X hacia donde apuntas, Y perpendicular al apuntado. Sólo afecta al machete.")]
-    public Vector2 posicionManoMachete = new Vector2(0.25f, 0f);
+    [Tooltip("Anclaje fijo respecto a la cadera, en ejes del personaje. No gira con el apuntado. (0, 0) centra el mango en la cadera. Sólo afecta al machete.")]
+    public Vector2 posicionManoMachete = Vector2.zero;
     [Tooltip("Punto del mango dentro del rectángulo del sprite, de 0 a 1 desde la esquina inferior izquierda. El machete gira alrededor de este agarre.")]
     public Vector2 agarreMachete = new Vector2(0.78f, 0.80f);
     private WeaponManager armas;
@@ -119,13 +119,14 @@ public class ArmaIndependiente : MonoBehaviour
     public void Apuntar(Vector2 destino)
     {
         if (pivote == null || visual == null) return;
-        pivote.localPosition = new Vector3(cadera.x, cadera.y, 0f);
+        bool cuerpoACuerpo = armas != null && armas.isUsingMelee;
+        Vector2 anclaje = cadera + (cuerpoACuerpo ? posicionManoMachete : Vector2.zero);
+        pivote.localPosition = new Vector3(anclaje.x, anclaje.y, 0f);
         pivote.localScale = Vector3.one;
         Vector2 direccion = destino - (Vector2)pivote.position;
         if (direccion.sqrMagnitude < 0.0001f) return;
         pivote.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg);
         bool izquierda = direccion.x < 0f;
-        bool cuerpoACuerpo = armas != null && armas.isUsingMelee;
         int dir = AnimacionJasonDinamica.Direccion8(direccion);
         Sprite reposo = spritesApuntar != null && dir < spritesApuntar.Length ? spritesApuntar[dir] : null;
         Sprite disparando = spritesDisparo != null && dir < spritesDisparo.Length ? spritesDisparo[dir] : null;
@@ -150,8 +151,7 @@ public class ArmaIndependiente : MonoBehaviour
             Vector2 puntoSprite = (Vector2.Scale(agarreMachete, visual.sprite.rect.size) - visual.sprite.pivot)
                 / visual.sprite.pixelsPerUnit;
             if (visual.flipY) puntoSprite.y = -puntoSprite.y;
-            Vector3 mano = new Vector3(posicionManoMachete.x, izquierda ? -posicionManoMachete.y : posicionManoMachete.y, 0f);
-            visual.transform.localPosition = mano - rotacion * (Vector3)(puntoSprite * escala);
+            visual.transform.localPosition = -(rotacion * (Vector3)(puntoSprite * escala));
         }
         else
         {

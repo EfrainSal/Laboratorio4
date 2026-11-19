@@ -1,0 +1,10 @@
+# Pulido de combate, audio y anuncios de piso
+
+- **Machete junto a muros:** `Assets/Scripts/Jugador/PlayerCombat.cs` dirige la línea de obstáculos desde el centro físico del jugador al punto más cercano del collider del enemigo. `ColisionesCombate.cs` ignora un muro tangente al extremo del corte o situado detrás de la cara alcanzada. Un enemigo completamente al otro lado del muro sigue protegido.
+- **Anclaje fijo:** `Assets/Scripts/Jugador/ArmaIndependiente.cs`. Los prefabs `Assets/Prefabs/Player_Jason.prefab` y `Player_Milena.prefab` tienen `Posicion Mano Machete = (0,0)`: el mango gira en la `Cadera` existente sin desplazarse al apuntar abajo. El campo permite añadir un desplazamiento fijo en ejes del personaje; no gira con el cursor. Se mantienen escala, orientación del filo y altura del subfusil.
+- **Munición:** `Assets/Scripts/Enemigos/AmmoDrop.cs`, campos `Sonido Recogida` y `Volumen Recogida`. `Assets/Prefabs/Ammo.prefab` utiliza `Assets/Audio/SFX/Recoger_Objeto.ogg`. El sonido sale desde la fuente del inventario del jugador para conservar el mezclador SFX y continuar aunque el drop se destruya. Las instancias antiguas sin clip usan el sonido de objetos del inventario. No se han generado audios nuevos.
+- **Anuncios:** `Assets/Scripts/Menus/AnuncioPisoUI.cs`. `NumeroPiso` define el orden real: `Escenario1_Entrada` → Primer Piso, `Piso3_V10` → Segundo Piso, `E3_Laboratorio` → Tercer Piso, `Escenario4_Jefe` → Cuarto Piso. Cada entrada, incluida una carga de partida, genera un solo cartel. Dura 3,2 segundos de visualización y usa fundidos de 0,4 segundos. Espera a que terminen fundidos, menús o notas; no pausa ni captura clics. La recepción mantiene su ayuda de controles.
+
+Pruebas: **Laboratorio 4 > Pulido > Probar machete munición y anuncios** (Ctrl+Alt+F6). Resultados en `pruebas.txt`, capturas en esta carpeta. Los guardados/rankings de prueba se aíslan y las preferencias se restauran al salir de Play.
+
+`resources-base.json` conserva los hashes previos de los 289 archivos protegidos; no modificar archivos existentes de Resources.

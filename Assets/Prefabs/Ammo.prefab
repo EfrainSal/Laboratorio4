@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AmmoDrop
   minAmmo: 15
   maxAmmo: 20
+  sonidoRecogida: {fileID: 8300000, guid: e0e96afa8b4fbff429556d13c8e11a91, type: 3}
+  volumenRecogida: 1
 --- !u!114 &4053430420850277685
 MonoBehaviour:
   m_ObjectHideFlags: 0

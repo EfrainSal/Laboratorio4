@@ -1349,7 +1349,7 @@ PrefabInstance:
     - target: {fileID: 3312338835132382555, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
       propertyPath: spriteNotaAltaResolucion
       value: 
-      objectReference: {fileID: 1987575722118485324, guid: 7da445c6e91f5dd4bbbb666dd03de352, type: 3}
+      objectReference: {fileID: 5095295663579988814, guid: 0f75ec3d2cbafb64a96a30dad738add2, type: 3}
     - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.51
@@ -5597,6 +5597,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1001 &1332990951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3312338835132382555, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: textoNota
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312338835132382555, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: tituloNota
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312338835132382555, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: spriteNotaAltaResolucion
+      value: 
+      objectReference: {fileID: -1668212854923836522, guid: 7b6b6a55c019b6f4d82e5c71b6df69c9, type: 3}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776553805955750360, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037848542790907389, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
+      propertyPath: m_Name
+      value: NotaTutorialProgreso
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc54b8d43583b364b8453b458b9a3f98, type: 3}
 --- !u!1 &1343473961
 GameObject:
   m_ObjectHideFlags: 0
@@ -9373,3 +9442,4 @@ SceneRoots:
   - {fileID: 1801193835}
   - {fileID: 270994742}
   - {fileID: 1554585881}
+  - {fileID: 1332990951}

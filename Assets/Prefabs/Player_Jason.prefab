@@ -417,6 +417,9 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  capasObstaculos:
+    serializedVersion: 2
+    m_Bits: 4294967295
   attackRate: 2
   sfxSource: {fileID: 9116492846357870993}
   sonidoTajo: {fileID: 8300000, guid: e79f7d82ae5210b418eea7ecd913006b, type: 3}
@@ -470,8 +473,12 @@ MonoBehaviour:
   textoBotiquines: {fileID: 0}
   textoEstimulantes: {fileID: 0}
   iconoTarjetaUI: {fileID: 0}
+  colorFeedbackEstimulante: {r: 1, g: 0.92, b: 0.15, a: 0.08}
+  duracionDesvanecimientoEstimulante: 1.5
   mensajeTarjetaRecogida: "TARJETA OBTENIDA  /  Ac\xE9rcate al panel de la puerta de salida"
   duracionAvisoTarjeta: 3
+  colorFeedbackVenda: {r: 0.15, g: 1, b: 0.35, a: 0.16}
+  duracionDestelloVenda: 0.7
   audioSource: {fileID: 9116492846357870993}
   sfxRecogerObjeto: {fileID: 8300000, guid: e0e96afa8b4fbff429556d13c8e11a91, type: 3}
   sfxRecogerEspecial: {fileID: 8300000, guid: a12bb67f14f8b5b49a1ffa3521ef1173, type: 3}
@@ -767,8 +774,8 @@ MonoBehaviour:
   controlManual: 0
   invertirFiloMachete: 1
   escalaMachete: 0.7
-  rotacionReposoMachete: 180
-  posicionManoMachete: {x: 0.2, y: 0}
+  rotacionReposoMachete: 120
+  posicionManoMachete: {x: 0, y: 0}
   agarreMachete: {x: 0.78, y: 0.8}
 --- !u!114 &1664316089188151987
 MonoBehaviour:
@@ -782,6 +789,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b652600dd07ba334199641e0066ee63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiraPersonalizada
+  radioMaximoMando: 3.5
+  suavizadoMando: 22
+  escalaVisualMando: 1
 --- !u!114 &6477336984351892878
 MonoBehaviour:
   m_ObjectHideFlags: 0

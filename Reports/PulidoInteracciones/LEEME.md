@@ -1,0 +1,15 @@
+# Pulido de interacciones, daño y consumibles
+
+- **Nota tutorial:** escena `Assets/Scenes/Recepcion.unity`, objeto `NotaTutorialProgreso`, componente `NotaInteractable`. Los campos `Titulo Nota` y `Texto Nota` permiten cambiar el contenido. `{Interact}` se sustituye por el botón del dispositivo activo. Posición inicial: `(10.70, -11.55)` junto a la aparición del jugador.
+- **Avisos celestes:** `Assets/Scripts/Menus/AvisoPuertaUI.cs`, método `EstiloAvisoRecepcion.Aplicar`, y estilo de recepción en `Assets/UI/Inicio/ControlesInicio.uss`. Texto y borde `#6EBEC1`, fondo azul oscuro. La alerta de tarjeta sustituye el texto de interacción en su panel existente.
+- **Teclado/mando:** `Assets/Scripts/Menus/TextoInteraccion.cs` consulta la acción `Interact` del `PlayerInput` del jugador y respeta `GestorModoEntrada`. Indica A en mando genérico/Xbox y Cruz en PlayStation. También actualiza el texto de la nota tutorial y su indicación de cierre.
+- **Notas:** `Assets/Scripts/Testing/InteraccionJugador.cs` valida los contactos reales en cada actualización y limpia el objetivo al cerrar/salir/desactivarse. Tras cerrar una nota, su aviso no reaparece hasta salir y volver a su alcance. Se puede interactuar inmediatamente con otros objetos. `NotaInteractable` convierte sus colliders a triggers en las instancias; los proyectiles ignoran explícitamente notas y triggers informativos.
+- **Machete:** `Assets/Scripts/Jugador/PlayerCombat.cs`, campo `Capas Obstaculos`, y `ColisionesCombate.cs`. La comprobación sale del cuerpo del jugador, por lo que tampoco atraviesa un muro cuando el punto de ataque ya quedó al otro lado. Se omiten triggers y personajes, conservando los obstáculos sólidos.
+- **Yiba:** escena `Assets/Scenes/Escenario4_Jefe.unity`, hijo `HurtboxCuerpoCompleto`, componente `HurtboxJefe`. Su trigger sigue los límites de cada sprite; el collider físico original de pies conserva tamaño y offset. Las balas del jugador dañan a través de la hurtbox, con un solo impacto por proyectil. El mismo componente se asegura en tiempo de ejecución para las instancias antiguas.
+- **Consumibles:** `Assets/Scripts/Jugador/PlayerInventory.cs`: constantes `MaxVendas = 20`, `MaxJeringas = 10`; campos `Color Feedback Venda` y `Duracion Destello Venda` para ajustar el verde y su duración. Se conserva el efecto amarillo existente del estimulante. `ItemPickup.cs` mantiene en el suelo los objetos rechazados y vuelve a intentar recogerlos si se libera espacio mientras el jugador sigue en contacto.
+
+## Verificación
+
+Menú de Unity: **Laboratorio 4 > Pulido > Probar interacciones combate y consumibles** (Ctrl+Alt+F12). Pruebas en Play Mode con teclado y mando virtuales, los dos protagonistas, prefabs reales de nota/botiquín y colisiones físicas de proyectiles. Utiliza archivos de guardado/ranking de prueba y restaura las preferencias al salir. Resultados en `pruebas.txt`; capturas en esta carpeta.
+
+`resources-base.json` contiene los hashes anteriores al cambio de los 289 archivos protegidos. Ningún archivo existente dentro de `Resources` debe alterarse.
